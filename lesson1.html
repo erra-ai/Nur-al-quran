@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why We Feel · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--emerald);font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--gold-light);color:#6b4d0a;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--gold-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(15,118,110,.14);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:var(--emerald-dark);text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--emerald);}
+.section.gold{border-left-color:var(--gold);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--emerald);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--emerald);background:var(--emerald-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.weather-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0;}
+.weather-card{background:var(--cream);border-radius:var(--radius-sm);padding:14px 8px;text-align:center;border:1px solid #e8e3db;box-shadow:0 1px 3px rgba(0,0,0,.03);}
+.weather-card .wc-icon{font-size:1.6rem;margin-bottom:4px;}
+.weather-card .wc-label{font-weight:700;font-size:.82rem;color:#3a3333;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--emerald-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #b8dcd0;}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--emerald);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#5db89a;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#115e59;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card ul,.skill-card .slist{list-style:none;padding:0;margin:0;text-align:left;font-size:.8rem;color:var(--ink-soft);line-height:1.5;}
+.skill-card ul li::before,.skill-card .slist li::before{content:'· ';color:var(--emerald);font-weight:700;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--emerald-light);border:2px solid #b8dcd0;border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:var(--emerald-dark);margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--gold-light),#ffe6a4);border:2px solid var(--gold-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#5c3d1a;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--emerald);background:var(--emerald-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .weather-grid{grid-template-columns:repeat(3,1fr);}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .weather-grid{grid-template-columns:1fr 1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible{outline:3px solid var(--emerald);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <div class="part">Part 1 · Understanding Feelings</div>
+  <h1>Why We Feel</h1>
+  <div class="rule">Feelings are signals, not commands.</div>
+  <p class="subtitle">A story-centered Islamic SEL lesson that teaches children how to notice a feeling, understand what it may be signaling, and choose a response guided by faith and wisdom.</p>
+  <div class="meta">
+    <div class="meta-card"><strong>Age</strong><span>10–13</span></div>
+    <div class="meta-card"><strong>Time</strong><span>25–30 min</span></div>
+    <div class="meta-card"><strong>SEL Skill</strong><span>Self-awareness</span></div>
+    <div class="meta-card"><strong>Main Tool</strong><span>Notice — Name — Check — Choose</span></div>
+  </div>
+</header>
+
+<!-- 1. MAIN STORY -->
+<article class="section" id="story">
+<h2>1. Main Story: Samir Is Left Out</h2>
+<div class="story-box">
+<p>Samir had been looking forward to the soccer game all morning. He had practiced passing the ball with his older brother during the week, and he hoped the other children would finally notice that he was improving.</p>
+<p>At recess, two team captains stood in the middle of the field and began choosing players.</p>
+<p>One name after another was called. Samir waited. He tried to stand tall and look confident. He told himself, "Maybe I will be next."</p>
+<p>Then the final player was chosen.</p>
+<p><strong>Nobody chose Samir.</strong></p>
+<p>A few children ran toward the field without looking at him. One child laughed about something Samir could not hear.</p>
+<p>Samir's stomach felt heavy. His face became warm. His throat tightened. He looked down so no one would see the tears forming in his eyes.</p>
+<p>He remembered another game when he had been chosen last. A thought began growing inside him:</p>
+<p>"They never want me. Maybe they all think I am useless."</p>
+<p>Then another urge appeared:</p>
+<p>"Say something cruel before they can embarrass you."</p>
+</div>
+
+<div class="checkpoint">
+<h4>What is Samir probably feeling?</h4>
+<button class="option" data-correct="true" data-feedback="Good noticing. Samir may be feeling more than one emotion at the same time.">A. Hurt, sadness, and embarrassment</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">B. Only happiness</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">C. Nothing at all</button>
+<div class="feedback"></div>
+</div>
+
+<div class="story-box">
+<p>Samir's heart began beating faster. His shoulders became tight. A thought appeared:</p>
+</div>
+<div class="thought harmful">"They must all hate me. I should say something mean before they laugh at me."</div>
+
+<div class="checkpoint">
+<h4>Which body signs show the feeling is becoming strong?</h4>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">A. His shoes are new</button>
+<button class="option" data-correct="true" data-feedback="Body signals can warn us that a feeling is growing stronger.">B. Heavy stomach, warm face, fast heartbeat, and tight shoulders</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">C. He is standing near a field</button>
+<div class="feedback"></div>
+</div>
+
+<div class="checkpoint">
+<h4>What might the feeling be signaling?</h4>
+<button class="option" data-correct="false" data-feedback="The feeling may be signaling hurt — it does not prove this.">A. It proves that nobody will ever like him</button>
+<button class="option" data-correct="false" data-feedback="The feeling does not command him to insult anyone.">B. It commands him to insult the players</button>
+<button class="option" data-correct="true" data-feedback="The feeling may be signaling hurt and a need for belonging. It does not prove that everyone hates him.">C. He feels excluded and wants belonging, respect, and fairness</button>
+<div class="feedback"></div>
+</div>
+
+<div class="story-box">
+<p>Samir's feeling was real. But the thought "everyone hates me" was not automatically a fact. And the urge to insult people was not a command he had to obey.</p>
+</div>
+
+<div class="checkpoint">
+<h4>What should Samir do first?</h4>
+<button class="option" data-correct="false" data-feedback="That could make the situation worse.">A. Send an angry message immediately</button>
+<button class="option" data-correct="true" data-feedback="A pause gives Samir time to understand the feeling before choosing an action.">B. Pause, name the feelings, and check the thought before acting</button>
+<button class="option" data-correct="false" data-feedback="Pretending he has no feelings does not help.">C. Pretend he has no feelings</button>
+<div class="feedback"></div>
+</div>
+
+<div class="story-box">
+<p>Samir took a slow breath. He quietly said:</p>
+</div>
+<div class="thought wise">"I feel hurt and embarrassed. That does not mean everyone hates me. I can choose what to do next."</div>
+
+<div class="checkpoint">
+<h4>Which final response is wisest?</h4>
+<button class="option" data-correct="false" data-feedback="Insulting others is harmful and does not solve the problem.">A. "You are all terrible. I never want to see you again."</button>
+<button class="option" data-correct="false" data-feedback="Hurting others physically is never a wise response.">B. Push one of the players so they feel hurt too</button>
+<button class="option" data-correct="true" data-feedback="A wise response protects Samir's words, actions, and dignity.">C. Calm down, then ask to join the next game or speak to a trusted adult about feeling excluded</button>
+<div class="feedback"></div>
+</div>
+
+<div class="story-box">
+<p>Samir paused and named the feeling: "I feel hurt, embarrassed, and left out."</p>
+<p>He checked the thought "everyone hates me" and realized that he did not actually know why the captains made their choices.</p>
+<p>He decided not to insult anyone or walk away forever.</p>
+<p>After the game started, Samir spoke to the playground teacher and said calmly, "I was not chosen, and I feel left out. May I join the next game or help make the teams fair next time?"</p>
+<p>The teacher listened. She explained that the captains had chosen quickly and had not noticed how the same children were being left out. She promised to organize the next round differently.</p>
+<p>One of the captains later asked Samir to join a short passing game.</p>
+<p>Samir was still hurt. Wise choices did not erase the feeling immediately. But he protected his words, his actions, and his dignity. He also gave other people a chance to understand and correct the situation.</p>
+</div>
+</article>
+
+<!-- 2. QURAN ANCHOR -->
+<article class="section gold" id="quran">
+<h2>2. Quran Anchor</h2>
+<div class="quran-box">
+<p class="arabic">وَأَنَّهُ هُوَ أَضْحَكَ وَأَبْكَىٰ</p>
+<p class="trans">"And that it is He who makes one laugh and weep."</p>
+<p class="ref">Surah An-Najm 53:43</p>
+</div>
+<p>Allah created human beings with the ability to laugh, cry, love, fear, hope, grieve, and become angry. Having a feeling does not automatically make a child bad.</p>
+<div class="balance-card">
+<p>Important balance: A feeling may tell us that something is happening inside us. But it does not automatically prove that every thought is true, and it does not decide what we should do.</p>
+</div>
+<div class="weather-grid">
+  <div class="weather-card"><div class="wc-icon">☀️</div><div class="wc-label">Joy · sunshine</div></div>
+  <div class="weather-card"><div class="wc-icon">🌧️</div><div class="wc-label">Sadness · rain</div></div>
+  <div class="weather-card"><div class="wc-icon">⛈️</div><div class="wc-label">Anger · storm</div></div>
+  <div class="weather-card"><div class="wc-icon">🌬️</div><div class="wc-label">Fear · wind</div></div>
+  <div class="weather-card"><div class="wc-icon">🌈</div><div class="wc-label">Hope · rainbow</div></div>
+</div>
+<p style="text-align:center;font-weight:600;color:#3a3333;">Feelings can change like weather. I may not choose every feeling that arrives, but I can learn how to respond when it comes.</p>
+</article>
+
+<!-- 3. PROPHETIC LENS -->
+<article class="section gold" id="prophetic">
+<h2>3. Prophetic Lens</h2>
+<p>When the Prophet Muhammad ﷺ lost his young son Ibrahim, he cried. He did not pretend that sadness was absent. But he kept his words guided by Allah.</p>
+<div class="hadith-box">
+<p class="hadith-arabic">إِنَّ الْعَيْنَ تَدْمَعُ، وَالْقَلْبَ يَحْزَنُ، وَلَا نَقُولُ إِلَّا مَا يَرْضَى رَبُّنَا</p>
+<p class="hadith-en">"The eyes shed tears, the heart grieves, but we do not say except what pleases our Lord."</p>
+<p class="hadith-ref">Sahih al-Bukhari 1303</p>
+</div>
+<div class="grid-2">
+  <div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What the Prophet ﷺ did</h4><p style="margin:0;font-size:.9rem;">He allowed the sadness to be real. He cried and acknowledged that his heart was grieving.</p></div>
+  <div class="card gold" style="text-align:center;"><h4 style="color:#8b6914;margin-top:0;">What guided him</h4><p style="margin:0;font-size:.9rem;">His feeling did not command harmful words. Faith guided what he chose to say.</p></div>
+</div>
+<p style="text-align:center;font-weight:600;color:#3a3333;">Strong faith does not mean having no feelings. It means letting Allah's guidance lead our response.</p>
+</article>
+
+<!-- 4. UNDERSTAND THE DIFFERENCE -->
+<article class="section" id="difference">
+<h2>4. Understand the Difference</h2>
+<div class="grid-3">
+  <div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I feel left out. I want belonging and respect."</p></div>
+  <div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Everyone hates me. I should hurt them back."</p></div>
+  <div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Pause, check what is true, and choose words or actions that please Allah.</p></div>
+</div>
+<div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "Every feeling tells the truth." Feelings are real experiences, but the thoughts attached to them can sometimes be mistaken or exaggerated.</p></div>
+</article>
+
+<!-- 5. MAIN SEL TOOL -->
+<article class="section" id="skill">
+<h2>5. Notice — Name It to Tame It — Check — Choose</h2>
+<div class="skill-grid">
+  <div class="skill-card s1"><div class="step-num">1</div><h4>Notice</h4><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">What is happening in my body?<br><br>· Hot face<br>· Tight chest<br>· Heavy stomach<br>· Tears<br>· Fast heartbeat<br>· Tight shoulders</p></div>
+  <div class="skill-card s2"><div class="step-num">2</div><h4>Name It to Tame It</h4><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.5;margin:0;">A strong feeling can feel like a storm with no name. When I name it, I understand it better. Naming the feeling does not make it disappear, but it can make it easier to manage.</p><p style="font-size:.78rem;font-weight:600;color:#3a3333;text-align:left;margin:8px 0 4px;">Say: <strong>"I feel angry."</strong><br>Not: "I am an angry person."</p><div style="background:var(--rose-light);border-radius:8px;padding:10px;font-size:.76rem;"><strong>Before:</strong> "Everything is terrible!"<br><strong>After:</strong> "I feel embarrassed because I was left out."</div></div>
+  <div class="skill-card s3"><div class="step-num">3</div><h4>Check</h4><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">· What may this feeling be signaling?<br>· What thought came with it?<br>· Is that thought certainly true?<br>· What is the feeling pushing me to do?<br>· Could there be another explanation?</p></div>
+  <div class="skill-card s4"><div class="step-num">4</div><h4>Choose</h4><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">What response is safe, fair, wise, and pleasing to Allah?<br><br>· Speak calmly<br>· Ask for help<br>· Wait before responding<br>· Move away from harm<br>· Correct a misunderstanding<br>· Apologize or repair if needed</p></div>
+</div>
+<div class="rule-card"><p>I notice my feeling. I name it to tame it. I check the thought and urge. I choose what pleases Allah.</p></div>
+</article>
+
+<!-- 6. TRANSFER PRACTICE -->
+<article class="section" id="transfer">
+<h2>6. Transfer Practice: Layla's Presentation</h2>
+<div class="story-box">
+<p>Layla had practiced her science presentation at home three times. She knew the main ideas, but she still felt nervous about speaking in front of the class.</p>
+<p>During the presentation, she answered a question from the teacher. A student near the back whispered something, and two children laughed.</p>
+<p>Layla's face became hot. Her stomach tightened. For a moment, she forgot the next sentence on her note card.</p>
+<p>She thought:</p>
+</div>
+<div class="thought harmful">"They think I am stupid. I should never speak in class again."</div>
+
+<div class="checkpoint">
+<h4>What should Layla check before accepting that thought?</h4>
+<button class="option" data-correct="false" data-feedback="Insulting others is not a wise check.">A. Whether she can insult them first</button>
+<button class="option" data-correct="true" data-feedback="Layla's embarrassment is real, but she does not yet know exactly why they laughed.">B. Whether she knows why they laughed, and whether one moment defines her ability</button>
+<button class="option" data-correct="false" data-feedback="Giving up forever is not a wise choice.">C. Whether she should stop trying forever</button>
+<div class="feedback"></div>
+</div>
+
+<div class="checkpoint">
+<h4>Which response best follows Notice — Name It to Tame It — Check — Choose?</h4>
+<button class="option" data-correct="false" data-feedback="Running away does not help Layla grow.">A. Run out and refuse every future presentation</button>
+<button class="option" data-correct="false" data-feedback="A cruel message only spreads harm.">B. Send a cruel message after class</button>
+<button class="option" data-correct="true" data-feedback="This response names the feeling, checks the meaning, and chooses a safe action.">C. Name the embarrassment, finish if she can, then ask the teacher calmly what happened</button>
+<div class="feedback"></div>
+</div>
+
+<div class="story-box">
+<p>Layla quietly named the feeling: "I feel embarrassed and nervous."</p>
+<p>She checked the thought. She did not actually know why the children laughed, and one difficult moment did not prove that she was bad at speaking.</p>
+<p>She took one breath, looked at her note card, and finished the next sentence.</p>
+<p>After class, she calmly asked the teacher what had happened. The teacher explained that the students had laughed at a picture that appeared on another student's screen, not at Layla's answer.</p>
+<p>Layla learned that a feeling can be real even when the first interpretation is wrong.</p>
+</div>
+</article>
+
+<!-- 7. HOME CHALLENGE -->
+<article class="section gold" id="challenge">
+<h2>7. My One-Minute Feeling Check</h2>
+<div class="challenge-card">
+<p style="font-weight:600;margin-bottom:12px;">Use the four steps once before the next lesson:</p>
+<ol>
+  <li><strong>Notice:</strong> What happened in my body?</li>
+  <li><strong>Name It to Tame It:</strong> What was I feeling?</li>
+  <li><strong>Check:</strong> What was the feeling signaling? What thought or urge came with it?</li>
+  <li><strong>Choose:</strong> What did I do that was safer, wiser, or more pleasing to Allah?</li>
+</ol>
+<p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Tell one trusted adult what happened. No long journal is required.</p>
+</div>
+</article>
+
+<!-- 8. PARENT / TEACHER GUIDE -->
+<article class="section" id="guide">
+<h2>8. Parent / Teacher Guide</h2>
+<div class="grid-2">
+  <div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Stop feeling that."</li><li>"You are overreacting."</li><li>"Good Muslims do not feel this."</li><li>"There is nothing to be upset about."</li></ul></div>
+  <div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"I can see this feeling is strong."</li><li>"Let us name it."</li><li>"What might it be signaling?"</li><li>"Is the thought certainly true?"</li><li>"Now let us choose the right action."</li></ul></div>
+</div>
+
+<h3>Interactive Teach-Back: Put the Steps in Order</h3>
+<p>Click the steps in the correct order.</p>
+<div class="order-grid" id="orderGrid"></div>
+<p class="order-feedback" id="orderFeedback"></p>
+<button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button>
+<div class="order-complete" id="orderComplete">Excellent. You know the four-step feeling skill.</div>
+
+<div class="checkpoint" style="margin-top:24px;">
+<h4>Mariam notices that her hands are shaking and her heart is beating fast. What should she do next?</h4>
+<button class="option" data-correct="false" data-feedback="She has not yet named the feeling. That comes next.">A. Choose an action immediately</button>
+<button class="option" data-correct="true" data-feedback="After noticing the body signal, the next step is Name It to Tame It.">B. Name the feeling: "I feel nervous"</button>
+<button class="option" data-correct="false" data-feedback="She has not yet checked whether that thought is true.">C. Decide that something terrible will happen</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card" style="background:var(--cream);text-align:center;margin-top:16px;">
+<p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Validate the feeling without automatically agreeing with every interpretation. A child may truly feel rejected while still being mistaken about why another person acted a certain way.</p>
+</div>
+</article>
+
+</div>
+
+<script>
+(function(){
+
+// --- MCQ checkpoints ---
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct="true"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+
+// --- Ordering Activity ---
+const steps=['Notice','Name It to Tame It','Check','Choose'];
+let shuffled=[],placed=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  placed=[];orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  document.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>4){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='✅ Step '+orderIdx+' of 4 placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent='That step comes later. First notice what is happening inside.';
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+  orderReset.style.display='none';
+}
+
+orderReset.addEventListener('click',initOrder);
+initOrder();
+
+})();
+</script>
+</body>
+</html>

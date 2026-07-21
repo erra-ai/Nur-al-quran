@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: My Heart Feels, But My Feelings Do Not Lead Me | Strong Heart, Wise Mind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfaf5;
+            --card-bg: #ffffff;
+            --sidebar-bg: #1a5c4f;
+            --sidebar-text: #e8f0ed;
+            --sidebar-hover: #237a68;
+            --primary: #2d8a7a;
+            --primary-light: #e8f5f1;
+            --gold: #b8862d;
+            --gold-light: #fdf3e4;
+            --text: #3d3535;
+            --text-light: #5c5454;
+            --text-muted: #7a7272;
+            --border: #e8e3db;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+            --radius-sm: 8px;
+            --radius: 14px;
+            --radius-lg: 20px;
+            --green-correct: #4caf84;
+            --green-bg: #edf8f2;
+            --red-incorrect: #e8877a;
+            --red-bg: #fdf4f3;
+            --sabr-1-3: #5db89a;
+            --sabr-4-6: #e8b94d;
+            --sabr-7-8: #e8875c;
+            --sabr-9-10: #d4534a;
+            --thermo-cool: #5db89a;
+            --thermo-warm: #e8b94d;
+            --thermo-hot: #e8875c;
+            --thermo-burn: #d4534a;
+            --transition: 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 30px;
+        }
+
+        body {
+            font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============ MAIN CONTENT ============ */
+        .main-content {
+            margin: 0 auto;
+            padding: 0;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* ============ MOBILE HEADER ============ */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background: var(--sidebar-bg);
+            color: #fff;
+            padding: 14px 18px;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+        .mobile-header .mh-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            line-height: 1.2;
+        }
+        .mobile-header .mh-back {
+            margin-left: auto;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* ============ SECTION STYLES ============ */
+        .section {
+            padding: 40px 36px;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 20px;
+        }
+        .section:first-of-type {
+            padding-top: 50px;
+        }
+        .section:last-of-type {
+            border-bottom: none;
+            padding-bottom: 60px;
+        }
+
+        .section-hero {
+            background: linear-gradient(170deg, #fdfaf5 0%, #eaf7f3 40%, #fdf3e4 100%);
+            text-align: center;
+            padding: 55px 36px 45px;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .section-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(45, 138, 122, 0.04);
+            pointer-events: none;
+        }
+        .section-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(184, 134, 45, 0.05);
+            pointer-events: none;
+        }
+        .section-hero>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2a2525;
+            line-height: 1.25;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .hero-age {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            background: #fff;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 14px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2a2525;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        .section h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #3a3333;
+            margin: 22px 0 10px;
+        }
+        .section h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 16px 0 8px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: var(--text-light);
+            font-size: 0.98rem;
+        }
+
+        /* ============ QURAN VERSE BOX ============ */
+        .quran-box {
+            background: #fff;
+            border: 2px solid var(--gold-light);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        .quran-box .arabic {
+            font-family: 'Amiri', 'Scheherazade New', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #5c3d1a;
+            line-height: 2;
+            direction: rtl;
+            margin-bottom: 10px;
+            letter-spacing: 0.01em;
+        }
+        .quran-box .translation {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .quran-box .reference {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+        .quran-box .ornament {
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            opacity: 0.6;
+        }
+
+        /* ============ HADITH BOX ============ */
+        .hadith-box {
+            background: #fffef8;
+            border: 2px solid #e8d9b8;
+            border-radius: var(--radius-lg);
+            padding: 24px 22px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .hadith-box .hadith-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #5c3d1a;
+            line-height: 2;
+            direction: rtl;
+            margin-bottom: 8px;
+        }
+        .hadith-box .hadith-translation {
+            font-style: italic;
+            color: #6b5a3a;
+            font-size: 0.93rem;
+            font-weight: 500;
+        }
+        .hadith-box .hadith-source {
+            font-size: 0.75rem;
+            color: #9a8a6a;
+            margin-top: 4px;
+        }
+        .hadith-box .hadith-icon {
+            font-size: 1.8rem;
+            margin-bottom: 4px;
+        }
+
+        /* ============ REWARD BANNER ============ */
+        .reward-banner {
+            background: linear-gradient(135deg, #fef9e7 0%, #fef3d6 100%);
+            border: 2px solid #e8d08b;
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            margin: 18px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        .reward-banner .reward-star {
+            font-size: 2rem;
+        }
+        .reward-banner .reward-text {
+            font-weight: 700;
+            color: #6b4d0a;
+            font-size: 0.95rem;
+        }
+        .reward-banner .reward-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.1rem;
+            color: #8b6914;
+            direction: rtl;
+            margin-top: 4px;
+        }
+
+        /* ============ SEERAH STORY ============ */
+        .seerah-story {
+            background: #fefef9;
+            border: 2px dashed #d4c9a8;
+            border-radius: var(--radius-lg);
+            padding: 22px 24px;
+            margin: 16px 0;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+        .seerah-story::before {
+            content: '🕌';
+            position: absolute;
+            top: -16px;
+            left: 18px;
+            font-size: 1.4rem;
+            background: #fefef9;
+            padding: 0 6px;
+            border-radius: 50%;
+        }
+        .seerah-story .seerah-highlight {
+            background: #fef3d6;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: #6b4d0a;
+            display: inline-block;
+            margin: 4px 0;
+        }
+
+        /* ============ SUNNAH STEPS GRID ============ */
+        .sunnah-steps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .sunnah-step-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 18px 14px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+            transition: all var(--transition);
+        }
+        .sunnah-step-card:hover {
+            border-color: #c5d5cf;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .sunnah-step-card .sunnah-emoji {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        .sunnah-step-card .sunnah-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #3a3333;
+            margin-bottom: 4px;
+        }
+        .sunnah-step-card .sunnah-detail {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .sunnah-step-card .sunnah-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 0.85rem;
+            color: #5c3d1a;
+            direction: rtl;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* ============ ADHKAR CARDS ============ */
+        .adhkar-card {
+            background: #f9fdfb;
+            border: 2px solid #d0e8df;
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin: 12px 0;
+            text-align: center;
+        }
+        .adhkar-card .dua-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.2rem;
+            color: #1a5c4f;
+            direction: rtl;
+            font-weight: 700;
+            line-height: 1.8;
+        }
+        .adhkar-card .dua-trans {
+            font-size: 0.82rem;
+            color: #5c5454;
+            font-style: italic;
+        }
+
+        /* ============ ANGER TYPES DUO ============ */
+        .anger-types-duo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0;
+        }
+        .anger-type-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 20px 18px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .anger-type-card.mahmood {
+            border-top: 4px solid #4caf84;
+        }
+        .anger-type-card.madhmoom {
+            border-top: 4px solid #e8875c;
+        }
+        .anger-type-card .type-icon {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        .anger-type-card .type-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        .anger-type-card .type-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ============ CARDS ============ */
+        .card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 22px 24px;
+            margin: 16px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: box-shadow var(--transition);
+        }
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .card.accent-teal {
+            border-left: 4px solid var(--primary);
+        }
+        .card.accent-gold {
+            border-left: 4px solid var(--gold);
+        }
+        .card.accent-soft {
+            background: #fefefc;
+        }
+
+        /* ============ TABLE ============ */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            background: #fff;
+        }
+        table th,
+        table td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        table th {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        table tr:last-child td {
+            border-bottom: none;
+        }
+        table .wrong {
+            color: #c0392b;
+            font-weight: 600;
+        }
+        table .better {
+            color: #1e7a5e;
+            font-weight: 600;
+        }
+
+        /* ============ STORY BOX ============ */
+        .story-box {
+            background: #fffef9;
+            border: 2px dashed #e0d7c4;
+            border-radius: var(--radius-lg);
+            padding: 26px 28px;
+            margin: 18px 0;
+            font-style: italic;
+            color: #4a3f3a;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .story-box::before {
+            content: '📖';
+            position: absolute;
+            top: -18px;
+            left: 20px;
+            font-size: 1.6rem;
+            background: #fffef9;
+            padding: 0 8px;
+            border-radius: 50%;
+        }
+        .story-box p {
+            font-style: normal;
+            margin-bottom: 10px;
+            font-size: 0.96rem;
+            line-height: 1.8;
+        }
+        .story-box .highlight-thought {
+            background: #fef3e1;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8b5e2a;
+        }
+
+        /* ============ NAFS CARDS ============ */
+        .nafs-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            margin: 12px 0;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .nafs-card .nafs-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .nafs-card.nafs-ammarah .nafs-icon {
+            background: #fef0ed;
+        }
+        .nafs-card.nafs-lawwamah .nafs-icon {
+            background: #fef9ed;
+        }
+        .nafs-card.nafs-mutmainnah .nafs-icon {
+            background: #edf7f3;
+        }
+        .nafs-card .nafs-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #3a2a1a;
+            direction: rtl;
+        }
+        .nafs-card .nafs-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #3a3333;
+            margin-bottom: 4px;
+        }
+        .nafs-card .nafs-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ============ BRAIN SECTION ============ */
+        .brain-duo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .brain-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .brain-card .brain-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+        .brain-card h4 {
+            margin: 4px 0;
+            font-size: 1rem;
+        }
+        .brain-card.amygdala {
+            border-top: 4px solid #e8875c;
+        }
+        .brain-card.prefrontal {
+            border-top: 4px solid var(--primary);
+        }
+
+        /* ============ SKILL STEPS ============ */
+        .skill-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .skill-step {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 20px 16px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+            transition: all var(--transition);
+            cursor: default;
+        }
+        .skill-step:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .skill-step .step-num {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .skill-step.step-feel .step-num {
+            background: #5db89a;
+        }
+        .skill-step.step-pause .step-num {
+            background: #e8b94d;
+        }
+        .skill-step.step-choose .step-num {
+            background: var(--primary);
+        }
+        .skill-step h4 {
+            margin: 4px 0;
+            font-size: 0.95rem;
+        }
+        .skill-step p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ============ FEELINGS THERMOMETER ============ */
+        .thermometer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 18px 0;
+            text-align: center;
+        }
+        .thermo-column {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 18px 14px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+        .thermo-column h4 {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            color: #3a3333;
+        }
+        .thermo-bar-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .thermo-segment {
+            width: 60px;
+            height: 18px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .thermo-segment:hover {
+            border-color: #555;
+            transform: scaleX(1.12);
+            z-index: 2;
+        }
+        .thermo-segment.filled {
+            border-color: #333;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .thermo-segment.s10 {
+            background: #d4534a;
+        }
+        .thermo-segment.s9 {
+            background: #da5e50;
+        }
+        .thermo-segment.s8 {
+            background: #e0705a;
+        }
+        .thermo-segment.s7 {
+            background: #e8875c;
+        }
+        .thermo-segment.s6 {
+            background: #e8a04d;
+        }
+        .thermo-segment.s5 {
+            background: #e8b94d;
+        }
+        .thermo-segment.s4 {
+            background: #c5c45a;
+        }
+        .thermo-segment.s3 {
+            background: #8dbf7a;
+        }
+        .thermo-segment.s2 {
+            background: #5db89a;
+        }
+        .thermo-segment.s1 {
+            background: #4aaf8d;
+        }
+        .thermo-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            color: #3a3333;
+        }
+        .thermo-diff {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #1a5c4f;
+            min-height: 28px;
+        }
+        .thermo-reset {
+            background: #e8e3db;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: all var(--transition);
+            font-family: 'Nunito', sans-serif;
+            margin-top: 8px;
+        }
+        .thermo-reset:hover {
+            background: #d5cfc5;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ============ SABR SCALE (STATIC) ============ */
+        .sabr-scale-static {
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 36px;
+            margin: 16px 0;
+            box-shadow: var(--shadow-sm);
+        }
+        .sabr-scale-static .sabr-seg {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #fff;
+        }
+        .sabr-scale-static .sabr-seg.s1-3 {
+            background: var(--sabr-1-3);
+        }
+        .sabr-scale-static .sabr-seg.s4-6 {
+            background: var(--sabr-4-6);
+        }
+        .sabr-scale-static .sabr-seg.s7-8 {
+            background: var(--sabr-7-8);
+        }
+        .sabr-scale-static .sabr-seg.s9-10 {
+            background: var(--sabr-9-10);
+        }
+        .sabr-info {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* ============ MCQs ============ */
+        .mcq-option {
+            display: block;
+            padding: 10px 14px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid #e8e3db;
+            transition: all var(--transition);
+            font-size: 0.88rem;
+            background: #fefefc;
+            font-weight: 500;
+        }
+        .mcq-option:hover {
+            border-color: #c5c0b8;
+            background: #f9f8f5;
+        }
+        .mcq-option.selected-correct {
+            border-color: var(--green-correct) !important;
+            background: #e6f7ef !important;
+            font-weight: 700;
+            color: #1e6b3e;
+        }
+        .mcq-option.selected-incorrect {
+            border-color: var(--red-incorrect) !important;
+            background: #fdecea !important;
+            font-weight: 700;
+            color: #a33;
+        }
+        .mcq-option.show-correct {
+            border-color: var(--green-correct) !important;
+            background: #e6f7ef !important;
+            font-weight: 700;
+        }
+        .feedback {
+            font-size: 0.82rem;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* ============ AL-HALEEM CARD ============ */
+        .al-haleem-card {
+            background: linear-gradient(135deg, #f6fdfa 0%, #eaf7f3 100%);
+            border: 2px solid #b8dcd0;
+            border-radius: var(--radius-lg);
+            padding: 22px 24px;
+            text-align: center;
+            margin: 16px 0;
+            box-shadow: var(--shadow-md);
+        }
+        .al-haleem-card .haleem-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a5c4f;
+            direction: rtl;
+        }
+
+        .btn-save {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 24px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            font-family: 'Nunito', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        .btn-save:hover {
+            background: #1e6b55;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .save-confirm {
+            display: none;
+            color: #4caf84;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 0.85rem;
+        }
+        .save-confirm.show {
+            display: inline;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 28px;
+            z-index: 50;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition);
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .back-to-top:hover {
+            background: #1e6b55;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 900px) {
+            .main-content {
+                margin: 0 auto;
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .section:first-of-type {
+                padding-top: 75px;
+            }
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            .brain-duo,
+            .anger-types-duo,
+            .sunnah-steps-grid,
+            .thermometer-container {
+                grid-template-columns: 1fr;
+            }
+            .skill-steps {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 28px 16px;
+            }
+            .quran-box .arabic,
+            .hadith-box .hadith-arabic {
+                font-size: 1.3rem;
+            }
+            table {
+                font-size: 0.78rem;
+            }
+            table th,
+            table td {
+                padding: 8px 6px;
+            }
+            .back-to-top {
+                bottom: 16px;
+                right: 16px;
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.25rem;
+            }
+            .section {
+                padding: 22px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="mobile-header" id="mobileHeader">
+        <span class="mh-title">Lesson 1: My Heart Feels…</span>
+        <a href="app.html" target="_top" class="mh-back">← App</a>
+    </header>
+
+   
+    <main class="main-content" id="mainContent">
+
+        <!-- HERO -->
+        <section class="section section-hero" id="hero">
+            <a href="app.html" target="_top" style="display:inline-block;margin-bottom:18px;color:var(--primary);text-decoration:none;font-weight:700;font-size:0.88rem;">← Back to Nur al-Qur'an</a>
+            <span class="hero-badge">Lesson 1</span>
+            <h1 class="hero-title">My Heart Feels,<br>But My Feelings Do Not Lead Me</h1>
+            <p class="hero-subtitle"><strong>Program:</strong> Strong Heart, Wise Mind — Quranic Life Skills for Muslim Kids</p>
+            <p class="hero-age">Age Group: 10–13 &nbsp;|&nbsp; Core Value: كَظْمُ الغَيْظ &nbsp;|&nbsp; Skill: Feel → Pause → Choose</p>
+        </section>
+
+        <!-- 1. LESSON GOAL -->
+        <section class="section" id="lesson-goal">
+            <h2>1. Lesson Goal</h2>
+            <p>In this lesson, you will learn that <strong>feelings are not bad</strong>.</p>
+            <p>You may feel angry. You may feel sad. You may feel scared. You may feel embarrassed. You may feel disappointed.</p>
+            <p>These feelings do <strong>not</strong> make you weak. They do <strong>not</strong> make you a bad Muslim. They do <strong>not</strong> mean something is wrong with you.</p>
+            <p><strong>Feelings are signals.</strong> They tell you that something is happening inside your heart, mind, or body. But feelings are not always wise leaders.</p>
+            <div class="card accent-teal">
+                <p style="font-weight:700;margin-bottom:4px;color:#1a5c4f;">A Muslim child learns:</p>
+                <p style="font-size:1.05rem;color:#1a5c4f;"><strong>I can feel the feeling, pause, remember Allah, and choose what is right.</strong></p>
+            </div>
+        </section>
+
+        <!-- 2. REVELATION ANCHOR -->
+        <section class="section" id="revelation-anchor">
+            <h2>2. Revelation Anchor</h2>
+            <div class="quran-box">
+                <div class="ornament">❁ ❁ ❁</div>
+                <p class="arabic">وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ ۗ وَاللَّهُ يُحِبُّ الْمُحْسِنِينَ</p>
+                <p class="translation">"Those who control their anger and forgive people. And Allah loves those who do good."</p>
+                <p class="reference">Surah Ali 'Imran 3:134</p>
+                <div class="ornament">❁ ❁ ❁</div>
+            </div>
+        </section>
+
+        <!-- HADITH: TRUE STRENGTH -->
+        <section class="section" id="hadith-strength">
+            <h2>✨ Hadith: True Strength</h2>
+            <div class="hadith-box">
+                <div class="hadith-icon">💪</div>
+                <p class="hadith-arabic">لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ</p>
+                <p class="hadith-translation">"The strong person is not the one who throws people down. Rather, <strong>the truly strong person is the one who controls himself when angry</strong>."</p>
+                <p class="hadith-source">📜 Muttafaqun 'Alayh (Agreed Upon — Bukhari & Muslim)</p>
+            </div>
+            <p style="text-align:center;font-weight:600;color:#3a3333;">💡 In simple words: <em>The real hero is not the one who can wrestle others to the ground. The real hero is the one who can hold back anger and stay calm when upset.</em></p>
+        </section>
+
+        <!-- 3. VERSE MEANING -->
+        <section class="section" id="verse-meaning">
+            <h2>3. What This Verse Means for Me</h2>
+            <p>This verse does <strong>not</strong> say: <em>"Good people never feel angry."</em></p>
+            <p>It says that <strong>good people control their anger</strong>. This is very important.</p>
+            <p>Anger may enter the heart. But anger should not control the tongue. Anger should not control the hands. Anger should not control the choices.</p>
+            <div class="card accent-gold">
+                <p style="font-weight:700;">In Islam, strength is not only muscles. Strength is also <strong>self-control</strong>.</p>
+                <p>A strong heart does not mean a heart that never feels. A strong heart means a heart that <strong>feels, but still follows Allah's guidance</strong>.</p>
+            </div>
+        </section>
+
+        <!-- REWARD OF SELF-CONTROL -->
+        <section class="section" id="reward-kazm">
+            <h2>🎁 The Amazing Reward for Controlling Anger</h2>
+            <div class="reward-banner">
+                <div class="reward-star">🌟🏆🌟</div>
+                <p class="reward-text">The Prophet ﷺ said:</p>
+                <p class="reward-arabic" style="font-size:1rem;">مَنْ كَظَمَ غَيْظًا وَهُوَ قَادِرٌ عَلَى أَنْ يُنْفِذَهُ، دَعَاهُ اللَّهُ عَلَى رُؤُوسِ الْخَلَائِقِ يَوْمَ الْقِيَامَةِ حَتَّى يُخَيِّرَهُ مِنَ الْحُورِ الْعِينِ مَا شَاءَ</p>
+                <p class="reward-text" style="margin-top:8px;">"Whoever controls their anger when they are <strong>able to act on it</strong>, Allah will call them in front of all creation on the Day of Judgment and let them choose from the hoor al-'een whatever they wish."</p>
+                <p class="hadith-source">📜 Hasan Hadith — Reported by Abu Dawud & others</p>
+            </div>
+            <p style="text-align:center;font-weight:600;color:#6b4d0a;">💎 Imagine: holding back anger when you <em>could</em> take revenge — that moment of self-control earns you a <strong>huge, unimaginable reward</strong> from Allah!</p>
+        </section>
+
+        <!-- 4. BIG RULE -->
+        <section class="section" id="big-rule">
+            <h2>4. Big Rule of the Lesson</h2>
+            <div class="card accent-gold" style="text-align:center;">
+                <p style="font-size:1.2rem;font-weight:800;color:#5c3d1a;">💎 My feelings are messages, not commands.</p>
+                <p>A message gives me information. A command tells me what to do. Feelings can give me useful information, but I should not obey every feeling.</p>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Feeling</th><th>What It May Be Telling Me</th><th>Wrong Response</th><th>Better Response</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Anger</strong></td><td>Something feels unfair.</td><td class="wrong">I yell or hit.</td><td class="better">I pause and speak clearly.</td></tr>
+                        <tr><td><strong>Fear</strong></td><td>I need safety or help.</td><td class="wrong">I run from everything.</td><td class="better">I ask for help and take a wise step.</td></tr>
+                        <tr><td><strong>Sadness</strong></td><td>I lost something or need comfort.</td><td class="wrong">I give up completely.</td><td class="better">I talk to someone and make du'ā.</td></tr>
+                        <tr><td><strong>Embarrassment</strong></td><td>I care about what people think.</td><td class="wrong">I hide or lie.</td><td class="better">I learn and try again.</td></tr>
+                        <tr><td><strong>Jealousy</strong></td><td>I want something someone else has.</td><td class="wrong">I say something mean.</td><td class="better">I make du'ā and focus on my own blessings.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>So when a strong feeling comes, I ask:</strong></p>
+            <p>🔍 What is this feeling telling me? &nbsp;|&nbsp; ⚖️ Is it telling me to do something good or harmful? &nbsp;|&nbsp; 🤲 What choice would please Allah?</p>
+        </section>
+
+        <!-- 5. STORY -->
+        <section class="section" id="story">
+            <h2>5. Story: The Broken Project</h2>
+            <div class="story-box">
+                <p>Omar worked very hard on his science project. He used cardboard, glue, colors, and small labels. He stayed up late with his mother to finish it. He was excited to show it to his teacher.</p>
+                <p>When Omar got to school, he placed the project carefully on his desk. A few minutes later, another student rushed by and bumped into the desk. <strong>The project fell.</strong> One side broke. Some labels came off. The cardboard bent.</p>
+                <p>Omar froze. His face became hot. His fists became tight. His heart started beating fast.</p>
+                <p class="highlight-thought">A thought jumped into his mind: <em>"He ruined everything! I should push him!"</em></p>
+                <p>Omar felt angry. Very angry. For a moment, his anger wanted to become the leader.</p>
+                <p>But then Omar remembered: <strong>My feelings are messages, not commands.</strong></p>
+                <p>He took one step back. He breathed in slowly. He breathed out slowly. He looked at the project again. Then he said: <em>"I'm really upset. I worked hard on this. Please be careful."</em></p>
+                <p>The other student looked sorry and said: <em>"I'm sorry. I didn't mean to. I can help you fix it."</em></p>
+                <p>Omar was still upset. But he did not let anger control him. <strong>He protected his project. He protected his manners. And he protected his heart.</strong></p>
+            </div>
+        </section>
+
+        <!-- STORY QUIZ (MCQ) -->
+        <section class="section" id="story-quiz">
+            <h2>6. Think About the Story</h2>
+            <p>Answer these questions about Omar's story:</p>
+            <div id="storyQuizContainer"></div>
+        </section>
+
+        <!-- SEERAH STORY -->
+        <section class="section" id="seerah-story">
+            <h2>🕌 From the Seerah: "La Taghdab" — Do Not Get Angry</h2>
+            <div class="seerah-story">
+                <p>A man once came to the Prophet Muhammad ﷺ and said:</p>
+                <p style="font-weight:700;font-size:1.1rem;color:#3a2a1a;">"O Messenger of Allah, <strong>give me advice</strong>."</p>
+                <p>The Prophet ﷺ replied simply:</p>
+                <p class="seerah-highlight">«لَا تَغْضَبْ» — <strong>"Do not get angry."</strong></p>
+                <p>The man repeated his request several times, and each time the Prophet ﷺ gave the same answer:</p>
+                <p class="seerah-highlight">«لَا تَغْضَبْ» — <strong>"Do not get angry."</strong></p>
+                <p style="color:var(--text-light);margin-top:8px;">📜 Narrated by Al-Bukhari</p>
+                <p style="font-weight:600;color:#1a5c4f;margin-top:6px;">💡 This does not mean "never feel anger." It means: <em>do not let anger take over. Do not act upon it. Control it.</em> The Prophet ﷺ summarized the most important advice in just two words because controlling anger is <strong>the foundation of so much goodness</strong>.</p>
+            </div>
+        </section>
+
+        <!-- 7. HEART & NAFS -->
+        <section class="section" id="heart-nafs">
+            <h2>7. The Heart, the Nafs, and the Choice</h2>
+            <p>Islam teaches us that inside the human being there is a struggle. The Quran teaches us about the <strong>nafs</strong>.</p>
+
+            <div class="nafs-card nafs-ammarah">
+                <div class="nafs-icon">⚠️</div>
+                <div>
+                    <p class="nafs-arabic">النَّفْس الأَمَّارَة</p>
+                    <p class="nafs-label">The Nafs That Pushes Toward Wrong</p>
+                    <p class="nafs-desc">This part may say: "Do it. Say it. Get revenge." This does not mean you are evil — it means you must <strong>train yourself</strong>. A strong Muslim does not obey every push inside.</p>
+                </div>
+            </div>
+            <div class="nafs-card nafs-lawwamah">
+                <div class="nafs-icon">💭</div>
+                <div>
+                    <p class="nafs-arabic">النَّفْس اللَّوَّامَة</p>
+                    <p class="nafs-label">The Nafs That Blames and Wakes Up</p>
+                    <p class="nafs-desc">This part feels bad after doing wrong. It says: "That was not right. I should fix this." This feeling can be a mercy from Allah. It should help you <strong>repair, not destroy yourself</strong>.</p>
+                </div>
+            </div>
+            <div class="nafs-card nafs-mutmainnah">
+                <div class="nafs-icon">🕊️</div>
+                <div>
+                    <p class="nafs-arabic">النَّفْس المُطْمَئِنَّة</p>
+                    <p class="nafs-label">The Peaceful Nafs</p>
+                    <p class="nafs-desc">This is the calm soul that wants to obey Allah. It is not controlled by every desire, not shaken by every insult. It wants truth, patience, mercy, and Allah's pleasure. <strong>This is the kind of heart we are trying to build.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPES OF ANGER -->
+        <section class="section" id="anger-types">
+            <h2>⚖️ Two Types of Anger: Praiseworthy and Blameworthy</h2>
+            <p>Not all anger is the same! Islam teaches us to tell the difference:</p>
+            <div class="anger-types-duo">
+                <div class="anger-type-card mahmood">
+                    <div class="type-icon">🟢</div>
+                    <div class="type-label">Anger for Allah (Praiseworthy)</div>
+                    <p class="type-desc">When you see <strong>injustice, oppression, or disrespect toward Allah's rules</strong> — this anger is for the sake of Allah. The Prophet ﷺ only got angry when Allah's boundaries were violated. This anger pushes you to <strong>stand up for truth and protect others</strong>.</p>
+                </div>
+                <div class="anger-type-card madhmoom">
+                    <div class="type-icon">🔴</div>
+                    <div class="type-label">Anger for the Self (Blameworthy)</div>
+                    <p class="type-desc">When you get angry because your <strong>ego is hurt, your pride is wounded, or you want revenge</strong> — this is the anger we must control. It pushes you to insult, hit, break things, or hold grudges. <strong>This is the anger we learn to pause and manage.</strong></p>
+                </div>
+            </div>
+            <p style="text-align:center;font-weight:600;color:#3a3333;">🔑 The key question: <strong>Am I angry for Allah's sake, or for my own ego?</strong></p>
+        </section>
+
+        <!-- 8. THE BRAIN -->
+        <section class="section" id="brain">
+            <h2>8. The Brain Allah Created: Alarm and Wisdom</h2>
+            <p>Allah created your body and brain in an amazing way. When something upsetting happens, your brain may react very quickly.</p>
+            <div class="brain-duo">
+                <div class="brain-card amygdala">
+                    <div class="brain-emoji">🚨</div>
+                    <h4>Amygdala: The Alarm</h4>
+                    <p style="font-size:0.85rem;color:var(--text-muted);">The amygdala reacts quickly when you feel danger, anger, fear, or threat. It may make your body ready to fight, run away, or freeze. <strong>It is an alarm — but sometimes the alarm becomes too loud.</strong></p>
+                </div>
+                <div class="brain-card prefrontal">
+                    <div class="brain-emoji">🧠</div>
+                    <h4>Prefrontal Cortex: Wise Thinking</h4>
+                    <p style="font-size:0.85rem;color:var(--text-muted);">This part helps you think, pause, plan, choose, remember consequences, and use good judgment. <strong>Pausing gives this wise part time to help you choose better.</strong></p>
+                </div>
+            </div>
+            <div class="card accent-teal" style="text-align:center;">
+                <p style="font-weight:700;color:#1a5c4f;">🧠 My amygdala sounds the alarm.<br>🧠 My prefrontal cortex helps me choose wisely.<br>🤲 My iman reminds me what pleases Allah.</p>
+            </div>
+        </section>
+
+        <!-- 9. MAIN SKILL -->
+        <section class="section" id="main-skill">
+            <h2>9. The Main Skill: Feel — Pause — Choose</h2>
+            <p>When a strong feeling comes, use this skill:</p>
+            <div class="skill-steps">
+                <div class="skill-step step-feel">
+                    <div class="step-num">1</div>
+                    <h4>😌 Feel</h4>
+                    <p>Name the feeling quietly:<br><em>"I feel angry." "I feel sad."</em><br>You are noticing it, not obeying it.</p>
+                </div>
+                <div class="skill-step step-pause">
+                    <div class="step-num">2</div>
+                    <h4>⏸️ Pause</h4>
+                    <p>Breathe in (4 sec), hold (2 sec), breathe out (6 sec). Repeat 3 times.<br>Say: <em>"I need a minute."</em><br>Remember Allah.</p>
+                </div>
+                <div class="skill-step step-choose">
+                    <div class="step-num">3</div>
+                    <h4>✅ Choose</h4>
+                    <p>Ask: What choice will please Allah?<br>Speak calmly, walk away, make wudu, ask for help, forgive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUNNAH STEPS -->
+        <section class="section" id="sunnah-steps">
+            <h2>🤲 Practical Sunnah Steps When You Feel Angry</h2>
+            <p>The Prophet ﷺ taught us <strong>simple, powerful actions</strong> to cool down anger:</p>
+            <div class="sunnah-steps-grid">
+                <div class="sunnah-step-card">
+                    <div class="sunnah-emoji">🗣️</div>
+                    <div class="sunnah-title">Say the Protection</div>
+                    <p class="sunnah-arabic">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</p>
+                    <p class="sunnah-detail">"I seek refuge with Allah from the accursed shaytan."<br>Anger comes from shaytan — seeking Allah's protection pushes it away.</p>
+                </div>
+                <div class="sunnah-step-card">
+                    <div class="sunnah-emoji">🪑</div>
+                    <div class="sunnah-title">Change Your Position</div>
+                    <p class="sunnah-detail"><strong>If standing → sit down.</strong><br><strong>If sitting → lie down.</strong><br>Changing your body position helps your mind calm down.</p>
+                </div>
+                <div class="sunnah-step-card">
+                    <div class="sunnah-emoji">💧</div>
+                    <div class="sunnah-title">Make Wudu</div>
+                    <p class="sunnah-detail">Wash your face and hands with <strong>cool water</strong>.<br>Anger is from fire, and water puts out fire. Wudu cools the body and the heart.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADHKAR -->
+        <section class="section" id="adhkar">
+            <h2>📿 Short Adhkar & Duas for Moments of Anger</h2>
+            <div class="adhkar-card">
+                <p class="dua-arabic">اللَّهُمَّ أَلْهِمْنِي رُشْدِي وَقِنِي شَرَّ نَفْسِي</p>
+                <p class="dua-trans">"O Allah, inspire me with right guidance and protect me from the evil of my own self."</p>
+            </div>
+            <div class="adhkar-card">
+                <p class="dua-arabic">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ</p>
+                <p class="dua-trans">"O Ever-Living, O Sustainer, by Your mercy I seek help."</p>
+            </div>
+        </section>
+
+        <!-- 10. SABR SCALE (STATIC) -->
+        <section class="section" id="sabr-scale">
+            <h2>10. Sabr Scale: How Strong Is the Feeling?</h2>
+            <p>Use a scale from <strong>1 to 10</strong> to understand your feeling:</p>
+            <div class="sabr-scale-static">
+                <div class="sabr-seg s1-3">1–3 Small</div>
+                <div class="sabr-seg s4-6">4–6 Medium</div>
+                <div class="sabr-seg s7-8">7–8 Strong</div>
+                <div class="sabr-seg s9-10">9–10 Storm</div>
+            </div>
+            <p class="sabr-info"><strong>1–3 Small:</strong> Name it, breathe, keep going. <strong>4–6 Medium:</strong> Pause, use kind words. <strong>7–8 Strong:</strong> Step away, make wudu. <strong>9–10 Storm:</strong> Stop, tell a trusted adult, get help.</p>
+        </section>
+
+        <!-- FEELINGS THERMOMETER (INTERACTIVE) -->
+        <section class="section" id="feelings-thermometer">
+            <h2>🌡️ Feelings Thermometer: Before & After</h2>
+            <p>Click the bars to set your feeling level before and after using the skill:</p>
+            <div class="thermometer-container">
+                <div class="thermo-column" id="thermoBeforeCol">
+                    <h4>🔥 BEFORE</h4>
+                    <div class="thermo-bar-wrap" id="thermoBeforeBar"></div>
+                    <p class="thermo-label" id="thermoBeforeLabel">Level: —</p>
+                </div>
+                <div class="thermo-column" id="thermoAfterCol">
+                    <h4>❄️ AFTER</h4>
+                    <div class="thermo-bar-wrap" id="thermoAfterBar"></div>
+                    <p class="thermo-label" id="thermoAfterLabel">Level: —</p>
+                </div>
+            </div>
+            <p class="thermo-diff" id="thermoDiff"></p>
+            <button class="thermo-reset" id="thermoResetBtn">🔄 Reset Thermometer</button>
+        </section>
+
+        <!-- 11. ACTIVITY (MCQ) -->
+        <section class="section" id="activity">
+            <h2>11. Activity: Message or Command? (Choose the best answer)</h2>
+            <p>Read each situation and select the better choice:</p>
+            <div id="activityMcqContainer"></div>
+        </section>
+
+        <!-- 12. PERSONAL REFLECTION (IMMEDIATE) -->
+        <section class="section" id="reflection">
+            <h2>12. Personal Reflection</h2>
+            <p>Complete these sentences. Your answers are saved in your browser.</p>
+            <div class="card accent-soft">
+                <label>1. A strong feeling I had recently was:</label>
+                <textarea id="r1" style="width:100%;" rows="2" placeholder="e.g., anger, sadness..."></textarea>
+                <label>2. I felt it when:</label>
+                <textarea id="r2" style="width:100%;" rows="2" placeholder="Describe what happened..."></textarea>
+                <label>3. My body felt:</label>
+                <textarea id="r3" style="width:100%;" rows="2" placeholder="e.g., hot face, tight fists..."></textarea>
+                <label>4. The feeling wanted me to:</label>
+                <textarea id="r4" style="width:100%;" rows="2" placeholder="What did the feeling push you to do?"></textarea>
+                <label>5. With Allah's help, I made this good choice right away:</label>
+                <textarea id="r5" style="width:100%;" rows="2" placeholder="What did you choose to do instead?"></textarea>
+                <label>6. Right now, with Allah's help, I choose to:</label>
+                <textarea id="r6" style="width:100%;" rows="2" placeholder="Your immediate decision..."></textarea>
+                <button class="btn-save" onclick="saveReflection()">💾 Save My Reflection</button>
+                <span class="save-confirm" id="saveConfirm">✓ Saved!</span>
+            </div>
+        </section>
+
+        <!-- 13. QUICK QUIZ -->
+        <section class="section" id="quiz">
+            <h2>13. Quick Quiz</h2>
+            <p>Test what you've learned! <strong>Click on each answer</strong> to check.</p>
+            <div id="quizContainer"></div>
+            <div id="quizScore" style="display:none;"></div>
+            <button class="btn-save" id="resetQuizBtn" style="display:none;" onclick="resetQuiz()">🔄 Retry Quiz</button>
+        </section>
+
+        <!-- ALLAH AL-HALEEM -->
+        <section class="section" id="al-haleem">
+            <h2>🌿 Allah is Al-Haleem — The Most Forbearing</h2>
+            <div class="al-haleem-card">
+                <p class="haleem-arabic">ٱلْحَلِيمُ</p>
+                <p style="font-weight:700;font-size:1.1rem;color:#1a5c4f;">Al-Haleem — The Most Forbearing, The Most Patient</p>
+                <p>Allah does not rush to punish. He gives us time to think, repent, and return to Him. When I feel angry, I remember: <strong>"I love Allah Al-Haleem, and I want to be forbearing like my perfect role model."</strong></p>
+            </div>
+        </section>
+
+        <!-- 15. WEEKLY MISSION (UPDATED PLACEHOLDER) -->
+        <section class="section" id="weekly-mission">
+            <h2>15. Weekly Mission</h2>
+            <div class="card">
+                <p>This week, notice <strong>one strong feeling</strong>. Then fill in the blanks:</p>
+                <textarea id="missionReport" style="width:100%;" rows="3" placeholder="This week, I felt ______. My feeling was at level __. I paused by ______. I chose to ______."></textarea>
+                <button class="btn-save" onclick="saveMission()">💾 Save Mission Report</button>
+                <span class="save-confirm" id="missionConfirm">✓ Saved!</span>
+            </div>
+        </section>
+
+        <!-- PARENT DISCUSSION -->
+        <section class="section" id="parent-discussion">
+            <h2>16. Parent and Child Discussion</h2>
+            <div class="card accent-gold">
+                <p><strong>Parents can ask:</strong></p>
+                <ol>
+                    <li>What feeling is hardest for you to control?</li>
+                    <li>Where do you feel that emotion in your body?</li>
+                    <li>What helps you calm down?</li>
+                    <li>How does remembering Allah help when emotions are strong?</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section class="section" id="closing">
+            <h2>18. Closing Reminder</h2>
+            <p style="text-align:center;font-size:1.2rem;font-weight:700;">💚 My heart feels, but my feelings do not lead me.<br>Allah guides me, and I choose what is right. 💚</p>
+        </section>
+
+    </main>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        (function() {
+            const backToTop = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 500));
+            backToTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+            // ========== STORY MCQs ==========
+            const storyQuestions = [
+                { q:"1. What happened to Omar's project?", opts:["He forgot it at home","Another student bumped it and it broke","He gave it away","The teacher took it"], correct:1 },
+                { q:"2. What did Omar feel in his body?", opts:["Cold hands and sleepy eyes","Hot face, tight fists, fast heartbeat","He felt nothing","He started laughing"], correct:1 },
+                { q:"3. What angry thought came into his mind?", opts:["I should cry","I should push him","I should run away","I should break his project too"], correct:1 },
+                { q:"4. What could have happened if Omar followed his anger?", opts:["He would have been praised","He might have hurt someone and gotten in trouble","Nothing would change","He would feel happy"], correct:1 },
+                { q:"5. What did Omar do instead?", opts:["He pushed the student","He stayed silent and ignored it","He took a breath and said he was upset","He broke the project completely"], correct:2 },
+                { q:"6. Was Omar weak because he didn't push the other student?", opts:["Yes, he should have fought back","No, controlling anger shows real strength","It doesn't matter","Yes, he lost respect"], correct:1 },
+                { q:"7. How did Omar live the Quranic verse?", opts:["He forgave immediately and felt no anger","He controlled his anger and spoke respectfully","He yelled but later apologized","He ignored the situation"], correct:1 }
+            ];
+            const storyQuizContainer = document.getElementById('storyQuizContainer');
+            storyQuestions.forEach((q, idx) => {
+                const div = document.createElement('div'); div.className='card'; div.innerHTML=`<p><strong>${q.q}</strong></p>`;
+                q.opts.forEach((opt, optIdx) => {
+                    const optEl = document.createElement('div'); optEl.className='mcq-option'; optEl.textContent=opt;
+                    optEl.addEventListener('click', function(){
+                        if(this.parentElement.querySelector('.selected-correct')||this.parentElement.querySelector('.selected-incorrect')) return;
+                        const allOpts = this.parentElement.querySelectorAll('.mcq-option');
+                        if(optIdx === q.correct) { this.classList.add('selected-correct'); }
+                        else { this.classList.add('selected-incorrect'); allOpts[q.correct].classList.add('selected-correct'); }
+                        let fb = this.parentElement.querySelector('.feedback');
+                        if(!fb) { fb = document.createElement('p'); fb.className='feedback'; this.parentElement.appendChild(fb); }
+                        fb.textContent = optIdx===q.correct ? '✅ Correct!' : '❌ The correct answer is highlighted.';
+                        allOpts.forEach(o => o.style.pointerEvents='none');
+                    });
+                    div.appendChild(optEl);
+                });
+                storyQuizContainer.appendChild(div);
+            });
+
+            // ========== ACTIVITY MCQs ==========
+            const activityData = [
+                { scenario:"Layla feels angry because her brother took her pencil. The feeling says: \"Yell at him!\"", opts:["Yell at him","Say \"I feel upset. Please ask before taking my things.\"","Take his pencil","Ignore it and stay angry"], correct:1 },
+                { scenario:"Adam feels embarrassed after a wrong answer. The feeling says: \"Never raise your hand again!\"", opts:["Never participate again","Say \"I made a mistake, I can still learn.\"","Laugh at others","Blame the teacher"], correct:1 },
+                { scenario:"Sara feels scared before a test. The feeling says: \"Run away, don't try.\"", opts:["Skip the test","Review, make du'a, and try her best","Cry and give up","Cheat"], correct:1 },
+                { scenario:"Yusuf feels jealous of his friend's new bike. The feeling says: \"Say something mean.\"", opts:["Say something mean","Say \"MashaAllah\" and ask Allah to bless him too","Break the bike","Ignore his friend forever"], correct:1 }
+            ];
+            const activityContainer = document.getElementById('activityMcqContainer');
+            activityData.forEach((item, idx) => {
+                const div = document.createElement('div'); div.className='card'; div.innerHTML=`<p><strong>${item.scenario}</strong> What should they do?</p>`;
+                item.opts.forEach((opt, optIdx) => {
+                    const optEl = document.createElement('div'); optEl.className='mcq-option'; optEl.textContent=opt;
+                    optEl.addEventListener('click', function(){
+                        if(this.parentElement.querySelector('.selected-correct')||this.parentElement.querySelector('.selected-incorrect')) return;
+                        const allOpts = this.parentElement.querySelectorAll('.mcq-option');
+                        if(optIdx === item.correct) { this.classList.add('selected-correct'); }
+                        else { this.classList.add('selected-incorrect'); allOpts[item.correct].classList.add('selected-correct'); }
+                        let fb = this.parentElement.querySelector('.feedback');
+                        if(!fb) { fb = document.createElement('p'); fb.className='feedback'; this.parentElement.appendChild(fb); }
+                        fb.textContent = optIdx===item.correct ? '✅ Good choice!' : '❌ Better choice highlighted.';
+                        allOpts.forEach(o => o.style.pointerEvents='none');
+                    });
+                    div.appendChild(optEl);
+                });
+                activityContainer.appendChild(div);
+            });
+
+            // ========== FEELINGS THERMOMETER ==========
+            let thermoBefore=0, thermoAfter=0;
+            const beforeBar=document.getElementById('thermoBeforeBar'), afterBar=document.getElementById('thermoAfterBar');
+            const beforeLabel=document.getElementById('thermoBeforeLabel'), afterLabel=document.getElementById('thermoAfterLabel');
+            const thermoDiff=document.getElementById('thermoDiff');
+            function buildThermo(container, levelSetter) {
+                for(let i=10; i>=1; i--) {
+                    const seg = document.createElement('div'); seg.className='thermo-segment';
+                    seg.style.backgroundColor = ['#4aaf8d','#5db89a','#8dbf7a','#c5c45a','#e8b94d','#e8a04d','#e8875c','#e0705a','#da5e50','#d4534a'][i-1];
+                    seg.dataset.level=i; seg.addEventListener('click', (e) => { levelSetter(parseInt(e.target.dataset.level)); updateThermo(); });
+                    container.appendChild(seg);
+                }
+            }
+            function updateThermo() {
+                [beforeBar, afterBar].forEach(bar => bar.querySelectorAll('.thermo-segment').forEach(s => s.classList.remove('filled')));
+                beforeBar.querySelectorAll('.thermo-segment').forEach(s => { if(parseInt(s.dataset.level)<=thermoBefore) s.classList.add('filled'); });
+                afterBar.querySelectorAll('.thermo-segment').forEach(s => { if(parseInt(s.dataset.level)<=thermoAfter) s.classList.add('filled'); });
+                beforeLabel.textContent = 'Level: '+(thermoBefore||'—')+'/10';
+                afterLabel.textContent = 'Level: '+(thermoAfter||'—')+'/10';
+                if(thermoBefore && thermoAfter) {
+                    const diff = thermoBefore - thermoAfter;
+                    thermoDiff.innerHTML = diff>0 ? `❄️ Cooled down by ${diff} level(s)! 🌟` : (diff===0 ? '🤔 No change yet. Keep practicing!' : '⚠️ Feeling increased. Try a Sunnah step.');
+                } else { thermoDiff.textContent = ''; }
+            }
+            buildThermo(beforeBar, (val)=>{ thermoBefore=val; });
+            buildThermo(afterBar, (val)=>{ thermoAfter=val; });
+            document.getElementById('thermoResetBtn').addEventListener('click', ()=>{
+                thermoBefore=0; thermoAfter=0;
+                [beforeBar, afterBar].forEach(b => b.querySelectorAll('.thermo-segment').forEach(s => s.classList.remove('filled')));
+                beforeLabel.textContent='Level: —'; afterLabel.textContent='Level: —'; thermoDiff.textContent='';
+            });
+
+            // ========== QUIZ ==========
+            const quizData = [
+                { q:"1. Main rule?", opts:["Feelings are bad","Feelings are messages, not commands","Muslims never feel angry","Obey every feeling"], correct:1 },
+                { q:"2. Quran praises those who...", opts:["never feel","hide emotions","control anger and forgive","win arguments"], correct:2 },
+                { q:"3. True strength according to Hadith?", opts:["Wrestling","Controlling self when angry","Never feeling anger","Being loud"], correct:1 },
+                { q:"4. Amygdala is like?", opts:["Notebook","Alarm system","Muscle","Digestion"], correct:1 },
+                { q:"5. Prefrontal cortex helps with?", opts:["Thinking wisely","Making anger stronger","Heartbeat","Shouting"], correct:0 },
+                { q:"6. Self-control sentence?", opts:["I'm angry so I can hurt","I feel angry but I'll pause","I must hide sadness","If jealous, insult"], correct:1 },
+                { q:"7. Which nafs pushes to wrong?", opts:["Peaceful","Blaming","Al-Ammārah","None"], correct:2 },
+                { q:"8. Prophet's repeated advice?", opts:["Pray more","Do not get angry","Fast","Give charity"], correct:1 }
+            ];
+            let quizAnswered = new Array(quizData.length).fill(false), quizCorrect=0;
+            function buildQuiz() {
+                const container = document.getElementById('quizContainer'); container.innerHTML='';
+                quizAnswered.fill(false); quizCorrect=0;
+                document.getElementById('quizScore').style.display='none'; document.getElementById('resetQuizBtn').style.display='none';
+                quizData.forEach((item, idx) => {
+                    const div = document.createElement('div'); div.className='card'; div.innerHTML=`<p><strong>${item.q}</strong></p>`;
+                    item.opts.forEach((opt, optIdx) => {
+                        const optEl = document.createElement('div'); optEl.className='mcq-option'; optEl.textContent=opt;
+                        optEl.addEventListener('click', function(){
+                            if(quizAnswered[idx]) return; quizAnswered[idx]=true;
+                            const allOpts = div.querySelectorAll('.mcq-option');
+                            if(optIdx===item.correct) { optEl.classList.add('selected-correct'); quizCorrect++; }
+                            else { optEl.classList.add('selected-incorrect'); allOpts[item.correct].classList.add('selected-correct'); }
+                            allOpts.forEach(o => o.style.pointerEvents='none');
+                            let fb = div.querySelector('.feedback'); if(!fb) { fb=document.createElement('p'); fb.className='feedback'; div.appendChild(fb); }
+                            fb.textContent = optIdx===item.correct ? '✅ Correct!' : '❌ Correct answer highlighted.';
+                            if(quizAnswered.every(a=>a)) {
+                                const score = document.getElementById('quizScore'); score.style.display='block';
+                                score.innerHTML = `🎉 You scored <strong>${quizCorrect}/${quizData.length}</strong>! ${quizCorrect===quizData.length?'🌟 Perfect!':''}`;
+                                document.getElementById('resetQuizBtn').style.display='inline-block';
+                            }
+                        });
+                        div.appendChild(optEl);
+                    });
+                    container.appendChild(div);
+                });
+            }
+            window.resetQuiz = buildQuiz;
+            buildQuiz();
+
+            // Save reflection & mission
+            window.saveReflection = () => {
+                const data = {}; for(let i=1;i<=6;i++) data['r'+i]=document.getElementById('r'+i)?.value||'';
+                localStorage.setItem('lesson1_reflection', JSON.stringify(data));
+                document.getElementById('saveConfirm').classList.add('show'); setTimeout(()=>document.getElementById('saveConfirm').classList.remove('show'),2500);
+            };
+            window.saveMission = () => {
+                localStorage.setItem('lesson1_mission', document.getElementById('missionReport').value);
+                document.getElementById('missionConfirm').classList.add('show'); setTimeout(()=>document.getElementById('missionConfirm').classList.remove('show'),2500);
+            };
+            (function load(){
+                const ref = JSON.parse(localStorage.getItem('lesson1_reflection')||'{}');
+                for(let i=1;i<=6;i++) if(ref['r'+i]) { const el=document.getElementById('r'+i); if(el) el.value=ref['r'+i]; }
+                const miss = localStorage.getItem('lesson1_mission'); if(miss) document.getElementById('missionReport').value=miss;
+            })();
+
+            console.log('✅ Full Lesson 1 restored with all requested changes.');
+        })();
+    </script>
+</body>
+</html>
