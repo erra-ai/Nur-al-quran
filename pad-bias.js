@@ -4,7 +4,7 @@
 // Qualifiers are domain-appropriate, not generic filler.
 
 const fs = require('fs');
-const file = String.raw`C:\Users\Dell\Downloads\Quran and Hadith lesson\app.html`;
+const file = require('path').join(__dirname, 'app.html');
 let src = fs.readFileSync(file, 'utf8');
 
 // Smart qualifiers — short, natural, domain-appropriate

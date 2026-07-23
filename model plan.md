@@ -4,11 +4,23 @@
 
 This document is the implementation contract for adding or rebuilding a surah in the Nur al-Qur'an app. An AI coder must follow it together with:
 
-- `README-SOURCES.md` for sourcing, verification, rhetoric, and Meaning Bank rules.
-- `TRANSLATION-SOURCES.md` for approved translations and exact source names.
+- `README-SOURCES.md` for sourcing, verification, reading level, rhetoric, and Meaning Bank rules.
+- `TRANSLATION-SOURCES.md` for approved translations, exact source names, and how to fetch the tafsir.
 - `preflight.js`, `vocab-audit.js`, and `verify-translations.js` for automated checks.
 
-Do not treat an older surah object as automatically correct. Older modules may be incomplete or use an earlier model. Use a recently completed module such as Al-Buruj, At-Tariq, or Al-A'la as a structural reference, then apply every rule in this document.
+**Precedence.** Where this document and `README-SOURCES.md` disagree on sourcing, verification, or wording, **`README-SOURCES.md` wins** — it is kept current, and parts of this file are older. Report the contradiction rather than silently following one.
+
+Do not treat an older surah object as automatically correct. Most existing modules do not conform; `preflight.js` reports which. **Use Surah Al-'Alaq (96) as the reference module**, with Al-'Adiyat (100) as a second example. Al-'Alaq was rebuilt from nothing under the current rules and is the closest model for a new build. Al-Buruj, At-Tariq and Al-A'la are structurally sound but predate the single-tafsir and answerable-from-the-module rules — do not copy their sourcing.
+
+## How to build the module object
+
+Do not hand-edit thirty questions into a two-megabyte file. Build the module as a JavaScript object in a scratch script, serialise it, and splice it over the old object. Everything below was learned by getting it wrong at least once.
+
+- **Write every quiz answer at index 0 while drafting**, then spread the indexes afterwards by rotating each question's options. Trying to place answers at varied indexes by hand while also writing the content produces mistakes.
+- **Dry-run every scripted edit before writing.** Print what will change, verify it, then re-run with `--apply`. A script that rewrites app.html must prove it changed only what it meant to.
+- **After any rewrite, re-evaluate the array and compare against the original**: same module count, same question count, correct-answer *text* unchanged, option sets identical. Rotating options is safe only if you check the correct answer still points at the same string.
+- **Back up `app.html` before a scripted write.**
+- Regenerate nothing by hand that a check can verify: counts, banks, ayah coverage, category mix.
 
 ## Product Goal
 
@@ -62,14 +74,21 @@ Use the exact property names above. The engine derives the following activities 
 
 Do not draft the module from memory.
 
-1. Read the complete surah in at least three trusted English translations:
-   - The Clear Quran for primary student wording.
+1. **Fetch the tafsir first, before writing anything:**
+
+   ```sh
+   node fetch-tafsir.js <surah-number> <slug>    # e.g. node fetch-tafsir.js 100 adiyat
+   ```
+
+   This writes `tafsir-notes/<number>-<slug>-ibn-kathir.md` from the quran.com API. Every `verified` note you write must quote a line from that file. **Do not scrape tafsir web pages** — a summarised page returns a paraphrase, not his words, and paraphrases drop things silently. See `TRANSLATION-SOURCES.md`.
+2. Read the complete surah in at least three trusted English translations:
+   - ClearQuran (Talal Itani) for primary student wording. The graded presentation at quranfor.com/teens helps pitch the level for ages 10-12.
    - Saheeh International for closeness to the Arabic.
    - Abdul Haleem for natural English.
-2. Read trusted tafsir for the complete surah. Prefer Ibn Kathir, al-Sa'di, al-Jalalayn, Ma'arif al-Qur'an, or another source approved in `README-SOURCES.md`.
-3. Check every selected Arabic vocabulary form in the Qur'anic Arabic Corpus. Confirm the exact spelling, verse location, part of speech, morphology, and grammatical role.
-4. For every rhetoric question, locate a specific tafsir-supported point before writing the question or answer.
-5. Keep a list of the exact source and verse range used for each claim.
+3. **Use Tafsir Ibn Kathir only.** It is the single tafsir permitted in `verified.by`. Other tafsirs may inform your reading but must not be cited, and no scholar other than Ibn Kathir is ever named in student-facing text. See the single-tafsir rule in `README-SOURCES.md` for why: the audience is 10-12 and competing readings confuse rather than deepen.
+4. Check every selected Arabic vocabulary form in the Qur'anic Arabic Corpus. Confirm the exact spelling, verse location, part of speech, morphology, and grammatical role.
+5. For every rhetoric question, locate a specific tafsir-supported point before writing the question or answer.
+6. Keep a list of the exact source and verse range used for each claim.
 
 Quran.com word-by-word and the Qur'anic Arabic Corpus support language analysis, but they are not sufficient by themselves for tafsir, nazm, tone, imagery, or theological explanation.
 
@@ -107,8 +126,8 @@ Each vocabulary object must use this complete shape:
   },
   verified: {
     status: "verified",
-    by: "corpus.quran.com, Tafsir Ibn Kathir, and Tafsir Maududi",
-    note: "Meaning and grammar checked against the Corpus; teaching context checked against the named tafsir.",
+    by: "corpus.quran.com",
+    note: "Meaning and grammar checked against the Qur'anic Arabic Corpus word-by-word analysis for Al-Buruj 85:8.",
     checkedAt: "YYYY-MM-DD"
   },
   grammar: {
@@ -253,8 +272,8 @@ Each question must use:
   explanation: "They were present and watched what they did to the believers, so the passage removes any excuse of ignorance or accident.",
   verified: {
     status: "verified",
-    by: "Tafsir Ibn Kathir and Tafsir Maududi",
-    note: "Checked against both tafsirs on Al-Buruj 85:6-7.",
+    by: "tafsir Ibn Kathir",
+    note: "Ibn Kathir on Al-Buruj 85:6-7: <quote the sentence relied on, so the sign-off can be checked by someone who was not there>.",
     checkedAt: "YYYY-MM-DD"
   }
 }
@@ -298,7 +317,17 @@ Use exactly two questions from each area:
    - Why a particular image, oath, question, command, example, tone, or repetition suits the context.
    - What effect the style has on the listener.
 
-In the source array, interleave rhetoric questions at positions 4, 9, 14, 19, 24, and 29 when counted from 1. The engine shuffles the quiz at runtime, so the student encounters them randomly while the source data remains easy to audit.
+Do not pin rhetoric questions to fixed source positions. The rule is simply **6 rhetoric questions**, and **all 30 questions mixed** so no category is clustered together.
+
+Mixed means, in the source array:
+
+- No two rhetoric questions sit next to each other.
+- No more than 4 questions in a row share the same category.
+- The 6 rhetoric questions are spread across the whole array, not bunched into one half.
+
+The engine also shuffles question order at runtime, so a student meets them randomly regardless. Mixing the source as well keeps the file readable as a lesson rather than as four separate blocks.
+
+The limit of 4 targets modules that are genuinely blocked rather than merely uneven. Thirteen legacy modules run 10 questions of one category back to back; that is a different shape, not a small drift. A single run of 4 in an otherwise mixed quiz is acceptable.
 
 Each rhetoric question must:
 
@@ -344,7 +373,23 @@ Write one coherent paragraph that introduces the complete movement of the surah.
 - The central warning and/or promise.
 - The ending and how it completes the message.
 
-Do not turn the introduction into a verse-by-verse commentary. Do not disclose quiz answers using identical wording. Verify all interpretive statements against trusted tafsir.
+Do not turn the introduction into a verse-by-verse commentary. Do not disclose quiz answers using identical wording. Verify all interpretive statements against Ibn Kathir.
+
+The intro is the first text a student reads, so it carries its own sign-off. Every module with an `intro` must also have an `introVerified` block, in the same shape as `verified`, as a sibling field on the surah object:
+
+```js
+intro: "...",
+introVerified: {
+  status: "verified",
+  by: "tafsir Ibn Kathir",
+  note: "Summary of <surah> checked against Tafsir Ibn Kathir. <Anything deliberately left out, and why.>",
+  checkedAt: "YYYY-MM-DD"
+},
+```
+
+`verify-translations.js` reports missing intro sign-offs in their own section.
+
+Watch for wording copied between modules. A summary of Al-'Adiyat 100:9 once read "the graves will be overturned" — that is Al-Infitar 82:4, where the graves are the subject. In 100:9 the verb acts on **what is in** the graves. Two surahs with similar imagery is where this class of error comes from.
 
 ## Content Assembly Workflow
 
@@ -384,7 +429,7 @@ Also run a direct module-specific data validation that confirms:
 - Practice count equals vocabulary count.
 - Quiz count is exactly 30.
 - Category counts are exactly 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, and 6 Rhetoric.
-- Rhetoric source positions are exactly 4, 9, 14, 19, 24, and 29.
+- Exactly 6 rhetoric questions, and all 30 questions mixed: no two rhetoric adjacent, no more than 3 consecutive questions of one category, rhetoric spread across both halves.
 - The six rhetoric items contain exactly two questions from each required area.
 - Every quiz item has four options, a valid answer index, explanation, and verified metadata.
 - Correct-answer source indexes are balanced near `8, 8, 7, 7`.
@@ -414,20 +459,55 @@ Use the running app, not only static inspection. Test at minimum:
 
 Fix overflow, overlap, broken text, missing data, awkward blank sentence frames, and console errors before reporting completion.
 
+## Build Checklist
+
+Follow in order. Al-'Adiyat (100) in `app.html` is the worked example of every step.
+
+1. **Fetch the sources.** Do not write a word before both files exist.
+
+   ```sh
+   node fetch-tafsir.js <number> <slug>        # tafsir-notes/
+   node fetch-translation.js <number> <slug>   # translation-notes/
+   ```
+
+   Never scrape a tafsir page by hand.
+2. **Read** the surah in ClearQuran (Talal Itani), Saheeh International and Abdul Haleem, and read the whole tafsir file.
+3. **Count the ayahs** and take the vocabulary target from the chapter-size table. Fix this number before choosing any words.
+4. **Choose vocabulary** carrying the surah's main movement. Check each form in the Qur'anic Arabic Corpus for spelling, location, morphology and role.
+5. **Write vocabulary cards** with `source`, `verified`, and complete bilingual `grammar`.
+6. **Write one practice item per card.** `practice.length === vocabulary.length`.
+7. **Write the intro** plus its `introVerified` block.
+8. **Write 30 quiz questions**: 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, 6 Rhetoric. Give every rhetoric question a `rhetoricArea`, two from each of the three areas.
+9. **Check every question is answerable from the module** — surah, intro, translation, vocabulary cards. Nothing else. Tafsir verifies the answer; it is not something the student has read.
+10. **Spread the source answer indexes** ~8,8,7,7 and **mix the categories** so no more than 4 of one category sit in a row and no two rhetoric are adjacent.
+11. **Build** Meaning Blanks and Meaning Bank. Include **every ayah of the surah** in `fillBlanks.ayahs` and `fillBlanksEn.ayahs`, numbered from 1 with no gaps. Ayahs carrying no vocabulary word still appear, as plain `{ t: "..." }` segments. Order the Verses is generated from `fillBlanks.ayahs`, so an ayah omitted here vanishes from that activity too, silently. `preflight.js` checks this.
+12. **Run all three audits.** The new module must be clean even though older modules are not:
+
+    ```sh
+    node vocab-audit.js
+    node verify-translations.js
+    PREFLIGHT_STRICT_CONTRACT=1 PREFLIGHT_STRICT_LENGTH=1 node preflight.js
+    ```
+
+13. **Browser-verify** per the section above, desktop and mobile, no console errors.
+14. **Remove temporary scripts** unless they are being added deliberately as permanent tooling.
+
 ## Definition of Done
 
 A surah is complete only when:
 
 - Its full data object follows the current schema.
-- Its vocabulary count follows the chapter-size table.
+- Its vocabulary count follows the chapter-size table, and `practice.length === vocabulary.length`.
 - Vocabulary cards include beginner-friendly bilingual grammar teaching.
 - Practice, both banks, blanks, and verse order use the same vocabulary set.
-- The quiz has exactly 30 strong questions with the required category mix.
-- Exactly 6 tafsir-grounded Rhetoric questions cover the three required areas evenly.
+- The quiz has exactly 30 questions with the mix 12 / 7 / 5 / 6.
+- Exactly 6 Rhetoric questions, tagged `rhetoricArea`, two from each of the three areas, none labelled in the question text.
+- Every question is answerable from the module alone.
+- Every `verified` and `introVerified` note quotes the source line it rests on, and cites Ibn Kathir as the only tafsir.
 - No answer is exposed by length, tone, absurd distractors, or repeated filler.
-- All source and verification metadata is complete.
-- Automated module checks pass.
+- Source answer indexes are spread ~8,8,7,7 and the categories are mixed.
+- All three audits pass for this module, with `PREFLIGHT_STRICT_CONTRACT=1` and `PREFLIGHT_STRICT_LENGTH=1`.
 - Desktop and mobile browser checks pass without console errors.
 - Temporary generation or validation scripts have been removed unless intentionally added as permanent project tooling.
 
-When reporting completion, name the surah, summarize the counts, state which trusted tafsir was used, report the automated and browser checks, and identify the next surah in sequence.
+When reporting completion, name the surah, summarize the counts, confirm Ibn Kathir was the tafsir and name the `tafsir-notes/` file, report the automated and browser checks, and identify the next surah in sequence.
