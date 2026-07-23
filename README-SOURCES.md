@@ -467,6 +467,13 @@ node fetch-translation.js <num> <slug>        # Itani teen -> translation-notes/
 are leftover scripts that pad quiz options with generic filler — the weak
 wording the rules exist to remove. They will quietly damage a good module.
 
+`verify-quotes.js` is the starting point of the **Double-Check Workflow** in
+`model plan.md` — a required second-AI review pass that reads every note against
+the source files and catches what no script can (a real quote attached to the
+wrong question). The human does not do this pass; a reviewing AI does. See that
+section for the full steps and the honest-review rule (read the files, never
+judge from memory).
+
 ### `verify-quotes.js` is a reviewer aid, not a gate
 
 It lists the Ibn-Kathir and Itani sign-offs whose note shares no run of four

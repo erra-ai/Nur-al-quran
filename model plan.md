@@ -496,11 +496,10 @@ Follow in order. Al-'Adiyat (100) in `app.html` is the worked example of every s
     node verify-quotes.js <slug>     # reviewer aid — read its list by eye
     ```
 
-    `verify-quotes.js` is not a pass/fail gate. It lists the Ibn-Kathir/Itani
-    notes that do not share verbatim wording with the source files. Read each
-    one: it is an accurate paraphrase, an honestly-labelled inference, or an
-    invented claim, and only reading tells you which. A script cannot decide
-    this, so it is never skipped by trusting a green result — there is no green.
+    `verify-quotes.js` is not a pass/fail gate — it only starts the review. The
+    full review is the **Double-Check Workflow** below, a separate AI pass that
+    reads every note against the source files. It is a required step, not
+    optional, and the Definition of Done depends on it.
 
 13. **Do NOT run `pad-bias.js`.** It is still in the repo. It pads distractor
     options with generic filler ("in this world", "as a whole") — the exact weak
@@ -525,7 +524,73 @@ A surah is complete only when:
 - No answer is exposed by length, tone, absurd distractors, or repeated filler.
 - Source answer indexes are spread ~8,8,7,7 and the categories are mixed.
 - All three audits pass for this module, with `PREFLIGHT_STRICT_CONTRACT=1` and `PREFLIGHT_STRICT_LENGTH=1`.
+- **The Double-Check pass (below) has run and every problem it raised is fixed.**
 - Desktop and mobile browser checks pass without console errors.
 - Temporary generation or validation scripts have been removed unless intentionally added as permanent project tooling.
 
-When reporting completion, name the surah, summarize the counts, confirm Ibn Kathir was the tafsir and name the `tafsir-notes/` file, report the automated and browser checks, and identify the next surah in sequence.
+When reporting completion, name the surah, summarize the counts, confirm Ibn Kathir was the tafsir and name the `tafsir-notes/` file, report the automated and browser checks, confirm the Double-Check pass ran and what it changed, and identify the next surah in sequence.
+
+## Double-Check Workflow (a second AI reviews; the human does not)
+
+The mechanical audits check structure. They cannot check meaning — whether a
+real quote actually supports the answer it is attached to, or whether the
+simplified explanation drifted from the source. That needs reading with
+understanding, which an AI has and a script does not. So every module gets a
+**second AI pass** after it is built. This replaces manual human checking. The
+human's only role is to notice something off while using the app and fix it.
+
+**Run this as a fresh pass, ideally not the same context that built the module.**
+The reviewer's whole job is to distrust the build.
+
+### The one rule that keeps the review honest
+
+**Read the source files. Never judge from your own memory of the Qur'an or the
+tafsir.** A reviewer working from memory is no safer than the builder — it can
+wave through a wrong claim because it misremembers the tafsir the same way. The
+only valid comparison is against:
+
+- `tafsir-notes/<number>-<slug>-ibn-kathir.md`
+- `translation-notes/<number>-<slug>-itani-teens.md`
+
+If a claim cannot be confirmed in those files, it is not confirmed — no matter
+how sure the claim feels.
+
+### Steps
+
+1. Open both source files above and read them.
+2. Run `node verify-quotes.js <slug>`. It lists the notes with no verbatim
+   overlap — a starting shortlist, not the whole job.
+3. Read **all 30 questions, the intro, and every vocabulary card** against the
+   source files. verify-quotes only finds notes that share no words with the
+   source; it PASSES a real quote sitting under the wrong question, so the
+   shortlist is never enough on its own.
+4. For each explanation and its `verified` note, confirm all of these against
+   the FILES:
+   1. The note's quoted or paraphrased claim is actually in the source file.
+   2. The claim actually **supports the answer**. A real quote under the wrong
+      question is still wrong. (This is the failure a script cannot see.)
+   3. The kid-facing explanation means the same as the source; simplifying did
+      not change the meaning.
+   4. The cited verse number is the right one.
+   5. The question is answerable from the module alone — surah, intro,
+      translation, vocabulary cards — not from tafsir a student never read, and
+      not using a term (e.g. a technical word) the module never introduces.
+   6. No scholar is named in a question or its options.
+   7. Notes marked "inference" are reasoned connections, not invented facts
+      dressed up as a quote.
+5. Produce a numbered fix-list: which question, what is wrong, what the source
+   file actually says (quote it), and the fix.
+6. Apply the fixes, then re-run the audits and verify-quotes. The user does not
+   gate this list; the AI closes it out. Keep the fix-list in the completion
+   report so there is a record of what the review changed.
+
+### Worked example (why step 4.2 matters)
+
+In the An-Nas review, one Vocabulary question asked what النَّاس (people) means.
+Its note quoted a real Ibn Kathir passage — but that passage was about the three
+attributes Lord/King/God, not about the meaning of "people". `verify-quotes`
+passed it, because the quoted words genuinely exist in the source. Only reading
+for meaning caught that the real quote sat under the wrong question. The fix was
+in the same file: a different line ("the word An-Nas (the people)") did support
+it. That class of error — real quote, wrong question — is exactly what this pass
+exists to catch and the scripts never will.
