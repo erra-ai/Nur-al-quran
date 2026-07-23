@@ -452,7 +452,37 @@ chance. Measure, then report.
 node vocab-audit.js          # Layer 1 — Arabic root sources
 node verify-translations.js  # Layer 2 — translation verification tags
 node preflight.js            # question structure + Main Quiz Contract
+node verify-quotes.js <slug> # reviewer aid — notes to read by eye (see below)
 ```
+
+Helper tools (not audits):
+
+```sh
+node redistribute-answers.js <slug> --apply   # spread answers to ~8,8,7,7
+node fetch-tafsir.js <num> <slug>             # Ibn Kathir -> tafsir-notes/
+node fetch-translation.js <num> <slug>        # Itani teen -> translation-notes/
+```
+
+**Do not run `pad-bias.js`, `fix-distractors.js`, or `fix-final.js`.** They
+are leftover scripts that pad quiz options with generic filler — the weak
+wording the rules exist to remove. They will quietly damage a good module.
+
+### `verify-quotes.js` is a reviewer aid, not a gate
+
+It lists the Ibn-Kathir and Itani sign-offs whose note shares no run of four
+consecutive words with the source files. Each flagged note is one of three
+things, and only reading it tells you which:
+
+1. an accurate paraphrase of the source — fine
+2. an honestly-labelled cautious inference — fine
+3. an invented or altered claim — must be fixed
+
+A script cannot tell a paraphrase from a fabrication; both lack verbatim
+overlap. So this tool does not pass or fail — it shrinks the reading pass from
+"every note" to "just these few", and it will always catch a wholly invented
+note (which shares nothing with the source). When the four reference modules
+were checked, every flagged note was category 1 or 2 — the tool found no
+fabrication, which is the result to expect from an honest build.
 
 ### The audits used to lie — how, and what changed
 

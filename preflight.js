@@ -165,6 +165,26 @@ surahs.forEach(surah => {
 
   if (mixing.length) faults.push(`mixing: ${mixing.join(', ')}`);
 
+  // --- Vocabulary coverage: every card gets tested ---
+  // A student should be quizzed on each word they learned. There are 12
+  // Vocabulary questions, so a short surah (12 cards) can cover them all, and a
+  // long surah (14-16 cards) covers as many as there are questions. The rule:
+  // the DISTINCT cards named across the vocab questions must reach that maximum.
+  // Al-Falaq's original bug — two cards tested twice, two never — shows up here
+  // as fewer distinct cards covered than there are questions.
+  // (A single question may quote a phrase containing two cards, e.g.
+  // "بِرَبِّ الْفَلَقِ"; that is fine — it still contributes to coverage.)
+  const vocabQs = quiz.filter(q => q.category === 'Vocabulary');
+  if (vocabQs.length && vocab.length) {
+    const covered = new Set();
+    vocabQs.forEach(q => vocab.forEach(v => { if (q.q.includes(v.arabic)) covered.add(v.arabic); }));
+    const need = Math.min(vocab.length, vocabQs.length);
+    if (covered.size < need) {
+      const missing = vocab.map(v => v.arabic).filter(a => !covered.has(a));
+      faults.push(`vocabulary coverage: ${covered.size} of ${need} cards tested; not tested: ${missing.join(', ')}`);
+    }
+  }
+
   // --- Meaning Blanks / Meaning Bank ---
   // model plan.md: fillBlanks.ayahs must contain EVERY ayah of the surah, in
   // order, because Order the Verses is generated from this array. Ayahs with

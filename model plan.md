@@ -479,18 +479,36 @@ Follow in order. Al-'Adiyat (100) in `app.html` is the worked example of every s
 7. **Write the intro** plus its `introVerified` block.
 8. **Write 30 quiz questions**: 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, 6 Rhetoric. Give every rhetoric question a `rhetoricArea`, two from each of the three areas.
 9. **Check every question is answerable from the module** — surah, intro, translation, vocabulary cards. Nothing else. Tafsir verifies the answer; it is not something the student has read.
-10. **Spread the source answer indexes** ~8,8,7,7 and **mix the categories** so no more than 4 of one category sit in a row and no two rhetoric are adjacent.
+10. **Spread the source answer indexes** to ~8,8,7,7 with the tool — never by hand:
+
+    ```sh
+    node redistribute-answers.js <slug> --apply
+    ```
+
+    It rotates each question's options and moves the `answer` index to match, so the correct answer text is unchanged. Then **mix the categories** so no more than 4 of one category sit in a row and no two rhetoric are adjacent.
 11. **Build** Meaning Blanks and Meaning Bank. Include **every ayah of the surah** in `fillBlanks.ayahs` and `fillBlanksEn.ayahs`, numbered from 1 with no gaps. Ayahs carrying no vocabulary word still appear, as plain `{ t: "..." }` segments. Order the Verses is generated from `fillBlanks.ayahs`, so an ayah omitted here vanishes from that activity too, silently. `preflight.js` checks this.
-12. **Run all three audits.** The new module must be clean even though older modules are not:
+12. **Run the audits.** The new module must be clean even though older modules are not:
 
     ```sh
     node vocab-audit.js
     node verify-translations.js
     PREFLIGHT_STRICT_CONTRACT=1 PREFLIGHT_STRICT_LENGTH=1 node preflight.js
+    node verify-quotes.js <slug>     # reviewer aid — read its list by eye
     ```
 
-13. **Browser-verify** per the section above, desktop and mobile, no console errors.
-14. **Remove temporary scripts** unless they are being added deliberately as permanent tooling.
+    `verify-quotes.js` is not a pass/fail gate. It lists the Ibn-Kathir/Itani
+    notes that do not share verbatim wording with the source files. Read each
+    one: it is an accurate paraphrase, an honestly-labelled inference, or an
+    invented claim, and only reading tells you which. A script cannot decide
+    this, so it is never skipped by trusting a green result — there is no green.
+
+13. **Do NOT run `pad-bias.js`.** It is still in the repo. It pads distractor
+    options with generic filler ("in this world", "as a whole") — the exact weak
+    wording the rules tell you to remove. Same for `fix-distractors.js` and
+    `fix-final.js`. Leave all three alone.
+
+14. **Browser-verify** per the section above, desktop and mobile, no console errors.
+15. **Remove temporary scripts** unless they are being added deliberately as permanent tooling.
 
 ## Definition of Done
 
