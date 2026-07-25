@@ -1,0 +1,728 @@
+/* ------- HERO ------- */
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 56px 28px 44px;
+    margin-bottom: 32px;
+    border-radius: 24px;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(217, 185, 107, 0.10), transparent 70%),
+      radial-gradient(circle at 20% 80%, rgba(45, 138, 122, 0.15), transparent 50%),
+      radial-gradient(circle at 80% 30%, rgba(184, 134, 45, 0.08), transparent 45%),
+      linear-gradient(160deg, #143824 0%, #1a4a30 40%, #133522 100%);
+    color: #f9f5ed;
+    box-shadow: 0 12px 48px rgba(10, 40, 25, 0.35), inset 0 1px 0 rgba(217, 185, 107, 0.12);
+    overflow: hidden;
+  }
+
+  /* Subtle geometric pattern overlay */
+  .hero-pattern {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.04; z-index: 0;
+    background-image:
+      repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(217,185,107,0.3) 10deg, transparent 20deg);
+    background-size: 120px 120px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+  }
+
+  /* Thin gold inner frame */
+  .hero-frame {
+    position: absolute; inset: 12px; border-radius: 16px;
+    border: 1px solid rgba(217, 185, 107, 0.15);
+    pointer-events: none; z-index: 0;
+  }
+
+  /* Soft glow behind content */
+  .hero-glow {
+    position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);
+    width: 60%; height: 60%; border-radius: 50%; pointer-events: none; z-index: 0;
+    background: radial-gradient(circle, rgba(217, 185, 107, 0.06), transparent 70%);
+    filter: blur(30px);
+  }
+
+  .hero > *:not(.hero-pattern):not(.hero-frame):not(.hero-glow) {
+    position: relative; z-index: 1;
+  }
+
+  .hero .basmala {
+    font-family: "Amiri", serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: rgba(217, 185, 107, 0.85);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+  .hero .title-kicker {
+    font-size: clamp(0.72rem, 1.5vw, 0.82rem);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(217, 185, 107, 0.6);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-family: "Cormorant Garamond", "Amiri", serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    color: #fff;
+  }
+  .hero h1 .accent { color: var(--gold-soft); }
+  .hero .title-kicker {
+    color: rgba(251, 247, 236, 0.84);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin: 8px 0 6px;
+  }
+  .hero p {
+    color: #efe6ce;
+    max-width: 680px;
+    margin: 10px auto 0;
+    font-size: 1.05rem;
+  }
+  .hero h1 .accent { color: rgba(217, 185, 107, 0.9); font-style: italic; }
+
+  /* Gold divider — replaces the ornament SVG */
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px auto 8px;
+  }
+  .hero-divider .hd-line {
+    height: 1px;
+    width: clamp(40px, 12vw, 80px);
+    background: linear-gradient(90deg, transparent, rgba(217, 185, 107, 0.5), transparent);
+  }
+  .hero-divider .hd-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(217, 185, 107, 0.7);
+    box-shadow: 0 0 8px rgba(217, 185, 107, 0.3);
+  }
+  .hero-divider .hd-diamond {
+    width: 8px; height: 8px;
+    transform: rotate(45deg);
+    border: 1px solid rgba(217, 185, 107, 0.6);
+  }
+
+  .hero .stats {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+  }
+  .hero .stats span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(217, 185, 107, 0.18);
+    padding: 7px 16px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+  }
+  .hero .stats b { color: rgba(217, 185, 107, 0.85); }
+
+  /* ------- DIVIDER ------- */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0 20px;
+    color: var(--gold);
+  }
+  .divider svg { display: block; }
+
+  header.app-header { display: none; }
+
+  .arabic {
+    font-family: "Amiri", "Scheherazade New", "Traditional Arabic", serif;
+    direction: rtl;
+    unicode-bidi: isolate;
+  }
+
+  /* ------- BUTTONS ------- */
+  button {
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 12px rgba(176, 138, 62, 0.25);
+  }
+  button:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(176, 138, 62, 0.32); }
+  button:active { transform: translateY(0); }
+  button.secondary {
+    background: transparent;
+    color: var(--green);
+    border-color: var(--green);
+    box-shadow: none;
+  }
+  button.secondary:hover { background: var(--green); color: #fff; box-shadow: 0 6px 14px rgba(31, 81, 50, 0.25); }
+  button.ghost {
+    background: transparent;
+    color: var(--muted);
+    border-color: transparent;
+    box-shadow: none;
+  }
+  button.ghost:hover { background: var(--cream-2); color: var(--green); }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ------- CARDS ------- */
+  .card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--cream-3);
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: var(--shadow);
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .card.elevated { box-shadow: var(--shadow-lg); }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(217,185,107,0.55), rgba(31,81,50,0.0) 40%, rgba(217,185,107,0.45));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* ------- HOME / SURAH GRID ------- */
+  .home-section h2 {
+    color: var(--green-deep);
+    margin: 0 0 6px;
+    font-size: 1.65rem;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", "Amiri", serif;
+  }
+  .home-section .lede {
+    color: var(--muted);
+    margin: 0 0 18px;
+    font-size: 0.98rem;
+  }
+  .surah-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .surah-card {
+    position: relative;
+    background:
+      linear-gradient(180deg, #ffffff, var(--cream));
+    border: 1px solid var(--cream-3);
+    border-radius: 22px;
+    padding: 14px 14px 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .surah-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  .surah-card::after {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(217,185,107,0.45), transparent 70%);
+  }
+  .surah-card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 1;
+  }
+  .surah-card .num {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .surah-card .english-name {
+    color: var(--green-deep);
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+  .surah-card .arabic-name {
+    font-size: 1.7rem;
+    color: var(--green);
+    margin: 6px 0 0;
+    line-height: 1.2;
+    z-index: 1;
+  }
+  .surah-card .title {
+    color: var(--green-soft);
+    font-style: italic;
+    font-size: 0.92rem;
+    margin-top: 4px;
+    z-index: 1;
+  }
+  .surah-card .desc {
+    color: var(--ink);
+    font-size: 0.82rem;
+    margin: 6px 0 8px;
+    z-index: 1;
+  }
+  .surah-card .status {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+  .surah-card .status .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    background: var(--cream-2);
+    color: var(--green-deep);
+    font-weight: 600;
+  }
+  .surah-card .status .badge.done { background: #e6f1ea; color: var(--good); }
+  .surah-card .status .badge::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.8;
+  }
+  .surah-card .actions {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+  }
+
+  /* ------- INTRO ------- */
+  .intro-card .ribbon {
+    background: linear-gradient(135deg, var(--cream-2), #fff);
+    border: 1px dashed var(--gold);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    color: var(--green-deep);
+    font-size: 0.95rem;
+  }
+  .intro-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--cream-2);
+  }
+  .intro-title h2 {
+    color: var(--green);
+    margin: 0;
+    font-size: 1.85rem;
+    font-family: "Cormorant Garamond", "Amiri", serif;
+    font-weight: 700;
+  }
+  .intro-title .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
+  .intro-title .arabic-name {
+    font-size: 2.6rem;
+    color: var(--gold-deep);
+    line-height: 1.2;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .intro-body {
+    color: var(--ink);
+    margin: 16px 0 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  .intro-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--cream-2);
+  }
+
+  /* ------- VOCAB CARDS (flip) ------- */
+  .vocab-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .vocab-wrap { perspective: 1200px; }
+  .vocab-card {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+    cursor: pointer;
+  }
+  .vocab-card.flipped { transform: rotateY(180deg); }
+  .vocab-card.has-grammar { min-height: 520px; }
+  .vocab-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--cream-3);
+  }
+  .vocab-face.front {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(217,185,107,0.45), transparent 60%),
+      linear-gradient(180deg, #fff, var(--cream));
+    color: var(--green-deep);
+  }
+  .vocab-face.back {
+    background:
+      linear-gradient(160deg, var(--green-deep), var(--green)),
+      radial-gradient(circle at 100% 100%, rgba(217,185,107,0.25), transparent 50%);
+    color: #fbf7ec;
+    transform: rotateY(180deg);
+  }
+  .vocab-face .label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    opacity: 0.75;
+  }
+  .vocab-face .label.gold { color: var(--gold-soft); }
+  .vocab-face .arabic-word {
+    font-family: "Amiri", serif;
+    font-size: 4rem;
+    color: var(--green-deep);
+    margin: 10px 0 18px;
+    line-height: 1.3;
+  }
+  .vocab-face .meaning {
+    font-size: 1.25rem;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .vocab-grammar {
+    width: min(100%, 560px);
+    margin: 20px auto 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(31, 92, 63, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.58);
+    text-align: left;
+  }
+  .vocab-grammar-title {
+    color: var(--green-deep);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .vocab-grammar-title .arabic-grammar {
+    font-family: "Amiri", serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  .vocab-grammar-note {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .vocab-face .verse {
+    color: var(--green-soft);
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 12px;
+    max-width: 520px;
+    margin-left: auto; margin-right: auto;
+  }
+  .vocab-face .hint {
+    margin-top: 18px;
+    padding: 10px 16px;
+    background: rgba(251, 247, 236, 0.12);
+    border: 1px dashed var(--gold-soft);
+    border-radius: 12px;
+    color: #f3ead4;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+  .vocab-card .flip-hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+  .vocab-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* ------- QUIZ / PRACTICE ------- */
+  .quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .quiz-meta .category {
+    background: linear-gradient(135deg, var(--green-deep), var(--green-soft));
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 8px rgba(31, 81, 50, 0.18);
+  }
+  .quiz-meta .score {
+    color: var(--gold-deep);
+    font-weight: 700;
+  }
+  .progress {
+    height: 10px;
+    background: var(--cream-3);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .progress > div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold-deep));
+    width: 0%;
+    transition: width 0.4s ease;
+    border-radius: 999px;
+  }
+  .question-text {
+    font-size: 1.2rem;
+    color: var(--green-deep);
+    margin: 4px 0 20px;
+    font-weight: 600;
+  }
+  .arabic-q {
+    font-size: 1.7rem;
+    color: var(--green-deep);
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+  .options { display: grid; gap: 10px; }
+  .option {
+    text-align: left;
+    background: #fff;
+    border: 1.5px solid var(--cream-3);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.08s ease;
+    position: relative;
+    line-height: 1.4;
+  }
+  .option:hover { background: var(--cream); border-color: var(--gold-soft); }
+  .option:active { transform: scale(0.99); }
+  .option .letter {
+    display: inline-block;
+    width: 26px; height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--cream-2);
+    color: var(--gold-deep);
+    font-weight: 700;
+    margin-right: 12px;
+    font-size: 0.82rem;
+  }
+  .option.selected { border-color: var(--gold); background: var(--cream); }
+  .option.selected .letter { background: var(--gold); color: #fff; }
+  .option.correct { border-color: var(--good); background: #eaf5ee; color: var(--good); }
+  .option.correct .letter { background: var(--good); color: #fff; }
+  .option.wrong { border-color: var(--danger); background: #f7e6e6; color: var(--danger); }
+  .option.wrong .letter { background: var(--danger); color: #fff; }
+  .option:disabled { cursor: default; }
+
+  .feedback {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--cream-2);
+    color: var(--ink);
+    font-size: 1rem;
+    border-left: 4px solid var(--gold);
+  }
+  .feedback.good { background: #eaf5ee; color: var(--good); border-color: var(--good); }
+  .feedback.bad { background: #f7e6e6; color: var(--danger); border-color: var(--danger); }
+  .feedback b { color: inherit; }
+
+  .quiz-controls {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* ------- RESULTS ------- */
+  .result-headline {
+    text-align: center;
+    background:
+      linear-gradient(180deg, #fff, var(--cream));
+  }
+  .result-headline .trophy {
+    width: 78px; height: 78px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: grid; place-items: center;
+    background: radial-gradient(circle, var(--gold-soft), var(--gold) 60%, var(--gold-deep));
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(176, 138, 62, 0.4);
+  }
+  .result-headline h2 {
+    color: var(--green-deep);
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond", "Amiri", serif;
+    font-weight: 700;
+  }
+  .result-headline .pct {
+    font-size: 2.8rem;
+    color: var(--gold-deep);
+    margin: 8px 0 4px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-family: "Cormorant Garamond", "Amiri", serif;
+  }
+  .result-headline .level {
+    color: var(--green-soft);
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .result-headline .surah-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  .review-list { margin-top: 18px; display: grid; gap: 14px; }
+  .review-item .qi-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .review-item .qi-q { color: var(--green-deep); font-weight: 600; margin: 6px 0; font-size: 1.05rem; }
+  .review-item .qi-row-answers { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.94rem; margin-bottom: 6px; }
+  .review-item .qi-row-answers span.you { color: var(--danger); }
+  .review-item .qi-row-answers span.right { color: var(--good); }
+  .review-item .qi-row-answers b { font-weight: 700; }
+  .actions-center {
+    text-align: center;
+    margin-top: 22px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ------- UTILITY ------- */
+  .hidden { display: none !important; }
+  .muted { color: var(--muted); }
+  .small { font-size: 0.85rem; }
+  .center { text-align: center; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 18px;
+    color: var(--green-deep);
+  }
+  .section-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", "Amiri", serif;
+    color: var(--green-deep);
+  }
+  .section-title .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold-soft), transparent);
+  }
+
+  /* ------- FOOTER ------- */
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cream-3);
+  }
+  footer .arabic-foot {
+    font-family: "Amiri", serif;
+    color: var(--gold-deep);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  /* ------- ANIMATIONS ------- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card, .surah-card { animation: fadeUp 0.45s ease both; }
+
+  @keyframes pop {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .result-headline .trophy { animation: pop 0.6s cubic-bezier(.2,.9,.3,1.4) both; }

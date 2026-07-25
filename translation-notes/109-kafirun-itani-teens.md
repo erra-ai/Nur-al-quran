@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 109, Al-Kafirun
+# ClearQuran (Talal Itani) — teen level — Surah 109
 
 Source: https://www.quranfor.com/teens/109
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 7
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

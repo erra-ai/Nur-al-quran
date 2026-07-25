@@ -6,21 +6,22 @@ This document is the implementation contract for adding or rebuilding a surah in
 
 - `README-SOURCES.md` for sourcing, verification, reading level, rhetoric, and Meaning Bank rules.
 - `TRANSLATION-SOURCES.md` for approved translations, exact source names, and how to fetch the tafsir.
-- `preflight.js`, `vocab-audit.js`, and `verify-translations.js` for automated checks.
+- `src/data/README.md` for file placement and the reusable AI handoff.
+- `audit-surah.js` for the chapter-specific completion gate.
+- `preflight.js`, `vocab-audit.js`, and `verify-translations.js` for repository-wide health checks.
 
-**Precedence.** Where this document and `README-SOURCES.md` disagree on sourcing, verification, or wording, **`README-SOURCES.md` wins** — it is kept current, and parts of this file are older. Report the contradiction rather than silently following one.
+**Precedence.** This file is the canonical implementation contract. `README-SOURCES.md` owns source and verification details, `TRANSLATION-SOURCES.md` owns approved edition names and retrieval details, and `src/data/README.md` owns file placement. Those files must refine this contract, not contradict it. If a contradiction is found, stop the build, correct the documentation, and then continue under the corrected contract.
 
-Do not treat an older surah object as automatically correct. Most existing modules do not conform; `preflight.js` reports which. **Use Surah Al-'Alaq (96) as the reference module**, with Al-'Adiyat (100) as a second example. Al-'Alaq was rebuilt from nothing under the current rules and is the closest model for a new build. Al-Buruj, At-Tariq and Al-A'la are structurally sound but predate the single-tafsir and answerable-from-the-module rules — do not copy their sourcing.
+Do not treat an existing surah as proof that a rule is optional. Examples help with schema shape only; the written contract and the target audit always win.
 
-## How to build the module object
+## Where to build the module
 
-Do not hand-edit thirty questions into a two-megabyte file. Build the module as a JavaScript object in a scratch script, serialise it, and splice it over the old object. Everything below was learned by getting it wrong at least once.
+Each surah lives in its own file under `src/data/surahs/`. Build or rebuild only the target surah file. Do not place lesson data in `app.html` or `src/app.js`, and do not edit shared application behavior unless the requested work genuinely changes that behavior.
 
-- **Write every quiz answer at index 0 while drafting**, then spread the indexes afterwards by rotating each question's options. Trying to place answers at varied indexes by hand while also writing the content produces mistakes.
-- **Dry-run every scripted edit before writing.** Print what will change, verify it, then re-run with `--apply`. A script that rewrites app.html must prove it changed only what it meant to.
-- **After any rewrite, re-evaluate the array and compare against the original**: same module count, same question count, correct-answer *text* unchanged, option sets identical. Rotating options is safe only if you check the correct answer still points at the same string.
-- **Back up `app.html` before a scripted write.**
-- Regenerate nothing by hand that a check can verify: counts, banks, ayah coverage, category mix.
+- Write every quiz answer at index `0` while drafting, then use `node redistribute-answers.js <slug> --apply` to spread the answer indexes.
+- Dry-run any scripted rewrite before applying it, and prove that it changed only the target module.
+- After a rewrite, confirm that the correct answer text and option set for every question are unchanged.
+- Regenerate nothing by hand that a check can verify: counts, banks, ayah coverage, category order, and answer spread.
 
 ## Product Goal
 
@@ -40,7 +41,7 @@ Student-facing writing must be:
 
 ## Technical Boundary
 
-The app is a single-page application in `app.html`, using HTML, CSS, and vanilla JavaScript. The reusable rendering engine already exists. A normal surah-building task should add or replace one object in the `surahs` array and should not create a second engine.
+The app is a single-page application using HTML, CSS, native JavaScript modules, and no framework. `app.html` is only the page shell. `src/app.js` is the small view router; state and persistence live in `src/state.js`; navigation lives in `src/navigation.js`; activity renderers live under `src/activities/`; and shared styling lives in `src/styles/app.css`. Every surah has one lesson-data file under `src/data/surahs/`. A normal surah-building task should add or replace one surah file and its registry entry; it should not edit the rendering engine or put lesson data back into `app.html`.
 
 Do not change global UI behavior, CSS, navigation, scoring, or another surah unless the requested module cannot work correctly without a narrowly scoped engine fix.
 
@@ -285,7 +286,7 @@ Rules:
 - `answer` is the zero-based index of the correct option.
 - `explanation` teaches why the answer is correct; it does not merely restate it.
 - Every question has valid `verified` metadata, not only rhetoric questions.
-- The runtime shuffles both question order and answer choices, so metadata must remain attached to the question object and `answer` must point to the unshuffled source options.
+- The runtime preserves the learning-stage order, shuffles questions only within each category, and shuffles answer choices. Metadata must remain attached to the question object and `answer` must point to the unshuffled source options.
 
 ### Vocabulary Questions
 
@@ -317,17 +318,16 @@ Use exactly two questions from each area:
    - Why a particular image, oath, question, command, example, tone, or repetition suits the context.
    - What effect the style has on the listener.
 
-Do not pin rhetoric questions to fixed source positions. The rule is simply **6 rhetoric questions**, and **all 30 questions mixed** so no category is clustered together.
+Do not pin rhetoric questions to the old fixed positions 4, 9, 14, 19, 24, and 29. Use a progressive four-stage sequence instead:
 
-Mixed means, in the source array:
+1. Questions 1-12: `Vocabulary`
+2. Questions 13-19: `Comprehension`
+3. Questions 20-24: `Critical Thinking`
+4. Questions 25-30: `Rhetoric`
 
-- No two rhetoric questions sit next to each other.
-- No more than 4 questions in a row share the same category.
-- The 6 rhetoric questions are spread across the whole array, not bunched into one half.
+This sequence is deliberate scaffolding. Students first establish the core words, then use those words to understand the passage, then reason about its message, and only then examine deeper translation, structure, and style.
 
-The engine also shuffles question order at runtime, so a student meets them randomly regardless. Mixing the source as well keeps the file readable as a lesson rather than as four separate blocks.
-
-The limit of 4 targets modules that are genuinely blocked rather than merely uneven. Thirteen legacy modules run 10 questions of one category back to back; that is a different shape, not a small drift. A single run of 4 in an otherwise mixed quiz is acceptable.
+The student-facing quiz must use this category order. At runtime, questions are grouped by category and shuffled only within their own stage, while the four stages remain in the order above. Answer choices continue to be shuffled for every question. A source array may already be grouped in this order for readability, but the runtime does not rely on that arrangement.
 
 Each rhetoric question must:
 
@@ -395,7 +395,7 @@ Watch for wording copied between modules. A summary of Al-'Adiyat 100:9 once rea
 
 Follow this order for each surah:
 
-1. Inspect the existing surah object and engine behavior.
+1. Inspect the existing surah file under `src/data/surahs/`. Inspect shared files under `src/` only when the task changes application behavior.
 2. Confirm the surah's ayah count and choose the vocabulary target from the table.
 3. Research the complete surah using approved translations, Corpus morphology, and trusted tafsir.
 4. Select the exact core vocabulary set.
@@ -404,7 +404,7 @@ Follow this order for each surah:
 7. Build complete `fillBlanks` Arabic ayahs with exactly the selected words blanked.
 8. Build complete `fillBlanksEn` English ayahs with exactly the selected meanings blanked.
 9. Build the 30-question quiz using the exact category mix.
-10. Write the 6 tafsir-grounded rhetoric questions and interleave them at the required source positions.
+10. Place the 6 tafsir-grounded rhetoric questions after Vocabulary, Comprehension, and Critical Thinking as the final learning stage.
 11. Audit answer balance, option length, clarity, and theological respect.
 12. Run automated checks.
 13. Test every activity in the browser on desktop and mobile.
@@ -414,32 +414,41 @@ Do not stop after adding vocabulary or quiz data. A surah is not complete until 
 
 ## Required Automated Checks
 
-Run:
+The primary completion gate is:
 
 ```sh
-node preflight.js
-node vocab-audit.js
-node verify-translations.js
+node audit-surah.js <slug-or-number>
 ```
 
-Also run a direct module-specific data validation that confirms:
+It must exit `0` with `READY` before a surah may be reported complete. It validates:
 
 - Vocabulary count equals the chapter-size target.
 - Every vocabulary card has `source`, `verified`, and complete `grammar` fields.
 - Practice count equals vocabulary count.
 - Quiz count is exactly 30.
 - Category counts are exactly 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, and 6 Rhetoric.
-- Exactly 6 rhetoric questions, and all 30 questions mixed: no two rhetoric adjacent, no more than 3 consecutive questions of one category, rhetoric spread across both halves.
+- The category counts support the four learning stages: 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, and 6 Rhetoric.
 - The six rhetoric items contain exactly two questions from each required area.
 - Every quiz item has four options, a valid answer index, explanation, and verified metadata.
 - Correct-answer source indexes are balanced near `8, 8, 7, 7`.
 - No correct answer has obvious length bias.
+- Both meaning activities contain every canonical numbered ayah and use the exact vocabulary set.
+- Every rhetoric item uses Ibn Kathir, cites an exact verse range, and the six items cover the three required rhetoric areas evenly.
+- Every locally sourced verification note contains wording that can be traced to its cited source file.
 - No banned generic filler remains.
 - Arabic blank set exactly equals `vocabulary[].arabic`.
 - English blank set exactly equals `vocabulary[].meaning`.
 - Every Arabic and English ayah number appears once and in order.
 
-The three repository-wide audits may expose older unrelated modules. Record those separately, but the newly built module itself must have no warnings or unverified content.
+Then run the repository-wide health checks:
+
+```sh
+node vocab-audit.js
+node verify-translations.js
+node preflight.js
+```
+
+These global checks can reveal unfinished legacy modules. Report that existing debt separately; it does not replace or weaken the zero-issue target audit.
 
 ## Required Browser Verification
 
@@ -453,15 +462,17 @@ Use the running app, not only static inspection. Test at minimum:
 6. Open Meaning Bank and confirm all target words are present and completed English sentences are grammatical.
 7. Open Meaning Blanks and confirm all target Arabic words are present.
 8. Open Order the Verses and confirm cards drag vertically without arrow controls or a separate “Your Order” panel.
-9. Start the quiz, answer at least one question correctly and one incorrectly, and inspect feedback.
-10. Repeat the key screens at a mobile viewport around 390 x 844.
-11. Check browser console errors and warnings.
+9. Start the quiz and confirm it progresses through Vocabulary, Comprehension, Critical Thinking, and Rhetoric in that order while varying questions within each stage.
+10. Answer at least one question correctly and one incorrectly, and inspect feedback.
+11. Repeat the key screens at a mobile viewport around 390 x 844.
+12. Check browser console errors and warnings.
 
 Fix overflow, overlap, broken text, missing data, awkward blank sentence frames, and console errors before reporting completion.
 
 ## Build Checklist
 
-Follow in order. Al-'Adiyat (100) in `app.html` is the worked example of every step.
+Follow this checklist in order. Existing modules are schema examples only and
+must not override a written requirement.
 
 1. **Fetch the sources.** Do not write a word before both files exist.
 
@@ -478,25 +489,27 @@ Follow in order. Al-'Adiyat (100) in `app.html` is the worked example of every s
 6. **Write one practice item per card.** `practice.length === vocabulary.length`.
 7. **Write the intro** plus its `introVerified` block.
 8. **Write 30 quiz questions**: 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, 6 Rhetoric. Give every rhetoric question a `rhetoricArea`, two from each of the three areas.
-9. **Check every question is answerable from the module** — surah, intro, translation, vocabulary cards. Nothing else. Tafsir verifies the answer; it is not something the student has read.
+9. **Check every question is answerable from the module** — surah, intro, translation, vocabulary cards. Nothing else. Tafsir verifies the answer; it is not something the student has read. A well-cited answer can still fail this: a historical or tafsir detail (e.g. "Abu Lahab's wife placed thorns in the Prophet's path") is unfair unless it also appears in the intro or a card, even though Ibn Kathir confirms it. The standard fix is to add the fact to the intro in one short clause (sourced in `introVerified`) so the question becomes fair. Also avoid stems like "what did the companions understand X to mean?" — ask what the word or verse means, not what a source says about it.
 10. **Spread the source answer indexes** to ~8,8,7,7 with the tool — never by hand:
 
     ```sh
     node redistribute-answers.js <slug> --apply
     ```
 
-    It rotates each question's options and moves the `answer` index to match, so the correct answer text is unchanged. Then **mix the categories** so no more than 4 of one category sit in a row and no two rhetoric are adjacent.
+    It rotates each question's options and moves the `answer` index to match, so the correct answer text is unchanged. The runtime will present the categories as 12 Vocabulary, 7 Comprehension, 5 Critical Thinking, and 6 Rhetoric, even when rebuilding a legacy module whose source array was previously mixed.
 11. **Build** Meaning Blanks and Meaning Bank. Include **every ayah of the surah** in `fillBlanks.ayahs` and `fillBlanksEn.ayahs`, numbered from 1 with no gaps. Ayahs carrying no vocabulary word still appear, as plain `{ t: "..." }` segments. Order the Verses is generated from `fillBlanks.ayahs`, so an ayah omitted here vanishes from that activity too, silently. `preflight.js` checks this.
-12. **Run the audits.** The new module must be clean even though older modules are not:
+12. **Run the audits.** The target module must be clean even though older modules may not be:
 
     ```sh
+    node audit-surah.js <slug>
     node vocab-audit.js
     node verify-translations.js
-    PREFLIGHT_STRICT_CONTRACT=1 PREFLIGHT_STRICT_LENGTH=1 node preflight.js
-    node verify-quotes.js <slug>     # reviewer aid — read its list by eye
+    node preflight.js
+    node verify-quotes.js <slug>     # additional reviewer aid
     ```
 
-    `verify-quotes.js` is not a pass/fail gate — it only starts the review. The
+    `audit-surah.js` is the pass/fail completion gate for the target. The
+    standalone `verify-quotes.js` is not a pass/fail gate; it only starts the review. The
     full review is the **Double-Check Workflow** below, a separate AI pass that
     reads every note against the source files. It is a required step, not
     optional, and the Definition of Done depends on it.
@@ -515,15 +528,15 @@ A surah is complete only when:
 
 - Its full data object follows the current schema.
 - Its vocabulary count follows the chapter-size table, and `practice.length === vocabulary.length`.
-- Vocabulary cards include beginner-friendly bilingual grammar teaching.
+- Vocabulary cards include beginner-friendly bilingual grammar teaching. Grammar terms (active participle, imperative verb, perfect form, jussive) stay on the card's `grammar` box only — NEVER in a quiz `explanation`, which is quick feedback for a 10-12 year old. In the quiz say "a word meaning 'worshippers'", not "active participle". See the reading-level rule in README-SOURCES.md.
 - Practice, both banks, blanks, and verse order use the same vocabulary set.
 - The quiz has exactly 30 questions with the mix 12 / 7 / 5 / 6.
 - Exactly 6 Rhetoric questions, tagged `rhetoricArea`, two from each of the three areas, none labelled in the question text.
 - Every question is answerable from the module alone.
 - Every `verified` and `introVerified` note quotes the source line it rests on, and cites Ibn Kathir as the only tafsir.
 - No answer is exposed by length, tone, absurd distractors, or repeated filler.
-- Source answer indexes are spread ~8,8,7,7 and the categories are mixed.
-- All three audits pass for this module, with `PREFLIGHT_STRICT_CONTRACT=1` and `PREFLIGHT_STRICT_LENGTH=1`.
+- Source answer indexes are spread ~8,8,7,7 and the student-facing quiz follows the progressive four-stage order.
+- `node audit-surah.js <slug>` exits `0` with `READY`, and the repository-wide audits have been run and reported honestly.
 - **The Double-Check pass (below) has run and every problem it raised is fixed.**
 - Desktop and mobile browser checks pass without console errors.
 - Temporary generation or validation scripts have been removed unless intentionally added as permanent project tooling.

@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 105, Al-Fil
+# ClearQuran (Talal Itani) — teen level — Surah 105
 
 Source: https://www.quranfor.com/teens/105
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 6
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

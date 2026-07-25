@@ -9,35 +9,11 @@
 // `verified: {`. Entries written with quoted keys (`"verified": {`) were skipped
 // entirely — not reported missing, simply never seen. Al-Mutaffifin (230 entries)
 // and At-Tin (138) passed clean without a single one being examined. It now
-// evaluates the surahs array and inspects real objects, so key quoting cannot
+// loads the lesson modules and inspects real objects, so key quoting cannot
 // hide anything again.
 
-const fs = require('fs');
-const path = require('path');
-
-const APP_HTML = path.join(__dirname, 'app.html');
-if (!fs.existsSync(APP_HTML)) {
-  console.error(`ERROR: ${APP_HTML} not found. Run this script from the project folder.`);
-  process.exit(2);
-}
-
-const src = fs.readFileSync(APP_HTML, 'utf8');
-
-// app.html holds TWO module arrays: `surahs` and `hadiths`. Scanning only the
-// first silently exempts 30 hadith modules from every rule.
-function loadArray(name) {
-  const start = src.indexOf(`const ${name} = [`);
-  if (start === -1) { console.error(`ERROR: could not find \`const ${name} = [\` in app.html`); process.exit(2); }
-  const bs = src.indexOf('[', start);
-  let depth = 0, i = bs;
-  while (i < src.length) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') { depth--; if (depth === 0) break; }
-    i++;
-  }
-  return eval(src.slice(bs, i + 1));
-}
-const surahs = [...loadArray('surahs'), ...loadArray('hadiths')];
+const { loadLessonData } = require('./lesson-data-loader');
+const { lessons: surahs } = loadLessonData();
 
 // Ibn Kathir (Abridged), fetched from the quran.com API, is the ONLY tafsir.
 // See README-SOURCES.md and TRANSLATION-SOURCES.md.

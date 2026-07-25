@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 102, At-Takathur
+# ClearQuran (Talal Itani) — teen level — Surah 102
 
 Source: https://www.quranfor.com/teens/102
-Retrieved: 2026-07-22
-Verses: 9
+Retrieved: 2026-07-24
+Numbered ayahs: 8 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

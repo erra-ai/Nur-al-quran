@@ -1,8 +1,9 @@
 # Source-Citation Rule (Two Layers)
 
-Every new vocabulary entry, practice question, and quiz explanation
-added to a surah **must** be backed by real authoritative sources. This
-is enforced by `vocab-audit.js` and `verify-translations.js`.
+Every new vocabulary entry and quiz explanation added to a surah **must** be
+backed by real authoritative sources. A practice item tests one exact
+vocabulary pair and inherits that card's sourcing. This is enforced by the
+audits described below.
 
 ## Why two layers
 
@@ -13,7 +14,7 @@ A Qur'an learning app has two kinds of accuracy that can go wrong:
    Corpus) covers this.
 2. **The English wording** — when we write a gloss, a hint, a question,
    or a feedback explanation in English, is that what ClearQuran (Talal
-   Itani), Saheeh International, and Abdul Haleem say? The 3-layer
+   Itani), Saheeh International, and Abdul Haleem say? The 4-layer
    translation method covers this.
 
 The vocab `source` field covers layer 1. A new `verified` field on every
@@ -25,14 +26,15 @@ Every object in a surah's `vocabulary[]` array must have a `source` field:
 
 ```js
 source: {
-  primary: "<one of: Qur'anic Arabic Corpus | Lane Lexicon | Hans Wehr Dict. 4e | Tafsir al-Sa'di | Tafsir al-Jalalayn | The Noble Qur'an (Muhsin Khan | Pickthall | Yusuf Ali)>",
-  ref:     "<root and form, or surah:verse>",
+  primary: "<one of: Qur'anic Arabic Corpus | Lane Lexicon | Hans Wehr Dict. 4e | tafsir Ibn Kathir | The Noble Qur'an (Muhsin Khan | Pickthall | Yusuf Ali)>",
+  ref:     "<exact surah:verse, plus root/form when useful>",
   checkedAt: "<YYYY-MM-DD>",
   note:    "<optional>"
 }
 ```
 
-Enforced by `vocab-audit.js`. Currently **50/50** entries pass.
+Enforced by `audit-surah.js` for the target and `vocab-audit.js`
+repository-wide.
 
 ## Layer 2 — English translation accuracy (new rule)
 
@@ -43,7 +45,7 @@ Every vocab entry AND every quiz question `explanation` must have a
 verified: {
   status:   "verified" | "unverified",
   by:       "<ClearQuran (Talal Itani) | Saheeh International | Abdul Haleem | tafsir Ibn Kathir | corpus.quran.com | self>",
-  note:     "<optional, e.g. 'paraphrase — direct translation is closer to X'>",
+  note:     "<required source passage and short supporting source phrase>",
   checkedAt: "<YYYY-MM-DD>"   // when the reviewer signed it off
 }
 ```
@@ -58,7 +60,9 @@ A `verified` tag without a reviewer signature is **not valid**. The
 `checkedAt` field is the date the reviewer confirmed it. Until then,
 keep `status: "unverified"`.
 
-## The 3-layer method for translations
+A finished target surah may contain no `status: "unverified"` entries.
+
+## The 4-layer method for translations
 
 When writing or reviewing English wording:
 
@@ -96,15 +100,30 @@ mixing them up produces questions no child in the class can answer:
 | "Al-Hasan explained what an ungrateful person is like. What did he say?" | The student has never read Al-Hasan. |
 | "Ibn Kathir says the Prophet ﷺ would listen for the Adhan before a dawn raid. Why?" | The Adhan detail is in the tafsir, not in the surah or the intro. |
 | "Ibn Kathir gives two meanings for verse 8. What are they?" | Asks what a book says, not what the verse means. |
+| "What did Abu Lahab's wife do to harm the Prophet? — placed thorns in his path." | The thorns detail is only in the tafsir; the surah, translation and intro never mention it. |
 
-Each of those was a real question in Al-'Adiyat, added while fixing the
-sourcing. The content was accurate and properly cited — and still wrong
-to ask, because the student had no way to reach it.
+**A correct, well-cited answer can still fail this test.** The thorns
+answer above (Al-Masad Q18) is genuinely in Ibn Kathir — but that is not
+the point. The point is whether the *student* was given it. A historical
+or tafsir detail used as the answer is unfair unless it also appears in
+the surah, the translation, the intro, or a vocabulary card. The two most
+common forms of this mistake:
+
+- **A `verified` note that quotes Ibn Kathir does not make the question
+  answerable.** The note proves the answer is true; it does not put the
+  fact in front of the student. Check answerability separately from
+  sourcing — a question can pass every audit and still be unfair.
+- **Naming a scholar or "the companions" in the question stem** ("what
+  did the companions understand X to mean?") points at material the
+  student never read, even when the answer itself is in the intro. Ask
+  what the word or verse means, not what a source says about it.
 
 The test to apply: **could a student who read this module, and only this
-module, answer this?** If not, either rewrite the question or move the
-information into the intro or a vocabulary card first, so it becomes
-material the student actually has.
+module, answer this?** If not, either rewrite the question or **move the
+fact into the intro** (one short clause is usually enough, sourced in
+`introVerified`) so it becomes material the student actually has. This is
+the standard fix — Al-Asr and Al-Masad both put a needed tafsir detail
+into the intro so the matching question became fair.
 
 Good tafsir material is not wasted — put it in the `explanation`, where
 it teaches after the answer instead of gatekeeping it.
@@ -136,6 +155,26 @@ are the usual offenders:
 | severe in his love of wealth | he loves wealth so much |
 | the contents of the graves | what is inside the graves |
 | penetrating into the midst | charging into the middle |
+| compromise | a deal |
+| declare complete separation | say clearly he will not share their worship |
+| the core declaration | the main statement |
+| disavowal, unmistakable | rejection, completely clear |
+| finality | that it is final |
+| establishes a clear boundary | draws a clear line |
+
+**Grammar terms belong on the vocab card, not in the quiz.** The
+vocabulary card has a bilingual `grammar` box built to teach terms like
+active participle, imperative verb, perfect (past) form, jussive. Use the
+full term THERE, with its explanation. But a quiz `explanation` is quick
+feedback a child reads after answering — do not use grammar jargon in it.
+
+| Don't write in a quiz explanation | Write |
+| --- | --- |
+| "active participle — worshippers" | "a word meaning 'worshippers'" |
+| "imperative verb meaning Say" | "a command meaning 'Say'" |
+| "the perfect form" | "the past-tense form" |
+| "second-person plural pronoun" | "the word for 'you all'" |
+| "the detached pronoun adds emphasis" | "this word adds emphasis" |
 
 **Arabic and Islamic terms stay.** Do not simplify away الْعَادِيَاتِ,
 كَنُودٌ, Adhan, or Day of Judgment. Gloss them the first time instead.
@@ -300,8 +339,8 @@ introVerified: {
 }
 ```
 
-Enforced by `verify-translations.js`, which lists intro problems in their
-own section. Currently **1/60** intros signed.
+Enforced for the target by `audit-surah.js` and reported repository-wide by
+`verify-translations.js`.
 
 Watch specifically for wording copied between modules. A summary of
 Al-'Adiyat 100:9 once said "the graves will be overturned" — that is the
@@ -319,8 +358,7 @@ intuition alone.
 
 Required sources:
 
-- Prefer tafsir Ibn Kathir, Tafsir al-Sa'di, Tafsir al-Jalalayn, or
-  Ma'arif al-Qur'an.
+- Use Tafsir Ibn Kathir as the only tafsir for new or rebuilt work.
 - Use Quran.com word-by-word or corpus.quran.com only as supporting
   language evidence, not as the only basis for a rhetoric explanation.
 - If the question asks about translation choice, check both the Arabic
@@ -402,7 +440,7 @@ Before finishing a new surah, run a direct data check confirming:
 - no Arabic spelling mismatches
 - no English meaning mismatches
 
-## Lessons from the 2026-07-22 pass
+## Implementation lessons
 
 Written down because every one of them cost real time or produced a real
 error. A future builder should not have to rediscover them.
@@ -446,7 +484,49 @@ chance. Measure, then report.
 **One activity's data can feed another.** Order the Verses is built from
 `fillBlanks.ayahs`. Nothing in the field name says so.
 
+## Source-note traceability contract
+
+Every `verified.note` and `introVerified.note` must identify the source passage
+and include a short phrase from the exact local source text that supports the
+claim. The `verified.by` value selects the corresponding chapter source file.
+For automated traceability, the note and that source must share at least four
+consecutive English words. A citation label by itself is not evidence.
+
+For a rhetoric question, the note must also contain the exact Qur'an range in
+`surah:ayah` or `surah:start-end` form, such as `104:1` or `104:5-7`. The cited
+range must be the passage on which the rhetoric explanation rests. When a
+structure or style conclusion is a cautious inference from Ibn Kathir rather
+than his explicit wording, label it as a cautious inference in the note.
+
+For surahs other than Al-Fatiha, translation-note files retain the basmalah as
+entry `0` when supplied as a reference but do not count it as a numbered ayah.
+Their count line must be:
+
+```text
+Numbered ayahs: N (plus the basmalah reference at entry 0)
+```
+
+The body must then contain entry `0` and every canonical numbered ayah from
+`1` through `N`. `audit-surah.js` checks the header, body coverage, and local
+source wording.
+
+Al-Fatiha is the explicit exception: its basmalah is numbered ayah `1`, there
+is no entry `0`, and its count line is
+`Numbered ayahs: 7 (basmalah is ayah 1)`.
+
 ## How to run the audits
+
+The chapter-specific completion gate is:
+
+```sh
+node audit-surah.js <slug-or-number>
+```
+
+It must exit `0` with `READY` before the target surah is complete. It turns the
+target chapter's count, structure, answer-balance, rhetoric, source-note, and
+ayah-coverage requirements into hard failures.
+
+Repository-wide health checks are:
 
 ```sh
 node vocab-audit.js          # Layer 1 — Arabic root sources
@@ -474,22 +554,14 @@ wrong question). The human does not do this pass; a reviewing AI does. See that
 section for the full steps and the honest-review rule (read the files, never
 judge from memory).
 
-### `verify-quotes.js` is a reviewer aid, not a gate
+### `verify-quotes.js` is a reviewer aid, not the target gate
 
 It lists the Ibn-Kathir and Itani sign-offs whose note shares no run of four
-consecutive words with the source files. Each flagged note is one of three
-things, and only reading it tells you which:
-
-1. an accurate paraphrase of the source — fine
-2. an honestly-labelled cautious inference — fine
-3. an invented or altered claim — must be fixed
-
-A script cannot tell a paraphrase from a fabrication; both lack verbatim
-overlap. So this tool does not pass or fail — it shrinks the reading pass from
-"every note" to "just these few", and it will always catch a wholly invented
-note (which shares nothing with the source). When the four reference modules
-were checked, every flagged note was category 1 or 2 — the tool found no
-fabrication, which is the result to expect from an honest build.
+consecutive words with the source files. A script cannot determine whether a
+paraphrase is accurate, so this standalone listing does not pass or fail.
+However, a finished target module must add a short supporting source phrase to
+every flagged note and then pass `audit-surah.js <slug>`. The second-AI review
+still decides whether that real phrase actually supports the attached claim.
 
 ### The audits used to lie — how, and what changed
 
@@ -512,33 +584,36 @@ both `surahs` and `hadiths`. Key quoting cannot hide anything again. The
 numbers moved a lot as a result — 400 vocab entries became 705, not
 because anything was added, but because 305 were finally visible.
 
-If you add a third module array to `app.html`, add it to `loadArray` in
-both scripts or it will be silently exempt.
+If you add a third lesson-data directory, add it to
+`lesson-data-loader.js` in the same commit or it will be silently exempt.
 
-`vocab-audit.js` and `verify-translations.js` must exit `0` before
-committing. `verify-translations.js` fails if any entry, quiz
-explanation, or surah intro is missing the `verified` / `introVerified`
-field or has `status: "unverified"`. The intent: every English word a
-student sees has been signed off.
+`audit-surah.js <slug>` must exit `0` before the target chapter is reported
+complete. `verify-translations.js` fails if any entry, quiz explanation, or
+surah intro is missing the `verified` / `introVerified` field or has
+`status: "unverified"`. Run it and `vocab-audit.js` repository-wide, but report
+unrelated legacy failures separately instead of weakening the target rule.
 
 `preflight.js` has three levels:
 
 | Level | Behaviour |
 | --- | --- |
 | Hard blockers | Always exit `1`. Wrong option count, duplicate options, an `answer` index pointing at nothing, empty options, banned filler wording. These are bugs, not style. |
-| Contract warnings | Reported, exit `0`. Category mix, answer-index spread, rhetoric positions, `(B - ...)` scaffolding in question text. |
+| Contract warnings | Reported, exit `0`. Category mix, answer-index spread, progressive category order, `(B - ...)` scaffolding in question text. |
 | Length-bias warnings | Reported, exit `0`. |
 
-Make either warning class blocking when a module is meant to be finished:
+The repository-wide preflight keeps these as warnings because legacy modules
+remain. `audit-surah.js <slug>` makes the equivalent target-chapter contract
+failures blocking. The strict global modes remain available for repository
+cleanup:
 
 ```sh
 PREFLIGHT_STRICT_CONTRACT=1 node preflight.js
 PREFLIGHT_STRICT_LENGTH=1   node preflight.js
 ```
 
-They default to warnings because most existing modules do not conform
-yet — see below. Turning them into hard failures today would just block
-every commit. A module you have finished should pass both strict modes.
+They default to warnings because most existing modules do not conform yet.
+Use the target audit, not a clean global report, as proof that one rebuilt
+surah is complete.
 
 ### The three count rules
 
@@ -553,30 +628,6 @@ They are easy to confuse, so state them plainly:
 
 Only the vocabulary count varies with the surah. Practice follows
 vocabulary; the quiz never moves.
-
-### Current conformance (2026-07-22)
-
-**2 of 38** modules conform: **Al-'Adiyat (100)** and **Al-'Alaq (96)**.
-These are the reference modules — the only two built end to end under the
-current rules, and what `model plan.md` tells a new build to imitate.
-
-Al-'Alaq is the better example to copy, because it was built from nothing
-under the current rules: it had no `fillBlanks`, no `fillBlanksEn`, no
-intro sign-off, 10 practice items against 15 vocabulary cards, and a
-10/10/10 quiz with zero rhetoric questions. Al-'Adiyat was repaired
-rather than rebuilt.
-
-| Rule | Modules failing |
-| --- | ---: |
-| Quiz is exactly 30 | 0 |
-| Vocabulary matches chapter-size table | 2 |
-| **Practice has one item per vocabulary card** | **11** |
-| Category mix | 31 |
-| ...of which have **no rhetoric questions at all** | 12 |
-| Answer-index spread | 29 |
-| Mixing (no category clustered) | 13 |
-| **`rhetoricArea` field missing** | **23** |
-| **Meaning Blanks / Meaning Bank problems** | **13** |
 
 ## Meaning Blanks and Meaning Bank — now checked
 
@@ -597,46 +648,27 @@ rebuilt with only the 14 ayahs that carry a vocabulary word; the other
 five were missing and Order the Verses would have shown 14 of 19 verses
 with nothing to indicate the loss. The check now catches that.
 
-What it found across the project:
+### Progressive quiz order
 
-- **8 modules have no `fillBlanksEn` at all** — 'Abasa, At-Takwir,
-  Al-Infitar, Al-Layl, Ad-Duhaa, Ash-Sharh, Al-Qadr, Al-Bayyinah,
-  Az-Zalzalah. The English Meaning Bank activity does not exist for them.
-- **At-Tin** has 11 vocabulary words that never appear as a blank.
-- **Al-Ikhlas** has 3; **Al-Fatiha** and **Al-Mutaffifin** have gaps in
-  the English bank.
+The old rules that pinned rhetoric to positions 4, 9, 14, 19, 24, and 29,
+or mixed all four categories throughout the quiz, are **withdrawn**. The
+quiz now follows the learning sequence:
 
-The count went from 4 conforming to 1 because `rhetoricArea` is a new
-required field — those modules did not get worse, the bar moved. That is
-the honest reading, and the migration is mechanical.
+1. Questions 1-12: Vocabulary
+2. Questions 13-19: Comprehension
+3. Questions 20-24: Critical Thinking
+4. Questions 25-30: Rhetoric
 
-Rough order of work, by how much it affects a student:
+This gives the learner the words first, then asks for passage
+understanding, then thoughtful reasoning, and finally deeper attention to
+translation, structure, and style.
 
-1. **11 modules with missing practice items** — vocabulary taught on a
-   card and never practised before the graded quiz. A real hole in the
-   learning path.
-2. **13 modules with no rhetoric questions** — each needs 6 written
-   against tafsir. The largest single job.
-3. **24 modules needing the `rhetoricArea` migration**, which also
-   removes the `(B - ...)` text students currently read.
-4. **Answer-index spread** — cosmetic. The runtime shuffles options
-   (`shuffleOptions` in app.html), so no student sees the source order.
-
-### Rhetoric: 6 questions, and the 30 mixed
-
-The old rule pinned rhetoric to source positions 4, 9, 14, 19, 24, 29.
-That is **withdrawn**. The rule is now: exactly 6 rhetoric questions, and
-all 30 mixed so no category is clustered. Checked as:
-
-- no two rhetoric questions adjacent
-- no more than **4** questions in a row sharing a category
-- rhetoric not all bunched into one half
-
-The limit of 4 was chosen from the data. Longest same-category run per
-module falls into two groups with nothing in between: 7 modules run 1-2,
-17 run exactly 4, one runs 7, and 13 run 10. A limit of 4 flags the 14
-that are genuinely blocked; a limit of 3 would have flagged 31 and buried
-the signal.
+The student-facing runtime uses this order, regardless of how a legacy
+module's source array was previously organized. It shuffles questions
+only within each category, so attempts still vary without placing an
+advanced Rhetoric question before the vocabulary and comprehension work
+that supports it. Answer options continue to be shuffled. New and rebuilt
+modules must also group the source array in this order.
 
 ### Rhetoric areas live in a field, not in the question text
 
@@ -673,5 +705,5 @@ Two things this reveals. First, thirteen modules were built on an older
 10/10/10 template with zero rhetoric questions — that is a different
 shape, not a small drift, and each needs 6 rhetoric questions written
 against tafsir. Second, the answer-index failures are cosmetic: the
-runtime shuffles options (`shuffleOptions`, app.html), so a student never
+runtime shuffles options (`shuffleOptions`, `src/app.js`), so a student never
 sees the source order. Fix it for auditability, not urgency.

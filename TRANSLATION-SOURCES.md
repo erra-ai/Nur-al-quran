@@ -47,14 +47,28 @@ node fetch-translation.js 100 adiyat    # -> translation-notes/100-adiyat-itani-
 node fetch-translation.js --all         # every surah the app teaches
 ```
 
-`--all` reads the surah list out of `app.html` and fetches only those. Do
+`--all` reads the surah files under `src/data/surahs/` and fetches only those. Do
 not mirror the whole Qur'an; the project has no use for the rest.
 
-All 38 were fetched on 2026-07-22. The bismillah arrives as verse 0,
-except in Al-Fatihah where it is ayah 1 — which is correct in both cases.
-Highest verse number was checked against each module's own ayah count:
-37 of 38 agree, and the exception is Al-'Alaq, which has no ayah data in
-`app.html` to compare against.
+The bismillah reference arrives as entry `0` for surahs where it is not a
+numbered ayah. It must never be added to the chapter's canonical ayah count.
+Generated note files for those surahs use this exact count line:
+
+```text
+Numbered ayahs: N (plus the basmalah reference at entry 0)
+```
+
+The body keeps entry `0` as a wording reference, followed by every numbered
+ayah from `1` through the canonical final ayah. `audit-surah.js` rejects a
+missing ayah, an extra numbered ayah, or a header that counts entry `0` as an
+ayah.
+
+Al-Fatiha is the explicit exception. Its basmalah is numbered ayah `1`, so its
+file has entries `1-7`, no entry `0`, and this count line:
+
+```text
+Numbered ayahs: 7 (basmalah is ayah 1)
+```
 
 ### Replaced 2026-07-22
 
@@ -126,7 +140,7 @@ Darussalam copy.
 
 Tafsir Maududi, Ma'arif al-Qur'an, Tafsir al-Sa'di, Tafsir al-Jalalayn and
 Tafsir Ibn Ashur have been removed everywhere — 0 occurrences remain in
-`app.html`. `verify-translations.js` now rejects them in a `by` field, in
+the lesson data. `verify-translations.js` now rejects them in a `by` field, in
 a `note`, and anywhere in student-facing text.
 
 Ibn Kathir (Abridged), fetched from the quran.com API, is the only tafsir.

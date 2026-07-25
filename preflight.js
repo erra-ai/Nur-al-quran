@@ -9,23 +9,8 @@
 // and No-Giveaway Rules" in model plan.md. Those rules were written down but
 // nothing checked them, so modules drifted from them unnoticed.
 
-const fs = require('fs');
-const file = require('path').join(__dirname, 'app.html');
-const src = fs.readFileSync(file, 'utf8');
-
-const start = src.indexOf('const surahs = [');
-const bs = src.indexOf('[', start);
-let d = 0, i = bs;
-while (i < src.length) {
-  if (src[i] === '[') d++;
-  else if (src[i] === ']') {
-    d--;
-    if (d === 0) break;
-  }
-  i++;
-}
-const arrText = src.slice(bs, i + 1);
-const surahs = eval(arrText);
+const { loadLessonData } = require('./lesson-data-loader');
+const { surahs } = loadLessonData();
 
 const strictLength = process.env.PREFLIGHT_STRICT_LENGTH === '1';
 const strictContract = process.env.PREFLIGHT_STRICT_CONTRACT === '1';
@@ -37,8 +22,6 @@ const bannedFillers = [
 // model plan.md -> Main Quiz Contract
 const CATEGORY_MIX = { 'Vocabulary': 12, 'Comprehension': 7, 'Critical Thinking': 5, 'Rhetoric': 6 };
 const QUIZ_TOTAL = 30;
-const RHETORIC_COUNT = 6;
-const MAX_SAME_CATEGORY_RUN = 4;
 const RHETORIC_AREAS = ['Meaning Construction', 'Nazm', 'Style of Address'];
 
 // model plan.md -> Chapter-Size Vocabulary Rule.
@@ -134,36 +117,6 @@ surahs.forEach(surah => {
   if (Math.max(...spread) - Math.min(...spread) > 2) {
     faults.push(`answer index spread ${spread.join(',')} (want ~8,8,7,7)`);
   }
-
-  // Rhetoric: exactly 6, and the 30 mixed so no category clusters.
-  // Source positions are deliberately NOT fixed — see model plan.md.
-  const rPos = quiz.map((q, n) => q.category === 'Rhetoric' ? n + 1 : null).filter(Boolean);
-  const mixing = [];
-
-  if (rPos.some((p, n) => n > 0 && p - rPos[n - 1] === 1)) {
-    mixing.push('two rhetoric questions adjacent');
-  }
-
-  let run = 1, worst = 1, worstCat = null;
-  for (let n = 1; n < quiz.length; n++) {
-    if (quiz[n].category === quiz[n - 1].category) {
-      run++;
-      if (run > worst) { worst = run; worstCat = quiz[n].category; }
-    } else run = 1;
-  }
-  if (worst > MAX_SAME_CATEGORY_RUN) {
-    mixing.push(`${worst} "${worstCat}" in a row (max ${MAX_SAME_CATEGORY_RUN})`);
-  }
-
-  if (rPos.length === RHETORIC_COUNT && quiz.length === QUIZ_TOTAL) {
-    const half = QUIZ_TOTAL / 2;
-    const firstHalf = rPos.filter(p => p <= half).length;
-    if (firstHalf === 0 || firstHalf === RHETORIC_COUNT) {
-      mixing.push('all rhetoric questions in one half');
-    }
-  }
-
-  if (mixing.length) faults.push(`mixing: ${mixing.join(', ')}`);
 
   // --- Vocabulary coverage: every card gets tested ---
   // A student should be quizzed on each word they learned. There are 12

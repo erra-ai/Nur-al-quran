@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 106, Quraysh
+# ClearQuran (Talal Itani) — teen level — Surah 106
 
 Source: https://www.quranfor.com/teens/106
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 5
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

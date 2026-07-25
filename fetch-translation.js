@@ -10,12 +10,13 @@
 //   node fetch-translation.js 112 ikhlas
 //   node fetch-translation.js --all          # every surah the app teaches
 //
-// Only the surahs present in app.html are fetched. Do not mirror the whole
+// Only the surahs present in the lesson data modules are fetched. Do not mirror the whole
 // Qur'an — the project has no use for it.
 
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { loadLessonData } = require('./lesson-data-loader');
 
 const LEVEL = 'teens';
 const BASE = `https://www.quranfor.com/${LEVEL}`;
@@ -61,16 +62,8 @@ function parseVerses(html) {
 }
 
 function appSurahs() {
-  const src = fs.readFileSync(path.join(__dirname, 'app.html'), 'utf8');
-  const st = src.indexOf('const surahs = [');
-  const bs = src.indexOf('[', st);
-  let d = 0, i = bs;
-  while (i < src.length) {
-    if (src[i] === '[') d++;
-    else if (src[i] === ']') { d--; if (d === 0) break; }
-    i++;
-  }
-  return eval(src.slice(bs, i + 1))
+  const { surahs } = loadLessonData();
+  return surahs
     .map(m => ({ number: m.number, slug: m.id, name: m.nameEnglish }))
     .filter(m => m.number)
     .sort((a, b) => a.number - b.number);
@@ -81,16 +74,21 @@ async function fetchOne({ number, slug, name }) {
   const html = await get(url);
   const verses = parseVerses(html);
   if (!verses.length) throw new Error(`no verses parsed from ${url} — page structure may have changed`);
+  const numberedVerses = verses.filter(v => v.n > 0);
 
   const outDir = path.join(__dirname, 'translation-notes');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
   const outFile = path.join(outDir, `${number}-${slug}-itani-teens.md`);
+  const countNote =
+    number === 1
+      ? '(basmalah is ayah 1)'
+      : '(plus the basmalah reference at entry 0)';
 
   const header = `# ClearQuran (Talal Itani) — teen level — Surah ${number}${name ? `, ${name}` : ''}
 
 Source: ${url}
 Retrieved: ${new Date().toISOString().slice(0, 10)}
-Verses: ${verses.length}
+Numbered ayahs: ${numberedVerses.length} ${countNote}
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for \`verified: { by: "ClearQuran (Talal Itani)" }\` in this
@@ -105,7 +103,7 @@ Regenerate with:
 `;
   const body = verses.map(v => `${v.n}. ${v.text}`).join('\n\n');
   fs.writeFileSync(outFile, header + body + '\n');
-  return { outFile, count: verses.length };
+  return { outFile, count: numberedVerses.length };
 }
 
 (async () => {
@@ -129,7 +127,7 @@ Regenerate with:
     try {
       const r = await fetchOne(t);
       ok++;
-      console.log(`  ${String(t.number).padStart(3)}  ${t.slug.padEnd(12)} ${String(r.count).padStart(3)} verses`);
+      console.log(`  ${String(t.number).padStart(3)}  ${t.slug.padEnd(12)} ${String(r.count).padStart(3)} ayahs`);
     } catch (e) {
       failed.push(t.slug);
       console.error(`  ${String(t.number).padStart(3)}  ${t.slug.padEnd(12)} FAILED: ${e.message}`);

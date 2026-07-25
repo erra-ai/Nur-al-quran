@@ -8,35 +8,11 @@
 // That silently skipped every entry written with quoted keys (`"source": {`) —
 // both spellings are valid JavaScript and the app treats them identically, but
 // the regex only matched one. Two whole modules (Al-Mutaffifin, At-Tin) were
-// never examined and still reported clean. It now evaluates the surahs array and
-// inspects real objects, so key quoting cannot hide anything again.
+// never examined and still reported clean. It now loads the real lesson modules
+// and inspects their objects, so key quoting cannot hide anything again.
 
-const fs = require('fs');
-const path = require('path');
-
-const APP_HTML = path.join(__dirname, 'app.html');
-if (!fs.existsSync(APP_HTML)) {
-  console.error(`ERROR: ${APP_HTML} not found. Run this script from the project folder.`);
-  process.exit(2);
-}
-
-const src = fs.readFileSync(APP_HTML, 'utf8');
-
-// app.html holds TWO module arrays: `surahs` and `hadiths`. Scanning only the
-// first silently exempts 30 hadith modules from every rule.
-function loadArray(name) {
-  const start = src.indexOf(`const ${name} = [`);
-  if (start === -1) { console.error(`ERROR: could not find \`const ${name} = [\` in app.html`); process.exit(2); }
-  const bs = src.indexOf('[', start);
-  let depth = 0, i = bs;
-  while (i < src.length) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') { depth--; if (depth === 0) break; }
-    i++;
-  }
-  return eval(src.slice(bs, i + 1));
-}
-const surahs = [...loadArray('surahs'), ...loadArray('hadiths')];
+const { loadLessonData } = require('./lesson-data-loader');
+const { lessons: surahs } = loadLessonData();
 
 // Layer 1 is about the Arabic word's meaning, so lexicons and the corpus belong
 // here. Ibn Kathir is the only tafsir permitted anywhere in the project.

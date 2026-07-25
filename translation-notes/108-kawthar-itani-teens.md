@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 108, Al-Kawthar
+# ClearQuran (Talal Itani) — teen level — Surah 108
 
 Source: https://www.quranfor.com/teens/108
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 4
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

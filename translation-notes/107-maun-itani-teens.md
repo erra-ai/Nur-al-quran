@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 107, Al-Ma'un
+# ClearQuran (Talal Itani) — teen level — Surah 107
 
 Source: https://www.quranfor.com/teens/107
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 8
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

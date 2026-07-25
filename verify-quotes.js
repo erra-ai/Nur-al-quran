@@ -28,20 +28,12 @@
 
 const fs = require('fs');
 const path = require('path');
+const { loadLessonData } = require('./lesson-data-loader');
 
 const CHECKED_SOURCES = ['tafsir Ibn Kathir', 'ClearQuran (Talal Itani)'];
 const RUN = 4; // consecutive words that must appear verbatim in the source
 
-const src = fs.readFileSync(path.join(__dirname, 'app.html'), 'utf8');
-function loadArray(name) {
-  const st = src.indexOf(`const ${name} = [`);
-  if (st === -1) return [];
-  const bs = src.indexOf('[', st);
-  let d = 0, i = bs;
-  while (i < src.length) { if (src[i] === '[') d++; else if (src[i] === ']') { d--; if (d === 0) break; } i++; }
-  return eval(src.slice(bs, i + 1));
-}
-const ALL = [...loadArray('surahs'), ...loadArray('hadiths')];
+const { lessons: ALL } = loadLessonData();
 
 const words = t => (t.toLowerCase().match(/[a-z]+/g) || []);
 const squash = arr => arr.join('');

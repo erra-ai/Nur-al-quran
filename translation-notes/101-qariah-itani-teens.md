@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 101, Al-Qari'ah
+# ClearQuran (Talal Itani) — teen level — Surah 101
 
 Source: https://www.quranfor.com/teens/101
-Retrieved: 2026-07-22
-Verses: 12
+Retrieved: 2026-07-24
+Numbered ayahs: 11 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

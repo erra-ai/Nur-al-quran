@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 111, Al-Masad
+# ClearQuran (Talal Itani) — teen level — Surah 111
 
 Source: https://www.quranfor.com/teens/111
-Retrieved: 2026-07-22
+Retrieved: 2026-07-24
 Verses: 6
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the

@@ -2,7 +2,7 @@
 
 Source: https://www.quranfor.com/teens/104
 Retrieved: 2026-07-22
-Verses: 10
+Numbered ayahs: 9 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

@@ -1,7 +1,7 @@
-# ClearQuran (Talal Itani) — teen level — Surah 112, Al-Ikhlas
+# ClearQuran (Talal Itani) — teen level — Surah 112
 
 Source: https://www.quranfor.com/teens/112
-Retrieved: 2026-07-22
+Retrieved: 2026-07-23
 Verses: 5
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
