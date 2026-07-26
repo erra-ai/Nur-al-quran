@@ -6,11 +6,11 @@ export default {
   "nameArabic": "الْبَيِّنَةِ",
   "nameEnglish": "Al-Bayyinah",
   "title": "The Clear Proof",
-  "intro": "Al-Bayyinah was revealed in Madinah. A clear proof came to the People of the Book and the polytheists: a Messenger from Allah reciting purified pages containing upright books. Yet they divided even after the truth arrived. Their religion is simple: worship Allah with sincere devotion, establish prayer, and give zakah. Those who reject the clear proof are the worst of creation, destined for Hell forever. Those who believe and do righteous deeds are the best of creation, destined for gardens of eternity beneath which rivers flow. Their reward is Allah's pleasure and their eternal peace.",
+  "intro": "Surah Al-Bayyinah was revealed in Madinah. It identifies the clear proof as a Messenger from Allah reciting purified pages that contain upright teachings. It says that the People of the Book differed after the clear proof came to them. They had been commanded to worship Allah alone with sincere devotion, turn away from shirk, establish prayer, and give zakah. The surah then contrasts two outcomes: the disbelievers among the People of the Book and the polytheists will remain in Hell and are called the worst of creation, while those who believe and do righteous deeds are called the best of creation. Their reward with their Lord is everlasting gardens beneath which rivers flow. Allah is pleased with them, and they are pleased with Him. This reward is for those who fear their Lord.",
   "introVerified": {
     "status": "verified",
     "by": "tafsir Ibn Kathir",
-    "note": "Ibn Kathir: 'Those who disbelieve from among the People of the Scripture and idolators, were not going to leave until there came to them the Bayyinah.' and 'They are the worst of creatures' and 'They are the best of creatures' and 'Eternal Gardens underneath which rivers flow' and 'Allah will be pleased with them, and they well-pleased with Him.' and 'That is for him who fears his Lord.'",
+    "note": "Ibn Kathir identifies the Bayyinah as the Qur'an and explains it through 'A Messenger from Allah, reciting purified pages.' He states that the People of the Scripture differed after the Bayyinah came, explains Hunafa' as avoiding shirk and being devoted to Tawhid, and quotes: 'They are the worst of creatures,' 'They are the best of creatures,' 'Eternal Gardens underneath which rivers flow,' 'Allah will be pleased with them, and they well-pleased with Him,' and 'That is for him who fears his Lord.'",
     "checkedAt": "2026-07-26"
   },
   "vocabulary": [
@@ -18,7 +18,7 @@ export default {
       "arabic": "الْبَيِّنَةُ",
       "meaning": "the clear proof",
       "connection": "The clear proof that came to the People of the Book and polytheists — a Messenger and a book from Allah.",
-      "hint": "Evidence so clear no one can argue against it.",
+      "hint": "Evidence that makes the truth clear.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Bayyinah 98:1 word-by-word morphology",
@@ -31,8 +31,8 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Definite noun, nominative singular feminine, subject of the verb",
-        "arabic": "اسم معرف مفرد مذكر مرفوع (فاعل)",
+        "english": "Definite feminine singular noun, nominative subject",
+        "arabic": "اسم معرفة مفرد مؤنث مرفوع (فاعل)",
         "explanation": "الْبَيِّنَةُ is the subject (فاعل) of the verb تَأْتِيَهُمُ. The damma on the final ة shows it is in the nominative case, standing as the one who 'comes' to them."
       }
     },
@@ -53,16 +53,16 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Indefinite noun, nominative singular masculine, subject of the verb",
-        "arabic": "اسم نكرة مفرد مذكر مرفوع (فاعل)",
-        "explanation": "رَسُولٌ is the subject (فاعل) of the verb يَتْلُو. The damma on the final ن shows it is nominative. The tanween (ٌ) marks it as indefinite — 'a messenger,' not 'the messenger.'"
+        "english": "Indefinite masculine singular noun explaining the clear proof",
+        "arabic": "اسم نكرة مفرد مذكر مرفوع يبيّن الْبَيِّنَةُ",
+        "explanation": "رَسُولٌ is nominative and explains what الْبَيِّنَةُ is: a Messenger from Allah. The following verb يَتْلُو has an implied 'he' that refers back to the Messenger."
       }
     },
     {
       "arabic": "صُحُفًا",
       "meaning": "pages",
-      "connection": "The Messenger recites from purified pages — the scriptures that contain no falsehood.",
-      "hint": "Clean sheets with pure words written on them.",
+      "connection": "The Messenger recites purified pages containing upright teachings.",
+      "hint": "Written pages being recited aloud.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Bayyinah 98:2 word-by-word morphology",
@@ -75,16 +75,16 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Indefinite noun, accusative singular (plural form), direct object of the verb",
-        "arabic": "اسم نكرة مفرد مذكر منصوب (مفعول به)",
+        "english": "Indefinite plural noun, accusative direct object",
+        "arabic": "اسم نكرة جمع منصوب (مفعول به)",
         "explanation": "صُحُفًا is the direct object (مفعول به) of the verb يَتْلُو. The fatha on the final ف shows it is in the accusative case. The plural form صُحُفًا means 'pages' or 'scriptures.'"
       }
     },
     {
       "arabic": "مُطَهَّرَةً",
       "meaning": "purified",
-      "connection": "The pages are purified — no falsehood, error, or contradiction can touch them.",
-      "hint": "Washed completely clean of all impurity.",
+      "connection": "The pages recited by the Messenger are described as purified and held in honor.",
+      "hint": "Made pure and free from impurity.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Bayyinah 98:2 word-by-word morphology",
@@ -97,9 +97,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Indefinite adjective, accusative singular feminine, attribute of the direct object",
-        "arabic": "صفة منصوبة مفردة مذكرة (صفة المفعول به)",
-        "explanation": "مُطَهَّرَةً is an adjective describing صُحُفًا. It is in the accusative case (shown by the fatha) because it follows the accusative direct object. The tanween (ً) marks it as indefinite."
+        "english": "Indefinite feminine adjective, accusative modifier",
+        "arabic": "صفة نكرة مفردة مؤنثة منصوبة",
+        "explanation": "مُطَهَّرَةً is an adjective describing صُحُفًا. It is accusative because it follows the accusative noun it describes. Arabic treats the non-human plural صُحُفًا as feminine singular for adjective agreement."
       }
     },
     {
@@ -119,9 +119,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Indefinite noun, nominative singular feminine, predicate of the subject",
-        "arabic": "اسم نكرة مفرد مذكر مرفوع (خبر)",
-        "explanation": "قَيِّمَةٌ is the predicate (خبر) of كُتُبٌ (the subject). The damma on the final ة shows it is nominative, matching the case of the subject it describes."
+        "english": "Indefinite feminine adjective, nominative modifier",
+        "arabic": "صفة نكرة مفردة مؤنثة مرفوعة",
+        "explanation": "قَيِّمَةٌ is an adjective describing كُتُبٌ. It is nominative because the noun it describes is nominative. Although كُتُبٌ is plural, a non-human plural takes a feminine singular adjective."
       }
     },
     {
@@ -141,9 +141,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Plural active participle, accusative, attribute of the direct object",
-        "arabic": "فعل مضارع مجرور أو منصوب (صفة)",
-        "explanation": "مُخْلِصِينَ is an active participle meaning 'being sincere.' It is in the accusative case (shown by the fatha) because it describes how to worship Allah. The ياء at the end marks it as a masculine plural."
+        "english": "Masculine plural active participle, accusative circumstantial description",
+        "arabic": "اسم فاعل جمع مذكر سالم منصوب (حال)",
+        "explanation": "مُخْلِصِينَ is an active participle meaning 'being sincere.' It is an accusative حال describing the worshippers' state: they worship Allah while making their religion sincerely for Him."
       }
     },
     {
@@ -163,9 +163,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Plural noun, accusative, attribute describing the manner of worship",
-        "arabic": "اسم مجرور أو منصوب (صفة)",
-        "explanation": "حُنَفَاءَ is the plural of حَنِيفٌ (a monotheist). It is in the accusative case (shown by the fatha) as an attribute describing how to worship Allah. It means turning away from all false paths toward the truth."
+        "english": "Accusative broken plural, circumstantial description",
+        "arabic": "جمع تكسير منصوب (حال)",
+        "explanation": "حُنَفَاءَ is the plural of حَنِيفٌ. It is another accusative حال describing the worshippers: they turn away from shirk and remain devoted to Tawhid."
       }
     },
     {
@@ -185,9 +185,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Definite noun, genitive singular, possessed by the preceding word",
-        "arabic": "اسم معرف مجرور (ملكوق)",
-        "explanation": "الْبَرِيَّةِ is in the genitive case (shown by the kasra) because it is the possessed (ملكوق) of شَرُّ (the worst). Together they mean 'the worst of the creation.'"
+        "english": "Definite feminine noun, genitive in a possessive construction",
+        "arabic": "اسم معرفة مجرور (مضاف إليه)",
+        "explanation": "الْبَرِيَّةِ is genitive as the second term of an idafah after شَرُّ or خَيْرُ. The two expressions mean 'the worst of creation' and 'the best of creation.'"
       }
     },
     {
@@ -207,9 +207,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Definite noun phrase, nominative, subject of the implied verb",
-        "arabic": "جملة اسم معرف مرفوعة (مبتدأ)",
-        "explanation": "جَنَّاتُ عَدْنٍ is a phrase meaning 'gardens of eternity.' The damma on جَنَّاتُ shows it is nominative as the subject (مبتدأ) of the implied verb. عَدْنٍ is genitive, meaning 'of eternity.'"
+        "english": "Nominative possessive phrase functioning as the predicate",
+        "arabic": "مركب إضافي مرفوع في محل خبر",
+        "explanation": "جَنَّاتُ عَدْنٍ tells what their reward will be, so it functions as the predicate of جَزَاؤُهُمْ. جَنَّاتُ is nominative, while عَدْنٍ is genitive as the second term of the idafah."
       }
     },
     {
@@ -225,18 +225,18 @@ export default {
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'the idolors are the worshippers of idols and fire among the Arabs and the non-Arabs.'",
+        "note": "Ibn Kathir: 'the idolators are the worshippers of idols and fire among the Arabs and the non-Arabs.'",
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Definite plural active participle, genitive, governed by the preposition",
-        "arabic": "فعل مضارع مجرور معرف (مجرور بمِنْ)",
-        "explanation": "الْمُشْرِكِينَ is in the genitive case (shown by the kasra) because it follows the preposition مِنْ (from/of). The الْ makes it definite: 'the polytheists.' It means 'those who associate partners with Allah.'"
+        "english": "Definite masculine plural active participle, genitive by coordination",
+        "arabic": "اسم فاعل جمع مذكر سالم مجرور معطوف على أَهْلِ",
+        "explanation": "الْمُشْرِكِينَ is genitive because it is coordinated with أَهْلِ after the preposition مِنْ. The ياء marks the genitive masculine plural form, and الْ makes it definite."
       }
     },
     {
       "arabic": "آمَنُوا",
-      "meaning": "they believed",
+      "meaning": "believed",
       "connection": "The believers are the best of creation — faith is the first step.",
       "hint": "The light of faith entering the heart.",
       "source": {
@@ -251,9 +251,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Perfect verb, third person masculine plural, nominative",
-        "arabic": "فعل ماض للغائب الجمع المذكر المرفوع",
-        "explanation": "آمَنُوا is a past-tense verb meaning 'they believed.' The damma on the final و shows it is nominative, required after the particle إِنَّ which governs the nominative case."
+        "english": "Third-person masculine plural perfect verb with subject pronoun",
+        "arabic": "فعل ماض مبني على الضم، والواو ضمير في محل رفع فاعل",
+        "explanation": "آمَنُوا is a perfect verb meaning 'believed.' It is built on damm because the subject pronoun واو الجماعة is attached. That pronoun supplies the meaning 'they.'"
       }
     },
     {
@@ -273,9 +273,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Plural noun, accusative, direct object of the verb",
-        "arabic": "اسم مجرور أو منصوب (مفعول به)",
-        "explanation": "الصَّالِحَاتِ is in the accusative case (shown by the kasra) because it is the direct object (مفعول به) of the verb عَمِلُوا (they did). It means 'righteous deeds.'"
+        "english": "Feminine sound plural, accusative direct object",
+        "arabic": "جمع مؤنث سالم منصوب (مفعول به)",
+        "explanation": "الصَّالِحَاتِ is the direct object of عَمِلُوا, so it is accusative. A sound feminine plural uses kasra rather than fatha as its accusative marker."
       }
     },
     {
@@ -295,9 +295,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Plural active participle, accusative, describing the state of the believers",
-        "arabic": "فعل مضارع منصوب (صفة)",
-        "explanation": "خَالِدِينَ is an active participle meaning 'living forever.' It is in the accusative case (shown by the fatha) as an attribute describing the believers. The ن at the end marks it as a masculine plural."
+        "english": "Accusative masculine plural active participle functioning as a state",
+        "arabic": "اسم فاعل جمع مذكر سالم منصوب (حال)",
+        "explanation": "خَالِدِينَ is an active participle functioning as a حال. It describes the people while they remain in Hell or the gardens, and the ياء marks the accusative masculine plural form."
       }
     },
     {
@@ -317,9 +317,9 @@ export default {
         "checkedAt": "2026-07-26"
       },
       "grammar": {
-        "english": "Definite noun, nominative singular (plural), subject of the implied verb",
-        "arabic": "اسم معرف مرفوع (فاعل)",
-        "explanation": "الْأَنْهَارُ is in the nominative case (shown by the damma) as the subject (فاعل) of the implied verb 'flow.' The دمة on the final ر shows nominative case. It means 'the rivers.'"
+        "english": "Definite plural noun, nominative subject of تَجْرِي",
+        "arabic": "اسم معرفة جمع مرفوع (فاعل)",
+        "explanation": "الْأَنْهَارُ is the nominative subject of the explicit verb تَجْرِي, 'flow.' The damma on the final ر marks the nominative case."
       }
     }
   ],
@@ -370,7 +370,7 @@ export default {
         "dark"
       ],
       "answer": 0,
-      "explanation": "مُطَهَّرَةً means 'purified.' The pages have no falsehood or error in them."
+      "explanation": "مُطَهَّرَةً means 'purified.' Ibn Kathir connects these pages with records that are held in honor, exalted, and purified."
     },
     {
       "type": "ar2en",
@@ -448,7 +448,7 @@ export default {
       "type": "ar2en",
       "q": "What does آمَنُوا mean?",
       "options": [
-        "they believed",
+        "believed",
         "they traveled",
         "they denied",
         "they rested"
@@ -558,7 +558,7 @@ export default {
         "purified"
       ],
       "answer": 3,
-      "explanation": "مُطَهَّرَةً means 'purified.' The pages have no falsehood or error in them.",
+      "explanation": "مُطَهَّرَةً means 'purified.' Ibn Kathir connects these pages with records that are held in honor, exalted, and purified.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
@@ -680,7 +680,7 @@ export default {
       "options": [
         "they denied",
         "they rested",
-        "they believed",
+        "believed",
         "they traveled"
       ],
       "answer": 2,
@@ -838,91 +838,91 @@ export default {
     },
     {
       "category": "Critical Thinking",
-      "q": "Why did people divide after the clear proof came?",
+      "q": "A student says, 'Once clear proof arrives, everyone will automatically agree.' Which response best fits verses 1-4?",
       "options": [
-        "The proof was not clear",
-        "Allah forced them",
-        "They had no choice",
-        "Stubbornness and love of old ways"
+        "The clear proof prevented every disagreement among the People of the Book",
+        "The People of the Book divided only before any evidence reached them",
+        "The surah says disagreement proves that the message itself was unclear",
+        "Clear evidence arrived, yet the People of the Book still divided"
       ],
       "answer": 3,
-      "explanation": "The proof was clear, but people cling to tradition. Ibn Kathir explains the Jews and Christians divided after the truth came, just as their Scriptures foretold.",
+      "explanation": "The surah does not teach that evidence removes a person's ability to disagree. It says the People of the Scripture divided after the clear proof came to them.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'The People of the Scripture differed not until after there came to them the Bayyinah' and 'After Allah established the proofs and evidences against them, they divided and differed.'",
+        "note": "Ibn Kathir on 98:4: 'After Allah established the proofs and evidences against them, they divided and differed.'",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why are the pages called purified?",
+      "q": "Why does verse 5 place sincere worship before prayer and zakah?",
       "options": [
-        "No falsehood can touch them",
-        "The paper is clean",
-        "It is written in gold",
-        "Only angels see it"
+        "Prayer and zakah must be acts of devotion directed to Allah alone",
+        "Sincerity replaces the need to establish prayer or give zakah",
+        "Prayer and zakah are mentioned only as customs of earlier nations",
+        "The order teaches that outward actions matter without inward devotion"
       ],
       "answer": 0,
-      "explanation": "The Qur'an is purified from all falsehood, error, and contradiction. Ibn Kathir says the pages are 'Exalted, purified.'",
+      "explanation": "Verse 5 first commands worship that is sincerely for Allah, then names prayer and zakah. The order joins inward sincerity with outward worship.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'reciting purified pages' and 'In Records held in honor. Exalted, purified.'",
+        "note": "Ibn Kathir on 98:5 explains, 'they should worship Allah, making religion purely for Him alone,' followed by 'and perform Salah' and 'and give Zakah.' Cautious structural inference: sincerity frames the acts that follow.",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "What three acts summarize religion in this surah?",
+      "q": "Which situation best reflects the description of the best of creation in verse 7?",
       "options": [
-        "Building, farming, trading",
-        "Sincere worship, prayer, zakah",
-        "Fasting, pilgrimage, jihad",
-        "Reading, writing, teaching"
+        "A person claims faith but treats righteous action as unnecessary",
+        "A person believes sincerely and follows faith with righteous deeds",
+        "A person performs visible deeds only to gain people's admiration",
+        "A person depends on family background instead of faith and deeds"
       ],
       "answer": 1,
-      "explanation": "The surah condenses religion into three acts: worship Allah sincerely, establish prayer, and give zakah. Ibn Kathir explains each one.",
+      "explanation": "Verse 7 joins belief and righteous deeds. Ibn Kathir explains this as belief in the heart together with righteous deeds performed by the body.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'they should worship Allah, making religion purely for Him alone' and 'and perform Salah' and 'and give Zakah' and 'and that is the right religion.'",
+        "note": "Ibn Kathir describes 'righteous people who believed in their hearts and performed righteous deeds with their bodies.'",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why are believers called the best of creation?",
+      "q": "What contrast does the surah make between rejection and belief joined with righteous deeds?",
       "options": [
-        "They have the most money",
-        "They were born in Arabia",
-        "Faith produces deeds that benefit all",
-        "They are physically strongest"
+        "Both choices receive the same description and the same final destination",
+        "Only a person's community matters, while belief and deeds have no role",
+        "The two choices lead to opposite descriptions and final outcomes",
+        "The difference applies only to life before the clear proof arrives"
       ],
       "answer": 2,
-      "explanation": "Believers are best because their faith produces good deeds. Ibn Kathir says: 'righteous people who believed in their hearts and performed righteous deeds with their bodies.'",
+      "explanation": "Verses 6-8 contrast the worst of creation and Hell with the best of creation and eternal gardens. The descriptions are tied to rejection on one side and belief with righteous deeds on the other.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'They are the best of creatures' and 'righteous people who believed in their hearts and performed righteous deeds with their bodies.'",
+        "note": "Ibn Kathir on 98:6-8 says, 'They are the worst of creatures,' then, 'They are the best of creatures,' whose reward is 'Eternal Gardens underneath which rivers flow.'",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "What does fearing Allah teach about the reward?",
+      "q": "A student thinks the gardens and rivers are the only reward in verse 8. What important reward did the student miss?",
       "options": [
-        "Fear means being terrified only",
-        "Only prophets can fear Allah",
-        "Fear of Allah is not required",
-        "It is for the God-conscious"
+        "The believers receive authority over every nation in worldly life",
+        "The believers return to earth after spending some time in the gardens",
+        "The believers are promised that no acts of worship will be required",
+        "Allah is pleased with them, and they are pleased with Him"
       ],
       "answer": 3,
-      "explanation": "The reward is for those who feared their Lord. Ibn Kathir says: 'That is for him who fears his Lord.'",
+      "explanation": "Verse 8 mentions more than the physical delights of Paradise. It also says that Allah is pleased with the believers and they are pleased with Him.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir: 'That is for him who fears his Lord' meaning 'this is the reward that will be attained by those who revere Allah and fear Him as He deserves to be feared.'",
+        "note": "Ibn Kathir on 98:8 says, 'Allah will be pleased with them, and they well-pleased with Him. The condition of Him being pleased with them is more illustrious than all of the everlasting delights.'",
         "checkedAt": "2026-07-26"
       }
     },
@@ -931,17 +931,17 @@ export default {
       "rhetoricArea": "Meaning Construction",
       "q": "The surah uses الْبَيِّنَةُ (the clear proof) rather than a simpler word like 'book' or 'message.' Why choose this word?",
       "options": [
-        "It shows the proof cannot be argued against",
-        "The surah needed a longer word for style",
-        "Allah forgot simpler words in the verse",
-        "It sounds more poetic in recitation"
+        "It presents the message as evidence that makes the truth clear",
+        "It limits the proof to a written object without a messenger",
+        "It suggests the message remained hidden from the people addressed",
+        "It makes the word refer only to disagreements from the past"
       ],
       "answer": 0,
-      "explanation": "الْبَيِّنَةُ means 'clear proof' — something so evident that no one can argue against it. Ibn Kathir explains it refers to the Qur'an itself, which is clear evidence from Allah.",
+      "explanation": "الْبَيِّنَةُ presents the revelation as clear evidence, not merely information. Ibn Kathir explains that the truth became clear to them and identifies the Bayyinah here as the Qur'an.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:1: 'until there came to them the Bayyinah' meaning 'this Qur'an.' The word Bayyinah (clear proof) is chosen to emphasize that the evidence is self-evident.",
+        "note": "Ibn Kathir on 98:1 says, 'they will not be finished until the truth becomes clear to them,' and explains 'until there came to them the Bayyinah' as 'this Qur'an.' Cautious meaning inference: the word frames the Qur'an as evidence that clarifies truth.",
         "checkedAt": "2026-07-26"
       }
     },
@@ -950,93 +950,93 @@ export default {
       "rhetoricArea": "Meaning Construction",
       "q": "The word مُطَهَّرَةً (purified) describes the pages. Why use this word instead of simply saying 'clean pages'?",
       "options": [
-        "It is a description of the paper quality",
-        "It shows the pages have no falsehood or error",
-        "The pages need to be washed before reading",
-        "Only angels can see the purification"
+        "It mainly identifies the material from which the pages were made",
+        "It gives the pages an honored purity beyond ordinary physical tidiness",
+        "It says the pages became pure only after people accepted them",
+        "It describes the readers rather than the pages being recited"
       ],
       "answer": 1,
-      "explanation": "مُطَهَّرَةً means purified from all falsehood, error, and contradiction. Ibn Kathir says the pages are 'Exalted, purified' — not just physically clean, but free from any impurity of content.",
+      "explanation": "مُطَهَّرَةً is stronger than ordinary physical cleanliness. Ibn Kathir connects the recited pages with records held in honor and described as exalted and purified.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:2: 'reciting purified pages' and 'In Records held in honor. Exalted, purified.'",
+        "note": "Ibn Kathir on 98:2 connects 'reciting purified pages' with 'Records held in honor. Exalted, purified.' Cautious meaning inference: purified conveys honored purity rather than ordinary tidiness.",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Rhetoric",
       "rhetoricArea": "Nazm",
-      "q": "The surah starts by saying the disbelievers 'were not going to leave' until the proof came. Why begin with this statement of inevitability?",
+      "q": "Why does verse 2 explain the clear proof immediately after verse 1 names it?",
       "options": [
-        "Allah was explaining a mistake in the verse",
-        "It was added later by the companions",
-        "It shows the proof was destined to reach them",
-        "The surah needed to be longer for style"
+        "The order delays the subject so the reader never learns what the proof is",
+        "The next verse changes to an unrelated messenger from an earlier nation",
+        "The order identifies the proof as a Messenger reciting purified pages",
+        "The explanation turns the clear proof into the disagreement mentioned later"
       ],
       "answer": 2,
-      "explanation": "Starting with 'were not going to leave' shows that the coming of the clear proof was inevitable and ordained. This sets up the contrast: despite this clear sign, they still divided.",
+      "explanation": "Verse 1 creates attention by naming the clear proof. Verse 2 immediately identifies it as a Messenger from Allah reciting purified pages, so the key term is not left vague.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:1: 'Those who disbelieve from among the People of the Scripture and idolators, were not going to leave until there came to them the Bayyinah.' The structure moves from inevitability to what actually came.",
+        "note": "Ibn Kathir on 98:1-2 says, 'Then He explains what the Bayyinah is by His saying: A Messenger from Allah, reciting purified pages.'",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Rhetoric",
       "rhetoricArea": "Nazm",
-      "q": "The surah moves from the clear proof, to the command to worship, to the division of creation, to the final reward. Why end with the description of Paradise and Allah's pleasure?",
+      "q": "After verse 6 describes the worst of creation and Hell, why do verses 7-8 describe the best of creation and their reward?",
       "options": [
-        "The surah was running out of space to write",
-        "It was added later by the companions",
-        "The first verse was not finished properly",
-        "It ends with hope after the strongest warning"
+        "The later verses cancel the warning, so rejection has no consequence",
+        "The passage changes subject because belief and deeds are unrelated to judgment",
+        "The order suggests both groups reach the same destination after different lives",
+        "The contrast completes the warning by showing the opposite path and outcome"
       ],
       "answer": 3,
-      "explanation": "The structure builds: first the warning (Hell for disbelievers), then the promise (Paradise for believers), and finally the highest reward (Allah's pleasure). Ending with hope after warning gives the listener a clear destination.",
+      "explanation": "The surah places the two groups side by side: rejection and Hell, then belief with righteous deeds and eternal gardens. The contrast makes both paths and outcomes clear.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:6-8: 'They are the worst of creatures' then 'They are the best of creatures' then 'Eternal Gardens underneath which rivers flow' then 'Allah will be pleased with them, and they well-pleased with Him.' The structure moves from warning to promise to the highest reward.",
+        "note": "Ibn Kathir on 98:6-8 moves from 'They are the worst of creatures' to 'They are the best of creatures' and 'Eternal Gardens underneath which rivers flow.' Cautious structural inference: placing the outcomes together completes the contrast.",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Rhetoric",
       "rhetoricArea": "Style of Address",
-      "q": "Why does the surah address both 'the People of the Book' and 'the polytheists' together?",
+      "q": "What is the effect of naming both the People of the Book and the polytheists at the opening and again when judgment is described?",
       "options": [
-        "Both groups share the same proof and choice",
-        "The Prophet was confused about who to address",
-        "Only one group needed to hear the message",
-        "It was a mistake in the transmission"
+        "It places both groups under responsibility toward the clear proof",
+        "It teaches that both groups held identical beliefs before the Messenger",
+        "It limits the surah's message to one ethnicity in the Arabian Peninsula",
+        "It separates the arrival of proof from the judgment described later"
       ],
       "answer": 0,
-      "explanation": "Both groups received the same clear proof and face the same choice: believe or reject. Ibn Kathir explains the People of the Scripture are the Jews and Christians, and the idolators are the worshippers of idols.",
+      "explanation": "The surah names disbelievers from both groups when the proof arrives and when their outcome is stated. Repeating the grouping links receiving the proof with responsibility for the response.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:1: 'As for the People of the Scripture, they are the Jews and the Christians, and the idolators are the worshippers of idols and fire among the Arabs and the non-Arabs.'",
+        "note": "Ibn Kathir identifies 'the People of the Scripture' as Jews and Christians and 'the idolators' as worshippers of idols and fire; on 98:6 he again discusses 'the People of the Scripture and the idolators.' Cautious style inference: repeating both groups links proof with accountability.",
         "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Rhetoric",
       "rhetoricArea": "Style of Address",
-      "q": "Why does the surah use simple, direct language rather than long, elaborate descriptions?",
+      "q": "What is the effect of the direct labels 'worst of creation' and 'best of creation' near the end?",
       "options": [
-        "Shorter surahs are easier to print and read",
-        "The truth about Allah is simple, no decoration",
-        "The Prophet was in a hurry to leave",
-        "The people could not read long texts then"
+        "They describe social rank in this life without any final outcome",
+        "They make the moral contrast clear by pairing each group with an outcome",
+        "They suggest every person belongs to both groups at the same time",
+        "They shift attention from faith and deeds toward family background"
       ],
       "answer": 1,
-      "explanation": "Tawheed does not need long explanations. The direct, simple style matches the pure truth: Allah is One, He has no children, He was not born, nothing is equal to Him.",
+      "explanation": "The two direct labels create a sharp contrast. The surrounding verses connect the worst description with rejection and Hell, and the best description with belief, righteous deeds, and eternal reward.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on 98:6-8: 'They are the worst of creatures' then 'They are the best of creatures' then 'Eternal Gardens underneath which rivers flow' then 'Allah will be pleased with them, and they well-pleased with Him.'",
+        "note": "Ibn Kathir on 98:6-8 states, 'They are the worst of creatures,' then, 'They are the best of creatures,' before describing 'Eternal Gardens underneath which rivers flow.' Cautious style inference: the direct labels sharpen the moral contrast.",
         "checkedAt": "2026-07-26"
       }
     }
@@ -1154,7 +1154,7 @@ export default {
           },
           {
             "b": "آمَنُوا",
-            "m": "they believed"
+            "m": "believed"
           },
           {
             "t": " وَعَمِلُوا "
@@ -1313,7 +1313,7 @@ export default {
             "t": "Those who "
           },
           {
-            "b": "they believed",
+            "b": "believed",
             "m": "آمَنُوا"
           },
           {
