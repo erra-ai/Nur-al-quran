@@ -9,895 +9,1097 @@ export default {
   "intro": "Surah At-Takwir describes the great changes that will happen before the Day of Judgment. The sun, stars, mountains, oceans, and sky will no longer remain as we know them. Then every person will see what they brought forward from their deeds. The surah also teaches that the Qur'an is a true message from Allah, brought by Jibril (peace be upon him) to Prophet Muhammad ﷺ.",
   "vocabulary": [
     {
-      "arabic": "كُوِّرَتْ",
+      "arabic": "كُوِّرَتْ",
       "meaning": "wrapped up / darkened",
-      "connection": "The sun will be wrapped up and its light will be taken away.",
-      "hint": "Think of something bright being folded away.",
+      "connection": "The first thing to go is the sun's light — it is folded up and darkened.",
+      "hint": "Rolling a blanket tight around something.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:1 (root: ك-و-ر, Form II)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:1 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:1: '(When the sun is Kuwwirat.) \"This means it will be darkened.\" ... At-Takwir means to gather one part of something with another part of it (i.e., folding).'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, third person feminine singular, passive voice",
+        "arabic": "فعل ماض مبني للمجهول للغائب المفرد المؤنث",
+        "explanation": "The suffix ت marks the passive: the sun does not wrap itself, it IS wrapped. The feminine form agrees with the sun."
       }
     },
     {
-      "arabic": "انْكَدَرَتْ",
+      "arabic": "ٱنكَدَرَتْ",
       "meaning": "scattered / dimmed",
-      "connection": "The stars will fall or lose their brightness.",
-      "hint": "Think of lights falling and fading.",
+      "connection": "The stars that looked fixed will pour down and lose their light.",
+      "hint": "Water that spills over and goes dark.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:2 (root: ك-د-ر, Form VII)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:2 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 21: 'And when the stars fall, losing their light.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, Form VII, third person feminine singular",
+        "arabic": "فعل ماض لسبعل للغائب المفرد المؤنث",
+        "explanation": "The pattern ٱنفَعَلَ gives the sense of something breaking apart on its own, which suits stars scattering; the final ت agrees with the feminine subject."
       }
     },
     {
-      "arabic": "سُيِّرَتْ",
+      "arabic": "سُيِّرَتْ",
       "meaning": "moved away",
-      "connection": "The mountains will be moved from their places.",
-      "hint": "Something huge that looked fixed begins to move.",
+      "connection": "The mountains that looked permanent are marched off and gone.",
+      "hint": "Something carried off on a journey.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:3 (root: س-ي-ر, Form II)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:3 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 23: 'And when the mountains are moved away.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, third person feminine singular, passive voice",
+        "arabic": "فعل ماض مبني للمجهول للمفرد المؤنث",
+        "explanation": "This is the passive of 'to make something travel', so the mountains are made to move — the doubled yaa marks the intensive form."
       }
     },
     {
-      "arabic": "سُجِّرَتْ",
+      "arabic": "سُجِّرَتْ",
       "meaning": "set boiling / made to blaze",
-      "connection": "The seas will be made to boil or blaze.",
-      "hint": "Water becomes terrifying by Allah's command.",
+      "connection": "Seas that seem endless are turned into blazing fire.",
+      "hint": "An oven heated until it glows.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:6 (root: س-ج-ر, Form II)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:6 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 29: 'And when the seas burst into flames.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, Form II, third person feminine singular, passive",
+        "arabic": "فعل ماض للتكثير مبني للمجهول للمفرد المؤنث",
+        "explanation": "The Form II passive shows intensive action done to the seas: they are heated again and again until they blaze."
       }
     },
     {
-      "arabic": "كُشِطَتْ",
-      "meaning": "stripped away",
-      "connection": "The sky will be removed like a covering.",
-      "hint": "Think of a cover being pulled away.",
+      "arabic": "ٱلنُّفُوسُ",
+      "meaning": "souls",
+      "connection": "Every soul is matched with its peer, so nothing about a person is lost.",
+      "hint": "The inner life of a person — what never dies.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:11 (root: ك-ش-ط, Form I)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:7 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:7: '(And when the souls are joined with their mates.) meaning, every type (of soul) will be gathered with its peer (or mate).'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Plural noun, nominative with al-",
+        "arabic": "اسم جمع مرفوع بالضم ومعروف بأل",
+        "explanation": "This is the plural of نَفْس, 'soul'. It carries al- and a dammah because it is the subject of the verse."
       }
     },
     {
-      "arabic": "الْمَوْءُودَةُ",
+      "arabic": "ٱلْمَوْءُودَةُ",
       "meaning": "the baby girl buried alive",
-      "connection": "A helpless child killed unjustly will be asked about the crime done to her.",
-      "hint": "This word points to hidden injustice.",
-      "source": {
-        "primary": "Lane Lexicon",
-        "ref": "At-Takwir 81:8-9; Lane Lex. root و-ء-د",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "arabic": "ذَنْبٍ",
-      "meaning": "sin / fault",
-      "connection": "The question is: for what sin she was killed?",
-      "hint": "The victim had no sin.",
-      "source": {
-        "primary": "Hans Wehr Dict. 4e",
-        "ref": "root ذ-ن-ب 'sin, fault, crime'",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "arabic": "الصُّحُفُ",
-      "meaning": "records / pages",
-      "connection": "The records of people's deeds will be opened.",
-      "hint": "Think of a book of deeds.",
+      "connection": "A victim from the days of ignorance is brought forward and asked a question.",
+      "hint": "A child pushed into the ground and left there.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:10 (root: ص-ح-ف, plural of صحيفة)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:8 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:8: 'Al-Maw'udah is the female infant that the people of the pre-Islamic time of ignorance would bury in the dirt due to their hatred of girls.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Passive noun on the مَفْعُولَة pattern, nominative",
+        "arabic": "اسم مفعول على وزن مفعولة مرفوع",
+        "explanation": "The word is built on مَفْعُولَة from the root و-أ-د, to bury, so the word itself means 'the one who has been buried alive'."
+      }
+    },
+    {
+      "arabic": "ذَنۢبٍۢ",
+      "meaning": "sin / fault",
+      "connection": "The question asked is: for what fault was she killed?",
+      "hint": "Something wrong a person is blamed for.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "At-Takwir 81:9 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 35: 'For what crime was she killed?'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite noun, genitive with tanween kasr",
+        "arabic": "اسم نكرة مجرور بتنوين الكسر",
+        "explanation": "The kasra-tanween shows the word is governed by the preposition in 'for what sin', marking the genitive case."
+      }
+    },
+    {
+      "arabic": "ٱلصُّحُفُ",
+      "meaning": "records / pages",
+      "connection": "The written pages holding each person's deeds are brought out.",
+      "hint": "Sheets of paper rolled out flat.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "At-Takwir 81:10 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 37: 'And when the records of deeds are opened wide.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Plural noun, nominative with al-",
+        "arabic": "اسم جمع مرفوع ومعروف بأل",
+        "explanation": "This is the plural of صَحِيفَة, a written sheet, and it is the subject of the verse, so it carries a dammah."
       }
     },
     {
       "arabic": "نُشِرَتْ",
       "meaning": "opened / spread out",
-      "connection": "The records will be opened and shown.",
-      "hint": "Something hidden becomes visible.",
+      "connection": "Those records are unrolled and spread out where all can see them.",
+      "hint": "Spreading a cloth out flat.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:10 (root: ن-ش-ر, Form I)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:10 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 37: 'And when the records of deeds are opened wide.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, third person feminine singular, passive",
+        "arabic": "فعل ماض مبني للمجهول للمفرد المؤنث",
+        "explanation": "The passive means the pages are spread out by someone else; the final ت agrees with the feminine subject 'records'."
+      }
+    },
+    {
+      "arabic": "كُشِطَتْ",
+      "meaning": "stripped away",
+      "connection": "The sky that covered the earth is peeled back like a skin.",
+      "hint": "Taking a covering off by force.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "At-Takwir 81:11 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 39: 'And when the sky is stripped away.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, third person feminine singular, passive",
+        "arabic": "فعل ماض مبني للمجهول للمفرد المؤنث",
+        "explanation": "This is the passive of 'to scrape or peel off', so the sky is something peeled away from above the people."
+      }
+    },
+    {
+      "arabic": "ٱلْجَنَّةُ",
+      "meaning": "Paradise",
+      "connection": "While Hell is kindled, Paradise is brought right up close to its people.",
+      "hint": "A walled garden of shelter.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "At-Takwir 81:13 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:13: '(And when Paradise is brought near.) ... \"This means it will be brought near to its inhabitants.\"'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun, nominative with al-",
+        "arabic": "اسم مرفوع ومعروف بأل",
+        "explanation": "The word is the subject of 'brought near' and carries a dammah; its root ج-ن-ن (to cover) gives the picture of a protected garden."
       }
     },
     {
       "arabic": "أَحْضَرَتْ",
       "meaning": "brought forward",
-      "connection": "Every soul will know what it brought.",
-      "hint": "Your deeds are brought in front of you.",
+      "connection": "At last the answer comes: every soul will know what it has produced.",
+      "hint": "Presenting something you have saved up.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:14 (root: ح-ض-ر, Form IV)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:14 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 45: 'Then each soul will clearly know what it has brought along.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, Form IV, third person feminine singular",
+        "arabic": "فعل ماض رباعي للغائب المفرد المؤنث",
+        "explanation": "The Form IV pattern points to what a person has produced and presented, which is why the verse names a soul knowing it."
       }
     },
     {
-      "arabic": "كَرِيمٍ",
+      "arabic": "كَرِيمٍۢ",
       "meaning": "noble",
-      "connection": "Jibril (peace be upon him) is described as a noble messenger.",
-      "hint": "The message comes through a noble messenger.",
+      "connection": "The one who carries this Word is described as noble and honoured.",
+      "hint": "Generous in character and rank.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:19 (root: ك-ر-م, Form I active participle)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:19 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:19: '(Verily, this is the Word of a most honorable messenger.) meaning, indeed this Qur'an is being conveyed by a noble messenger ... and he is Jibril.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Adjective, indefinite genitive (tanween kasr)",
+        "arabic": "صفة نكرة مجرورة بالتنوين",
+        "explanation": "The adjective repeats the case ending of the noun before it, which is the sign in Arabic that it is describing that word."
       }
     },
     {
-      "arabic": "أَمِينٍ",
+      "arabic": "أَمِينٍۢ",
       "meaning": "trustworthy",
-      "connection": "Jibril faithfully delivers Allah's message.",
-      "hint": "A trustworthy messenger does not change the message.",
+      "connection": "The messenger carrying the revelation can be trusted with it completely.",
+      "hint": "Someone you can safely leave a secret with.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:21 (root: أ-م-ن, Form I active participle)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:21 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:21: '(trustworthy.) This is a description of Jibril as being trustworthy.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Adjective, indefinite genitive (tanween kasr)",
+        "arabic": "صفة نكرة مجرورة بالتنوين",
+        "explanation": "It continues the same genitive chain as 'noble', adding a second quality to the same messenger."
       }
     },
     {
-      "arabic": "رَجِيمٍ",
+      "arabic": "رَّجِيمٍۢ",
       "meaning": "rejected / cast away",
-      "connection": "The Qur'an is not from a rejected devil.",
-      "hint": "Shaytan is rejected, not trusted.",
+      "connection": "The Qur'an is not the speech of a devil driven out from mercy.",
+      "hint": "Shouted at and pushed far away.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:25 (root: ر-ج-م, Form I passive participle)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:25 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 67: 'And this is not the word of a rejected devil.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Intensive adjective, indefinite genitive",
+        "arabic": "صفة مبالغة مجرورة بالتنوين",
+        "explanation": "The فَعِيل pattern here carries an intensive sense from the root ر-ج-م, to stone or curse, so the devil is one permanently driven off."
       }
     },
     {
       "arabic": "يَسْتَقِيمَ",
       "meaning": "to go straight / be upright",
-      "connection": "A person must want to follow the straight path.",
-      "hint": "Think of choosing the straight road.",
+      "connection": "The choice offered is to take the straight way back to Allah.",
+      "hint": "Asking to be set on a straight road.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "At-Takwir 81:28 (root: ق-و-م, Form X)",
-        "checkedAt": "2026-06-30"
+        "ref": "At-Takwir 81:28 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:28: '(To whomsoever among you who wills to walk straight.) meaning, whoever seeks guidance, then he must adhere to this Qur'an'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Imperfect verb, Form X, jussive",
+        "arabic": "فعل مضارع للاستفعال مجزوم",
+        "explanation": "The pattern يَسْتَفْعِل expresses seeking, so the verb means 'to seek to be straight'. It carries no vowel sign because the word before it puts it in the jussive."
       }
     }
   ],
   "practice": [
     {
       "type": "ar2en",
-      "q": "What does كُوِّرَتْ mean?",
+      "q": "What does كُوِّرَتْ mean?",
       "options": [
+        "brought forward",
+        "stripped away",
         "wrapped up / darkened",
-        "opened / spread out",
-        "left abandoned",
-        "brought near"
+        "records / pages"
       ],
-      "answer": 0
+      "answer": 2,
+      "explanation": "كُوِّرَتْ means 'wrapped up / darkened' — The first thing to go is the sun's light — it is folded up and darkened."
     },
     {
       "type": "ar2en",
-      "q": "What does انْكَدَرَتْ mean?",
+      "q": "What does ٱنكَدَرَتْ mean?",
       "options": [
-        "made to blaze",
         "scattered / dimmed",
-        "set boiling",
+        "moved away",
+        "the baby girl buried alive",
+        "set boiling / made to blaze"
+      ],
+      "answer": 0,
+      "explanation": "ٱنكَدَرَتْ means 'scattered / dimmed' — The stars that looked fixed will pour down and lose their light."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does سُيِّرَتْ mean?",
+      "options": [
+        "stripped away",
+        "souls",
+        "sin / fault",
         "moved away"
       ],
-      "answer": 1
+      "answer": 3,
+      "explanation": "سُيِّرَتْ means 'moved away' — The mountains that looked permanent are marched off and gone."
     },
     {
       "type": "ar2en",
-      "q": "What does سُيِّرَتْ mean?",
+      "q": "What does سُجِّرَتْ mean?",
       "options": [
-        "joined together",
-        "stripped away",
+        "opened / spread out",
+        "set boiling / made to blaze",
+        "Paradise",
+        "noble"
+      ],
+      "answer": 1,
+      "explanation": "سُجِّرَتْ means 'set boiling / made to blaze' — Seas that seem endless are turned into blazing fire."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلنُّفُوسُ mean?",
+      "options": [
         "moved away",
-        "raised up"
+        "scattered / dimmed",
+        "souls",
+        "to go straight / be upright"
       ],
-      "answer": 2
+      "answer": 2,
+      "explanation": "ٱلنُّفُوسُ means 'souls' — Every soul is matched with its peer, so nothing about a person is lost."
     },
     {
       "type": "ar2en",
-      "q": "What does سُجِّرَتْ mean?",
+      "q": "What does ٱلْمَوْءُودَةُ mean?",
       "options": [
-        "set to boil",
-        "scattered far",
-        "wrapped over",
-        "covered away"
+        "noble",
+        "records / pages",
+        "the baby girl buried alive",
+        "rejected / cast away"
       ],
-      "answer": 0
+      "answer": 2,
+      "explanation": "ٱلْمَوْءُودَةُ means 'the baby girl buried alive' — A victim from the days of ignorance is brought forward and asked a question."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ذَنۢبٍۢ mean?",
+      "options": [
+        "trustworthy",
+        "sin / fault",
+        "to go straight / be upright",
+        "scattered / dimmed"
+      ],
+      "answer": 1,
+      "explanation": "ذَنۢبٍۢ means 'sin / fault' — The question asked is: for what fault was she killed?"
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلصُّحُفُ mean?",
+      "options": [
+        "Paradise",
+        "souls",
+        "moved away",
+        "records / pages"
+      ],
+      "answer": 3,
+      "explanation": "ٱلصُّحُفُ means 'records / pages' — The written pages holding each person's deeds are brought out."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'opened / spread out'?",
+      "options": [
+        "نُشِرَتْ",
+        "كُشِطَتْ",
+        "ٱلصُّحُفُ",
+        "ٱنكَدَرَتْ"
+      ],
+      "answer": 0,
+      "explanation": "نُشِرَتْ means 'opened / spread out' — Those records are unrolled and spread out where all can see them."
     },
     {
       "type": "ar2en",
       "q": "What does كُشِطَتْ mean?",
       "options": [
-        "folded tightly",
-        "swept away",
         "stripped away",
-        "left behind"
+        "scattered / dimmed",
+        "trustworthy",
+        "sin / fault"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "كُشِطَتْ means 'stripped away' — The sky that covered the earth is peeled back like a skin."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلْجَنَّةُ mean?",
+      "options": [
+        "rejected / cast away",
+        "Paradise",
+        "the baby girl buried alive",
+        "noble"
+      ],
+      "answer": 1,
+      "explanation": "ٱلْجَنَّةُ means 'Paradise' — While Hell is kindled, Paradise is brought right up close to its people."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'records / pages'?",
+      "q": "Which word means 'brought forward'?",
       "options": [
-        "ذَنْبٍ",
-        "الصُّحُفُ",
-        "كَرِيمٍ",
-        "أَمِينٍ"
-      ],
-      "answer": 1
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'rejected / cast away'?",
-      "options": [
-        "رَجِيمٍ",
-        "يَسْتَقِيمَ",
+        "نُشِرَتْ",
+        "أَمِينٍۢ",
         "أَحْضَرَتْ",
-        "نُشِرَتْ"
+        "يَسْتَقِيمَ"
       ],
-      "answer": 0
+      "answer": 2,
+      "explanation": "أَحْضَرَتْ means 'brought forward' — At last the answer comes: every soul will know what it has produced."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'noble'?",
+      "options": [
+        "أَمِينٍۢ",
+        "كَرِيمٍۢ",
+        "رَّجِيمٍۢ",
+        "كُوِّرَتْ"
+      ],
+      "answer": 1,
+      "explanation": "كَرِيمٍۢ means 'noble' — The one who carries this Word is described as noble and honoured."
     },
     {
       "type": "en2ar",
       "q": "Which word means 'trustworthy'?",
       "options": [
-        "كَرِيمٍ",
-        "أَمِينٍ",
-        "كُشِطَتْ",
-        "الْمَوْءُودَةُ"
+        "كَرِيمٍۢ",
+        "رَّجِيمٍۢ",
+        "أَمِينٍۢ",
+        "ٱلنُّفُوسُ"
       ],
-      "answer": 1
+      "answer": 2,
+      "explanation": "أَمِينٍۢ means 'trustworthy' — The messenger carrying the revelation can be trusted with it completely."
     },
     {
-      "type": "meaning",
-      "q": "The word الْمَوْءُودَةُ refers to:",
+      "type": "en2ar",
+      "q": "Which word means 'rejected / cast away'?",
       "options": [
-        "a bright star",
-        "a buried baby girl",
-        "a noble messenger",
-        "an open record"
+        "رَّجِيمٍۢ",
+        "كَرِيمٍۢ",
+        "أَمِينٍۢ",
+        "ذَنۢبٍۢ"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "رَّجِيمٍۢ means 'rejected / cast away' — The Qur'an is not the speech of a devil driven out from mercy."
     },
     {
-      "type": "meaning",
-      "q": "The word يَسْتَقِيمَ means to:",
+      "type": "en2ar",
+      "q": "Which word means 'to go straight / be upright'?",
       "options": [
-        "be confused",
-        "go straight",
-        "scatter far",
-        "be trusted"
+        "أَمِينٍۢ",
+        "يَسْتَقِيمَ",
+        "رَّجِيمٍۢ",
+        "سُجِّرَتْ"
       ],
-      "answer": 1
+      "answer": 1,
+      "explanation": "يَسْتَقِيمَ means 'to go straight / be upright' — The choice offered is to take the straight way back to Allah."
     }
   ],
   "quiz": [
     {
       "category": "Vocabulary",
-      "q": "What does كُشِطَتْ mean?",
+      "q": "What does كُوِّرَتْ mean?",
       "options": [
-        "stripped away",
-        "made heavy",
-        "joined together",
-        "lifted gently"
-      ],
-      "answer": 0,
-      "explanation": "كُشِطَتْ means pulled or stripped away. The verse describes the sky being removed like a covering.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does انْكَدَرَتْ mean?",
-      "options": [
-        "lit up bright",
-        "wrapped gently",
         "scattered / dimmed",
-        "tied together"
+        "moved away",
+        "wrapped up / darkened",
+        "brought forward"
       ],
       "answer": 2,
-      "explanation": "انْكَدَرَتْ means to scatter or dim. The stars fall and lose their light.",
+      "explanation": "It means folded up and darkened — the sun's light is rolled away.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:1: '(When the sun is Kuwwirat.) \"This means it will be darkened.\"'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does سُيِّرَتْ mean?",
+      "q": "What does ٱنكَدَرَتْ mean?",
       "options": [
-        "left in place",
+        "scattered / dimmed",
         "moved away",
-        "burned up",
-        "covered over"
-      ],
-      "answer": 1,
-      "explanation": "سُيِّرَتْ means to be moved. The mountains are moved from where they were.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does سُجِّرَتْ mean?",
-      "options": [
-        "set boiling",
-        "made empty",
-        "softly melted",
-        "put out"
+        "stripped away",
+        "set boiling / made to blaze"
       ],
       "answer": 0,
-      "explanation": "سُجِّرَتْ means set to boiling. The seas will blaze.",
+      "explanation": "It describes the stars falling and losing their light.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 21: 'And when the stars fall, losing their light.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does الْمَوْءُودَةُ mean?",
+      "q": "What does سُيِّرَتْ mean?",
       "options": [
-        "the shining star",
-        "the buried baby girl",
-        "the faithful messenger",
-        "the open record"
+        "stripped away",
+        "opened / spread out",
+        "wrapped up / darkened",
+        "moved away"
+      ],
+      "answer": 3,
+      "explanation": "It means the mountains are carried off and gone.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 23: 'And when the mountains are moved away.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does سُجِّرَتْ mean?",
+      "options": [
+        "made calm and quiet again",
+        "set boiling / made to blaze",
+        "poured out in heavy rain",
+        "carried off into the sky"
       ],
       "answer": 1,
-      "explanation": "الْمَوْءُودَةُ refers to the baby girl who was buried alive.",
+      "explanation": "It is the seas made to blaze — an intensive passive, heated again and again.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 29: 'And when the seas burst into flames.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does ذَنْبٍ mean?",
+      "q": "What does ٱلنُّفُوسُ mean?",
       "options": [
-        "a small gift",
-        "a sin / fault",
-        "a bright new star",
-        "a sealed hidden book"
-      ],
-      "answer": 1,
-      "explanation": "ذَنْبٍ means sin or fault. The question is what sin she had been killed for.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الصُّحُفُ mean?",
-      "options": [
-        "high mountains",
         "records / pages",
-        "sent messengers",
-        "great storms"
+        "markets of the world",
+        "souls",
+        "the heavens above"
+      ],
+      "answer": 2,
+      "explanation": "It is the plural of نَفْس, 'soul' — here every soul is matched with its like.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:7: '(And when the souls are joined with their mates.) meaning, every type (of soul) will be gathered with its peer (or mate).'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ٱلْمَوْءُودَةُ mean?",
+      "options": [
+        "the old woman of the tribe",
+        "the scribe who writes the scroll",
+        "the baby girl buried alive",
+        "the traveller far from home"
+      ],
+      "answer": 2,
+      "explanation": "It is the infant girl buried alive in the days of ignorance.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:8: 'Al-Maw'udah is the female infant that the people of the pre-Islamic time of ignorance would bury in the dirt'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ذَنۢبٍۢ mean?",
+      "options": [
+        "a debt of money",
+        "sin / fault",
+        "a long road",
+        "a tribe of people"
       ],
       "answer": 1,
-      "explanation": "الصُّحُفُ means records or pages — the book of deeds.",
+      "explanation": "It means a sin or fault — the question put to the murdered child.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 35: 'For what crime was she killed?'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ٱلصُّحُفُ mean?",
+      "options": [
+        "the heavens above",
+        "the graves below",
+        "the angels of mercy",
+        "records / pages"
+      ],
+      "answer": 3,
+      "explanation": "It is the plural of صَحِيفَة, a written sheet: the records of deeds.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 37: 'And when the records of deeds are opened wide.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does نُشِرَتْ mean?",
       "options": [
-        "gathered all up",
-        "hidden from sight",
         "opened / spread out",
-        "left far behind"
+        "folded up tightly again",
+        "filled up to the brim",
+        "held back for later use"
       ],
-      "answer": 2,
-      "explanation": "نُشِرَتْ means opened or spread out. The records are laid open.",
+      "answer": 0,
+      "explanation": "It is what happens to the records: unrolled and spread out where all can see.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 37: 'And when the records of deeds are opened wide.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does كُشِطَتْ mean?",
+      "options": [
+        "set boiling",
+        "stripped away",
+        "moved away",
+        "made to blaze"
+      ],
+      "answer": 1,
+      "explanation": "It means the sky is peeled away from above the people.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 39: 'And when the sky is stripped away.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ٱلْجَنَّةُ mean?",
+      "options": [
+        "Paradise",
+        "the plain",
+        "the balance",
+        "the horizon"
+      ],
+      "answer": 0,
+      "explanation": "It is Paradise, brought near to its inhabitants.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:13: '(And when Paradise is brought near.)'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does أَحْضَرَتْ mean?",
       "options": [
-        "forgotten",
+        "carried away",
+        "sent back",
         "brought forward",
-        "taken back",
-        "locked away"
+        "written down"
+      ],
+      "answer": 2,
+      "explanation": "It is what each soul will find it has produced and presented.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 45: 'Then each soul will clearly know what it has brought along.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What opens the first fourteen verses of the surah?",
+      "options": [
+        "A long list of trade rules",
+        "A debate with the idolaters",
+        "A description of Paradise",
+        "A series of 'And when' events"
+      ],
+      "answer": 3,
+      "explanation": "Verses 1-14 are a chain of events each introduced with 'And when', and only verse 14 tells what all of them lead to.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:1-14: 'Removing the Heavens, kindling Hellfire, and Paradise being brought near'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "Why is the baby girl buried alive mentioned among these signs?",
+      "options": [
+        "To show girls are stronger",
+        "To frighten the one who killed her",
+        "To count the girls of that age",
+        "Because she asked to be saved"
       ],
       "answer": 1,
-      "explanation": "أَحْضَرَتْ means brought forward. Every soul sees what it brought.",
+      "explanation": "Ibn Kathir explains that the victim being questioned is 'a means of frightening her murderer' — if the wronged one is asked, the wrongdoer has far more to fear.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:8: 'This will be a means of frightening her murderer.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does رَجِيمٍ mean?",
+      "category": "Comprehension",
+      "q": "What will each soul come to know, verse 14?",
       "options": [
-        "calm and accepting",
-        "rejected / cast away",
-        "patient and very kind",
-        "quietly hidden away"
+        "What it has brought forward",
+        "When the next day begins",
+        "Who its true family were",
+        "How long it will stay"
+      ],
+      "answer": 0,
+      "explanation": "After thirteen 'And when' clauses the answer arrives: every soul will know what it has produced and presented.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 45: 'Then each soul will clearly know what it has brought along.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "Whom does Ibn Kathir identify as the 'noble messenger' of verse 19?",
+      "options": [
+        "Every prophet sent before",
+        "The scribe who writes deeds",
+        "The angel Jibril",
+        "The believer who conveys it"
+      ],
+      "answer": 2,
+      "explanation": "Ibn Kathir states that the noble messenger here is the honourable angel Jibril, who conveyed the Qur'an to the Prophet ﷺ.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:19: 'which is referring to an honorable angel, who has good character and a radiant appearance, and he is Jibril.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does Allah swear by in verses 15-18?",
+      "options": [
+        "The sun and the moon",
+        "Stars that hide, night and morning",
+        "The sea and the mountain",
+        "The Ka'bah and the day"
       ],
       "answer": 1,
-      "explanation": "رَجِيمٍ means rejected. The Qur'an is not from a rejected devil.",
+      "explanation": "The oath is by al-Khunnas — the stars that withdraw by day and sweep the sky at night — then by the night and by the morning.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:15-18: 'These are the stars that withdraw (disappear) during the day and sweep across the sky (appear) at night.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What happens to the sun at the beginning of the surah?",
+      "q": "What did the Prophet ﷺ see on the clear horizon, verse 23?",
       "options": [
-        "It will be wrapped up",
-        "It will grow much larger",
-        "It will rise from the west",
-        "It will turn into a mountain"
+        "The written sheets opened wide",
+        "The sea turned into fire",
+        "Paradise brought near",
+        "Jibril in his own form"
+      ],
+      "answer": 3,
+      "explanation": "Ibn Kathir explains that Muhammad ﷺ saw Jibril, who brought him the Message, in the form Allah created him in.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:23: 'meaning, indeed Muhammad ? saw Jibril, who brought him the Message from Allah, in the form that Allah created him in'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does verse 27 say the Qur'an is?",
+      "options": [
+        "A reminder for all people",
+        "A letter for one city",
+        "A song for the night",
+        "A tax for the poor"
       ],
       "answer": 0,
-      "explanation": "The first verse mentions the sun being wrapped up — كُوِّرَتْ.",
+      "explanation": "Ibn Kathir glosses it as 'a reminder for all of mankind. They are reminded by it and receive admonition from it.'",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:27: 'meaning, this Qur'an is a reminder for all of mankind.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "What happens to the stars?",
+      "category": "Critical Thinking",
+      "q": "Why is the baby girl buried alive named instead of any other victim?",
       "options": [
-        "They will fall and dim",
-        "They will shine brighter",
-        "They will join together",
-        "They will turn into mountains"
-      ],
-      "answer": 0,
-      "explanation": "The stars scatter and lose their brightness.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What happens to the mountains?",
-      "options": [
-        "They will be moved away",
-        "They will be covered with snow",
-        "They will turn into seas",
-        "They will become the sky"
-      ],
-      "answer": 0,
-      "explanation": "Mountains are described as being moved away — سُيِّرَتْ.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What is said about the seas?",
-      "options": [
-        "They will boil and blaze",
-        "They will turn into ice",
-        "They will be filled with sand",
-        "They will dry up quietly"
-      ],
-      "answer": 0,
-      "explanation": "The seas are set boiling — سُجِّرَتْ.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What happens to the sky?",
-      "options": [
-        "It will be pulled away",
-        "It will be painted new colors",
-        "It will sink beneath the earth",
-        "It will fold into many layers"
-      ],
-      "answer": 0,
-      "explanation": "The sky is stripped away — كُشِطَتْ, like a cover being pulled.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What happens to the records of people's deeds?",
-      "options": [
-        "They will be opened and shown",
-        "They will be hidden forever",
-        "They will be thrown away",
-        "They will be changed by people"
-      ],
-      "answer": 0,
-      "explanation": "The records are opened — الصُّحُفُ نُشِرَتْ.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What will every soul know?",
-      "options": [
-        "What it brought forward",
-        "What others had forgotten",
-        "How long the world lasted",
-        "Where the stars had moved"
-      ],
-      "answer": 0,
-      "explanation": "Every soul will see what it brought — أَحْضَرَتْ.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "How is Jibril described in the surah?",
-      "options": [
-        "A forgetful passing wind",
-        "A noble and trusted messenger",
-        "A small curious child",
-        "An earthly wandering traveler"
+        "Because infanticide was common then",
+        "To show how grave their sin was",
+        "Because she will enter Paradise",
+        "To explain how children are judged"
       ],
       "answer": 1,
-      "explanation": "Jibril is described as كَرِيمٍ (noble) and أَمِينٍ (trustworthy).",
+      "explanation": "Choosing the most defenceless victim shows how serious their crime was: if she is questioned, the powerful wrongdoer has far more to answer for.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:8: 'For verily, if the one who was wronged is questioned, what does the wrongdoer'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "What does the surah say the Qur'an is NOT from?",
+      "category": "Critical Thinking",
+      "q": "The surah moves from cosmic signs to 'your companion is not crazy'. What does that order do?",
       "options": [
-        "A respected human scholar",
-        "A rejected and cast devil",
-        "A simple children's storybook",
-        "A written human invention"
+        "It proves trade must stop",
+        "It shows the stars are angels",
+        "It turns awe into trust",
+        "It lists the days of judgment"
+      ],
+      "answer": 2,
+      "explanation": "After the hearer is shaken by the signs of verses 1-14, the surah settles the question of the messenger's honesty — awe is turned into confidence in what he brings.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:22: 'Jibril descended with the Qur'an and it is not the Result of Insanity'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Verse 28 offers the straight way and verse 29 says you cannot wish it unless Allah wills. How do they fit?",
+      "options": [
+        "Choice and Allah's will both appear",
+        "Choice is only an illusion",
+        "Allah wills nothing for anyone",
+        "Wishing is forbidden in Islam"
+      ],
+      "answer": 0,
+      "explanation": "The surah teaches both at once: a person genuinely wills and chooses the straight path, and even that is within Allah's will — so gratitude replaces pride.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:28-29: 'Abu Jahl said, \"The matter is up to us. If we wish, we will stand straight'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Why is it reassuring that the records are opened wide in verse 10?",
+      "options": [
+        "Because records are always lost",
+        "Because nothing is ever written",
+        "Because angels will erase them",
+        "Because the truth will be clear"
+      ],
+      "answer": 3,
+      "explanation": "What was hidden will be laid open, so the person who was wronged — like the buried infant of verse 8 — finally sees the truth stated plainly.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/81-takwir-itani-teens.md line 37: 'And when the records of deeds are opened wide.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What does the surah leave its listener doing at the end?",
+      "options": [
+        "To fear the stars above them",
+        "To take the straight path",
+        "To wait before deciding",
+        "To trade honestly in the market"
       ],
       "answer": 1,
-      "explanation": "The Qur'an is not from رَجِيمٍ — a rejected devil.",
+      "explanation": "It closes by putting the choice in front of every hearer: whoever wills may take the upright road back to his Lord.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:28: 'meaning, whoever seeks guidance, then he must adhere to this Qur'an, for verily it is his salvation and guidance.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "The buried baby girl is mentioned to highlight which truth?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why is the first word of the surah rendered 'wrapped up / darkened' rather than simply 'turned off'?",
       "options": [
-        "Ancient burial customs only",
-        "Hidden injustice will be questioned",
-        "How small children were buried",
-        "How desert villages were built"
+        "Because the root picture is folding",
+        "Because darkness is not mentioned",
+        "Because the sun will return",
+        "Because it means to rise"
+      ],
+      "answer": 0,
+      "explanation": "Ibn Kathir explains at-Takwir as gathering one part of a thing into another, like folding a turban, so the translation keeps the folding picture and its result, darkness.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:1: 'At-Takwir means to gather one part of something with another part of it (i.e., folding).'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Ibn Kathir explains the word in verse 7 as every type of soul gathered with its peer. Why keep the teen word 'souls' plain?",
+      "options": [
+        "Because the pairing is not important",
+        "Because souls means only people",
+        "Because the verse is about trade",
+        "Because it is a word they know"
+      ],
+      "answer": 3,
+      "explanation": "The meaning is rich — each soul matched with its like — but a child holds the plain word 'souls' at once and can carry the fuller idea from there.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:7: 'meaning, every type (of soul) will be gathered with its peer (or mate).'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why are thirteen 'And when' clauses held back before verse 14 gives the answer?",
+      "options": [
+        "To lengthen the passage without need",
+        "So the listener waits for the point",
+        "Because the events are not certain",
+        "To hide the Day from the hearers"
       ],
       "answer": 1,
-      "explanation": "She was killed unjustly. The Day of Judgment asks about her — showing no hidden injustice is forgotten.",
+      "explanation": "The hearer is held through sign after sign until verse 14 lands: every soul will know what it brought forward. The delay makes the conclusion feel inevitable.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:12-14: '(And when Paradise is brought near.)'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about Allah?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "The oath by the hiding stars, the night and the morning comes straight after verse 14. What does that placement do?",
       "options": [
-        "To describe a sudden storm",
-        "To show the world is not permanent",
-        "To teach us about astronomy",
-        "To tell a children's fable"
+        "It repeats the first fourteen verses",
+        "It changes the topic to astronomy",
+        "It answers doubt with a solemn oath",
+        "It ends the surah too early"
       ],
-      "answer": 1,
-      "explanation": "These cosmic changes show that the world we see will not last — everything obeys Allah.",
+      "answer": 2,
+      "explanation": "Having proved the Day, the surah now swears by things that vanish and return — stars, night, dawn — that what follows about the message is certain.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:15: 'But nay! I swear by Al-Khunnas, Al-Jawar Al-Kunnas'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why does the surah mention the buried baby girl among the huge events of the Day of Judgment?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Verse 26 asks 'So where are you going?' What does that short question do?",
       "options": [
-        "Judgment brings justice too",
-        "To describe ancient burials",
-        "Just to make the surah longer",
-        "To change the topic suddenly"
-      ],
-      "answer": 0,
-      "explanation": "Among cosmic events, Allah still asks about one buried child — showing that hidden injustice is not forgotten.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does the opening of the records teach us?",
-      "options": [
-        "Nothing is hidden from Allah",
-        "People can erase their deeds",
-        "Only public actions matter",
-        "Records are not important"
+        "It turns them to face the choice",
+        "It shows the route is unclear",
+        "It asks for travel advice",
+        "It ends the surah abruptly"
       ],
       "answer": 0,
-      "explanation": "If records are opened for every soul, then nothing is hidden from Allah.",
+      "explanation": "Ibn Kathir explains it as 'where has your reason gone, in rejecting this Qur'an' — the question stops the listener and makes them account for their own turning away.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:26: '(Then where are you going) meaning, where has your reason gone, in rejecting this Qur'an'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why is it meaningful that Jibril is described as noble AND trustworthy?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Why close the surah by saying you cannot wish it unless Allah wills?",
       "options": [
-        "A sacred message needs a noble carrier",
-        "Messengers must be very tall",
-        "The Qur'an is a long book",
-        "Jibril lived in a far land"
+        "Because no one is allowed to choose",
+        "Because the straight path has two ends",
+        "Because the surah had to end somewhere",
+        "It keeps pride out of the choice"
       ],
-      "answer": 0,
-      "explanation": "A sacred message from Allah is delivered through a noble and trustworthy messenger — protecting it from distortion.",
+      "answer": 3,
+      "explanation": "Ibn Kathir records that a denier said the matter was up to them, so this verse answers: the will to walk straight is itself a gift, which removes self-reliance from the good choice.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does the phrase 'for whoever wants to follow the straight path' teach us?",
-      "options": [
-        "A person must choose to try",
-        "A person has no responsibility",
-        "Guidance is only for angels",
-        "The straight path is unclear"
-      ],
-      "answer": 0,
-      "explanation": "The phrase 'من شاء' shows that wanting to follow the path is a human choice and effort.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "How does the verse after it balance this idea?",
-      "options": [
-        "We choose, then Allah decides",
-        "We guide ourselves alone",
-        "Allah's will is unrelated",
-        "People fully control it"
-      ],
-      "answer": 0,
-      "explanation": "Effort comes from us, but actual guidance is by Allah's will — both are true together.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why does the surah call the Qur'an a 'reminder for the worlds'?",
-      "options": [
-        "It warns every nation",
-        "It is only for Arabs",
-        "It is a bedtime tale",
-        "It applies only to the past"
-      ],
-      "answer": 0,
-      "explanation": "The Qur'an is guidance for all of mankind — not limited to one people or time.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "If every soul sees what it brought forward, what does this mean for daily choices?",
-      "options": [
-        "Daily deeds will be shown",
-        "Deeds don't matter at all",
-        "Only future deeds are seen",
-        "Only public acts are seen"
-      ],
-      "answer": 0,
-      "explanation": "Every deed, seen or unseen, will be brought forward. Daily choices matter.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why does the surah reject that the Qur'an came from a rejected devil?",
-      "options": [
-        "The truth is from Allah alone",
-        "Because devils are very strong",
-        "Because people liked devils",
-        "Because Arabs feared devils"
-      ],
-      "answer": 0,
-      "explanation": "The Qur'an's content — justice, truth, mercy — proves it is from Allah, not from a rejected enemy.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Which is the best summary of the surah's main message?",
-      "options": [
-        "A poem about the stars",
-        "World changes; deeds are seen",
-        "A list of ancient names",
-        "A folk tale of a town"
-      ],
-      "answer": 1,
-      "explanation": "التكوير ties together: cosmic change, accountability, and the truth of revelation — all brought by a trustworthy messenger.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 81:29: 'Abu Jahl said, \"The matter is up to us. If we wish, we will stand straight'",
+        "checkedAt": "2026-08-30"
       }
     }
   ],
@@ -971,7 +1173,14 @@ export default {
         "n": 7,
         "segments": [
           {
-            "t": "وَإِذَا ٱلنُّفُوسُ زُوِّجَتْ"
+            "t": "وَإِذَا "
+          },
+          {
+            "b": "ٱلنُّفُوسُ",
+            "m": "souls"
+          },
+          {
+            "t": " زُوِّجَتْ"
           }
         ]
       },
@@ -1048,7 +1257,14 @@ export default {
         "n": 13,
         "segments": [
           {
-            "t": "وَإِذَا ٱلْجَنَّةُ أُزْلِفَتْ"
+            "t": "وَإِذَا "
+          },
+          {
+            "b": "ٱلْجَنَّةُ",
+            "m": "Paradise"
+          },
+          {
+            "t": " أُزْلِفَتْ"
           }
         ]
       },
@@ -1197,6 +1413,360 @@ export default {
         "segments": [
           {
             "t": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ"
+          }
+        ]
+      }
+    ]
+  },
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary of 81:1-29 checked against Tafsir Ibn Kathir. On the opening sign: 'At-Takwir means to gather one part of something with another part of it (i.e., folding)... Then it will be rolled up and thrown away. When this is done to it, its light will go away.' On the infant: 'Al-Maw'udah is the female infant that the people of the pre-Islamic time of ignorance would bury in the dirt due to their hatred of girls' and 'This will be a means of frightening her murderer.' On the two ends: 'Removing the Heavens, kindling Hellfire, and Paradise being brought near' and '(And when Paradise is brought near.) ... it will be brought near to its inhabitants.' On the messenger: 'this Qur'an is being conveyed by a noble messenger, which is referring to an honorable angel... and he is Jibril' and '(trustworthy.) This is a description of Jibril as being trustworthy.' On the ending: '(To whomsoever among you who wills to walk straight.) meaning, whoever seeks guidance, then he must adhere to this Qur'an'. The intro's description of the delayed answer at verse 14 is a structural reading of the passage, not a quotation.",
+    "checkedAt": "2026-08-30"
+  },
+  "fillBlanksEn": {
+    "ayahs": [
+      {
+        "n": 1,
+        "segments": [
+          {
+            "t": "When the sun is "
+          },
+          {
+            "b": "wrapped up / darkened",
+            "m": "كُوِّرَتْ"
+          },
+          {
+            "t": " in darkness."
+          }
+        ]
+      },
+      {
+        "n": 2,
+        "segments": [
+          {
+            "t": "And when the stars "
+          },
+          {
+            "b": "scattered / dimmed",
+            "m": "ٱنكَدَرَتْ"
+          },
+          {
+            "t": ", losing their light."
+          }
+        ]
+      },
+      {
+        "n": 3,
+        "segments": [
+          {
+            "t": "And when the mountains are "
+          },
+          {
+            "b": "moved away",
+            "m": "سُيِّرَتْ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 4,
+        "segments": [
+          {
+            "t": "And when the camels, ready to give birth, are left alone."
+          }
+        ]
+      },
+      {
+        "n": 5,
+        "segments": [
+          {
+            "t": "And when wild animals are gathered together."
+          }
+        ]
+      },
+      {
+        "n": 6,
+        "segments": [
+          {
+            "t": "And when the seas are "
+          },
+          {
+            "b": "set boiling / made to blaze",
+            "m": "سُجِّرَتْ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 7,
+        "segments": [
+          {
+            "t": "And when "
+          },
+          {
+            "b": "souls",
+            "m": "ٱلنُّفُوسُ"
+          },
+          {
+            "t": " are joined with their deeds."
+          }
+        ]
+      },
+      {
+        "n": 8,
+        "segments": [
+          {
+            "t": "And when "
+          },
+          {
+            "b": "the baby girl buried alive",
+            "m": "ٱلْمَوْءُودَةُ"
+          },
+          {
+            "t": " is asked."
+          }
+        ]
+      },
+      {
+        "n": 9,
+        "segments": [
+          {
+            "t": "For what "
+          },
+          {
+            "b": "sin / fault",
+            "m": "ذَنۢبٍۢ"
+          },
+          {
+            "t": " was she killed?"
+          }
+        ]
+      },
+      {
+        "n": 10,
+        "segments": [
+          {
+            "t": "And when the "
+          },
+          {
+            "b": "records / pages",
+            "m": "ٱلصُّحُفُ"
+          },
+          {
+            "t": " of deeds are "
+          },
+          {
+            "b": "opened / spread out",
+            "m": "نُشِرَتْ"
+          },
+          {
+            "t": " wide."
+          }
+        ]
+      },
+      {
+        "n": 11,
+        "segments": [
+          {
+            "t": "And when the sky is "
+          },
+          {
+            "b": "stripped away",
+            "m": "كُشِطَتْ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 12,
+        "segments": [
+          {
+            "t": "And when Hellfire is set blazing fiercely."
+          }
+        ]
+      },
+      {
+        "n": 13,
+        "segments": [
+          {
+            "t": "And when "
+          },
+          {
+            "b": "Paradise",
+            "m": "ٱلْجَنَّةُ"
+          },
+          {
+            "t": " is brought near."
+          }
+        ]
+      },
+      {
+        "n": 14,
+        "segments": [
+          {
+            "t": "Then each soul will clearly know what it has "
+          },
+          {
+            "b": "brought forward",
+            "m": "أَحْضَرَتْ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 15,
+        "segments": [
+          {
+            "t": "I swear by the stars that hide away."
+          }
+        ]
+      },
+      {
+        "n": 16,
+        "segments": [
+          {
+            "t": "Those that move swiftly and disappear."
+          }
+        ]
+      },
+      {
+        "n": 17,
+        "segments": [
+          {
+            "t": "And by the night as it gently fades."
+          }
+        ]
+      },
+      {
+        "n": 18,
+        "segments": [
+          {
+            "t": "And by the morning as it softly breathes."
+          }
+        ]
+      },
+      {
+        "n": 19,
+        "segments": [
+          {
+            "t": "Truly, this is the word brought by a "
+          },
+          {
+            "b": "noble",
+            "m": "كَرِيمٍۢ"
+          },
+          {
+            "t": " messenger."
+          }
+        ]
+      },
+      {
+        "n": 20,
+        "segments": [
+          {
+            "t": "Who has great strength, honored by the Lord of the Throne."
+          }
+        ]
+      },
+      {
+        "n": 21,
+        "segments": [
+          {
+            "t": "Obeyed there, and completely "
+          },
+          {
+            "b": "trustworthy",
+            "m": "أَمِينٍۢ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 22,
+        "segments": [
+          {
+            "t": "And your companion is not crazy."
+          }
+        ]
+      },
+      {
+        "n": 23,
+        "segments": [
+          {
+            "t": "He certainly saw him on the clear horizon."
+          }
+        ]
+      },
+      {
+        "n": 24,
+        "segments": [
+          {
+            "t": "And he is not stingy about sharing the unseen."
+          }
+        ]
+      },
+      {
+        "n": 25,
+        "segments": [
+          {
+            "t": "And this is not the word of a "
+          },
+          {
+            "b": "rejected / cast away",
+            "m": "رَّجِيمٍۢ"
+          },
+          {
+            "t": " devil."
+          }
+        ]
+      },
+      {
+        "n": 26,
+        "segments": [
+          {
+            "t": "So where are you going?"
+          }
+        ]
+      },
+      {
+        "n": 27,
+        "segments": [
+          {
+            "t": "This is only a reminder for all people."
+          }
+        ]
+      },
+      {
+        "n": 28,
+        "segments": [
+          {
+            "t": "For whoever among you wishes "
+          },
+          {
+            "b": "to go straight / be upright",
+            "m": "يَسْتَقِيمَ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 29,
+        "segments": [
+          {
+            "t": "But you cannot wish it, unless Allah, the Lord of all worlds, wills it."
           }
         ]
       }

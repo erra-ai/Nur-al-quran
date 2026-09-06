@@ -5,6 +5,7 @@ import {
   renderReadMeaning,
 } from "./activities/meaning-banks.js";
 import { renderQuiz, renderResult } from "./activities/quiz.js";
+import { renderRecite } from "./activities/recite.js?v=20260830-qurancom";
 import { renderVerseOrder } from "./activities/verse-order.js";
 import {
   renderMatchVocab,
@@ -12,7 +13,7 @@ import {
   renderVocab,
 } from "./activities/vocabulary.js";
 import { renderSidebar } from "./navigation.js";
-import { renderHome, renderIntro, renderLifeSkills } from "./pages.js";
+import { renderHome, renderIntro, renderLifeSkills } from "./pages.js?v=20260830-dagger-alif";
 import { setRenderer, state } from "./state.js";
 
 function render() {
@@ -27,6 +28,7 @@ function render() {
   if (state.view === "fillBlanks") return renderFillBlanks();
   if (state.view === "orderVerses") return renderOrderVerses();
   if (state.view === "verseOrder") return renderVerseOrder();
+  if (state.view === "recite") return renderRecite();
   if (state.view === "lifeSkills") return renderLifeSkills();
   if (state.view === "matchVocab") return renderMatchVocab();
   if (state.view === "meaningBank") return renderMeaningBank();

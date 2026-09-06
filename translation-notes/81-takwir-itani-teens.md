@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 81, At-Takwir
+# ClearQuran (Talal Itani) — teen level — Surah 81
 
 Source: https://www.quranfor.com/teens/81
-Retrieved: 2026-07-22
-Verses: 30
+Retrieved: 2026-08-30
+Numbered ayahs: 29 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

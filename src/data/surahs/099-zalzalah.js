@@ -1,1100 +1,695 @@
-// Surah 99 · Az-Zalzalah
-// Lesson data only. Shared behavior lives in the modules under src/.
 export default {
-  "id": "zalzalah",
-  "number": 99,
-  "nameArabic": "الزَّلْزَلَةِ",
-  "nameEnglish": "Az-Zalzalah",
-  "title": "The Earthquake",
-  "intro": "Surah Az-Zalzalah describes the final, greatest earthquake that will shake the entire earth on the Day of Judgment. The earth will throw out everything buried within it — bodies, treasures, and secrets. People will ask in panic: what is happening? And the earth itself will speak, telling the story of every deed done on its surface, because Allah will inspire it to do so. Then every human being will be shown their deeds — nothing hidden, nothing lost. The surah ends with one of the most famous and powerful verses in the Qur'an: whoever does an atom's weight of good will see it, and whoever does an atom's weight of evil will see it.",
-  "vocabulary": [
+  id: "zalzalah",
+  number: 99,
+  nameArabic: "الزَّلْزَلَةِ",
+  nameEnglish: "Az-Zalzalah",
+  title: "The Earthquake",
+  intro: "Surah Az-Zalzalah was revealed in Madinah. It opens with the earth shaking and bringing out its burdens. The shock leaves people asking what has happened. Allah will cause the earth to declare what people did on it. Then people will come from the place of Judgment in separate groups and be shown their deeds. The ending is a serious reminder: no deed is too small to be seen, whether it is good or evil.",
+  introVerified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir says the earth will throw out what is in it of the dead, then 'it will speak of what the people did upon its surface.' He explains that people return from the station of Judgement in separate groups and quotes the final verses about good and evil equal to 'the weight of a speck of dust.'", checkedAt: "2026-07-26" },
+  vocabulary: [
     {
-      "arabic": "زُلْزِلَتِ",
-      "meaning": "is shaken / quaked",
-      "connection": "The earth will be shaken with its final, greatest earthquake.",
-      "hint": "The ground trembling so hard that nothing stays standing.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:1 (root: ز-ل-ز-ل, Form I passive, 3rd person feminine singular)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "زُلْزِلَتِ",
+      meaning: "is shaken",
+      connection: "The surah begins when the earth is shaken with its appointed earthquake.",
+      hint: "Picture the ground moving under everything built on it.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:1 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:1: 'This means that it will move from beneath it.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Passive perfect verb, third-person feminine singular",
+        arabic: "فعل ماض مبني للمجهول للمفرد المؤنث",
+        explanation: "زُلْزِلَتِ is a past-tense passive verb: the earth receives the shaking rather than causing it. The feminine ending matches الْأَرْضُ, which is feminine in Arabic."
       }
     },
     {
-      "arabic": "زِلْزَالَهَا",
-      "meaning": "its earthquake / its shaking",
-      "connection": "Not just any earthquake — the earth's own, final, destined shaking.",
-      "hint": "The shaking that belongs to the earth itself, written for it since creation.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:1 (root: ز-ل-ز-ل, noun + pronoun)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "ٱلْأَرْضُ",
+      meaning: "the earth",
+      connection: "The earth itself is the subject of the opening scene and later becomes a witness.",
+      hint: "The ground where people live, walk, and act.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:1 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir describes 'the earth moving and shaking' after it had been stable and firm.", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Definite feminine noun, nominative deputy subject",
+        arabic: "اسم معرفة مؤنث مرفوع نائب فاعل",
+        explanation: "ٱلْأَرْضُ is definite because of ٱلْ. It is nominative and is the deputy subject of the passive verb زُلْزِلَتِ: the earth is the thing being shaken."
       }
     },
     {
-      "arabic": "أَثْقَالَهَا",
-      "meaning": "its burdens / its loads",
-      "connection": "The earth will throw out everything buried in it — bodies, metals, secrets.",
-      "hint": "A heavy bag being emptied onto the ground.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:2 (root: ث-ق-ل, plural noun + pronoun)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "زِلْزَالَهَا",
+      meaning: "its earthquake",
+      connection: "The word makes the shaking feel complete and directly tied to the earth.",
+      hint: "The earth's own great shaking.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:1 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:1 quotes 'When the earth quakes with its Zilzal' and explains that it will move from beneath it.", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Accusative noun with a feminine possessive pronoun",
+        arabic: "اسم منصوب وها ضمير متصل في محل جر بالإضافة",
+        explanation: "زِلْزَالَ is accusative and strengthens the verb زُلْزِلَتِ by naming the kind of shaking. The attached ها means 'its,' referring back to the earth."
       }
     },
     {
-      "arabic": "تُحَدِّثُ",
-      "meaning": "it will report / it will tell",
-      "connection": "The earth will speak and tell the story of every deed done upon it.",
-      "hint": "A witness finally telling the truth after being silent for thousands of years.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:4 (root: ح-د-ث, Form II, 3rd person feminine singular)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "أَثْقَالَهَا",
+      meaning: "its burdens",
+      connection: "The earth brings out what it has been carrying within it.",
+      hint: "Heavy things the earth has held inside.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:2 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:2: 'it will throw forth that which is in it of the dead.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Accusative plural noun with a feminine possessive pronoun",
+        arabic: "اسم جمع منصوب وها ضمير متصل في محل جر بالإضافة",
+        explanation: "أَثْقَالَ is the direct object of أَخْرَجَتِ, 'brought out.' The attached ها means 'its,' so the phrase means the earth's burdens."
       }
     },
     {
-      "arabic": "أَخْبَارَهَا",
-      "meaning": "its news / its reports",
-      "connection": "The earth will not just make noise — it will tell actual news: who did what, where, and when.",
-      "hint": "A news report that no one can deny or edit.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:4 (root: خ-ب-ر, plural noun + pronoun)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "ٱلْإِنسَـٰنُ",
+      meaning: "the human being",
+      connection: "The human being reacts with surprise when the earth changes so completely.",
+      hint: "A person looking at an event they cannot explain.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:3 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:3 says that the person 'will be baffled by its situation.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Definite masculine noun, nominative subject",
+        arabic: "اسم معرفة مذكر مرفوع فاعل",
+        explanation: "ٱلْإِنسَـٰنُ is the subject of وَقَالَ, 'and said.' The damma at the end marks it as nominative: the human being is the one asking the question."
       }
     },
     {
-      "arabic": "أَوْحَىٰ",
-      "meaning": "He inspired / He commanded",
-      "connection": "Allah will inspire the earth to speak. The silent planet will become a witness.",
-      "hint": "A direct message placed into something so it knows exactly what to say.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:5 (root: و-ح-ي, Form IV, 3rd person masculine singular)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "تُحَدِّثُ",
+      meaning: "it will tell",
+      connection: "On that day, the earth will tell what happened on its surface.",
+      hint: "A witness giving an account of what it knows.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:4 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4: 'it will speak of what the people did upon its surface.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Form II imperfect verb, third-person feminine singular",
+        arabic: "فعل مضارع من الباب الثاني للمفرد المؤنث",
+        explanation: "تُحَدِّثُ is a present/future verb meaning 'it will tell.' Its feminine form refers to the earth, which is treated as feminine in Arabic."
       }
     },
     {
-      "arabic": "أَشْتَاتًا",
-      "meaning": "separated / in scattered groups",
-      "connection": "People will emerge from the earth scattered, each going to see their own deeds.",
-      "hint": "A crowd splitting apart, each person walking alone to their judgment.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:6 (root: ش-ت-ت, plural noun, indefinite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "أَخْبَارَهَا",
+      meaning: "its stories",
+      connection: "The earth's stories are its testimony about what people did upon it.",
+      hint: "News the earth will reveal about what happened there.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:4 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir explains its information as testimony 'about what they did upon its surface.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Accusative plural noun with a feminine possessive pronoun",
+        arabic: "اسم جمع منصوب وها ضمير متصل في محل جر بالإضافة",
+        explanation: "أَخْبَارَ is the object of تُحَدِّثُ: the earth will tell its stories. The ending ها means 'its' and points back to the earth."
       }
     },
     {
-      "arabic": "مِثْقَالَ",
-      "meaning": "the weight of / the amount of",
-      "connection": "Even an atom's weight of good or evil will be shown.",
-      "hint": "The smallest amount you can imagine on a tiny scale.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:7 (root: ث-ق-ل, noun)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "أَوْحَىٰ",
+      meaning: "inspired",
+      connection: "The earth speaks because Allah inspires and permits it to do so.",
+      hint: "Allah giving the earth its command.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:5 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:5: 'He will permit it (the earth)' and 'Its Lord will say to it, Speak.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Form IV perfect verb, third-person masculine singular",
+        arabic: "فعل ماض من الباب الرابع للغائب المفرد المذكر",
+        explanation: "أَوْحَىٰ is a past-tense Form IV verb. Its hidden subject is Allah, named in the previous word رَبَّكَ, 'your Lord.'"
       }
     },
     {
-      "arabic": "ذَرَّةٍ",
-      "meaning": "an atom / a tiny particle",
-      "connection": "An amount so small it is almost invisible — yet it will be shown.",
-      "hint": "A speck of dust floating in a beam of sunlight.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:7 (root: ذ-ر-ر, indefinite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "يَصْدُرُ",
+      meaning: "will come forward",
+      connection: "People come forward after Judgment in order to be shown their deeds.",
+      hint: "People leaving a place and moving out in front.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:6 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: 'they will return from the station of the Judgement in separate groups.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Imperfect verb, third-person masculine singular",
+        arabic: "فعل مضارع مرفوع للغائب المفرد المذكر",
+        explanation: "يَصْدُرُ is a present/future verb. It comes before its subject ٱلنَّاسُ, so Arabic uses the singular verb form even though people are many."
       }
     },
     {
-      "arabic": "خَيْرًا",
-      "meaning": "good / a good deed",
-      "connection": "The smallest good deed — a smile, a kind word, a sip of water given — will be shown.",
-      "hint": "Something that helps, heals, or brings light to another person.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:7 (root: خ-ي-ر, indefinite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "أَشْتَاتًۭا",
+      meaning: "in scattered groups",
+      connection: "People will not come as one undivided crowd; they will come in separate groups.",
+      hint: "Separate groups moving in different directions.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:6 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir explains that people 'will be divided into types and categories.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Indefinite accusative plural describing a state",
+        arabic: "اسم جمع نكرة منصوب في محل حال",
+        explanation: "أَشْتَاتًا describes the state of the people as they come forward: they are in scattered groups. Its tanween and fatha mark it as indefinite and accusative."
       }
     },
     {
-      "arabic": "الْأَرْضُ",
-      "meaning": "the earth",
-      "connection": "The earth will be shaken with its final earthquake.",
-      "hint": "The ground beneath your feet — solid, but not on that Day.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:1",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "أَعْمَـٰلَهُمْ",
+      meaning: "their deeds",
+      connection: "People are brought forward so that their deeds can be shown to them.",
+      hint: "Everything a person chose to do.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:6 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: people will be rewarded for 'what they did in this life of good and evil.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Accusative plural noun with a masculine plural possessive pronoun",
+        arabic: "اسم جمع منصوب وهم ضمير متصل في محل جر بالإضافة",
+        explanation: "أَعْمَالَ is accusative because it is the thing people are shown. The ending هُمْ means 'their,' referring to the people."
       }
     },
     {
-      "arabic": "يَصْدُرُ",
-      "meaning": "will go forth / will emerge",
-      "connection": "People will emerge from the earth separated into groups.",
-      "hint": "Coming out from a place you have been held inside.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:6",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "ذَرَّةٍ",
+      meaning: "a tiny particle",
+      connection: "Even something as small as a tiny particle is included in the final account.",
+      hint: "A speck so small it is easy to overlook.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:7 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:7-8: 'good equal to the weight of a speck of dust shall see it.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Indefinite feminine noun, genitive in a possessive phrase",
+        arabic: "اسم نكرة مؤنث مجرور مضاف إليه",
+        explanation: "ذَرَّةٍ follows مِثْقَالَ, 'the weight of,' so it is genitive. Together the words mean 'the weight of a tiny particle.'"
       }
     },
     {
-      "arabic": "شَرًّا",
-      "meaning": "evil / a bad deed",
-      "connection": "Whoever does an atom's weight of evil will see it.",
-      "hint": "The opposite of good — something that harms or hurts.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:8",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "خَيْرًۭا",
+      meaning: "good",
+      connection: "The surah says even the smallest amount of good will be seen.",
+      hint: "A small right action still matters to Allah.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:7 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:7: 'whosoever does good equal to the weight of a speck of dust shall see it.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Indefinite accusative specification noun",
+        arabic: "اسم نكرة منصوب على التمييز",
+        explanation: "خَيْرًا specifies what the tiny weight consists of: a tiny particle's weight of good. Its fatha and tanween mark it as indefinite and accusative."
       }
     },
     {
-      "arabic": "يَرَهُ",
-      "meaning": "will see it",
-      "connection": "Every deed — good or evil — will be seen by the one who did it.",
-      "hint": "Something appearing right in front of your eyes so you cannot deny it.",
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "Az-Zalzalah 99:7",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+      arabic: "شَرًّۭا",
+      meaning: "evil",
+      connection: "The final verse mirrors the previous verse: even the smallest evil will be seen.",
+      hint: "A wrong action that should not be treated as harmless.",
+      source: { primary: "Qur'anic Arabic Corpus", ref: "Az-Zalzalah 99:8 word-by-word morphology", checkedAt: "2026-07-26" },
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:8: 'whosoever does evil equal to the weight of speck of dust shall see it.'", checkedAt: "2026-07-26" },
+      grammar: {
+        english: "Indefinite accusative specification noun",
+        arabic: "اسم نكرة منصوب على التمييز",
+        explanation: "شَرًّا specifies what the tiny weight consists of: a tiny particle's weight of evil. Like خَيْرًا, it is indefinite and accusative."
       }
     }
   ],
-  "practice": [
+  practice: [
     {
-      "type": "ar2en",
-      "q": "What does زُلْزِلَتِ mean?",
-      "options": [
-        "is shaken",
-        "is watered",
-        "is planted",
-        "is painted"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does زُلْزِلَتِ mean?",
+      options: ["is shaken", "is covered", "is measured", "is raised"],
+      answer: 0,
+      explanation: "زُلْزِلَتِ means 'is shaken.' It describes the earth at the opening of the surah."
     },
     {
-      "type": "ar2en",
-      "q": "What does أَثْقَالَهَا mean?",
-      "options": [
-        "its burdens",
-        "its flowers",
-        "its colors",
-        "its songs"
-      ],
-      "answer": 0
+      type: "en2ar",
+      q: "Which Arabic word means 'the earth'?",
+      options: ["ٱلْإِنسَـٰنُ", "ٱلْأَرْضُ", "أَخْبَارَهَا", "أَثْقَالَهَا"],
+      answer: 1,
+      explanation: "ٱلْأَرْضُ means 'the earth.' It is shaken, brings out its burdens, and later tells its stories."
     },
     {
-      "type": "ar2en",
-      "q": "What does تُحَدِّثُ mean?",
-      "options": [
-        "it will report",
-        "it will sleep",
-        "it will vanish",
-        "it will laugh"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does زِلْزَالَهَا mean?",
+      options: ["its stories", "its burdens", "its earthquake", "its groups"],
+      answer: 2,
+      explanation: "زِلْزَالَهَا means 'its earthquake.' The ending ها means 'its,' referring to the earth."
     },
     {
-      "type": "ar2en",
-      "q": "What does ذَرَّةٍ mean?",
-      "options": [
-        "an atom / speck",
-        "a mountain",
-        "an ocean",
-        "a forest"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does أَثْقَالَهَا mean?",
+      options: ["its questions", "its stories", "its people", "its burdens"],
+      answer: 3,
+      explanation: "أَثْقَالَهَا means 'its burdens.' The earth brings them out in verse 2."
     },
     {
-      "type": "ar2en",
-      "q": "What does خَيْرًا mean?",
-      "options": [
-        "good / good deed",
-        "evil / bad deed",
-        "water / rain",
-        "stone / rock"
-      ],
-      "answer": 0
+      type: "en2ar",
+      q: "Which Arabic phrase means 'the human being'?",
+      options: ["ٱلْإِنسَـٰنُ", "ٱلْأَرْضُ", "أَعْمَـٰلَهُمْ", "أَشْتَاتًۭا"],
+      answer: 0,
+      explanation: "ٱلْإِنسَـٰنُ means 'the human being.' This person asks what has happened to the earth."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'separated'?",
-      "options": [
-        "أَشْتَاتًا",
-        "ذَرَّةٍ",
-        "خَيْرًا",
-        "أَوْحَىٰ"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does تُحَدِّثُ mean?",
+      options: ["it will carry", "it will tell", "it will divide", "it will return"],
+      answer: 1,
+      explanation: "تُحَدِّثُ means 'it will tell.' The earth will tell its stories on that day."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'He inspired'?",
-      "options": [
-        "أَوْحَىٰ",
-        "تُحَدِّثُ",
-        "زُلْزِلَتِ",
-        "أَثْقَالَهَا"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does أَخْبَارَهَا mean?",
+      options: ["its burdens", "its earthquake", "its stories", "its people"],
+      answer: 2,
+      explanation: "أَخْبَارَهَا means 'its stories.' They are the earth's account of what happened on it."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'its news'?",
-      "options": [
-        "أَخْبَارَهَا",
-        "ذَرَّةٍ",
-        "خَيْرًا",
-        "أَشْتَاتًا"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does أَوْحَىٰ mean?",
+      options: ["measured", "divided", "returned", "inspired"],
+      answer: 3,
+      explanation: "أَوْحَىٰ means 'inspired.' Its understood subject is Allah: He inspired the earth to speak."
     },
     {
-      "type": "meaning",
-      "q": "مِثْقَالَ ذَرَّةٍ means:",
-      "options": [
-        "an atom's weight",
-        "a mountain's weight",
-        "an ocean's depth",
-        "a star's light"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does يَصْدُرُ mean?",
+      options: ["will come forward", "will be hidden", "will be shaken", "will be written"],
+      answer: 0,
+      explanation: "يَصْدُرُ means 'will come forward.' People come forward to be shown their deeds."
     },
     {
-      "type": "meaning",
-      "q": "تُحَدِّثُ أَخْبَارَهَا means the earth:",
-      "options": [
-        "will tell its stories",
-        "will hide its secrets",
-        "will lose its weight",
-        "will change its color"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does أَشْتَاتًۭا mean?",
+      options: ["in one place", "in scattered groups", "with no witness", "with great silence"],
+      answer: 1,
+      explanation: "أَشْتَاتًا means 'in scattered groups.' People will come in separate groups."
     },
     {
-      "type": "ar2en",
-      "q": "What does الْأَرْضُ mean?",
-      "options": [
-        "the earth",
-        "the sky",
-        "the ocean",
-        "the fire"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does أَعْمَـٰلَهُمْ mean?",
+      options: ["their burdens", "their stories", "their deeds", "their questions"],
+      answer: 2,
+      explanation: "أَعْمَـٰلَهُمْ means 'their deeds.' People will be shown what they did."
     },
     {
-      "type": "ar2en",
-      "q": "What does يَصْدُرُ mean?",
-      "options": [
-        "will emerge",
-        "will hide",
-        "will sleep",
-        "will vanish"
-      ],
-      "answer": 0
+      type: "en2ar",
+      q: "Which Arabic word means 'a tiny particle'?",
+      options: ["شَرًّۭا", "خَيْرًۭا", "أَثْقَالَهَا", "ذَرَّةٍ"],
+      answer: 3,
+      explanation: "ذَرَّةٍ means 'a tiny particle.' The surah uses it to show that no deed is too small to be seen."
     },
     {
-      "type": "ar2en",
-      "q": "What does شَرًّا mean?",
-      "options": [
-        "evil / bad deed",
-        "good / good deed",
-        "water / rain",
-        "stone / rock"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does خَيْرًۭا mean?",
+      options: ["good", "evil", "burdens", "stories"],
+      answer: 0,
+      explanation: "خَيْرًا means 'good.' Even a tiny amount of good will be seen."
     },
     {
-      "type": "ar2en",
-      "q": "What does يَرَهُ mean?",
-      "options": [
-        "will see it",
-        "will lose it",
-        "will hide it",
-        "will forget it"
-      ],
-      "answer": 0
+      type: "ar2en",
+      q: "What does شَرًّۭا mean?",
+      options: ["good", "deeds", "earth", "evil"],
+      answer: 3,
+      explanation: "شَرًّا means 'evil.' The final verse says even a tiny amount of evil will be seen."
     }
   ],
-  "quiz": [
+  quiz: [
     {
-      "category": "Vocabulary",
-      "q": "What does زُلْزِلَتِ mean?",
-      "options": [
-        "is shaken",
-        "is watered",
-        "is planted",
-        "is painted"
-      ],
-      "answer": 0,
-      "explanation": "زُلْزِلَتِ means is shaken violently. The earth will be shaken with its final earthquake.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does زُلْزِلَتِ mean in the opening verse?",
+      options: ["is shaken", "is covered", "is measured", "is raised"],
+      answer: 0,
+      explanation: "زُلْزِلَتِ means 'is shaken.' It describes the earth when the final event begins.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:1: 'This means that it will move from beneath it.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does أَثْقَالَهَا mean?",
-      "options": [
-        "its burdens",
-        "its flowers",
-        "its colors",
-        "its songs"
-      ],
-      "answer": 0,
-      "explanation": "أَثْقَالَهَا means its burdens or loads. The earth will throw out everything buried inside it.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does زِلْزَالَهَا mean?",
+      options: ["its surface", "its earthquake", "its witness", "its reward"],
+      answer: 1,
+      explanation: "زِلْزَالَهَا means 'its earthquake.' The attached ها means 'its,' referring to the earth.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:1 quotes 'When the earth quakes with its Zilzal.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does تُحَدِّثُ mean?",
-      "options": [
-        "it will report",
-        "it will sleep",
-        "it will vanish",
-        "it will laugh"
-      ],
-      "answer": 0,
-      "explanation": "تُحَدِّثُ means it will report or tell. The earth will speak on that Day.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does أَثْقَالَهَا mean?",
+      options: ["its surface", "its people", "its burdens", "its stories"],
+      answer: 2,
+      explanation: "أَثْقَالَهَا means 'its burdens.' The earth brings them out in verse 2.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:2: 'it will throw forth that which is in it of the dead.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does أَخْبَارَهَا mean?",
-      "options": [
-        "its news / stories",
-        "its name / title",
-        "its weight / mass",
-        "its shape / form"
-      ],
-      "answer": 0,
-      "explanation": "أَخْبَارَهَا means its news or reports. The earth will tell the story of every deed done on its surface.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does ٱلْإِنسَـٰنُ mean?",
+      options: ["the earth", "their deeds", "scattered groups", "the human being"],
+      answer: 3,
+      explanation: "ٱلْإِنسَـٰنُ means 'the human being,' the one who asks what has happened to the earth.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:3 says the person 'will be baffled by its situation.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does أَوْحَىٰ mean?",
-      "options": [
-        "He inspired",
-        "He destroyed",
-        "He forgot",
-        "He delayed"
-      ],
-      "answer": 0,
-      "explanation": "أَوْحَىٰ means He inspired or commanded. Allah will give the earth the ability to speak.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does تُحَدِّثُ mean?",
+      options: ["it will tell", "it will carry", "it will return", "it will divide"],
+      answer: 0,
+      explanation: "تُحَدِّثُ means 'it will tell.' The earth will tell its stories on that day.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4: 'it will speak of what the people did upon its surface.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does أَشْتَاتًا mean?",
-      "options": [
-        "separated / scattered",
-        "together / united",
-        "hidden / buried",
-        "silent / quiet"
-      ],
-      "answer": 0,
-      "explanation": "أَشْتَاتًا means separated into groups. Every person will walk alone to see their deeds.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does أَخْبَارَهَا mean?",
+      options: ["its shaking", "its stories", "its burdens", "its groups"],
+      answer: 1,
+      explanation: "أَخْبَارَهَا means 'its stories,' the earth's account of what happened on it.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir explains its information as testimony 'about what they did upon its surface.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does مِثْقَالَ mean?",
-      "options": [
-        "the weight of",
-        "the color of",
-        "the sound of",
-        "the shape of"
-      ],
-      "answer": 0,
-      "explanation": "مِثْقَالَ means the weight of — the amount something weighs on a scale.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does أَوْحَىٰ mean?",
+      options: ["measured", "divided", "inspired", "returned"],
+      answer: 2,
+      explanation: "أَوْحَىٰ means 'inspired.' Allah inspires the earth so that it can speak.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:5: 'Its Lord will say to it, Speak.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does ذَرَّةٍ mean?",
-      "options": [
-        "an atom / speck",
-        "a great mountain",
-        "a wide ocean",
-        "a dense forest"
-      ],
-      "answer": 0,
-      "explanation": "ذَرَّةٍ means an atom or tiny particle — the smallest thing you can imagine.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does يَصْدُرُ mean?",
+      options: ["will be hidden", "will remain", "will be counted", "will come forward"],
+      answer: 3,
+      explanation: "يَصْدُرُ means 'will come forward.' People come forward in order to be shown their deeds.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: 'they will return from the station of the Judgement.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does خَيْرًا mean?",
-      "options": [
-        "good / good deed",
-        "evil / bad deed",
-        "water / rain",
-        "stone / rock"
-      ],
-      "answer": 0,
-      "explanation": "خَيْرًا means good. Even an atom's weight of good will be seen and rewarded.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does أَشْتَاتًۭا mean?",
+      options: ["in scattered groups", "in one place", "with no witness", "with great silence"],
+      answer: 0,
+      explanation: "أَشْتَاتًا means 'in scattered groups.' People will come in separate groups.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir says people 'will be divided into types and categories.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Vocabulary",
-      "q": "What does the surah say about an atom's weight of evil?",
-      "options": [
-        "It will be seen and judged",
-        "It will be ignored",
-        "It will turn into good",
-        "The surah does not mention it"
-      ],
-      "answer": 0,
-      "explanation": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ — even the smallest evil will be shown.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does أَعْمَـٰلَهُمْ mean?",
+      options: ["their burdens", "their deeds", "their homes", "their questions"],
+      answer: 1,
+      explanation: "أَعْمَـٰلَهُمْ means 'their deeds.' People will be shown what they did in life.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: people are rewarded for 'what they did in this life of good and evil.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "What will happen to the earth?",
-      "options": [
-        "It will be shaken violently and throw out its burdens",
-        "It will turn into a garden in this world",
-        "It will float into space in this world",
-        "It will split into two halves in this world"
-      ],
-      "answer": 0,
-      "explanation": "إِذَا زُلْزِلَتِ الْأَرْضُ — when the earth is shaken, it will throw out everything buried inside.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does ذَرَّةٍ mean?",
+      options: ["a high mountain", "a long lifetime", "a tiny particle", "a hidden place"],
+      answer: 2,
+      explanation: "ذَرَّةٍ means 'a tiny particle.' It makes clear that even the smallest deed is seen.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:7-8: 'the weight of a speck of dust.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "What will people ask when the earth shakes?",
-      "options": [
-        "What is wrong with it?",
-        "Where is the food?",
-        "Who built the mountains?",
-        "When will the rain come?"
-      ],
-      "answer": 0,
-      "explanation": "وَقَالَ الْإِنسَانُ مَا لَهَا — mankind will ask in panic: what is wrong with the earth?",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Vocabulary",
+      q: "What does شَرًّۭا mean?",
+      options: ["mercy", "reward", "truth", "evil"],
+      answer: 3,
+      explanation: "شَرًّا means 'evil.' Verse 8 says even a tiny amount of evil will be seen.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:8: 'whosoever does evil equal to the weight of speck of dust shall see it.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "What unusual thing will the earth do?",
-      "options": [
-        "It will speak and report its news",
-        "It will sing a beautiful song",
-        "It will turn into water",
-        "It will disappear forever"
-      ],
-      "answer": 0,
-      "explanation": "تُحَدِّثُ أَخْبَارَهَا — it will report everything that happened on it. The earth itself becomes a witness.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "What does the earth do in verse 2?",
+      options: ["It brings out its burdens.", "It settles after the shaking.", "It tells its stories immediately.", "It gathers people into groups."],
+      answer: 0,
+      explanation: "Verse 2 says that the earth brings out its burdens. Ibn Kathir explains this as what is in it of the dead.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:2: 'it will throw forth that which is in it of the dead.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "Why will the earth be able to speak?",
-      "options": [
-        "Allah will inspire it",
-        "Because it learned to speak",
-        "Because people taught it words",
-        "Because it always had a voice"
-      ],
-      "answer": 0,
-      "explanation": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا — because your Lord inspired it. The earth does not speak on its own; Allah commands it.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "Why does the human being ask, 'What is happening to it?'",
+      options: ["The earth has stopped moving after the shaking.", "The earth has changed from its familiar state.", "The people do not know which group to join.", "The earth has already shown everyone their deeds."],
+      answer: 1,
+      explanation: "The person is shocked because the once stable earth is moving, shaking, and bringing out its burdens.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:3 says the earth had been 'stable, settled and firm' and the person 'will be baffled by its situation.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "How will people emerge from the earth?",
-      "options": [
-        "Separated into groups to see their deeds",
-        "All together in one crowd",
-        "Flying like birds in the sky",
-        "Walking on water"
-      ],
-      "answer": 0,
-      "explanation": "أَشْتَاتًا means scattered and separated. Every person will walk alone toward their own judgment.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "What will the earth tell on that day?",
+      options: ["Why its shaking began before people gathered.", "Which groups will receive each kind of reward.", "What people did on its surface.", "What people thought when the earth began shaking."],
+      answer: 2,
+      explanation: "The earth will testify about what people did upon its surface.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4: 'it will speak of what the people did upon its surface.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "What amount of deeds will people see?",
-      "options": [
-        "An atom's weight of good or evil",
-        "Only major crimes in this world",
-        "Only good deeds in this world",
-        "Only evil deeds in this world"
-      ],
-      "answer": 0,
-      "explanation": "مِثْقَالَ ذَرَّةٍ — the weight of a tiny particle. Nothing is too small to be recorded and shown.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "Why is the earth able to speak in the surah?",
+      options: ["The earth chooses when to report past events.", "People teach the earth what it should report.", "The shaking naturally gives the earth the power of speech.", "Allah inspired and permitted the earth to speak."],
+      answer: 3,
+      explanation: "Verse 5 explains that the earth speaks because Allah inspires it. Ibn Kathir also explains this as Allah permitting or commanding it.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:5: 'He will permit it (the earth)' and 'Its Lord will say to it, Speak.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does seeing an atom's weight teach?",
-      "options": [
-        "Every tiny good deed counts and every tiny bad deed counts",
-        "Only big actions matter at all in this world",
-        "Small deeds are ignored in this world",
-        "Good and bad cancel each other out in this world"
-      ],
-      "answer": 0,
-      "explanation": "Nothing is lost. A kind word, a smile, a sip of water given — or a harsh word, a small lie — all will be weighed and shown.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "How will people come forward on that day?",
+      options: ["They come in scattered groups.", "They come as one crowd with identical deeds.", "They come in groups based only on where they lived.", "They come alone before any deeds are shown."],
+      answer: 0,
+      explanation: "People will come forward in scattered groups in order to be shown their deeds.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: people will return from the station of Judgement 'in separate groups.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "According to this surah, what is true?",
-      "options": [
-        "Nothing is too small to matter — every deed will be seen",
-        "Earthquakes are the biggest punishment in this world",
-        "The earth is more powerful than the heavens in this world",
-        "Only major sins will be judged in this world"
-      ],
-      "answer": 0,
-      "explanation": "The surah teaches that on the Day of Judgment, the earth will testify and every deed — down to an atom's weight — will be shown.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "Why are people brought forward in groups?",
+      options: ["To hear why the earth began shaking.", "To be shown their deeds.", "To choose which deeds should be recorded.", "To compare their deeds with other groups."],
+      answer: 1,
+      explanation: "Verse 6 states the purpose clearly: people are brought forward to be shown their deeds.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6: 'that they may be shown their deeds.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why does the surah mention both good and evil deeds?",
-      "options": [
-        "To emphasize that both good and evil",
-        "Because it sounds nice when repeated",
-        "To fill extra space in the surah",
-        "Because the Prophet liked the phrase"
-      ],
-      "answer": 0,
-      "explanation": "One verse for good, one for evil. Both use the same phrase to show that justice is perfectly balanced. Good is not ignored, and evil is not overlooked.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Comprehension",
+      q: "What do the final two verses say about small deeds?",
+      options: ["Only deeds noticed by other people will be seen.", "Good will be seen, while small evil is overlooked.", "Both small good and small evil will be seen.", "Both are seen only when they reach a large amount."],
+      answer: 2,
+      explanation: "The final pair says that a tiny amount of good will be seen and a tiny amount of evil will be seen.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir quotes: 'whosoever does good equal to the weight of a speck of dust shall see it' and the matching statement about evil.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "What makes this surah different from other surahs about judgment?",
-      "options": [
-        "The earth itself becomes a witness and speaks",
-        "It is the only surah about judgment",
-        "It mentions angels fighting",
-        "It describes a flood instead of fire"
-      ],
-      "answer": 0,
-      "explanation": "Most surahs describe angels, scales, and fire. This surah uniquely describes the earth itself as a living witness that will tell what happened on its surface.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Critical Thinking",
+      q: "A student thinks a very small helpful act cannot matter. Which lesson from the surah best answers this?",
+      options: ["Only deeds with visible results will be counted.", "Small good deeds matter mainly when repeated often.", "A hidden good deed matters less than public help.", "Even the smallest good deed will be seen."],
+      answer: 3,
+      explanation: "Verse 7 teaches that no good deed is too small to be seen. This encourages a person not to dismiss small acts of good.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:7 quotes good 'equal to the weight of a speck of dust' and says it shall be seen.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about creation?",
-      "options": [
-        "To show that the power comes from Allah, not from the earth",
-        "The earth was always able to speak in this world",
-        "Inspiration is the same as a dream in this world",
-        "The earth chose to be silent in this world"
-      ],
-      "answer": 0,
-      "explanation": "The earth has no voice of its own. On that Day, Allah will give it the ability to speak. The entire creation becomes a witness only by Allah's permission.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Critical Thinking",
+      q: "What response fits the warning about even a tiny amount of evil?",
+      options: ["Treat small wrong actions seriously instead of dismissing them.", "Focus only on wrong actions that cause visible harm.", "Assume a private wrong matters less than a public one.", "Wait until several small wrongs become one serious problem."],
+      answer: 0,
+      explanation: "Verse 8 warns that even a tiny amount of evil will be seen. Ibn Kathir also warns against sins that people belittle.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:8 quotes evil 'equal to the weight of speck of dust'; later he warns, 'Beware of the sins that are belittled.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about Everything and hidden and bodies, and treasures,?",
-      "options": [
-        "Everything hidden — bodies, treasures, secrets — will be exposed",
-        "Burdens are only about heavy stones",
-        "The earth will feel lighter and happier",
-        "Throwing things out is a celebration"
-      ],
-      "answer": 0,
-      "explanation": "For thousands of years, the earth has swallowed its dead, received its offerings, and kept its secrets. On that Day, it will vomit everything back out. Nothing stays hidden forever.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Critical Thinking",
+      q: "What does being shown 'their deeds' suggest about accountability?",
+      options: ["People are judged mainly by the group they belonged to.", "Each person will face the deeds that they chose.", "The public result matters more than a person's intention.", "People can depend on another person's record at judgment."],
+      answer: 1,
+      explanation: "The verse speaks of people being shown their deeds. The lesson directs each person to take responsibility for what they do.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6 explains that people will be rewarded for 'what they did in this life of good and evil.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about Allah?",
-      "options": [
-        "No deed is too small for Allah to record, weigh, and reward or punish",
-        "Allah only cares about big deeds",
-        "Small deeds are deleted from the record",
-        "Only humans care about small details"
-      ],
-      "answer": 0,
-      "explanation": "Allah's justice is perfect. A smile that made someone's day better — recorded. A harsh word that hurt someone — recorded. The smallest act of kindness or cruelty has weight.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Critical Thinking",
+      q: "How does the earth's testimony challenge the thought, 'Nobody saw what I did'?",
+      options: ["An action matters only when another person sees it.", "Private actions stay hidden because no person recorded them.", "Allah can make the earth testify about every action.", "The earth reports only actions that visibly changed its surface."],
+      answer: 2,
+      explanation: "The earth is not speaking by itself. Allah inspires it to testify about what people did on its surface.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4-5: the earth 'will testify' about what was done on it, and 'Its Lord will say to it, Speak.'", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "According to this surah, what is true?",
-      "options": [
-        "No small thing is small",
-        "Small things never matter in Islam",
-        "Only big actions are worth thinking about",
-        "The surah is only about the earth"
-      ],
-      "answer": 0,
-      "explanation": "After reading this surah, you cannot say 'it was just a small thing.' The surah tells you: every smallest thing you did — that smile or that lie — will be standing in front of you on that Day.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Critical Thinking",
+      q: "What balanced lesson comes from placing good and evil in matching final verses?",
+      options: ["Good matters more because its verse appears first.", "Both kinds of deeds are seen and answered for.", "Only large amounts of good and evil are weighed.", "The two verses describe rewards but leave out warnings."],
+      answer: 1,
+      explanation: "The matching verses make the point complete: neither small good nor small evil is ignored.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir quotes the paired statements that good and evil equal to a speck of dust shall be seen.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about judgment?",
-      "options": [
-        "Judgment is personal",
-        "People will be together with their families",
-        "Separation means they will be lost",
-        "Everyone will walk in big groups"
-      ],
-      "answer": 0,
-      "explanation": "No family, no tribe, no group. Each person will walk alone toward their own record. Your father cannot carry your deeds, and you cannot carry his. Judgment is individual.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Meaning Construction",
+      q: "Why does the phrase زِلْزَالَهَا use 'its earthquake' instead of only saying that the earth shook?",
+      options: ["It ties the powerful shaking directly to the earth itself.", "It separates the earthquake from everything the earth carries.", "It suggests that the earth controls when the shaking begins.", "It limits the shaking to one small part of the earth."],
+      answer: 0,
+      explanation: "The phrase gives the event a strong, direct connection to the earth: it is shaken with its own appointed earthquake.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:1 quotes 'When the earth quakes with its Zilzal' and explains that it 'will move from beneath it.' Cautious meaning inference: the possessive wording intensifies the earth-centered event.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Comprehension",
-      "q": "According to this surah, what is true?",
-      "options": [
-        "From biggest to smallest",
-        "The order is random",
-        "It goes from small to big",
-        "There is no pattern at all"
-      ],
-      "answer": 0,
-      "explanation": "The surah zooms in: first the whole planet shakes, then the earth speaks, then people scatter, and finally — the camera focuses on a single speck of dust. The macro and the micro are connected.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Meaning Construction",
+      q: "The teen translation calls أَخْبَارَهَا 'its stories.' What does that wording help the reader understand?",
+      options: ["The earth remembers events mainly as lessons for entertainment.", "The earth will give an account of what happened on it.", "The earth will explain why every person chose each action.", "The earth will repeat only the words that people spoke."],
+      answer: 1,
+      explanation: "Here 'stories' means the earth's account or testimony. Ibn Kathir explains that it will speak about what people did on its surface.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4: 'it will speak of what the people did upon its surface.' Cautious translation inference: 'stories' communicates an account of those deeds.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What does the surah teach about the Hereafter?",
-      "options": [
-        "Every tiny deed matters",
-        "Nothing would change at all",
-        "Only big sins would matter",
-        "Good deeds would still be ignored"
-      ],
-      "answer": 0,
-      "explanation": "If you truly believed a single smile or a sip of water given in kindness would be shown to you on the Day of Judgment, you would never miss a chance to do good. And you would be terrified of even the smallest sin.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Nazm",
+      q: "Why does the surah show people asking what happened after the earth brings out its burdens?",
+      options: ["It lets people explain the cause of the earthquake themselves.", "It shows that people understand the event before seeing it.", "It shows how deeply the changed earth shocks the people.", "It shifts attention from the earthquake to an ordinary question."],
+      answer: 2,
+      explanation: "The order lets the listener feel the shock first: the earth was once stable, then it shakes and brings out its burdens, leaving people baffled.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:2-3 says the earth was 'stable, settled and firm' and the person 'will be baffled by its situation.' Cautious structural inference: the question follows the scene to show its shock.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "According to this surah, what is true?",
-      "options": [
-        "The earth will shake, speak its witness, and every deed",
-        "A guide to surviving earthquakes",
-        "A story about a talking planet",
-        "A warning about digging too deep into the earth"
-      ],
-      "answer": 0,
-      "explanation": "Az-Zalzalah is the surah of absolute accountability: the earth testifies, the people scatter, and every deed — down to a single atom — is brought into the light.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Nazm",
+      q: "Why do the final verses about tiny deeds come after people are shown their deeds?",
+      options: ["They return to the earthquake after describing the gathered people.", "They explain why groups are separated before deeds are shown.", "They repeat the crowd scene without adding a new lesson.", "They make personal accountability clear after the larger Judgment scene."],
+      answer: 3,
+      explanation: "The surah moves from the earth and crowds on the Day of Judgment to each person's smallest good and evil deed.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:6 explains that people are shown their deeds; then he introduces 'The Recompense for Every Minute Deed.' Cautious structural inference: the conclusion narrows the scene to personal accountability.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why do you think these are the last verses revealed about the scales of deeds?",
-      "options": [
-        "Nothing escapes Allah's notice — ever",
-        "Allah ran out of ideas after this",
-        "The Qur'an had to end somewhere",
-        "Scales are not important in Islam"
-      ],
-      "answer": 0,
-      "explanation": "These verses are often called the most hope-giving and fear-giving in the Qur'an. For the one who did good, it is comfort. For the one who did evil, it is terror. Both feelings lead you to act.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Style of Address",
+      q: "What is the effect of describing the earth as telling its stories?",
+      options: ["It presents the earth as a witness to human actions.", "It presents the earth as the judge who decides each result.", "It suggests the earth knows actions without Allah's command.", "It suggests only actions affecting the ground are recorded."],
+      answer: 0,
+      explanation: "The image makes the earth a witness: it will testify about what people did upon its surface by Allah's command.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:4 calls this the earth's information and says it 'will testify against every male and female servant' about what was done on it.", checkedAt: "2026-07-26" }
     },
     {
-      "category": "Critical Thinking",
-      "q": "If the earth records everything you do, what does that mean about the phone in your hand or the words you type?",
-      "options": [
-        "Every place and tool will be a witness",
-        "Phones are not part of the earth",
-        "The earth only records footsteps",
-        "Only speech is recorded, not typing"
-      ],
-      "answer": 0,
-      "explanation": "The earth is the surface on which you live. Every text you type, every video you watch, every word you speak — it all happens on the earth that will one day speak. Nothing disappears from its record.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
+      category: "Rhetoric",
+      rhetoricArea: "Style of Address",
+      q: "Why are the final verses almost repeated, first for good and then for evil?",
+      options: ["To separate good deeds from the account of human choices.", "To suggest that good and evil have the same result.", "To emphasize the size of deeds instead of their moral kind.", "To make both sides of accountability equally clear."],
+      answer: 3,
+      explanation: "The repeated pattern gives equal attention to both truths: tiny good will be seen, and tiny evil will be seen.",
+      verified: { status: "verified", by: "tafsir Ibn Kathir", note: "Ibn Kathir on 99:7-8 quotes the paired final verses: good equal to 'the weight of a speck of dust' shall be seen, and then the matching statement about evil. Cautious style inference: the repetition gives both sides equal clarity.", checkedAt: "2026-07-26" }
     }
   ],
-  "fillBlanks": {
-    "ayahs": [
+  fillBlanks: {
+    ayahs: [
       {
-        "n": 1,
-        "segments": [
-          {
-            "t": "إِذَا "
-          },
-          {
-            "b": "زُلْزِلَتِ",
-            "m": "is shaken / quaked"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "ٱلْأَرْضُ",
-            "m": "the earth"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "زِلْزَالَهَا",
-            "m": "its earthquake / its shaking"
-          }
+        n: 1,
+        segments: [
+          { t: "إِذَا " },
+          { b: "زُلْزِلَتِ", m: "is shaken" },
+          { t: " " },
+          { b: "ٱلْأَرْضُ", m: "the earth" },
+          { t: " " },
+          { b: "زِلْزَالَهَا", m: "its earthquake" }
         ]
       },
       {
-        "n": 2,
-        "segments": [
-          {
-            "t": "وَأَخْرَجَتِ ٱلْأَرْضُ "
-          },
-          {
-            "b": "أَثْقَالَهَا",
-            "m": "its burdens / its loads"
-          }
+        n: 2,
+        segments: [
+          { t: "وَأَخْرَجَتِ ٱلْأَرْضُ " },
+          { b: "أَثْقَالَهَا", m: "its burdens" }
         ]
       },
       {
-        "n": 3,
-        "segments": [
-          {
-            "t": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا"
-          }
+        n: 3,
+        segments: [
+          { t: "وَقَالَ " },
+          { b: "ٱلْإِنسَـٰنُ", m: "the human being" },
+          { t: " مَا لَهَا" }
         ]
       },
       {
-        "n": 4,
-        "segments": [
-          {
-            "t": "يَوْمَئِذٍۢ "
-          },
-          {
-            "b": "تُحَدِّثُ",
-            "m": "it will report / it will tell"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "أَخْبَارَهَا",
-            "m": "its news / its reports"
-          }
+        n: 4,
+        segments: [
+          { t: "يَوْمَئِذٍۢ " },
+          { b: "تُحَدِّثُ", m: "it will tell" },
+          { t: " " },
+          { b: "أَخْبَارَهَا", m: "its stories" }
         ]
       },
       {
-        "n": 5,
-        "segments": [
-          {
-            "t": "بِأَنَّ رَبَّكَ "
-          },
-          {
-            "b": "أَوْحَىٰ",
-            "m": "He inspired / He commanded"
-          },
-          {
-            "t": " لَهَا"
-          }
+        n: 5,
+        segments: [
+          { t: "بِأَنَّ رَبَّكَ " },
+          { b: "أَوْحَىٰ", m: "inspired" },
+          { t: " لَهَا" }
         ]
       },
       {
-        "n": 6,
-        "segments": [
-          {
-            "t": "يَوْمَئِذٍۢ "
-          },
-          {
-            "b": "يَصْدُرُ",
-            "m": "will go forth / will emerge"
-          },
-          {
-            "t": " ٱلنَّاسُ "
-          },
-          {
-            "b": "أَشْتَاتًۭا",
-            "m": "separated / in scattered groups"
-          },
-          {
-            "t": " لِّيُرَوْا۟ أَعْمَـٰلَهُمْ"
-          }
+        n: 6,
+        segments: [
+          { t: "يَوْمَئِذٍۢ " },
+          { b: "يَصْدُرُ", m: "will come forward" },
+          { t: " ٱلنَّاسُ " },
+          { b: "أَشْتَاتًۭا", m: "in scattered groups" },
+          { t: " لِّيُرَوْا۟ " },
+          { b: "أَعْمَـٰلَهُمْ", m: "their deeds" }
         ]
       },
       {
-        "n": 7,
-        "segments": [
-          {
-            "t": "فَمَن يَعْمَلْ "
-          },
-          {
-            "b": "مِثْقَالَ",
-            "m": "the weight of / the amount of"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "ذَرَّةٍ",
-            "m": "an atom / a tiny particle"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "خَيْرًۭا",
-            "m": "good / a good deed"
-          },
-          {
-            "t": " "
-          },
-          {
-            "b": "يَرَهُۥ",
-            "m": "will see it"
-          }
+        n: 7,
+        segments: [
+          { t: "فَمَن يَعْمَلْ مِثْقَالَ " },
+          { b: "ذَرَّةٍ", m: "a tiny particle" },
+          { t: " " },
+          { b: "خَيْرًۭا", m: "good" },
+          { t: " يَرَهُۥ" }
         ]
       },
       {
-        "n": 8,
-        "segments": [
-          {
-            "t": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ "
-          },
-          {
-            "b": "شَرًّۭا",
-            "m": "evil / a bad deed"
-          },
-          {
-            "t": " يَرَهُۥ"
-          }
+        n: 8,
+        segments: [
+          { t: "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ " },
+          { b: "شَرًّۭا", m: "evil" },
+          { t: " يَرَهُۥ" }
+        ]
+      }
+    ]
+  },
+  fillBlanksEn: {
+    ayahs: [
+      {
+        n: 1,
+        segments: [
+          { t: "When " },
+          { b: "the earth", m: "ٱلْأَرْضُ" },
+          { t: " " },
+          { b: "is shaken", m: "زُلْزِلَتِ" },
+          { t: " with " },
+          { b: "its earthquake", m: "زِلْزَالَهَا" },
+          { t: "." }
+        ]
+      },
+      {
+        n: 2,
+        segments: [
+          { t: "And the earth brings out " },
+          { b: "its burdens", m: "أَثْقَالَهَا" },
+          { t: "." }
+        ]
+      },
+      {
+        n: 3,
+        segments: [
+          { t: "And " },
+          { b: "the human being", m: "ٱلْإِنسَـٰنُ" },
+          { t: " asks, What is happening to it?" }
+        ]
+      },
+      {
+        n: 4,
+        segments: [
+          { t: "On that day, " },
+          { b: "it will tell", m: "تُحَدِّثُ" },
+          { t: " " },
+          { b: "its stories", m: "أَخْبَارَهَا" },
+          { t: "." }
+        ]
+      },
+      {
+        n: 5,
+        segments: [
+          { t: "Because your Lord " },
+          { b: "inspired", m: "أَوْحَىٰ" },
+          { t: " it." }
+        ]
+      },
+      {
+        n: 6,
+        segments: [
+          { t: "That day, people " },
+          { b: "will come forward", m: "يَصْدُرُ" },
+          { t: " " },
+          { b: "in scattered groups", m: "أَشْتَاتًۭا" },
+          { t: ", so they may be shown " },
+          { b: "their deeds", m: "أَعْمَـٰلَهُمْ" },
+          { t: "." }
+        ]
+      },
+      {
+        n: 7,
+        segments: [
+          { t: "Whoever does even " },
+          { b: "a tiny particle", m: "ذَرَّةٍ" },
+          { t: " of " },
+          { b: "good", m: "خَيْرًۭا" },
+          { t: " will see it." }
+        ]
+      },
+      {
+        n: 8,
+        segments: [
+          { t: "And whoever does even a tiny particle of " },
+          { b: "evil", m: "شَرًّۭا" },
+          { t: " will see it." }
         ]
       }
     ]

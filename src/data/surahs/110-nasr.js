@@ -1,231 +1,237 @@
 // Surah 110 · An-Nasr
-// Lesson data only. Shared behavior lives in the modules under src/.
+// Lesson data only. Shared behavior lives in src/app.js.
 export default {
   "id": "nasr",
   "number": 110,
   "nameArabic": "النَّصْرِ",
   "nameEnglish": "An-Nasr",
   "title": "The Divine Support",
-  "intro": "Surah An-Nasr was one of the last surahs revealed to the Prophet ﷺ. It announces the great victory when Makkah was conquered and people entered Islam in large numbers. But instead of celebrating with pride, the surah teaches the Prophet ﷺ to turn to Allah — to praise Him, to glorify Him, and to ask for forgiveness. The surah is a lesson in how to handle success: not with pride in yourself, but with humility before Allah, because every victory comes from Him and every soul will return to Him.",
+  "intro": "Surah An-Nasr was among the final surahs revealed and marks the completion of the Prophet's mission ﷺ. It opens with the promise that when the help of Allah and the conquest of Makkah comes, a turning point will arrive. Its main scene shows people entering the religion of Allah in crowds, tribe after tribe, after that victory. Its central lesson warns against pride at the moment of success and instead commands the believer to glorify Allah with praise and to ask His forgiveness with humility. It ends by naming Allah as ever Accepting of repentance, reminding believers that even at the height of success they should remain humble and keep returning to Him.",
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary checked against Tafsir Ibn Kathir on 110:1-3. Ibn Kathir notes: When there comes the help of Allah and the Conquest which is the conquest of Makkah, and that the people entered into the religion of Allah in crowds, and that the Prophet was commanded: So glorify the praises of your Lord and ask His forgiveness, Verily He is the One Who accepts the repentance and Who forgives. Ibn Kathir also records Ibn Abbas explaining 110:1-3 as the sign of the end of the life of Allah's Messenger.",
+    "checkedAt": "2026-08-30"
+  },
   "vocabulary": [
     {
       "arabic": "نَصْرُ",
-      "meaning": "victory / help / support",
-      "connection": "Allah's victory came — the conquest of Makkah was a gift from Him, not a human achievement.",
-      "hint": "Winning not by your strength but by help from above.",
+      "meaning": "help and victory",
+      "connection": "Allah's help came with the conquest of Makkah, a gift from Him rather than a human achievement.",
+      "hint": "Help that arrives from above and brings a decisive win.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "An-Nasr 110:1 (root: ن-ص-ر)",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' This supports نَصْرُ as help and victory.",
+        "checkedAt": "2026-08-30"
+      },
       "grammar": {
         "english": "Nominative noun",
         "arabic": "اسم مرفوع",
-        "explanation": "نَصْرُ is the subject of جَاءَ: Allah's help is what comes. Its ending marks it as the main noun carrying the action in this part of the sentence."
-      },
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:1 (root: ن-ص-ر, indefinite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "explanation": "نَصْرُ is the subject of جَاءَ: Allah's help is what comes. Its damma ending marks it as the main noun carrying the action in this part of the sentence."
       }
     },
     {
       "arabic": "الْفَتْحُ",
-      "meaning": "the conquest / the opening",
-      "connection": "The conquest of Makkah — a historic victory when the city opened to Islam without bloodshed.",
-      "hint": "A door that opens wide that was once shut tight.",
+      "meaning": "the conquest",
+      "connection": "The conquest of Makkah — the city opened to Islam peacefully after years of struggle.",
+      "hint": "A door that was shut tight opens wide.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "An-Nasr 110:1 (root: ف-ت-ح)",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' The phrase 'help and victory' includes الْفَتْحُ understood as the conquest.",
+        "checkedAt": "2026-08-30"
+      },
       "grammar": {
         "english": "Coordinated nominative noun",
         "arabic": "اسم معطوف مرفوع",
-        "explanation": "الْفَتْحُ is joined to نَصْرُ by وَ, so both nouns share the same grammatical level: Allah's help and the decisive opening arrive together."
-      },
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:1 (root: ف-ت-ح, definite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "explanation": "الْفَتْحُ is joined to نَصْرُ by وَ, so both nouns share the same nominative level: Allah's help and the decisive opening arrive together."
       }
     },
     {
       "arabic": "جَاءَ",
-      "meaning": "has come / came",
-      "connection": "When the victory of Allah has come — it is a certain event, not a hope.",
-      "hint": "Arriving at a destination you have been traveling toward.",
-      "grammar": {
-        "english": "Perfect verb, third-person singular",
-        "arabic": "فعل ماض للغائب المفرد",
-        "explanation": "جَاءَ is a past-form verb meaning 'came.' After إِذَا, this completed form presents the promised victory with certainty, as an event whose arrival is assured."
-      },
+      "meaning": "has come",
+      "connection": "When Allah's help has come — a promised event spoken of as already certain.",
+      "hint": "Arriving at a destination you were traveling toward.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:1 (root: ج-ي-ء, Form I, 3rd person)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:1 (root: ج-ي-ء)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' The verb 'come' renders جَاءَ as has come.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb, third-person masculine singular",
+        "arabic": "فعل ماض للغائب المفرد المذكر",
+        "explanation": "جَاءَ is past-form meaning 'has come.' After إِذَا, this completed form presents the promised victory as certain and assured."
       }
     },
     {
       "arabic": "يَدْخُلُونَ",
       "meaning": "they enter",
-      "connection": "People entered the religion of Allah in large crowds — not forced, but willingly.",
-      "hint": "Walking through an open gate together in a great group.",
-      "grammar": {
-        "english": "Imperfect verb, third-person plural",
-        "arabic": "فعل مضارع للغائب الجمع",
-        "explanation": "The واو in يَدْخُلُونَ points to 'they.' The imperfect form lets the learner picture people entering as the Prophet watches the scene unfold."
-      },
+      "connection": "You see people entering the religion of Allah willingly, in great numbers.",
+      "hint": "Walking through an open gate together.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:2 (root: د-خ-ل, Form I, 3rd person plural)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:2 (root: د-خ-ل)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The word 'entering' renders يَدْخُلُونَ as they enter.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Imperfect verb, third-person masculine plural",
+        "arabic": "فعل مضارع للغائبين بثبوت النون",
+        "explanation": "يَدْخُلُونَ begins with يَ for present and ends with ون for 'they.' The form lets the listener picture people entering while the Prophet watches."
       }
     },
     {
       "arabic": "دِينِ",
-      "meaning": "the religion / the faith",
+      "meaning": "the religion",
       "connection": "They entered into the religion of Allah — Islam spread in waves after the conquest.",
-      "hint": "A whole way of life, not just a name or a title.",
-      "grammar": {
-        "english": "Genitive noun in a possessive phrase",
-        "arabic": "اسم مجرور وهو مضاف",
-        "explanation": "دِينِ follows the preposition فِي, so it is genitive. It also begins the phrase دِينِ اللَّهِ, 'the religion of Allah,' linking the faith directly to Allah."
-      },
+      "hint": "A whole way of life belonging to Allah, not just a name.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:2 (root: د-ي-ن, indefinite, mudaf)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:2 (root: د-ي-ن)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The phrase 'Allah's religion' renders دِينِ اللَّهِ as the religion of Allah.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Genitive noun in a possessive phrase",
+        "arabic": "اسم مجرور مضاف",
+        "explanation": "دِينِ follows فِي, so it is genitive with kasra. It is also مضاف to اللَّهِ, forming the phrase 'the religion of Allah.'"
       }
     },
     {
       "arabic": "أَفْوَاجًا",
-      "meaning": "in multitudes / in crowds",
-      "connection": "People came to Islam not one by one, but in great crowds, tribe after tribe.",
-      "hint": "Waves of people flowing in like a great flood.",
-      "grammar": {
-        "english": "Accusative word describing manner",
-        "arabic": "حال منصوب",
-        "explanation": "أَفْوَاجًا explains how the people enter: as crowds or group after group. Grammatically it is a حال, a word that describes the state of people during the action."
-      },
+      "meaning": "in crowds",
+      "connection": "People came to Islam not one by one, but group after group.",
+      "hint": "Waves of people flowing in like a flood.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:2 (root: ف-و-ج, plural of فَوْجٌ, indefinite)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:2 (root: ف-و-ج)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The word 'crowds' renders أَفْوَاجًا as in crowds.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Accusative noun describing manner",
+        "arabic": "حال منصوبة",
+        "explanation": "أَفْوَاجًا is accusative with tanwīn. It describes how people entered: in crowds, group after group, as a حال describing their state."
       }
     },
     {
       "arabic": "سَبِّحْ",
-      "meaning": "glorify / declare perfection",
+      "meaning": "glorify",
       "connection": "After victory, the Prophet ﷺ is told to glorify Allah — not celebrate himself.",
-      "hint": "Saying words that lift Allah above every flaw.",
-      "grammar": {
-        "english": "Imperative verb",
-        "arabic": "فعل أمر",
-        "explanation": "سَبِّحْ is a direct command: declare Allah perfect and free from every weakness. The command turns the moment of victory into worship."
-      },
+      "hint": "Declaring Allah perfect and free from every flaw.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:3 (root: س-ب-ح, Form II imperative)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:3 (root: س-ب-ح)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'praise your Lord's glory' renders سَبِّحْ بِحَمْدِ رَبِّكَ as glorify with praise.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Imperative verb, second-person masculine singular",
+        "arabic": "فعل أمر للمخاطب المفرد",
+        "explanation": "سَبِّحْ is a direct command: 'glorify.' The shadda on ب shows emphasis — repeatedly declare Allah perfect."
       }
     },
     {
       "arabic": "حَمْدِ",
-      "meaning": "the praise / the thanks",
-      "connection": "Glorify Allah with His praise — victory leads to gratitude, not pride.",
-      "hint": "Saying thank you to the One who gave you everything.",
-      "grammar": {
-        "english": "Genitive noun after a preposition",
-        "arabic": "اسم مجرور بالباء",
-        "explanation": "The بِ before حَمْدِ makes it genitive. بِحَمْدِ means glorifying Allah while praising and thanking Him, so tasbih and gratitude are joined."
-      },
+      "meaning": "praise",
+      "connection": "Glorify Allah with praise — victory leads to gratitude, not pride.",
+      "hint": "Thanking the One who gave the victory.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:3 (root: ح-م-د, indefinite, mudaf)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:3 (root: ح-م-د)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The word 'praise' renders حَمْدِ as praise.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Genitive noun after the preposition",
+        "arabic": "اسم مجرور بالباء",
+        "explanation": "حَمْدِ follows بِ, so it is genitive. بِحَمْدِ means while praising Him, so glorification and praise are joined."
       }
     },
     {
       "arabic": "وَاسْتَغْفِرْهُ",
       "meaning": "and ask His forgiveness",
       "connection": "Even after the greatest victory, the Prophet ﷺ was told to seek forgiveness — a lesson in humility.",
-      "hint": "Saying 'forgive me' even when you feel you have done well.",
-      "grammar": {
-        "english": "Conjunction + imperative + object pronoun",
-        "arabic": "واو عطف وفعل أمر والهاء مفعول به",
-        "explanation": "وَ joins this command to سَبِّحْ, and هُ means 'Him.' The whole word says, 'and ask Him for forgiveness,' keeping the action directed to Allah."
-      },
+      "hint": "Saying 'forgive me' even at a moment of success.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:3 (root: غ-ف-ر, Form X imperative + pronoun)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nasr 110:3 (root: غ-ف-ر)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'ask His forgiveness' renders وَاسْتَغْفِرْهُ as and ask His forgiveness.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Conjunction + imperative + attached pronoun",
+        "arabic": "واو عطف وفعل أمر والهاء ضمير مفعول به",
+        "explanation": "وَ joins this command to سَبِّحْ, اسْتَغْفِرْ means 'ask forgiveness,' and هُ means 'Him,' so the whole word says 'and ask Him for forgiveness.'"
       }
     },
     {
       "arabic": "تَوَّابًا",
-      "meaning": "Oft-Returning / Accepting of repentance",
-      "connection": "Allah is described as تَوَّابًا — the One who always turns back to forgive.",
-      "hint": "Someone who never gets tired of saying 'I forgive you.'",
+      "meaning": "always ready to accept repentance",
+      "connection": "Allah is named as ever ready to welcome those who turn back to Him.",
+      "hint": "The One who never tires of forgiving when you return.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "An-Nasr 110:3 (root: ت-و-ب)",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'always ready to accept repentance' renders تَوَّابًا as always ready to accept repentance.",
+        "checkedAt": "2026-08-30"
+      },
       "grammar": {
         "english": "Accusative predicate of kāna",
         "arabic": "خبر كان منصوب",
-        "explanation": "تَوَّابًا completes the phrase كَانَ تَوَّابًا. Its intensive pattern expresses repeated acceptance of repentance: Allah continually welcomes those who turn back."
-      },
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nasr 110:3 (root: ت-و-ب, Form I intensive, indefinite)",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning and connection written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "explanation": "تَوَّابًا completes إِنَّهُ كَانَ تَوَّابًا. Its intensive form and accusative ending express that Allah continually accepts repentance."
       }
     }
   ],
@@ -234,12 +240,13 @@ export default {
       "type": "ar2en",
       "q": "What does نَصْرُ mean?",
       "options": [
-        "victory / help",
+        "help and victory",
         "deep sadness",
-        "a long war",
+        "a long night",
         "a quiet rest"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "نَصْرُ means help and victory. In 110:1, Allah's help and victory come together with the conquest."
     },
     {
       "type": "ar2en",
@@ -250,7 +257,20 @@ export default {
         "the hunger",
         "the silence"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "الْفَتْحُ means the conquest. In 110:1 it points to the conquest of Makkah."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does جَاءَ mean?",
+      "options": [
+        "has come",
+        "has gone away",
+        "has fallen down",
+        "has run away"
+      ],
+      "answer": 0,
+      "explanation": "جَاءَ means has come. The surah announces that Allah's help has come."
     },
     {
       "type": "ar2en",
@@ -258,632 +278,646 @@ export default {
       "options": [
         "they enter",
         "they run away",
-        "they fall down",
-        "they sit still"
+        "they sit still",
+        "they fall down"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "يَدْخُلُونَ means they enter. In 110:2, people entered Allah's religion in crowds."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does دِينِ mean?",
+      "options": [
+        "the religion",
+        "the palace",
+        "the mountain",
+        "the weapon"
+      ],
+      "answer": 0,
+      "explanation": "دِينِ means the religion. The phrase دِينِ اللَّهِ is the religion of Allah."
     },
     {
       "type": "ar2en",
       "q": "What does أَفْوَاجًا mean?",
       "options": [
-        "in large crowds",
+        "in crowds",
         "one by one",
         "very slowly",
         "from far away"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "أَفْوَاجًا means in crowds. People entered Islam group after group."
     },
     {
       "type": "ar2en",
       "q": "What does سَبِّحْ mean?",
       "options": [
-        "glorify Allah",
+        "glorify",
         "sleep deeply",
         "run quickly",
         "eat slowly"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "سَبِّحْ means glorify — to declare Allah perfect and free of any flaw."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'the conquest'?",
+      "type": "ar2en",
+      "q": "What does حَمْدِ mean?",
       "options": [
-        "الْفَتْحُ",
-        "نَصْرُ",
-        "دِينِ",
-        "حَمْدِ"
+        "praise",
+        "anger",
+        "silence",
+        "journey"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "حَمْدِ means praise. The command is to glorify your Lord with praise."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'in multitudes'?",
-      "options": [
-        "أَفْوَاجًا",
-        "جَاءَ",
-        "سَبِّحْ",
-        "تَوَّابًا"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'ask His forgiveness'?",
+      "q": "Which word means 'and ask His forgiveness'?",
       "options": [
         "وَاسْتَغْفِرْهُ",
         "سَبِّحْ",
         "جَاءَ",
         "نَصْرُ"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "وَاسْتَغْفِرْهُ means and ask His forgiveness. In 110:3 it follows the command to glorify."
     },
     {
-      "type": "meaning",
-      "q": "تَوَّابًا describes Allah as:",
+      "type": "en2ar",
+      "q": "Which word means 'always ready to accept repentance'?",
       "options": [
-        "Always ready to forgive",
-        "never hearing prayers",
-        "sleeping all night",
-        "far from creation"
+        "تَوَّابًا",
+        "أَفْوَاجًا",
+        "دِينِ",
+        "الْفَتْحُ"
       ],
-      "answer": 0
-    },
-    {
-      "type": "meaning",
-      "q": "دِينِ اللَّهِ means:",
-      "options": [
-        "the religion of Allah",
-        "the house of Allah",
-        "the book of Allah",
-        "the garden of Allah"
-      ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "تَوَّابًا means always ready to accept repentance. Allah ends the surah with this name."
     }
   ],
   "quiz": [
     {
       "category": "Vocabulary",
-      "q": "What does نَصْرُ mean?",
+      "q": "What does نَصْرُ mean in this surah?",
       "options": [
-        "victory / help",
+        "help and victory",
         "deep sadness",
-        "a long war",
-        "a quiet rest"
+        "a quiet rest",
+        "a long night"
       ],
       "answer": 0,
-      "explanation": "نَصْرُ means victory or help. The surah announces that Allah's victory has come.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الْفَتْحُ mean?",
-      "options": [
-        "the conquest",
-        "the darkness",
-        "the hunger",
-        "the silence"
-      ],
-      "answer": 0,
-      "explanation": "الْفَتْحُ means the conquest or opening. It refers to the conquest of Makkah.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does جَاءَ mean here?",
-      "options": [
-        "has come / arrived",
-        "has gone far away",
-        "has fallen down",
-        "has run away"
-      ],
-      "answer": 0,
-      "explanation": "جَاءَ means has come or arrived. The victory was certain and real.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Meaning Construction & Translation): The word أَفْوَاجًا is translated as 'in crowds.' Why is that stronger than simply saying 'many people'?",
-      "options": [
-        "It shows whole groups entering together",
-        "It gives the exact number who entered",
-        "It says only tribal leaders entered",
-        "It suggests people entered one at a time"
-      ],
-      "answer": 0,
-      "explanation": "أَفْوَاجًا pictures group after group entering together. It describes the manner of their entry, not merely a large final number.",
+      "explanation": "نَصْرُ means help and victory. Ayah 1 announces that Allah's help and victory have come.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked on 2026-07-13 against Ibn Kathir on 110:2; both explain that whole tribes and regions entered Islam in crowds after the decisive victory. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-13"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' This supports نَصْرُ as help and victory.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does دِينِ mean here?",
+      "q": "What does الْفَتْحُ mean here?",
+      "options": [
+        "the hunger",
+        "the conquest",
+        "the darkness",
+        "the silence"
+      ],
+      "answer": 1,
+      "explanation": "الْفَتْحُ means the conquest. It points to the conquest of Makkah, the decisive opening.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' The conquest is the opening named in that verse.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does جَاءَ mean in 110:1?",
+      "options": [
+        "has fallen down",
+        "has run away",
+        "has come",
+        "has gone away"
+      ],
+      "answer": 2,
+      "explanation": "جَاءَ means has come. The victory is presented as certain to arrive.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' The word 'come' renders جَاءَ as has come.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does يَدْخُلُونَ mean in 110:2?",
+      "options": [
+        "they run away",
+        "they sit still",
+        "they fall down",
+        "they enter"
+      ],
+      "answer": 3,
+      "explanation": "يَدْخُلُونَ means they enter. The surah describes people entering Allah's religion.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The word 'entering' renders يَدْخُلُونَ as they enter.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does دِينِ mean in 110:2?",
       "options": [
         "the religion",
-        "the weapon",
         "the palace",
-        "the mountain"
+        "the weapon",
+        "the market"
       ],
       "answer": 0,
-      "explanation": "دِينِ means the religion or faith. They entered the religion of Allah — Islam.",
+      "explanation": "دِينِ means the religion. The phrase دِينِ اللَّهِ is the religion of Allah.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The phrase 'Allah's religion' renders دِينِ as the religion.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does أَفْوَاجًا mean?",
       "options": [
-        "in large crowds",
+        "from far away",
+        "in crowds",
         "one by one",
-        "very slowly",
-        "from far away"
+        "very slowly"
       ],
-      "answer": 0,
-      "explanation": "أَفْوَاجًا means in multitudes or large crowds. People came to Islam not singly but in great groups.",
+      "answer": 1,
+      "explanation": "أَفْوَاجًا means in crowds. People came group after group, not singly.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The word 'crowds' renders أَفْوَاجًا as in crowds.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does سَبِّحْ mean?",
+      "q": "What does سَبِّحْ mean in 110:3?",
       "options": [
-        "glorify Allah",
-        "sleep deeply",
         "run quickly",
-        "eat slowly"
+        "stay silent",
+        "glorify",
+        "sleep deeply"
       ],
-      "answer": 0,
-      "explanation": "سَبِّحْ means glorify — to declare Allah perfect and free of any flaw.",
+      "answer": 2,
+      "explanation": "سَبِّحْ means glorify — to declare Allah perfect and free from any flaw.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'praise your Lord's glory' renders سَبِّحْ as glorify.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does حَمْدِ mean here?",
+      "q": "What does حَمْدِ mean in this surah?",
       "options": [
-        "the praise",
-        "the anger",
-        "the silence",
-        "the journey"
+        "anger",
+        "silence",
+        "journey",
+        "praise"
       ],
-      "answer": 0,
-      "explanation": "حَمْدِ means the praise. Glorify with His praise — victory leads to gratitude.",
+      "answer": 3,
+      "explanation": "حَمْدِ means praise. The command is to glorify your Lord while praising Him.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Meaning Construction & Translation): The opening says نَصْرُ اللَّهِ, 'Allah's help.' What does the word 'help' emphasize about the victory?",
-      "options": [
-        "The result came through Allah's support",
-        "The people won without any effort",
-        "The conquest happened before the struggle",
-        "The Prophet needed help from Quraysh"
-      ],
-      "answer": 0,
-      "explanation": "Calling it Allah's help directs credit to Him. Human effort mattered, but its success depended on Allah's support and favor.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Checked on 2026-07-13 against on 110:1 and 110:3, which distinguishes human service from the divine support on which its success depended. Removed tafsir was the only source checked here, so this returns to unverified on 2026-07-22; re-check against tafsir-notes/ before signing off.",
-        "checkedAt": "2026-07-13"
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The word 'praise' renders حَمْدِ as praise.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does تَوَّابًا mean?",
+      "q": "What does وَاسْتَغْفِرْهُ mean?",
       "options": [
-        "Always forgiving",
-        "never returning",
-        "always sleeping",
-        "never hearing"
+        "and ask His forgiveness",
+        "and forget His favor",
+        "and delay His praise",
+        "and hide His help"
       ],
       "answer": 0,
-      "explanation": "تَوَّابًا means Oft-Returning or Always Accepting of repentance — Allah never tires of forgiving.",
+      "explanation": "وَاسْتَغْفِرْهُ means and ask His forgiveness. It follows the command to glorify with praise.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'ask His forgiveness' renders وَاسْتَغْفِرْهُ as and ask His forgiveness.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does تَوَّابًا mean at the end of the surah?",
+      "options": [
+        "far from creation",
+        "always ready to accept repentance",
+        "never hearing a prayer",
+        "sleeping all night"
+      ],
+      "answer": 1,
+      "explanation": "تَوَّابًا means always ready to accept repentance. Allah is the One who continually welcomes those who return.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.' The phrase 'always ready to accept repentance' renders تَوَّابًا as always ready to accept repentance.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "When the surah says نَصْرُ اللَّهِ, what does نَصْرُ point to?",
+      "options": [
+        "a long night",
+        "deep sadness",
+        "help and victory",
+        "a quiet rest"
+      ],
+      "answer": 2,
+      "explanation": "نَصْرُ اللَّهِ is the help and victory that comes from Allah, made visible in the conquest.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.' The genitive construction is help and victory of Allah.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "In 110:2 the word أَفْوَاجًا describes people entering how?",
+      "options": [
+        "alone at night",
+        "with fearful faces",
+        "without any purpose",
+        "in crowds"
+      ],
+      "answer": 3,
+      "explanation": "أَفْوَاجًا describes the manner of entering — in crowds, group after group.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.' The word 'crowds' renders أَفْوَاجًا as in crowds.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What great event does the surah announce?",
+      "q": "What event does 110:1 announce has come?",
       "options": [
-        "Victory and the conquest of Makkah",
+        "Allah's help and the conquest",
         "A great earthquake",
-        "A famine in the land",
-        "A battle lost in battle"
+        "A famine across the land",
+        "A garden planted at night"
       ],
       "answer": 0,
-      "explanation": "The surah announces the victory of Allah and the conquest (الْفَتْح) — the peaceful opening of Makkah to Islam.",
+      "explanation": "The surah opens: when the help of Allah and the conquest have come.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:1 as: 'When Allah's help and victory come.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What did people do after the conquest, according to the surah?",
+      "q": "What does the surah say people did after the conquest in 110:2?",
       "options": [
-        "They entered Islam in large crowds",
+        "They hid in the valleys",
+        "They entered Allah's religion in crowds",
         "They fled from the city",
-        "They built new houses",
-        "They started a new war"
+        "They built tall houses"
       ],
-      "answer": 0,
-      "explanation": "People entered the religion of Allah in multitudes (أَفْوَاجًا) — tribe after tribe accepted Islam.",
+      "answer": 1,
+      "explanation": "Ayah 2 says you see people entering the religion of Allah in crowds.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:2 as: 'And you see people entering Allah's religion in crowds.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What is the Prophet ﷺ told to do after the victory?",
+      "q": "Who is addressed by the commands in 110:3?",
       "options": [
-        "Glorify Allah and ask forgiveness",
-        "Celebrate with a feast",
-        "Build a large palace",
-        "Rest from all work"
+        "The mountains told to move from place",
+        "The disbelievers told to leave the city",
+        "The Prophet ﷺ to glorify and seek forgiveness",
+        "The angels told to descend to earth"
       ],
-      "answer": 0,
-      "explanation": "The surah commands: سَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ — glorify and praise your Lord, and seek His forgiveness.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Nazm / Structure): Why does the command to seek forgiveness come immediately after the victory and the crowds entering Islam?",
-      "options": [
-        "Victory made earlier worship unnecessary",
-        "Success should lead to humility before Allah",
-        "Forgiveness was required before people entered",
-        "The crowds had committed the same mistake"
-      ],
-      "answer": 1,
-      "explanation": "The order teaches the manners of success: after Allah grants a great result, the servant lowers himself, praises Allah, and asks Him to accept and forgive every shortcoming.",
+      "answer": 2,
+      "explanation": "The commands glorify and ask forgiveness are addressed to the Prophet ﷺ as the example for believers.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked on 2026-07-13 against Ibn Kathir's report of the Prophet implementing 110:3's explanation that victory should produce humility rather than self-credit. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-13"
+        "note": "Tafsir Ibn Kathir on 110:3 reports the Prophet implementing So glorify the praises of your Lord and ask His forgiveness, showing the command was directed to him as interpretation of the Qur'an. The note includes the exact phrase So glorify the praises of your Lord.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "How many things is the Prophet ﷺ told to do after the victory?",
+      "q": "What two actions are commanded after victory in 110:3?",
       "options": [
-        "Two: glorify and seek forgiveness",
-        "One: celebrate only",
-        "Three: build, rule, and rest",
-        "None — he does nothing"
+        "Build a palace and then rest quietly",
+        "Celebrate with pride and loud song",
+        "Count wealth and gather arms for battle",
+        "Glorify with praise and ask His forgiveness"
       ],
-      "answer": 0,
-      "explanation": "Two things: glorify Allah (سَبِّحْ) and ask for forgiveness (اسْتَغْفِرْ).",
+      "answer": 3,
+      "explanation": "The ayah commands: glorify your Lord with praise and ask His forgiveness.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What does the surah teach about Allah?",
+      "q": "How does the surah describe Allah at its close in 110:3?",
       "options": [
-        "Oft-Returning / Accepting of repentance",
+        "Always ready to accept repentance",
         "Distant and unreachable",
-        "Angry and punishing",
-        "Sleeping and unaware"
+        "Unaware of return",
+        "Quick to turn away"
       ],
       "answer": 0,
-      "explanation": "إِنَّهُ كَانَ تَوَّابًا — Indeed, He is ever Accepting of repentance. Allah always welcomes a turning heart.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "When was Surah النصر revealed?",
-      "options": [
-        "Near the end of the Prophet's life",
-        "At the very beginning of Islam",
-        "During the battle of Uhud",
-        "After the building of the Ka'bah"
-      ],
-      "answer": 0,
-      "explanation": "النصر was one of the last surahs revealed. When it came, the companions knew the Prophet's mission was completing.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What does 'دِينِ اللَّهِ' mean literally?",
-      "options": [
-        "the religion of Allah",
-        "the house of Allah",
-        "the name of Allah",
-        "the food of Allah"
-      ],
-      "answer": 0,
-      "explanation": "دِينِ اللَّهِ means the religion of Allah — the faith and way of life that belongs to Him.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Nazm / Structure): Why does the surah move from Allah's help, to people entering Islam, and then to worship?",
-      "options": [
-        "It traces the gift, its visible result, and the faithful response",
-        "It changes subjects without showing any meaningful relationship between them",
-        "It lists three moments only to preserve a rhyme",
-        "It separates Allah's help from the people's response"
-      ],
-      "answer": 0,
-      "explanation": "The sequence forms a clear chain: Allah grants help, its effect appears in the crowds, and the believer answers the blessing with praise and repentance.",
+      "explanation": "The surah ends: Indeed, He is ever Accepting of repentance.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Structure inference checked on 2026-07-13 against Ibn Kathir on 110:1-3: the crowds are the promised sign, followed by the commanded response of praise and forgiveness.",
-        "checkedAt": "2026-07-13"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What is the main lesson of النصر?",
+      "q": "What does Ibn Kathir say 'the conquest' in 110:1 refers to?",
       "options": [
-        "Turn to Allah in good times too",
-        "Victory is won by human strength",
-        "Success means you do not need Allah",
-        "Forgiveness is only for sinners"
-      ],
-      "answer": 0,
-      "explanation": "Success is a test. In good times, believers should glorify Allah and seek forgiveness even more — not forget Him in pride.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why did the companions understand this surah meant the Prophet's mission was ending?",
-      "options": [
-        "Victory is done; now seek forgiveness",
-        "It said the Prophet would die",
-        "It mentioned death directly",
-        "It was the longest surah"
-      ],
-      "answer": 0,
-      "explanation": "When victory was complete and people had entered Islam, the command to seek forgiveness signaled that the Prophet's work was finishing. The companions wept.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is نَصْرُ (victory) called 'the victory of Allah' and not the Prophet's victory?",
-      "options": [
-        "Victory is a gift from Allah",
-        "The Prophet did nothing at all",
-        "Allah fought alone Himself",
-        "Humans have no role in events"
-      ],
-      "answer": 0,
-      "explanation": "By calling it نَصْرُ اللَّهِ — Allah's victory — the surah teaches that every success is a gift from Him, not just the result of human work.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Style of Address): Why are سَبِّحْ and وَاسْتَغْفِرْهُ given as direct commands rather than gentle suggestions?",
-      "options": [
-        "They turn gratitude into a clear duty",
-        "They describe what the crowds had already done",
-        "They allow victory to be celebrated with pride",
-        "They postpone worship until victory is forgotten"
-      ],
-      "answer": 0,
-      "explanation": "The command form makes the response immediate and serious. Victory is not a pause from worship; it creates a duty to glorify Allah and seek His forgiveness.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked on 2026-07-13 against Ibn Kathir on 110:3 and the reports that the Prophet repeatedly carried out these commands in prayer and near the end of his life.",
-        "checkedAt": "2026-07-13"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why does the surah say people entered 'in multitudes' (أَفْوَاجًا)?",
-      "options": [
-        "Countless people were guided by Allah",
-        "To boast about numbers only",
-        "To count the exact people",
-        "To show how small Islam was"
-      ],
-      "answer": 0,
-      "explanation": "أَفْوَاجًا means crowds, waves of people. The image is of oceans of people flowing into Islam — a miracle of guidance.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does the name Allah chose for Himself at the end — تَوَّابًا — teach us about how to return to Him?",
-      "options": [
-        "Allah is always ready to forgive",
-        "Forgiveness runs out after time",
-        "Only the perfect are forgiven",
-        "Forgiveness is only for prophets"
-      ],
-      "answer": 0,
-      "explanation": "تَوَّابًا means repeatedly turning back in mercy. It is an open invitation: no matter how far you went, return and you will be welcomed.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is this surah placed near the end of the Qur'an?",
-      "options": [
-        "It marks the completion of the mission",
-        "It is the shortest surah",
-        "It was placed randomly",
-        "It was written last in the book"
-      ],
-      "answer": 0,
-      "explanation": "As the Qur'an draws to a close, the surahs become shorter but heavier. النصر, near the end, marks the completion of the Prophet's work.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What is the difference between 'victory' and 'conquest' in this surah?",
-      "options": [
-        "Unseen help and visible result",
-        "They mean exactly the same thing",
-        "Conquest always means a loss",
-        "Victory always means losing"
-      ],
-      "answer": 0,
-      "explanation": "نَصْرُ is the unseen help from Allah. الْفَتْح is the visible opening of Makkah. One is the source, the other is the sign.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(B - Style of Address): Why can a surah about public victory also quietly signal that the Prophet's mission was reaching completion?",
-      "options": [
-        "A finished mission meant there was no need for further worship",
-        "The public triumph showed his task had reached fulfillment",
-        "The crowds replaced the Prophet as messenger",
-        "The conquest canceled the need for guidance"
+        "A well that overflowed",
+        "The conquest of Makkah",
+        "A journey across the sea",
+        "A market that opened"
       ],
       "answer": 1,
-      "explanation": "Ibn 'Abbas understood the completed victory as a sign that the Messenger's task had reached fulfillment. The joyful public scene therefore carries a gentle personal farewell.",
+      "explanation": "The tafsir explains that the meaning of Al-Fath here is the conquest of Makkah, after which tribes entered Islam in crowds.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked on 2026-07-13 against Ibn Kathir's report from Ibn 'Abbas that the victory was a sign of the completion of the Messenger's life and mission.",
-        "checkedAt": "2026-07-13"
+        "note": "Tafsir Ibn Kathir on 110:1-2 states: The meaning of Al-Fath here is the conquest of Makkah, and there is only one view concerning it.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "According to the tafsir, why did tribes delay accepting Islam until after the conquest?",
+      "options": [
+        "They could not locate the holy city",
+        "They wanted a different messenger for leadership",
+        "They waited to see his victory over his people",
+        "They were told to farm first before deciding"
+      ],
+      "answer": 2,
+      "explanation": "The tafsir reports tribes said: If he is victorious over his people, then he is a true Prophet, so they waited for Makkah's conquest.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1-2 explains: The different areas of the Arabs were waiting for the conquest of Makkah before they would accept Islam. They said, If he is victorious over his people, then he is a true Prophet.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Which summary best fits النصر's message?",
+      "q": "Why does the surah tie the greatest victory to seeking forgiveness?",
       "options": [
-        "Victory comes from Allah; respond with praise, not pride",
-        "A poem about an old battle",
-        "A list of the names of the defeated",
-        "A warning about hunger and drought"
+        "Forgiveness was needed because victory was a mistake",
+        "Victory was thought to cancel the need for worship",
+        "Forgiveness was thought only for the defeated people",
+        "Success can breed pride, so stay humble before Allah"
       ],
-      "answer": 0,
-      "explanation": "النصر teaches: when the victory comes and people enter Islam, do not forget Allah. Glorify Him, praise Him, and seek His forgiveness.",
+      "answer": 3,
+      "explanation": "Tying success to praise and forgiveness teaches that achievements come from Allah and should lead to humility, not self-credit.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1-3 explains that when there comes the help of Allah and the Conquest, the Prophet was commanded to glorify the praises of your Lord and ask His forgiveness, showing victory should be met with worship rather than pride.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why seek forgiveness when you have done nothing wrong?",
+      "q": "What does 'in crowds' teach about guidance after the conquest?",
       "options": [
-        "Humility before Allah has no limit",
-        "Forgiveness is only for wrong actions",
-        "The Prophet did many bad things",
-        "Seeking forgiveness is not needed"
+        "Many hearts can turn to Allah when the way opens",
+        "Numbers alone prove that force must have been used here",
+        "Only one tribe was guided while others were left",
+        "Crowds are thought to prevent true sincere faith entirely"
       ],
       "answer": 0,
-      "explanation": "The Prophet ﷺ was sinless, yet he sought forgiveness more than anyone. It is an act of closeness to Allah, not just for mistakes. It says: Whatever I did, You deserve better.",
+      "explanation": "The image of crowds shows how widely guidance spread when the barrier of Makkah's opposition was removed.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback text written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:2 explains that the people entered into the religion of Allah in crowds, and within two years the peninsula was laden with faith.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "How did companions like Ibn Abbas understand the meaning behind the victory announcement?",
+      "options": [
+        "They read it only as praise for wealth and trade",
+        "They understood it meant the Prophet's mission was complete",
+        "They thought it announced a new law about trade and markets",
+        "They believed it canceled every earlier command from Allah"
+      ],
+      "answer": 1,
+      "explanation": "Ibn Abbas explained to Umar that the verses meant the end of the Prophet's life was near, since his task had been completed.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1-3 records Ibn Abbas saying: It was the end of the life of Allah's Messenger that Allah was informing him of, that is a sign of the end of your life.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Why is it fitting that Allah closes the surah as 'ever Accepting of repentance'?",
+      "options": [
+        "It limits forgiveness only to leaders and not others",
+        "It means that success alone automatically brings forgiveness",
+        "It invites everyone to return to Allah after success",
+        "It suggests that repentance is no longer needed at all"
+      ],
+      "answer": 2,
+      "explanation": "Closing with this name shows that Allah always welcomes return — success should bring us back to Him, not away.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:3 explains Verily He is the One Who accepts the repentance and Who forgives, closing the surah with Allah's readiness to forgive.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Which response best reflects the surah's lesson for someone who receives a big blessing?",
+      "options": [
+        "Take full credit and celebrate oneself proudly",
+        "Ignore gratitude until a hardship comes later",
+        "Hide the blessing from others entirely",
+        "Thank Allah, praise Him, and seek forgiveness"
+      ],
+      "answer": 3,
+      "explanation": "The surah models thanking Allah with praise and seeking forgiveness rather than boasting.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 110:3 as: 'Then praise your Lord's glory, and ask His forgiveness. He is always ready to accept repentance.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why does 'help and victory' give a fuller sense for نَصْرُ than the single word 'win'?",
+      "options": [
+        "It shows success came through Allah's support alone",
+        "It suggests humans won without any real effort at all",
+        "It implies the help came from another powerful tribe",
+        "It makes the victory sound temporary and quite small"
+      ],
+      "answer": 0,
+      "explanation": "Calling it Allah's help directs credit to Him — human effort mattered, but its success depended on Allah's support.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1 explains When there comes the help of Allah and the Conquest as Allah's support that made the conquest possible, distinguishing divine help from mere human achievement.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why is 'in crowds' a more vivid choice for أَفْوَاجًا than simply saying 'many people'?",
+      "options": [
+        "It suggests people entered one at a time",
+        "It pictures whole groups entering together, tribe after tribe",
+        "It gives the exact number of people",
+        "It means only leaders entered"
+      ],
+      "answer": 1,
+      "explanation": "أَفْوَاجًا is a picture of movement — waves of groups flowing in together, not just a large final count.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:2 explains that the people entered into the religion of Allah in crowds, with whole tribes entering after the conquest of Makkah.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why does the command to glorify and seek forgiveness come right after the news of victory and the crowds?",
+      "options": [
+        "To suggest victory made worship unnecessary",
+        "To indicate the crowds had committed a mistake",
+        "To teach that success should lead to humility before Allah",
+        "To show that worship is only for hard times"
+      ],
+      "answer": 2,
+      "explanation": "The order teaches the manners of success: when Allah grants a great result, the servant lowers himself in praise and asks forgiveness.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1-3 explains the sequence: When there comes the help of Allah and the Conquest and you see the people entering, then So glorify the praises of your Lord and ask His forgiveness, making worship the response to blessing.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why does the surah move from Allah's help, to people entering the faith, and then to worship?",
+      "options": [
+        "It lists events with no clear link between them",
+        "It repeats the same point for rhyme and rhythm only",
+        "It separates divine help from any human action",
+        "It shows the gift, its outcome, and the response"
+      ],
+      "answer": 3,
+      "explanation": "The chain is clear: Allah grants help, its effect appears in crowds accepting Islam, and the believer answers the blessing with praise and repentance.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:1-3 describes the conquest of Makkah as the sign, the people entering into the religion of Allah in crowds as its outcome, followed by the command So glorify the praises of your Lord and ask His forgiveness.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "What is the effect of giving سَبِّحْ and وَاسْتَغْفِرْهُ as direct commands?",
+      "options": [
+        "They make gratitude a clear duty, not advice",
+        "They describe what the crowds had already done",
+        "They allow victory to be celebrated with great pride",
+        "They postpone worship until the victory is long forgotten"
+      ],
+      "answer": 0,
+      "explanation": "The command form makes the response immediate and serious — victory creates a duty to glorify Allah and seek forgiveness.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:3 reports the Prophet often saying Glory to You, O Allah, and praise be to You, O Allah forgive me as his interpretation of So glorify the praises of your Lord and ask His forgiveness.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Why does the surah end by naming Allah as 'ever Accepting of repentance'?",
+      "options": [
+        "It warns that no return will ever be accepted",
+        "It leaves hope that return to Allah stays open",
+        "It suggests that forgiveness runs out after success",
+        "It limits mercy only to those present at the conquest"
+      ],
+      "answer": 1,
+      "explanation": "Closing with تَوَّابًا leaves an open invitation: no matter how far you went, you can still turn back and be welcomed.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 110:3 explains Verily He is the One Who accepts the repentance and Who forgives, showing the surah ends with Allah's readiness to welcome repentance.",
+        "checkedAt": "2026-08-30"
       }
     }
   ],
   "fillBlanks": {
+    "wordBank": [
+      "نَصْرُ",
+      "الْفَتْحُ",
+      "جَاءَ",
+      "يَدْخُلُونَ",
+      "دِينِ",
+      "أَفْوَاجًا",
+      "سَبِّحْ",
+      "حَمْدِ",
+      "وَاسْتَغْفِرْهُ",
+      "تَوَّابًا"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -893,21 +927,21 @@ export default {
           },
           {
             "b": "جَاءَ",
-            "m": "has come / came"
+            "m": "has come"
           },
           {
             "t": " "
           },
           {
             "b": "نَصْرُ",
-            "m": "victory / help / support"
+            "m": "help and victory"
           },
           {
             "t": " ٱللَّهِ وَ"
           },
           {
             "b": "الْفَتْحُ",
-            "m": "the conquest / the opening"
+            "m": "the conquest"
           }
         ]
       },
@@ -926,14 +960,14 @@ export default {
           },
           {
             "b": "دِينِ",
-            "m": "the religion / the faith"
+            "m": "the religion"
           },
           {
             "t": " ٱللَّهِ "
           },
           {
             "b": "أَفْوَاجًا",
-            "m": "in multitudes / in crowds"
+            "m": "in crowds"
           }
         ]
       },
@@ -945,14 +979,14 @@ export default {
           },
           {
             "b": "سَبِّحْ",
-            "m": "glorify / declare perfection"
+            "m": "glorify"
           },
           {
             "t": " بِ"
           },
           {
             "b": "حَمْدِ",
-            "m": "the praise / the thanks"
+            "m": "praise"
           },
           {
             "t": " رَبِّكَ "
@@ -966,13 +1000,25 @@ export default {
           },
           {
             "b": "تَوَّابًا",
-            "m": "Oft-Returning / Accepting of repentance"
+            "m": "always ready to accept repentance"
           }
         ]
       }
     ]
   },
   "fillBlanksEn": {
+    "wordBank": [
+      "help and victory",
+      "the conquest",
+      "has come",
+      "they enter",
+      "the religion",
+      "in crowds",
+      "glorify",
+      "praise",
+      "and ask His forgiveness",
+      "always ready to accept repentance"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -981,21 +1027,21 @@ export default {
             "t": "When "
           },
           {
-            "b": "has come / came",
+            "b": "has come",
             "m": "جَاءَ"
           },
           {
             "t": " the "
           },
           {
-            "b": "victory / help / support",
+            "b": "help and victory",
             "m": "نَصْرُ"
           },
           {
             "t": " of Allah and "
           },
           {
-            "b": "the conquest / the opening",
+            "b": "the conquest",
             "m": "الْفَتْحُ"
           },
           {
@@ -1007,24 +1053,24 @@ export default {
         "n": 2,
         "segments": [
           {
-            "t": "And you see the people — "
+            "t": "And you see the people "
           },
           {
             "b": "they enter",
             "m": "يَدْخُلُونَ"
           },
           {
-            "t": " — "
+            "t": " "
           },
           {
-            "b": "the religion / the faith",
+            "b": "the religion",
             "m": "دِينِ"
           },
           {
             "t": " of Allah "
           },
           {
-            "b": "in multitudes / in crowds",
+            "b": "in crowds",
             "m": "أَفْوَاجًا"
           },
           {
@@ -1039,14 +1085,14 @@ export default {
             "t": "So "
           },
           {
-            "b": "glorify / declare perfection",
+            "b": "glorify",
             "m": "سَبِّحْ"
           },
           {
             "t": " with "
           },
           {
-            "b": "the praise / the thanks",
+            "b": "praise",
             "m": "حَمْدِ"
           },
           {
@@ -1060,7 +1106,7 @@ export default {
             "t": ". Indeed, He is "
           },
           {
-            "b": "Oft-Returning / Accepting of repentance",
+            "b": "always ready to accept repentance",
             "m": "تَوَّابًا"
           },
           {

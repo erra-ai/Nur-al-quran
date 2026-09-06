@@ -1,5 +1,5 @@
 // Surah 79 · An-Nazi'at
-// Lesson data only. Shared behavior lives in the modules under src/.
+// Lesson data only. Shared behavior lives in src/app.js.
 export default {
   "id": "naziat",
   "number": 79,
@@ -7,277 +7,363 @@ export default {
   "nameEnglish": "An-Nazi'at",
   "title": "Those who drag forth",
   "intro": "Surah An-Nazi'at opens with powerful oaths about angels carrying out Allah's command. It then shows the shock of resurrection: hearts trembling, eyes humbled, and people who once mocked the return suddenly brought back by one blast. The surah reminds us of Musa عليه السلام and Pharaoh, showing how arrogance ends when a person refuses Allah's signs. Then it points to the sky, earth, mountains, water, and pasture as signs of Allah's power. The ending makes the lesson personal: whoever prefers this world and follows desire faces loss, while whoever fears standing before Allah and restrains the soul is promised Paradise.",
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Checked against Tafsir Ibn Kathir on An-Nazi'at, 79:1-46. Ibn Kathir explains the opening oaths refer to angels: 'These are the angels who remove the souls from the Children of Adam' (79:1), and that Ar-Rajifah and Ar-Radifah are 'the two blasts (of the Trumpet) -- the first and the second' (79:6-7). He states Al-Hafirah means 'the graves' (79:10) and Nakhirah means 'decayed' (79:11). The surah's warning and promise rest on 79:37-41: 'But as for him who feared standing before his Lord and forbade himself from desire. Verily Paradise will be his abode.' Cautious structural inference: the surah moves from oaths about angels, to the blast, to the story of Musa, to the signs in creation, and finally to the two outcomes — this ordering reinforces resurrection by pairing Allah's power in creation with His power to raise the dead.",
+    "checkedAt": "2026-08-30"
+  },
   "vocabulary": [
     {
       "arabic": "وَٱلنَّـٰزِعَـٰتِ",
       "meaning": "those who drag forth",
-      "connection": "The surah opens by swearing by angels who pull souls by Allah's command.",
-      "hint": "Something pulled out strongly.",
+      "connection": "The surah opens with an oath by angels who pull out the souls of the dying.",
+      "hint": "Think of something being drawn out with a strong pull.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:1",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1: 'These are the angels who remove the souls from the Children of Adam.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine plural active participle, genitive after the oath particle",
+        "arabic": "اسم فاعل جمع مؤنث سالم معرّف مجرور بواو القسم",
+        "explanation": "ٱلنَّـٰزِعَـٰتِ is an active participle meaning 'the ones who pull out.' The و at the start is the oath particle, so the word is genitive. Its feminine plural form describes a group carrying out this task."
       }
     },
     {
       "arabic": "غَرْقًا",
-      "meaning": "deeply / forcefully",
-      "connection": "The first oath describes a severe, forceful extraction.",
-      "hint": "A pull that goes deep and hard.",
+      "meaning": "forcefully",
+      "connection": "It describes how souls are pulled out — with a strong, drowning motion, not gently.",
+      "hint": "Something done with great force, like being pulled through deep water.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:1",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1 explains the pulling as 'as if he is being drowned during its removal,' which is why the action is forceful.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite accusative verbal noun used as an adverb of manner",
+        "arabic": "مصدر منصوب نكرة (مفعول مطلق/حال)",
+        "explanation": "غَرْقًا comes from the root meaning 'to drown' or 'to be submerged.' It is accusative because it tells HOW the pulling happens — forcefully, as if drowning the person."
       }
     },
     {
       "arabic": "ٱلرَّاجِفَةُ",
       "meaning": "the quaking blast",
-      "connection": "The first blast shakes creation before the final rising.",
-      "hint": "A quake that shakes everything.",
+      "connection": "The first Trumpet blast that will shake everything in creation.",
+      "hint": "A sudden shock that makes the whole world tremble.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:6",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:6: 'These are the two blasts (of the Trumpet) -- the first and the second.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine singular active participle, nominative as subject",
+        "arabic": "اسم فاعل مؤنث مفرد معرّف مرفوع",
+        "explanation": "ٱلرَّاجِفَةُ means 'the quaking one.' It is nominative because it is the doer of the verb (the blast that quakes)."
       }
     },
     {
       "arabic": "ٱلرَّادِفَةُ",
       "meaning": "the following blast",
-      "connection": "The second blast follows the first.",
-      "hint": "Something coming right after.",
+      "connection": "The second blast that comes immediately after the first one.",
+      "hint": "Something that follows right behind.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:7",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:7: 'These are the two blasts (of the Trumpet) -- the first and the second.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine singular active participle, nominative",
+        "arabic": "اسم فاعل مؤنث مفرد معرّف مرفوع",
+        "explanation": "ٱلرَّادِفَةُ means 'the one that follows.' It is nominative as the second blast mentioned."
       }
     },
     {
       "arabic": "وَاجِفَةٌ",
       "meaning": "trembling",
-      "connection": "On that Day, hearts will tremble in fear.",
-      "hint": "A heart shaking inside.",
+      "connection": "On that Day hearts will be trembling with fear and awe.",
+      "hint": "A heart beating hard from fear.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:8",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:8 as: 'Hearts on that Day will tremble with fear.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite feminine singular active participle, nominative predicate",
+        "arabic": "اسم فاعل مؤنث مفرد نكرة مرفوع خبر",
+        "explanation": "وَاجِفَةٌ means 'trembling' or 'beating rapidly.' It is nominative because it states the condition of the hearts."
       }
     },
     {
       "arabic": "خَـٰشِعَةٌ",
       "meaning": "downcast",
-      "connection": "The eyes of the deniers will be lowered in humiliation.",
-      "hint": "Eyes lowered in fear.",
+      "connection": "Their eyes will be lowered in humility, not lifted in pride.",
+      "hint": "Eyes looking down because a person feels humble.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:9",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:9 as: 'Their eyes lowered in humility.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite feminine singular active participle, nominative",
+        "arabic": "اسم فاعل مؤنث مفرد نكرة مرفوع",
+        "explanation": "خَـٰشِعَةٌ means 'humbled' or 'downcast.' It is nominative describing the state of the eyes."
       }
     },
     {
       "arabic": "ٱلْحَافِرَةِ",
       "meaning": "the former state",
-      "connection": "The deniers mock the idea of being returned to life again.",
-      "hint": "Back to where you were before.",
+      "connection": "The mockers ask if they will really be returned to how they were before.",
+      "hint": "Going back to the very first condition you were in.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:10",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:10: 'Al-Hafirah -- which are the graves.' Mujahid is cited for this reading.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine singular noun, genitive",
+        "arabic": "اسم مؤنث مفرد معرّف مجرور",
+        "explanation": "ٱلْحَافِرَةِ refers to the former state — the condition people were in before death. It is genitive after the preposition."
       }
     },
     {
       "arabic": "نَّخِرَةً",
       "meaning": "decayed",
-      "connection": "They mock resurrection after bones become decayed.",
-      "hint": "Old bones crumbling away.",
+      "connection": "They argue they cannot return after their bones have decayed away.",
+      "hint": "Old bones that have crumbled into dust.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:11",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:11: Ibn Abbas, Mujahid and Qatadah all said, 'This means decayed.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite feminine singular adjective, accusative",
+        "arabic": "نعت مؤنث مفرد نكرة منصوب",
+        "explanation": "نَّخِرَةً means 'decayed' or 'crumbled.' It is accusative because it describes the bones."
       }
     },
     {
       "arabic": "زَجْرَةٌ",
-      "meaning": "a blast / shout",
-      "connection": "Resurrection takes only one command from Allah.",
-      "hint": "One powerful shout.",
+      "meaning": "a blast",
+      "connection": "Resurrection needs only one single blast — no repeated effort.",
+      "hint": "One loud shout that changes everything in an instant.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:13",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:13: 'But it will be only a single Zajrah.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Indefinite feminine singular verbal noun, nominative",
+        "arabic": "مصدر مؤنث مفرد نكرة مرفوع",
+        "explanation": "زَجْرَةٌ is a verbal noun meaning 'a single shout or blast.' It is nominative as the subject."
       }
     },
     {
       "arabic": "ٱلسَّاهِرَةِ",
       "meaning": "the open plain",
-      "connection": "After the blast, they are suddenly on the open plain of resurrection.",
-      "hint": "An open exposed ground.",
+      "connection": "After the blast people will find themselves on an open, level plain.",
+      "hint": "A wide, flat, open ground where everyone can be seen.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:14",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:14: Ibn Abbas said, 'As-Sahirah means the entire earth.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine singular noun, genitive",
+        "arabic": "اسم مؤنث مفرد معرّف مجرور",
+        "explanation": "ٱلسَّاهِرَةِ is the place where people will be gathered — the open surface of the earth. It is genitive."
       }
     },
     {
       "arabic": "طَغَىٰ",
       "meaning": "transgressed",
-      "connection": "Pharaoh crossed the limits and rebelled against Allah.",
-      "hint": "Going far past the limit.",
+      "connection": "Pharaoh transgressed by claiming to be the highest lord.",
+      "hint": "Crossing a limit that should not be crossed.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nazi'at 79:17, 79:37",
-        "checkedAt": "2026-07-13"
+        "ref": "An-Nazi'at 79:17",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:17 as: 'Go to Pharaoh — he has crossed all limits.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Third-person masculine singular perfect verb",
+        "arabic": "فعل ماض للغائب المفرد",
+        "explanation": "طَغَىٰ is a past-tense verb meaning 'he transgressed' or crossed the limit. Its subject is Pharaoh."
       }
     },
     {
       "arabic": "ٱلطَّآمَّةُ",
       "meaning": "the overwhelming calamity",
-      "connection": "The Great Calamity is the Day when everything becomes clear.",
-      "hint": "A disaster that overwhelms all else.",
+      "connection": "The great disaster that overwhelms everything — the Day of Judgment.",
+      "hint": "A disaster so huge it covers over everything else.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:34",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:34 as: 'Then, when the great overwhelming disaster comes.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite feminine singular active participle, nominative",
+        "arabic": "اسم فاعل مؤنث مفرد معرّف مرفوع",
+        "explanation": "ٱلطَّآمَّةُ means 'the overwhelming one.' It is nominative as the subject that comes."
       }
     },
     {
       "arabic": "دَحَىٰهَآ",
       "meaning": "spread it out",
-      "connection": "Allah spread out the earth and prepared it for life.",
-      "hint": "A place made wide and ready.",
+      "connection": "Allah spread out the earth after raising the sky, as a sign of His power.",
+      "hint": "Rolling out a carpet flat so it can be used.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:30",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:30 as: 'And after that, He spread out the earth.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Perfect verb with attached third-person feminine singular object pronoun",
+        "arabic": "فعل ماض والهاء ضمير متصل مفعول به",
+        "explanation": "دَحَىٰهَآ means 'He spread it out.' The verb is past tense, and the attached هَا means 'it,' referring to the earth."
       }
     },
     {
       "arabic": "مَرْعَىٰهَا",
       "meaning": "its pasture",
-      "connection": "Allah brought out water and pasture from the earth.",
-      "hint": "Land where animals graze.",
+      "connection": "Allah brought out from the earth its water and its pasture as provision.",
+      "hint": "The green plants that animals eat in a field.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:31",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:31: 'And brought forth therefrom its water and its pasture.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun with attached third-person feminine singular possessive pronoun, accusative",
+        "arabic": "اسم منصوب والهاء ضمير متصل مضاف إليه",
+        "explanation": "مَرْعَىٰهَا means 'its pasture,' from the root for grazing. The attached هَا means 'its,' and the word is accusative as the thing brought out."
       }
     },
     {
       "arabic": "نَهَى",
       "meaning": "restrained",
-      "connection": "The successful person restrains the soul from following desire.",
-      "hint": "Holding yourself back.",
+      "connection": "The successful person restrained the soul from forbidden desires.",
+      "hint": "Holding yourself back from what you want but should not do.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:40",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:40: 'But as for him who feared standing before his Lord and forbade himself from desire.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Third-person masculine singular perfect verb",
+        "arabic": "فعل ماض للغائب المفرد",
+        "explanation": "نَهَى is a past-tense verb meaning 'he restrained' or 'forbade.' Its subject is the person who feared his Lord."
       }
     },
     {
       "arabic": "ٱلْهَوَىٰ",
       "meaning": "desire",
-      "connection": "Desire must be controlled when it pulls the soul away from Allah.",
-      "hint": "What the self wants badly.",
+      "connection": "Selfish desire is what the soul must be held back from.",
+      "hint": "The strong pull to do what you want, even when it is wrong.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "An-Nazi'at 79:40",
-        "checkedAt": "2026-07-13"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from Quran.com word-by-word and common translations; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:40: 'and forbade himself from desire.' This is the desire the soul is restrained from.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite masculine noun, genitive",
+        "arabic": "اسم مذكّر معرّف مجرور بـ (عن)",
+        "explanation": "ٱلْهَوَىٰ means 'desire' or 'whim.' It is genitive after عَن ('from'), because the soul is held back from desire."
       }
     }
   ],
@@ -288,21 +374,47 @@ export default {
       "options": [
         "those who drag forth",
         "those who build high",
-        "those who drink deeply",
-        "those who speak softly"
+        "those who speak softly",
+        "those who travel far"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "The word describes angels who pull out the souls of the dying."
     },
     {
       "type": "ar2en",
       "q": "What does غَرْقًا mean here?",
       "options": [
-        "deeply / forcefully",
-        "gently / slowly",
-        "openly / clearly",
-        "nearby / shortly"
+        "forcefully",
+        "gently",
+        "slowly",
+        "openly"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "It tells how souls are removed — with a strong, drowning motion."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلرَّاجِفَةُ mean?",
+      "options": [
+        "the quaking blast",
+        "the quiet night",
+        "the green garden",
+        "the flowing river"
+      ],
+      "answer": 0,
+      "explanation": "It is the first Trumpet blast that shakes everything."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلرَّادِفَةُ mean?",
+      "options": [
+        "the following blast",
+        "the first blast",
+        "the open plain",
+        "the former state"
+      ],
+      "answer": 0,
+      "explanation": "It is the second blast that follows the first."
     },
     {
       "type": "ar2en",
@@ -313,7 +425,8 @@ export default {
         "laughing",
         "growing"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "It describes hearts beating rapidly from fear on that Day."
     },
     {
       "type": "ar2en",
@@ -322,9 +435,58 @@ export default {
         "downcast",
         "shining",
         "wide",
-        "full"
+        "fierce"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "It means humbled, with eyes lowered rather than lifted in pride."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلْحَافِرَةِ mean?",
+      "options": [
+        "the former state",
+        "the open plain",
+        "the great disaster",
+        "the flowing water"
+      ],
+      "answer": 0,
+      "explanation": "It refers to the earlier condition people ask about returning to."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does نَّخِرَةً mean?",
+      "options": [
+        "decayed",
+        "fresh",
+        "strong",
+        "hidden"
+      ],
+      "answer": 0,
+      "explanation": "It describes bones that have crumbled and decayed away."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does زَجْرَةٌ mean?",
+      "options": [
+        "a blast",
+        "a garden",
+        "a mountain",
+        "a book"
+      ],
+      "answer": 0,
+      "explanation": "It is one single mighty blast that brings the dead back to life."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلسَّاهِرَةِ mean?",
+      "options": [
+        "the open plain",
+        "the former state",
+        "the quaking blast",
+        "the selfish desire"
+      ],
+      "answer": 0,
+      "explanation": "It is the level, open ground where people will be gathered."
     },
     {
       "type": "ar2en",
@@ -335,62 +497,68 @@ export default {
         "watered",
         "settled"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "It means to cross a limit — Pharaoh crossed all limits."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'the open plain'?",
-      "options": [
-        "ٱلسَّاهِرَةِ",
-        "ٱلْحَافِرَةِ",
-        "ٱلرَّاجِفَةُ",
-        "ٱلْهَوَىٰ"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'spread it out'?",
-      "options": [
-        "دَحَىٰهَآ",
-        "نَهَى",
-        "طَغَىٰ",
-        "نَّخِرَةً"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'desire'?",
-      "options": [
-        "ٱلْهَوَىٰ",
-        "مَرْعَىٰهَا",
-        "زَجْرَةٌ",
-        "غَرْقًا"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "meaning",
-      "q": "ٱلطَّآمَّةُ points to:",
+      "type": "ar2en",
+      "q": "What does ٱلطَّآمَّةُ mean?",
       "options": [
         "the overwhelming calamity",
         "the peaceful garden",
         "the sacred valley",
         "the flowing river"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "It is the great overwhelming disaster — the Day of Judgment."
     },
     {
-      "type": "meaning",
-      "q": "نَهَى ٱلنَّفْسَ عَنِ ٱلْهَوَىٰ means:",
+      "type": "ar2en",
+      "q": "What does دَحَىٰهَآ mean?",
       "options": [
-        "restrained the soul from desire",
-        "followed every wish inside",
-        "forgot the Day of Judgment",
-        "mocked the final return"
+        "spread it out",
+        "raised it high",
+        "darkened it",
+        "split it open"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "The verb describes Allah spreading out the earth."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does مَرْعَىٰهَا mean?",
+      "options": [
+        "its pasture",
+        "its water",
+        "its mountain",
+        "its night"
+      ],
+      "answer": 0,
+      "explanation": "It refers to the plants and grazing the earth brings forth."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does نَهَى mean?",
+      "options": [
+        "restrained",
+        "followed",
+        "forgot",
+        "mocked"
+      ],
+      "answer": 0,
+      "explanation": "It means he held the soul back from what is forbidden."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلْهَوَىٰ mean?",
+      "options": [
+        "desire",
+        "fear",
+        "hope",
+        "patience"
+      ],
+      "answer": 0,
+      "explanation": "It is selfish desire, which the soul must be held back from."
     }
   ],
   "quiz": [
@@ -400,88 +568,70 @@ export default {
       "options": [
         "those who drag forth",
         "those who build high",
-        "those who plant gardens",
-        "those who speak gently"
+        "those who speak softly",
+        "those who travel far"
       ],
       "answer": 0,
-      "explanation": "وَٱلنَّـٰزِعَـٰتِ refers to those who drag forth, understood as angels carrying out Allah's command.",
+      "explanation": "The surah opens by swearing by angels who pull out the souls of the dying.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does غَرْقًا add to the first oath?",
-      "options": [
-        "deep force",
-        "soft sleep",
-        "clear light",
-        "wide land"
-      ],
-      "answer": 0,
-      "explanation": "غَرْقًا gives the feeling of a deep, forceful pulling out.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1: 'These are the angels who remove the souls from the Children of Adam.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does ٱلرَّاجِفَةُ mean?",
       "options": [
+        "the flowing river",
         "the quaking blast",
-        "the open plain",
-        "the sacred valley",
-        "the final pasture"
+        "the quiet night",
+        "the green garden"
       ],
-      "answer": 0,
-      "explanation": "ٱلرَّاجِفَةُ is the quaking blast that shakes creation.",
+      "answer": 1,
+      "explanation": "It is the first Trumpet blast that will shake everything in creation.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:6: 'These are the two blasts (of the Trumpet) -- the first and the second.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does ٱلرَّادِفَةُ mean?",
       "options": [
+        "the open plain",
+        "the former state",
         "the following blast",
-        "the first garden",
-        "the hidden desire",
-        "the wide pasture"
+        "the first blast"
       ],
-      "answer": 0,
-      "explanation": "ٱلرَّادِفَةُ is the blast that follows after the first.",
+      "answer": 2,
+      "explanation": "It is the second blast that follows immediately after the first one.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:7: 'These are the two blasts (of the Trumpet) -- the first and the second.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does وَاجِفَةٌ describe?",
+      "q": "What does وَاجِفَةٌ tell us about hearts on that Day?",
       "options": [
-        "trembling hearts",
-        "flowing rivers",
-        "settled mountains",
-        "opened books"
+        "They will be sleeping",
+        "They will be laughing",
+        "They will be resting",
+        "They will be trembling"
       ],
-      "answer": 0,
-      "explanation": "وَاجِفَةٌ describes hearts trembling on that Day.",
+      "answer": 3,
+      "explanation": "Hearts will be trembling with fear when the blast arrives on that Day.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:8 as: 'Hearts on that Day will tremble with fear.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -489,450 +639,474 @@ export default {
       "q": "What does خَـٰشِعَةٌ mean?",
       "options": [
         "downcast",
-        "joyful",
-        "hidden",
-        "wide"
+        "shining",
+        "fierce",
+        "closed in sleep"
       ],
       "answer": 0,
-      "explanation": "خَـٰشِعَةٌ means lowered or downcast, showing humiliation and fear.",
+      "explanation": "خَـٰشِعَةٌ means humbled or downcast — it describes eyes lowered in humility rather than pride.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:9 as: 'Their eyes lowered in humility.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ٱلْحَافِرَةِ refer to?",
+      "options": [
+        "the flowing water",
+        "the former state",
+        "the open plain",
+        "the great disaster"
+      ],
+      "answer": 1,
+      "explanation": "The mockers ask if they will really be returned to how they were before.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:10: 'Al-Hafirah -- which are the graves.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does نَّخِرَةً mean?",
       "options": [
+        "strong",
+        "hidden",
         "decayed",
-        "guided",
-        "raised",
         "fresh"
       ],
-      "answer": 0,
-      "explanation": "نَّخِرَةً describes bones that have decayed and become worn away.",
+      "answer": 2,
+      "explanation": "It describes bones that have crumbled and decayed away.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:11: Ibn Abbas, Mujahid and Qatadah all said, 'This means decayed.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does زَجْرَةٌ mean here?",
+      "q": "What does زَجْرَةٌ mean?",
       "options": [
-        "a blast / shout",
-        "a gentle rain",
-        "a hidden valley",
-        "a bright lamp"
+        "a garden",
+        "a mountain",
+        "a book",
+        "a blast"
+      ],
+      "answer": 3,
+      "explanation": "Resurrection needs only one single blast to bring everyone back.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:13: 'But it will be only a single Zajrah.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ٱلسَّاهِرَةِ mean?",
+      "options": [
+        "the open plain",
+        "the former state",
+        "the quaking blast",
+        "the selfish desire"
       ],
       "answer": 0,
-      "explanation": "زَجْرَةٌ means a blast or shout; resurrection takes only one command.",
+      "explanation": "It is the level, open ground where people will be gathered.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:14: Ibn Abbas said, 'As-Sahirah means the entire earth.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does طَغَىٰ mean?",
       "options": [
+        "settled",
         "transgressed",
-        "bowed down",
         "remembered",
-        "spread out"
+        "watered"
       ],
-      "answer": 0,
-      "explanation": "طَغَىٰ means to transgress, cross the limits, or rebel arrogantly.",
+      "answer": 1,
+      "explanation": "Pharaoh transgressed by crossing all limits and claiming lordship.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:17 as: 'Go to Pharaoh — he has crossed all limits.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does ٱلْهَوَىٰ mean?",
-      "options": [
-        "desire",
-        "pasture",
-        "valley",
-        "blast"
-      ],
-      "answer": 0,
-      "explanation": "ٱلْهَوَىٰ means desire, especially when the soul wants what pulls it away from Allah.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What scene comes after the opening oaths?",
-      "options": [
-        "the shaking Day",
-        "the garden harvest",
-        "the night journey",
-        "the sea crossing"
-      ],
-      "answer": 0,
-      "explanation": "After the oaths, the surah moves to the shaking blasts and the fear of resurrection.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What did the deniers mock?",
-      "options": [
-        "return after bones decay",
-        "rain after dry land",
-        "sleep after hard work",
-        "travel after sunrise"
-      ],
-      "answer": 0,
-      "explanation": "They mocked the idea of returning to life after becoming decayed bones.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "How does Allah answer their doubt?",
-      "options": [
-        "one blast returns them",
-        "many years train them",
-        "angels debate them",
-        "mountains hide them"
-      ],
-      "answer": 0,
-      "explanation": "The surah says it is only one blast, and suddenly they are on the open plain.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Which prophet is mentioned in the middle of the surah?",
-      "options": [
-        "Musa",
-        "Ibrahim",
-        "Yusuf",
-        "Nuh"
-      ],
-      "answer": 0,
-      "explanation": "The surah asks whether the story of Musa عليه السلام has reached the Prophet ﷺ.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Where did Allah call Musa?",
+      "q": "What does ٱلطَّآمَّةُ mean?",
       "options": [
         "the sacred valley",
-        "the open market",
-        "the high mountain",
-        "the quiet garden"
+        "the flowing river",
+        "the overwhelming calamity",
+        "the peaceful garden"
       ],
-      "answer": 0,
-      "explanation": "Allah called Musa عليه السلام in the sacred valley of Tuwa.",
+      "answer": 2,
+      "explanation": "It is the great overwhelming disaster — the Day of Judgment.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:34 as: 'Then, when the great overwhelming disaster comes.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does دَحَىٰهَآ mean?",
+      "options": [
+        "raised it high",
+        "darkened it",
+        "split it open",
+        "spread it out"
+      ],
+      "answer": 3,
+      "explanation": "The verb describes Allah spreading out the earth after raising the sky.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:30 as: 'And after that, He spread out the earth.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What did Pharaoh claim?",
+      "q": "What happens to people when the first blast shakes everything?",
+      "options": [
+        "Their hearts will tremble with fear",
+        "They will sleep peacefully",
+        "They will laugh with joy",
+        "They will continue working"
+      ],
+      "answer": 0,
+      "explanation": "On that Day hearts will tremble, and the surah pairs this with eyes lowered in humility.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:8-9 as: 'Hearts on that Day will tremble with fear. Their eyes lowered in humility.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What did the mockers say about being brought back to life?",
+      "options": [
+        "They said it would happen twice",
+        "They thought their return was impossible",
+        "They said it already happened",
+        "They welcomed it with joy"
+      ],
+      "answer": 1,
+      "explanation": "They rejected the idea, arguing that after their bones decayed they could not be returned.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:10-11: 'Shall we indeed be brought back from Al-Hafirah... Even after we are bones Nakhirah.' He cites Ibn Abbas, Mujahid and Qatadah: 'This means decayed.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "How many blasts does it take to bring the dead back to life?",
+      "options": [
+        "Seven blasts",
+        "Forty blasts",
+        "Only one blast",
+        "Two blasts"
+      ],
+      "answer": 2,
+      "explanation": "The surah says it will only take one mighty blast, and suddenly people are alive again.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:13: 'But it will be only a single Zajrah.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "In which place did Musa's Lord call to him?",
+      "options": [
+        "The palace of Pharaoh",
+        "The mountain of Sinai",
+        "The city of Makkah",
+        "The sacred valley of Tuwa"
+      ],
+      "answer": 3,
+      "explanation": "Allah called Musa in the sacred valley of Tuwa before sending him to Pharaoh.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:16: 'Tuwa. According to what is correct, it is the name of a valley.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What did Pharaoh claim about himself?",
       "options": [
         "I am your highest lord",
-        "I seek Allah's mercy",
-        "I fear the final Day",
-        "I will follow Musa"
+        "I am a messenger like you",
+        "I am the poorest among you",
+        "I am a servant of Allah"
       ],
       "answer": 0,
-      "explanation": "Pharaoh said, 'I am your highest lord,' showing the height of his arrogance.",
+      "explanation": "After gathering his people he shouted that he was their highest lord, which was his transgression.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:24 as: 'Saying, I am your highest lord!'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What creation sign is mentioned first after Pharaoh's story?",
+      "q": "What happened to Pharaoh after he rejected the signs?",
       "options": [
-        "the sky above",
-        "the sea below",
-        "the trees nearby",
-        "the people around"
+        "He escaped with his army",
+        "Allah seized him as a punishing example",
+        "He became a believer",
+        "He ruled for a thousand years"
       ],
-      "answer": 0,
-      "explanation": "The surah asks whether humans are harder to create, or the sky that Allah built.",
+      "answer": 1,
+      "explanation": "Allah seized him in this life and the next, making him an example of what rejecting signs brings.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:25: 'So Allah seized him with a punishing example for the Hereafter and the first (life).'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What did Allah bring from the earth?",
+      "q": "Which of these does the surah mention as signs of Allah's power?",
       "options": [
-        "water and pasture",
-        "gold and silver",
-        "smoke and fire",
-        "books and records"
+        "Only the number of the stars",
+        "Only the markets of Makkah",
+        "The sky, the earth, water and pasture",
+        "Only the trees of Egypt"
       ],
-      "answer": 0,
-      "explanation": "Allah brought out water and pasture from the earth as provision.",
+      "answer": 2,
+      "explanation": "The surah points to the sky He raised, the earth He spread, and the water and pasture He brought from it.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Who receives Hell as an abode?",
-      "options": [
-        "one who transgressed",
-        "one who restrained desire",
-        "one who feared standing",
-        "one who remembered Allah"
-      ],
-      "answer": 0,
-      "explanation": "The one who transgressed and preferred worldly life is warned of Hell.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Who receives Paradise as an abode?",
-      "options": [
-        "one who restrained desire",
-        "one who followed desire",
-        "one who mocked return",
-        "one who claimed lordship"
-      ],
-      "answer": 0,
-      "explanation": "The one who fears standing before Allah and restrains the soul from desire is promised Paradise.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from sourced wording; needs reviewer sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:28-31: 'He raised its height, and has perfected it... And brought forth therefrom its water and its pasture.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why does the surah show trembling hearts and lowered eyes?",
+      "q": "Why does the surah point to the sky and the earth when answering those who deny resurrection?",
       "options": [
-        "to make judgment feel real",
-        "to describe daily prayer",
-        "to praise worldly fear",
-        "to explain mountain shapes"
+        "Because the sky and earth will also be destroyed",
+        "Because people should study farming",
+        "Because the mountains are older than people",
+        "Because the One who created them can surely recreate people"
       ],
-      "answer": 0,
-      "explanation": "The scene makes resurrection feel real: the body itself shows fear when truth can no longer be denied.",
+      "answer": 3,
+      "explanation": "Creating the heavens and earth is greater than recreating people, so the surah uses it as proof that the return is possible.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:28: 'He raised its height, and has perfected it.' Cautious structural inference: the surah answers the denial of return by pointing to Allah's greater act of creating the heaven and earth.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why is 'one blast' powerful in the surah?",
+      "q": "What lesson does the story of Musa and Pharaoh teach in this surah?",
       "options": [
-        "Allah needs no effort",
-        "people can stop it",
-        "angels forget it",
-        "time delays it"
+        "Rejecting clear signs brings ruin",
+        "Pharaoh was rewarded for his power",
+        "Kings are always right",
+        "Miracles never convince anyone"
       ],
       "answer": 0,
-      "explanation": "One blast is enough. What people thought impossible is easy for Allah.",
+      "explanation": "Pharaoh saw the greatest miracle, then denied it and claimed lordship; Allah seized him as a punishing example.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:21-25: 'But he denied and disobeyed... So Allah seized him with a punishing example for the Hereafter and the first (life).' He explains this as a severe vengeance and an example.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why mention Pharaoh after resurrection?",
+      "q": "Who alone knows when the Hour will come?",
       "options": [
-        "arrogance has an ending",
-        "kings never face truth",
-        "power saves people",
-        "stories replace judgment"
+        "The scholars",
+        "Only Allah",
+        "The Prophet Muhammad",
+        "The angels"
       ],
-      "answer": 0,
-      "explanation": "Pharaoh looked powerful, but Allah seized him. The story warns every arrogant heart.",
+      "answer": 1,
+      "explanation": "The surah says knowledge of the Hour rests with Allah alone; the Prophet is only a warner for those who fear it.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:42-44: 'They ask you about the Hour -- when will be its appointed time... To your Lord it is limited.' He explains its knowledge is with Allah.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "What does Pharaoh's claim teach?",
+      "q": "How will the Day of Judgment feel to those who denied it?",
       "options": [
-        "pride can become worship of self",
-        "leadership is always evil",
-        "wealth removes all duties",
-        "fear belongs only to rulers"
+        "As if they were still sleeping",
+        "As if nothing had changed",
+        "Like a single evening or morning",
+        "As if they had lived a thousand years"
       ],
-      "answer": 0,
-      "explanation": "When a person refuses Allah and follows pride, the self can become like a false god.",
+      "answer": 2,
+      "explanation": "Their whole life in this world will feel as short as one evening or morning once they see that Day.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 79:46 as: 'On the Day they finally see it, it will feel as if they'd stayed in this world only an evening, or a single morning.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why ask whether humans or the sky are harder to create?",
+      "q": "What two final outcomes does the surah set before people?",
       "options": [
-        "creation proves resurrection",
-        "the sky needs help",
-        "humans made the sky",
-        "resurrection is hidden forever"
+        "Every person enters the Fire together",
+        "Nothing happens after death at all",
+        "Every person enters Paradise together",
+        "Paradise or the Fire, depending on deeds"
       ],
-      "answer": 0,
-      "explanation": "The One who built the sky can bring humans back after death.",
+      "answer": 3,
+      "explanation": "Those who transgressed and preferred this world face the Fire; those who feared their Lord and restrained the soul receive Paradise.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:37-41: 'Then for him who transgressed... Verily his abode will be the Hell. But as for him who feared standing before his Lord and forbade himself from desire. Verily Paradise will be his abode.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why mention water and pasture before judgment?",
+      "category": "Rhetoric",
+      "q": "Why is the word غَرْقًا ('forcefully') important in the opening oath?",
       "options": [
-        "daily gifts prove power",
-        "food hides the afterlife",
-        "pasture replaces worship",
-        "animals avoid judgment"
+        "It shows souls pulled with a drowning motion",
+        "It shows the angels move very slowly",
+        "It means the souls are left behind",
+        "It describes the colour of the sky"
       ],
       "answer": 0,
-      "explanation": "The everyday gifts of water and pasture remind us that Allah is already caring for creation.",
+      "explanation": "The word tells how the removal happens — with force, as if drowning — making the scene vivid rather than mild.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
-      }
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1: 'as if he is being drowned during its removal.' This explains the force described by غَرْقًا.",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Meaning Construction"
     },
     {
-      "category": "Critical Thinking",
-      "q": "What is the inner battle at the end?",
+      "category": "Rhetoric",
+      "q": "Why does the surah call the Day 'ٱلطَّآمَّةُ' (the overwhelming calamity)?",
       "options": [
-        "fear Allah or follow desire",
-        "sleep now or wake early",
-        "travel far or stay home",
-        "speak loudly or quietly"
+        "It shows the Day will be small and quiet",
+        "It shows the disaster overcomes all else",
+        "It shows the Day comes with rain",
+        "It shows the Day is only for animals"
       ],
-      "answer": 0,
-      "explanation": "The ending turns the surah inward: will the soul follow desire, or restrain itself for Allah?",
+      "answer": 1,
+      "explanation": "The name pictures a disaster so great that it overcomes every other matter — the Day of Judgment.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
-      }
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:34: 'But when there comes the Great Catastrophe. This refers to the Day of Judgement... It has been called this because it will overcome every matter. It will be frightful and horrifying.'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Meaning Construction"
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why is the Hour's exact time not given?",
+      "category": "Rhetoric",
+      "q": "Why does the surah open with oaths about angels before describing the Day of Judgment?",
       "options": [
-        "Allah keeps that knowledge",
-        "people can calculate it",
-        "prophets choose the date",
-        "angels announce it early"
+        "To list the names of the angels only",
+        "To explain exactly how rain is sent",
+        "To show Allah controls taking souls and returns them",
+        "To describe the weather on that Day"
       ],
-      "answer": 0,
-      "explanation": "The Prophet ﷺ warns about the Hour, but its final knowledge belongs to Allah.",
+      "answer": 2,
+      "explanation": "The oaths show angels taking souls by Allah's command, so the One who controls death can surely command life again.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
-      }
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1: 'These are the angels who remove the souls from the Children of Adam.' Cautious structural inference: these oaths precede the blast to link the taking of souls with their return.",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Nazm"
     },
     {
-      "category": "Critical Thinking",
-      "q": "Why will worldly life feel like only a morning or evening?",
+      "category": "Rhetoric",
+      "q": "Why does the surah move from the blast to the story of Musa, then to the signs in creation?",
       "options": [
-        "afterlife makes it brief",
-        "time becomes more important",
-        "life was never real",
-        "morning becomes forbidden"
+        "It moves from the most important to the least",
+        "It changes the subject with no link",
+        "It repeats the same warning three times",
+        "It builds one argument from Allah's power to resurrect"
       ],
-      "answer": 0,
-      "explanation": "When people see the Hour, the whole worldly life will feel brief compared with what comes next.",
+      "answer": 3,
+      "explanation": "Each step shows the same power: Allah takes souls, He judged those who rejected Musa, and He created the heavens and earth — so He can raise the dead.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
-      }
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:1-33: 'These are the angels who remove the souls... So Allah seized him with a punishing example... He raised its height, and has perfected it.' Cautious structural inference: these sections together argue resurrection from Allah's power.",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Nazm"
     },
     {
-      "category": "Critical Thinking",
-      "q": "Which summary best fits An-Nazi'at?",
+      "category": "Rhetoric",
+      "q": "Why does Allah ask 'Has the story of Musa reached you?' instead of simply telling it?",
       "options": [
-        "resurrection, arrogance, restraint",
-        "trade, travel, gardens",
-        "sleep, rain, rivers",
-        "names, dates, tribes"
+        "The question draws the listener in",
+        "The story was already forgotten",
+        "The story was not important",
+        "The question hides the lesson"
       ],
       "answer": 0,
-      "explanation": "The surah warns of resurrection, shows Pharaoh's arrogance, and ends with the choice to restrain desire before Allah.",
+      "explanation": "A question makes the listener pay attention and prepares the heart for the lesson that follows.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Reflection written from memory; needs tafsir review before final sign-off.",
-        "checkedAt": ""
-      }
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:15: 'Has there come to you the story of Musa.' The question form introduces the account that follows.",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Style of Address"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why does the surah end by speaking about the Hour and the Prophet's role as a warner?",
+      "options": [
+        "It changes the topic with no purpose",
+        "It makes the warning personal and returns to duty",
+        "It describes the end of the world's weather",
+        "It names the Hour's exact date"
+      ],
+      "answer": 1,
+      "explanation": "The ending turns the warning toward the listener and reminds us the Prophet's task is to warn those who fear the Hour.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 79:45: 'You are only a warner for those who fear it,' meaning 'I sent you to warn mankind and caution them to beware of the torment of Allah.'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Style of Address"
     }
   ],
   "fillBlanks": {
@@ -949,7 +1123,7 @@ export default {
           },
           {
             "b": "غَرْقًا",
-            "m": "deeply / forcefully"
+            "m": "forcefully"
           }
         ]
       },
@@ -1073,7 +1247,7 @@ export default {
           },
           {
             "b": "زَجْرَةٌ",
-            "m": "a blast / shout"
+            "m": "a blast"
           },
           {
             "t": " وَٰحِدَةٌ"
@@ -1396,7 +1570,7 @@ export default {
             "t": " "
           },
           {
-            "b": "deeply / forcefully",
+            "b": "forcefully",
             "m": "غَرْقًا"
           },
           {
@@ -1541,7 +1715,7 @@ export default {
             "t": "But it will only be "
           },
           {
-            "b": "a blast / shout",
+            "b": "a blast",
             "m": "زَجْرَةٌ"
           },
           {

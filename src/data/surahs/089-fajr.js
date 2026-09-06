@@ -1,5 +1,5 @@
 // Surah 89 · Al-Fajr
-// Lesson data only. Shared behavior lives in the modules under src/.
+// Lesson data only. Shared behavior lives in src/app.js.
 export default {
   "id": "fajr",
   "number": 89,
@@ -7,22 +7,28 @@ export default {
   "nameEnglish": "Al-Fajr",
   "title": "The Dawn",
   "intro": "Surah Al-Fajr begins with oaths by the dawn, the ten nights, the even and odd, and the passing night. These ordered signs call a thoughtful person to recognize Allah's wise rule and certain judgment. The surah then recalls 'Aad, Thamud, and Pharaoh: powerful people whose transgression and corruption did not escape their watchful Lord. It corrects another error by teaching that both abundant and restricted provision are tests, not automatic proof of honor or humiliation. Real failure appears in neglecting the orphan and poor, consuming inheritance greedily, and loving wealth excessively. When the earth is leveled and Judgment arrives, regret will be too late. In contrast, the tranquil soul is welcomed back to its Lord, well-pleased and pleasing, among His servants and into His Paradise.",
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary checked against Tafsir Ibn Kathir for 89:1-30. Ibn Kathir notes concerning Al-Fajr it is the morning as said by Ali and Ibn Abbas, that Ad were rebellious disobedient arrogant outside His obedience, that Thamud they cut the rocks in the valley, that Pharaoh with Al-Awtad, that wealth and poverty are both a test, and that the tranquil soul is at rest and abiding by the truth.",
+    "checkedAt": "2026-08-30"
+  },
   "vocabulary": [
     {
       "arabic": "الْفَجْرِ",
-      "meaning": "the dawn / daybreak",
+      "meaning": "the dawn",
       "connection": "The surah begins with an oath by the first light that breaks through the darkness.",
       "hint": "The pale light appearing before sunrise.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:1 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:1.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine noun after the oath particle",
@@ -38,13 +44,13 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:3 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:3.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine definite noun",
@@ -60,13 +66,13 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:3 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:3.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine definite noun",
@@ -76,24 +82,24 @@ export default {
     },
     {
       "arabic": "حِجْرٍ",
-      "meaning": "understanding / restraining intellect",
+      "meaning": "understanding",
       "connection": "A sound mind recognizes the evidence in the oaths and restrains a person from foolish wrongdoing.",
       "hint": "Good judgment that stops someone from crossing a harmful boundary.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:5 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:5.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine singular indefinite noun",
         "arabic": "اسم مجرور مذكر مفرد نكرة",
-        "explanation": "حِجْرٍ is an indefinite noun meaning sound understanding or intellect. It is genitive after لِذِي, in the phrase 'for a person of understanding.'"
+        "explanation": "حِجْرٍ is an indefinite noun meaning understanding. It is genitive after لِذِي, in the phrase 'for a person of understanding.'"
       }
     },
     {
@@ -104,13 +110,13 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:6 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:6.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive proper noun after a preposition",
@@ -120,24 +126,24 @@ export default {
     },
     {
       "arabic": "الْعِمَادِ",
-      "meaning": "the lofty pillars / columns",
+      "meaning": "lofty pillars",
       "connection": "Iram is described as possessing remarkable pillars, a sign of impressive worldly strength.",
       "hint": "Tall supports holding up a large structure.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:7 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:7.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine definite noun",
         "arabic": "اسم مجرور مذكر معرفة",
-        "explanation": "الْعِمَادِ is a definite noun meaning pillars or columns. It is genitive after ذَاتِ in the possessive phrase 'possessor of the pillars.'"
+        "explanation": "الْعِمَادِ is a definite noun meaning lofty pillars. It is genitive after ذَاتِ in the possessive phrase 'possessor of lofty pillars.'"
       }
     },
     {
@@ -148,13 +154,13 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:9 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:9.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Diptote proper noun in the genitive position",
@@ -164,41 +170,41 @@ export default {
     },
     {
       "arabic": "الْأَوْتَادِ",
-      "meaning": "the stakes / pegs",
+      "meaning": "stakes",
       "connection": "Pharaoh is called the possessor of stakes, an image connected with his established power and force.",
       "hint": "Strong pegs driven into the ground.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:10 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:10.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine plural definite noun",
         "arabic": "اسم مجرور جمع مذكر معرفة",
-        "explanation": "الْأَوْتَادِ is the plural of وَتَد, 'a stake or peg.' It is genitive after ذِي in the phrase 'possessor of the stakes.'"
+        "explanation": "الْأَوْتَادِ is the plural of وَتَد, 'a stake or peg.' It is genitive after ذِي in the phrase 'possessor of stakes.'"
       }
     },
     {
       "arabic": "طَغَوْا",
-      "meaning": "they transgressed / rebelled",
+      "meaning": "they transgressed",
       "connection": "The three powerful peoples crossed Allah's limits and spread corruption in their lands.",
       "hint": "They proudly went beyond the limits of what is right.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:11 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:11.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Third-person masculine plural perfect verb",
@@ -208,19 +214,19 @@ export default {
     },
     {
       "arabic": "سَوْطَ",
-      "meaning": "a scourge / whip",
+      "meaning": "a scourge",
       "connection": "Punishment is pictured as a scourge poured upon nations that persisted in corruption.",
       "hint": "A lash that gives the image of a severe striking punishment.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:13 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:13.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine singular noun",
@@ -230,19 +236,19 @@ export default {
     },
     {
       "arabic": "الْمِرْصَادِ",
-      "meaning": "the watchful lookout / observation post",
+      "meaning": "a place of watch",
       "connection": "Allah misses no act: every tyrant and every ordinary person remains under His complete watch.",
       "hint": "A place from which every movement can be observed.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:14 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:14.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine definite noun after a preposition",
@@ -252,19 +258,19 @@ export default {
     },
     {
       "arabic": "ابْتَلَاهُ",
-      "meaning": "He tested him / tried him",
+      "meaning": "He tested him",
       "connection": "Both abundance and restricted provision are tests, not automatic proof of honor or humiliation.",
       "hint": "He placed him in a situation that reveals his response.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:15 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:15.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Form VIII perfect verb with an object pronoun",
@@ -274,19 +280,19 @@ export default {
     },
     {
       "arabic": "التُّرَاثَ",
-      "meaning": "the inheritance / legacy",
+      "meaning": "inheritance",
       "connection": "The surah condemns greedily consuming inheritance without respecting the rights of others.",
       "hint": "Property passed down after someone dies.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:19 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:19.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine definite noun",
@@ -296,19 +302,19 @@ export default {
     },
     {
       "arabic": "الْمُطْمَئِنَّةُ",
-      "meaning": "the tranquil / reassured soul",
+      "meaning": "the tranquil soul",
       "connection": "The faithful soul rests securely in truth and receives a gentle welcome at its return to Allah.",
       "hint": "A heart at rest rather than shaken by fear or doubt.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:27 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:27.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Nominative feminine singular definite adjective",
@@ -318,19 +324,19 @@ export default {
     },
     {
       "arabic": "رَاضِيَةً مَرْضِيَّةً",
-      "meaning": "well-pleased and pleasing to Allah",
+      "meaning": "well-pleased and pleasing",
       "connection": "The soul is pleased with Allah's reward and is itself accepted and pleasing to Him.",
       "hint": "Content with its Lord and welcomed with His approval.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:28 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:28.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Two accusative feminine singular circumstantial adjectives",
@@ -340,19 +346,19 @@ export default {
     },
     {
       "arabic": "جَنَّتِي",
-      "meaning": "My Paradise / My Garden",
+      "meaning": "My Paradise",
       "connection": "The surah closes with Allah's direct invitation for the tranquil soul to enter His Paradise.",
       "hint": "The final home of peace, belonging to Allah.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Fajr 89:30 word-by-word morphology",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:30.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative feminine noun with a possessive pronoun",
@@ -366,177 +372,193 @@ export default {
       "type": "ar2en",
       "q": "What does الْفَجْرِ mean?",
       "options": [
-        "the dawn / daybreak",
-        "the deep night",
-        "the full moon",
-        "the high noon"
+        "the dawn",
+        "the sunset",
+        "the midday",
+        "the midnight"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "الْفَجْرِ means the dawn, the first light after night as in 89:1."
     },
     {
       "type": "ar2en",
       "q": "What does الشَّفْعِ mean?",
       "options": [
-        "the first",
         "the even",
-        "the final",
-        "the hidden"
+        "the odd",
+        "the many",
+        "the few"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "الشَّفْعِ means the even, paired with the odd in 89:3."
     },
     {
       "type": "ar2en",
       "q": "What does الْوَتْرِ mean?",
       "options": [
-        "the pair",
-        "the whole",
         "the odd",
-        "the half"
+        "the even",
+        "the pair",
+        "the whole"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "الْوَتْرِ means the odd, mentioned alongside the even in 89:3."
     },
     {
       "type": "ar2en",
       "q": "What does حِجْرٍ mean here?",
       "options": [
-        "a stone wall",
-        "a narrow valley",
-        "a carved house",
-        "understanding / restraining intellect"
+        "understanding",
+        "hardness",
+        "darkness",
+        "silence"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "حِجْرٍ means understanding, a mind that restrains a person from wrong in 89:5."
     },
     {
       "type": "ar2en",
       "q": "Who were عَادٍ?",
       "options": [
-        "the people of Prophet Hud",
-        "the people of Prophet Musa",
-        "the people of Prophet Lut",
-        "the people of Prophet Nuh"
+        "'Aad, the people of Prophet Hud",
+        "Thamud, the people of Prophet Salih",
+        "Pharaoh, the owner of stakes",
+        "Quraysh, the people of Makkah"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "عَادٍ were the people of Prophet Hud, a strong nation destroyed for arrogance in 89:6."
     },
     {
       "type": "ar2en",
       "q": "What does الْعِمَادِ mean?",
       "options": [
-        "the valleys",
-        "the lofty pillars / columns",
-        "the gardens",
-        "the city gates"
+        "lofty pillars",
+        "carved rocks",
+        "iron stakes",
+        "sandy valleys"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "الْعِمَادِ means lofty pillars, describing Iram in 89:7."
     },
     {
       "type": "ar2en",
       "q": "Who were ثَمُودَ?",
       "options": [
-        "the people of Prophet Hud",
-        "the army of Pharaoh",
-        "the people of Prophet Salih",
-        "the family of the orphan"
+        "Thamud, the people of Prophet Salih",
+        "'Aad, the people of Prophet Hud",
+        "Pharaoh and his armies",
+        "the people of the valley"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "ثَمُودَ were the people of Prophet Salih who cut rocks in the valley in 89:9."
     },
     {
       "type": "ar2en",
       "q": "What does الْأَوْتَادِ mean?",
       "options": [
-        "the rocks",
-        "the rows",
-        "the whips",
-        "the stakes / pegs"
+        "stakes",
+        "pillars",
+        "rocks",
+        "valleys"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "الْأَوْتَادِ means stakes, describing Pharaoh's power in 89:10."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'they transgressed / rebelled'?",
+      "type": "ar2en",
+      "q": "What does طَغَوْا mean?",
       "options": [
-        "طَغَوْا",
-        "ابْتَلَاهُ",
-        "الْفَجْرِ",
-        "التُّرَاثَ"
+        "they transgressed",
+        "they believed",
+        "they returned",
+        "they remembered"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "طَغَوْا means they transgressed, crossing limits in the lands in 89:11."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'a scourge / whip'?",
+      "type": "ar2en",
+      "q": "What does سَوْطَ mean?",
       "options": [
-        "حِجْرٍ",
-        "سَوْطَ",
-        "الْعِمَادِ",
-        "جَنَّتِي"
+        "a scourge",
+        "a shelter",
+        "a garden",
+        "a promise"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "سَوْطَ means a scourge, as in a scourge of punishment in 89:13."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'the watchful lookout / observation post'?",
+      "type": "ar2en",
+      "q": "What does الْمِرْصَادِ mean?",
       "options": [
-        "الْأَوْتَادِ",
-        "التُّرَاثَ",
-        "الْمِرْصَادِ",
-        "الْوَتْرِ"
+        "a place of watch",
+        "a place of rest",
+        "a time of prayer",
+        "a path of guidance"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "الْمِرْصَادِ means a place of watch, showing Allah is ever watchful in 89:14."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'He tested him / tried him'?",
+      "type": "ar2en",
+      "q": "What does ابْتَلَاهُ mean?",
       "options": [
-        "طَغَوْا",
-        "الْمُطْمَئِنَّةُ",
-        "الشَّفْعِ",
-        "ابْتَلَاهُ"
+        "He tested him",
+        "He honored him",
+        "He created him",
+        "He guided him"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "ابْتَلَاهُ means He tested him, whether with abundance or restriction in 89:15."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'the inheritance / legacy'?",
+      "type": "ar2en",
+      "q": "What does التُّرَاثَ mean?",
       "options": [
-        "التُّرَاثَ",
-        "الْعِمَادِ",
-        "الْمِرْصَادِ",
-        "الْفَجْرِ"
+        "inheritance",
+        "charity",
+        "punishment",
+        "guidance"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "التُّرَاثَ means inheritance, which some consume greedily in 89:19."
     },
     {
-      "type": "en2ar",
-      "q": "Which expression names the tranquil soul?",
+      "type": "ar2en",
+      "q": "What does الْمُطْمَئِنَّةُ mean?",
       "options": [
-        "رَاضِيَةً مَرْضِيَّةً",
-        "الْمُطْمَئِنَّةُ",
-        "الْأَوْتَادِ",
-        "حِجْرٍ"
+        "the tranquil soul",
+        "the fearful soul",
+        "the hasty soul",
+        "the doubtful soul"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "الْمُطْمَئِنَّةُ means the tranquil soul, at rest and secure in 89:27."
     },
     {
-      "type": "en2ar",
-      "q": "Which expression means 'well-pleased and pleasing to Allah'?",
+      "type": "ar2en",
+      "q": "What does رَاضِيَةً مَرْضِيَّةً mean?",
       "options": [
-        "الشَّفْعِ",
-        "الْمِرْصَادِ",
-        "رَاضِيَةً مَرْضِيَّةً",
-        "الْعِمَادِ"
+        "well-pleased and pleasing",
+        "distressed and complaining",
+        "heedless and forgetting",
+        "greedy and withholding"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "رَاضِيَةً مَرْضِيَّةً means well-pleased and pleasing, the state of the soul returning to its Lord in 89:28."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'My Paradise / My Garden'?",
+      "type": "ar2en",
+      "q": "What does جَنَّتِي mean?",
       "options": [
-        "ثَمُودَ",
-        "عَادٍ",
-        "سَوْطَ",
-        "جَنَّتِي"
+        "My Paradise",
+        "My punishment",
+        "My provision",
+        "My kingdom"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "جَنَّتِي means My Paradise, the final invitation in 89:30."
     }
   ],
   "quiz": [
@@ -544,544 +566,568 @@ export default {
       "category": "Vocabulary",
       "q": "What does الْفَجْرِ mean?",
       "options": [
-        "the dawn / daybreak",
-        "the dark midnight",
-        "the setting sun",
-        "the cloudy sky"
+        "the dawn",
+        "the sunset",
+        "the midday",
+        "the midnight"
       ],
       "answer": 0,
-      "explanation": "الْفَجْرِ is the dawn, when the first light appears after night.",
+      "explanation": "الْفَجْرِ is the dawn, when the first light appears after night in 89:1.",
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:1.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "Which three oppressive peoples are named as warnings?",
+      "category": "Vocabulary",
+      "q": "What does الشَّفْعِ mean?",
       "options": [
-        "Quraysh, Madyan, and Saba",
-        "'Aad, Thamud, and Pharaoh",
-        "Romans, Persians, and Greeks",
-        "Israelites, Canaanites, and Amalekites"
+        "the few",
+        "the even",
+        "the odd",
+        "the many"
       ],
       "answer": 1,
-      "explanation": "The surah names 'Aad, Thamud, and Pharaoh as powerful peoples who transgressed and spread corruption.",
+      "explanation": "الشَّفْعِ means the even, paired with the odd in 89:3.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:3.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "What do the ruins of powerful nations teach about worldly strength?",
+      "category": "Vocabulary",
+      "q": "What does الْوَتْرِ mean?",
       "options": [
-        "Strength always proves divine approval",
-        "Buildings make a nation impossible to defeat",
-        "Power cannot protect persistent injustice from judgment",
-        "Ancient history has no lesson for later people"
+        "the pair",
+        "the whole",
+        "the odd",
+        "the even"
       ],
       "answer": 2,
-      "explanation": "Their impressive power and construction did not protect them when they rebelled and spread corruption.",
+      "explanation": "الْوَتْرِ means the odd, the counterpart to the even in 89:3.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:3.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why is حِجْرٍ translated as 'understanding' or 'restraining intellect,' not simply 'a stone'?",
+      "category": "Vocabulary",
+      "q": "What does حِجْرٍ mean in this surah?",
       "options": [
-        "It describes the stone houses carved by Thamud",
-        "It names the pillars constructed by the people of Iram",
-        "It refers to a wall separating the even from the odd",
-        "It describes a mind that restrains a person from foolish conduct"
+        "hardness",
+        "darkness",
+        "silence",
+        "understanding"
       ],
       "answer": 3,
-      "explanation": "Ibn Kathir explains that intellect is called ḥijr because it prevents a person from unfitting words and actions. The translation carries that idea of restraint.",
+      "explanation": "حِجْرٍ means understanding, a sound intellect that restrains from wrong in 89:5.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Fajr 89:5 explains that the intellect is called hijr because it restrains a person from unfitting conduct. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:5.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "Who were عَادٍ?",
+      "options": [
+        "'Aad, the people of Prophet Hud",
+        "Thamud, the people of Prophet Salih",
+        "Pharaoh, the owner of stakes",
+        "Quraysh, the people of Makkah"
+      ],
+      "answer": 0,
+      "explanation": "عَادٍ were the people sent Prophet Hud, described as rebellious and arrogant in 89:6.",
+      "verified": {
+        "status": "verified",
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:6.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does الْعِمَادِ mean?",
       "options": [
-        "the lofty pillars / columns",
-        "the carved rocks / boulders",
-        "the ordered rows / ranks",
-        "the strong stakes / pegs"
+        "sandy valleys",
+        "lofty pillars",
+        "carved rocks",
+        "iron stakes"
       ],
-      "answer": 0,
-      "explanation": "الْعِمَادِ means pillars or columns and appears in the description of Iram.",
+      "answer": 1,
+      "explanation": "الْعِمَادِ means lofty pillars and appears in the description of Iram in 89:7.",
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:7.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "What did 'Aad, Thamud, and Pharaoh have in common?",
+      "category": "Vocabulary",
+      "q": "Who were ثَمُودَ?",
       "options": [
-        "They lived in the same valley",
-        "They transgressed and increased corruption",
-        "They protected orphans and poor people",
-        "They accepted every messenger sent to them"
+        "Pharaoh and his armies",
+        "the people of the valley alone",
+        "Thamud, the people of Prophet Salih",
+        "'Aad, the people of Prophet Hud"
       ],
-      "answer": 1,
-      "explanation": "After naming them, verses 11-12 describe them as people who transgressed in the lands and increased corruption.",
+      "answer": 2,
+      "explanation": "ثَمُودَ were the people of Prophet Salih who cut rocks in the valley in 89:9.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:9.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does الْأَوْتَادِ mean?",
+      "options": [
+        "pillars",
+        "rocks",
+        "valleys",
+        "stakes"
+      ],
+      "answer": 3,
+      "explanation": "الْأَوْتَادِ means stakes, used for Pharaoh's power in 89:10.",
+      "verified": {
+        "status": "verified",
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:10.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does طَغَوْا mean?",
       "options": [
-        "they built",
-        "they gathered",
-        "they transgressed / rebelled",
+        "they transgressed",
+        "they believed",
+        "they returned",
         "they remembered"
       ],
-      "answer": 2,
-      "explanation": "طَغَوْا is a plural past-tense verb meaning they crossed the limits or rebelled.",
+      "answer": 0,
+      "explanation": "طَغَوْا means they transgressed, crossing limits in the lands in 89:11.",
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:11.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is 'Your Lord is surely at the watchful lookout' important after the nations' stories?",
-      "options": [
-        "It says only ancient rulers were observed",
-        "It suggests hidden actions are never judged",
-        "It limits accountability to public corruption",
-        "It shows that oppression never escapes Allah's knowledge"
-      ],
-      "answer": 3,
-      "explanation": "The statement applies the historical warning broadly: Allah observes wrongdoing and no oppressor is beyond accountability.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why do the ordered signs of dawn, night, even, and odd come before the stories of destroyed nations?",
-      "options": [
-        "The order in creation points to a wise Ruler, and the histories show His moral judgment",
-        "The signs provide dates for when each ancient nation was destroyed",
-        "The oaths praise natural beauty without connecting it to accountability",
-        "The signs show that powerful nations controlled the cycles of time"
-      ],
-      "answer": 0,
-      "explanation": "The regular order of time points to Allah's wisdom and His power to judge. The histories that follow then give concrete warnings of that judgment.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Content originally came from a tafsir removed under the single-tafsir rule on 2026-07-22. The scholar's name has been taken out of the student-facing text and the wording kept, but this has NOT been re-read against Ibn Kathir, so it returns to unverified. Re-check against tafsir-notes/ before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What false conclusion does a person draw when provision is abundant?",
-      "options": [
-        "Every gift must be refused",
-        "My Lord has honored me because I am worthy",
-        "Wealth should immediately be hidden",
-        "Hardship has ended for every person"
-      ],
-      "answer": 1,
-      "explanation": "The person treats abundance as automatic proof of personal honor, but the surah calls it a test.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does ابْتَلَاهُ mean?",
+      "q": "What does سَوْطَ mean in this surah?",
       "options": [
-        "He rewarded him fully",
-        "He abandoned him completely",
-        "He tested him / tried him",
-        "He punished him immediately"
-      ],
-      "answer": 2,
-      "explanation": "ابْتَلَاهُ means that He tested him. Both abundance and restriction reveal a person's response.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:15.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Which response correctly treats wealth as a test?",
-      "options": [
-        "Assuming wealth proves greater worth",
-        "Using wealth only to gain public praise",
-        "Ignoring people whose rights are vulnerable",
-        "Showing gratitude and using resources justly"
-      ],
-      "answer": 3,
-      "explanation": "Ibn Kathir explains that abundance calls for gratitude and obedience, just as restricted provision calls for patience.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does التُّرَاثَ mean?",
-      "options": [
-        "the inheritance / legacy",
-        "the worldly honor / rank",
-        "the punishment / torment",
-        "the provision / livelihood"
-      ],
-      "answer": 0,
-      "explanation": "التُّرَاثَ means inherited property or legacy.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:19.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) What is the effect of the sharp word كَلَّا, 'No!', after the claims about wealth and before the Judgment scene?",
-      "options": [
-        "It politely leaves the false claims about wealth and honor open for later discussion",
-        "It forcefully rejects false thinking and wakes the listener before consequences are shown",
-        "It marks a dramatic pause but does not correct any belief held by the listener",
-        "It shifts attention away from accountability toward a neutral lesson about wealth"
+        "a promise",
+        "a scourge",
+        "a shelter",
+        "a garden"
       ],
       "answer": 1,
-      "explanation": "The abrupt correction breaks the listener's comfortable assumptions. First it rejects false measures of honor, and later it opens the unavoidable scene of Judgment.",
+      "explanation": "سَوْطَ means a scourge and gives the image of punishment in 89:13.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Fajr 89:15-21 explains the first kalla as rejecting false claims about wealth and the later kalla as introducing the reality of Judgment. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Which behavior does the surah condemn toward the orphan?",
-      "options": [
-        "Teaching the orphan a useful skill",
-        "Protecting the orphan's inheritance",
-        "Failing to honor and care for the orphan",
-        "Inviting others to support the orphan"
-      ],
-      "answer": 2,
-      "explanation": "Verse 17 condemns the failure to honor the orphan.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is encouraging others to feed the poor also mentioned?",
-      "options": [
-        "Only groups are allowed to provide food",
-        "Personal kindness is forbidden without permission",
-        "Food matters more than every other responsibility",
-        "A just community should actively support care for vulnerable people"
-      ],
-      "answer": 3,
-      "explanation": "The wording makes compassion a shared responsibility: people should help and encourage one another to help.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:13.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does الْمِرْصَادِ mean?",
       "options": [
-        "the watchful lookout / observation post",
-        "the narrow valley / mountain pass",
-        "the peaceful garden / final home",
-        "the inheritance / family property"
+        "a time of prayer",
+        "a path of guidance",
+        "a place of watch",
+        "a place of rest"
       ],
-      "answer": 0,
-      "explanation": "الْمِرْصَادِ describes a lookout or place of watch, emphasizing that Allah misses nothing.",
+      "answer": 2,
+      "explanation": "الْمِرْصَادِ means a place of watch, showing Allah is ever watchful in 89:14.",
       "verified": {
         "status": "verified",
         "by": "corpus.quran.com",
         "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:14.",
-        "checkedAt": "2026-07-20"
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ابْتَلَاهُ mean?",
+      "options": [
+        "He honored him",
+        "He created him",
+        "He guided him",
+        "He tested him"
+      ],
+      "answer": 3,
+      "explanation": "ابْتَلَاهُ means He tested him, with abundance or restriction in 89:15.",
+      "verified": {
+        "status": "verified",
+        "by": "corpus.quran.com",
+        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:15.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "Which three powerful peoples are named as warnings?",
+      "options": [
+        "'Aad, Thamud, and Pharaoh",
+        "Quraysh, Madyan, and Saba",
+        "Romans, Persians, and Greeks",
+        "Nuh, Hud, and Salih as prophets only"
+      ],
+      "answer": 0,
+      "explanation": "Verses 6-10 name 'Aad, Thamud, and Pharaoh as powerful peoples who were destroyed.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:6-10 states Saw you not how your Lord dealt with Ad and Iram of the pillars and Thamud who hewed rocks in the valley and Pharaoh with Al-Awtad.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What did those three peoples have in common?",
+      "options": [
+        "they accepted every messenger sent to them fully",
+        "they transgressed and spread corruption in the lands",
+        "they protected orphans and fed the poor sincerely",
+        "they lived together in the same narrow valley"
+      ],
+      "answer": 1,
+      "explanation": "Verses 11-12 say they transgressed in the lands and increased corruption.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:11-12 explains they rebelled were arrogant and went about making corruption in the land and harming the people.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What false conclusion does a person draw when provision is abundant?",
+      "options": [
+        "My wealth must be shared with others",
+        "My Lord wants me to be patient",
+        "My Lord has honored me because I deserve it",
+        "My Lord is testing me with a trial"
+      ],
+      "answer": 2,
+      "explanation": "In 89:15 the person with abundance says his Lord honored him, thinking wealth proves worth, but it is a test.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:15-16 explains Wealth and Poverty are both a Test and Do they think that in wealth and children We enlarge them We hasten unto them with good things.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "Which behavior does the surah condemn toward the orphan?",
+      "options": [
+        "teaching the orphan a useful skill every day",
+        "protecting the orphan's full share of inheritance today",
+        "inviting others to support the orphan with kindness",
+        "failing to honor and care for the orphan daily"
+      ],
+      "answer": 3,
+      "explanation": "Verse 17 condemns not honoring the orphan.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:17 states But you treat not the orphans with kindness and generosity and this contains the command to honor him.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does the surah say about loving wealth?",
+      "options": [
+        "people love wealth with immense love",
+        "people dislike wealth and avoid it",
+        "wealth love is only for Pharaoh",
+        "love of wealth is praised as honor"
+      ],
+      "answer": 0,
+      "explanation": "Verse 20 says people love wealth with great love.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:20 explains And you love wealth with love Jamma meaning in abundance and this increases some of them in wickedness.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "What regret does the person express on the Day of Judgment?",
       "options": [
-        "I wish I had gathered more worldly property",
-        "I wish I had sent good deeds ahead for my true life",
-        "I wish I had built pillars like the people of Iram",
-        "I wish I had learned the names of every nation"
+        "I wish I had learned the names of all ancient nations",
+        "I wish I had sent deeds ahead for my true life",
+        "I wish I had gathered more wealth and property",
+        "I wish I had built lofty pillars like Iram's people"
       ],
       "answer": 1,
-      "explanation": "Verse 24 records the regret: the person wishes he had prepared good deeds for the lasting life.",
+      "explanation": "Verse 24 records the wish to have prepared good deeds for the lasting life.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why is الْمُطْمَئِنَّةُ translated as 'tranquil' or 'reassured,' not merely 'happy'?",
-      "options": [
-        "It means the soul never experienced any test",
-        "It describes temporary excitement about receiving wealth",
-        "It conveys a soul settled in truth and secure in its Lord",
-        "It means the soul has forgotten all responsibility"
-      ],
-      "answer": 2,
-      "explanation": "Ibn Kathir describes this soul as at rest and abiding by the truth. 'Tranquil' expresses deep steadiness, not a passing happy feeling.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Fajr 89:27 describes the tranquil soul as at rest and abiding by the truth. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does 'I wish I had sent ahead for my life' teach about this world?",
-      "options": [
-        "Worldly life has no meaningful choices",
-        "Preparation begins only after resurrection",
-        "Regret automatically replaces missed action",
-        "Actions now prepare for the lasting life to come"
-      ],
-      "answer": 3,
-      "explanation": "The regret shows that present choices are the opportunity to prepare for the lasting life before remembrance is too late.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does رَاضِيَةً مَرْضِيَّةً mean?",
-      "options": [
-        "well-pleased and pleasing to Allah",
-        "greatly tested and left alone",
-        "strongly warned and held back",
-        "fully wealthy and widely honored"
-      ],
-      "answer": 0,
-      "explanation": "The two descriptions mean the soul is pleased and is itself pleasing and accepted by Allah.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:28.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:23-24 describes Hell will be brought near that Day the human will remember but what good will remembering do then he will say I wish I had prepared for my real life.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "What final invitations are given to the tranquil soul?",
       "options": [
-        "Return to the earth and gather wealth",
-        "Enter among Allah's servants and enter His Paradise",
-        "Join the ancient nations and study their buildings",
-        "Remain outside until every person has been judged"
+        "join the ancient nations to study their stone ruins",
+        "remain outside until every person is judged together",
+        "return to your Lord among servants and Paradise",
+        "return to the earth to gather much more wealth"
       ],
-      "answer": 1,
-      "explanation": "The soul is welcomed to return to its Lord, enter among His servants, and enter His Paradise.",
+      "answer": 2,
+      "explanation": "Verses 28-30 invite the tranquil soul to return to its Lord, enter among servants, and enter Paradise.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:27-30 explains the tranquil soul is at rest and abiding by the truth and is told return to your Lord pleased and pleasing enter among My servants and enter My Paradise.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "How does the surah define real honor more accurately than wealth does?",
+      "q": "What do the ruins of powerful nations teach about worldly strength?",
       "options": [
-        "By ancestry and impressive buildings",
-        "By having provision without any restriction",
-        "By faithful obedience and just treatment of others",
-        "By gaining enough power to avoid every test"
+        "strength always proves divine approval in this world",
+        "buildings make a nation impossible to defeat",
+        "ancient history has no lesson for later people",
+        "power cannot protect persistent injustice from judgment"
       ],
-      "answer": 2,
-      "explanation": "Wealth and poverty are tests. A person's response through faith, gratitude, patience, and justice reveals moral worth.",
+      "answer": 3,
+      "explanation": "Their impressive power did not protect them when they rebelled and spread corruption.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:6-13 explains they were the strongest people of their time yet Allah poured on them different kinds of severe torment and Verily your Lord is Ever Watchful He hears and He sees.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Which response correctly treats wealth as a test?",
+      "options": [
+        "showing gratitude and using resources justly",
+        "assuming wealth proves greater personal worth",
+        "using wealth only to gain public praise",
+        "ignoring people whose rights are vulnerable"
+      ],
+      "answer": 0,
+      "explanation": "Abundance calls for gratitude and obedience, restriction calls for patience, both are tests.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:15-16 states Allah gives wealth to those whom He loves as well as those whom He does not love likewise He withholds sustenance the point is that Allah should be obeyed in either circumstance.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Why is encouraging others to feed the poor also mentioned?",
+      "options": [
+        "food matters more than other responsibilities",
+        "a just community should support care for vulnerable people",
+        "only groups are allowed to provide food alone",
+        "personal kindness is forbidden without permission"
+      ],
+      "answer": 1,
+      "explanation": "The wording makes compassion a shared responsibility, not only individual feeding.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:18 explains And urge not one another on the feeding of the Miskin meaning they do not command that the poor be treated with kindness nor encourage each other.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What does wishing you had sent deeds ahead teach about this world?",
+      "options": [
+        "preparation begins only after resurrection happens",
+        "regret by itself replaces any missed action",
+        "actions now prepare for the lasting life to come",
+        "worldly life has no meaningful choices to make"
+      ],
+      "answer": 2,
+      "explanation": "Present choices are the chance to prepare before remembrance comes too late.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:23-24 explains Hell will be brought near that Day and the human will remember but what good will remembering do then for preparation must be before.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Which action best applies the warning about inheritance?",
+      "options": [
+        "taking a weaker relative's share before noticed",
+        "treating inheritance as proof of personal honor",
+        "avoiding all discussion of property and duties",
+        "protecting every rightful share even when greed tempts"
+      ],
+      "answer": 3,
+      "explanation": "The surah condemns consuming inheritance greedily, so justice requires protecting others' shares.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:19 explains And you devour the Turath meaning the inheritance devouring with greed however they can get it whether lawful or forbidden.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why does the surah move from correcting ideas about wealth and poverty to the orphan, poor person, and inheritance?",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why is حِجْرٍ translated as understanding rather than just a stone?",
       "options": [
-        "It changes to a separate set of rules with no link to the test of provision",
-        "It teaches that every case of poverty comes from unfair inheritance practices",
-        "It limits concern for vulnerable people to those who possess great wealth",
-        "It shows that the real test of provision appears in how people treat vulnerable rights"
-      ],
-      "answer": 3,
-      "explanation": "The structure turns an idea into evidence. A person's attitude toward orphans, poor people, inheritance, and wealth reveals whether the test of provision was answered justly.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Fajr 89:15-20 explains that wealth and poverty are tests, then connects the correction to honoring orphans, feeding the poor, and respecting inheritance. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does جَنَّتِي mean?",
-      "options": [
-        "My Paradise / My Garden",
-        "my provision / my wealth",
-        "my pillars / my buildings",
-        "my warning / my punishment"
+        "it describes a mind that restrains from foolish conduct",
+        "it names the stone houses carved by Thamud",
+        "it refers to pillars built by Iram in the hills",
+        "it means a wall separating even from odd"
       ],
       "answer": 0,
-      "explanation": "جَنَّتِي means 'My Paradise' or 'My Garden,' with the final ي expressing 'My.'",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:30.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What contrast appears between verse 23 and verses 27-30?",
-      "options": [
-        "Two different accounts of Pharaoh's power",
-        "Regret before Hell and reassurance for the faithful soul",
-        "A debate about whether dawn follows night",
-        "Two descriptions of the same worldly inheritance"
-      ],
-      "answer": 1,
-      "explanation": "The wrongdoer remembers too late as Hell is brought near, while the tranquil soul receives reassurance and welcome.",
+      "explanation": "Ibn Kathir explains intellect is called hijr because it prevents a person from unfitting words and actions.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Which action best applies the surah's warning about inheritance?",
-      "options": [
-        "Taking a weaker relative's share before anyone notices",
-        "Treating inheritance as proof of personal honor",
-        "Protecting every rightful share even when greed tempts you",
-        "Avoiding all discussion of property and family duties"
-      ],
-      "answer": 2,
-      "explanation": "The surah condemns greedily consuming inheritance, so justice requires protecting the shares and rights of others.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does سَوْطَ mean in سَوْطَ عَذَابٍ?",
-      "options": [
-        "a peaceful shelter",
-        "a measured provision",
-        "an honored position",
-        "a scourge / whip"
-      ],
-      "answer": 3,
-      "explanation": "سَوْطَ means a scourge or whip and gives a forceful image of punishment.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Fajr 89:13.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:5 explains There is indeed in them sufficient proofs for men with Hijr meaning for he who possesses intellect and the intellect has only been called Hijr because it prevents the person from doing that which is not befitting.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) Why does the surah shift from terrifying Judgment scenes to the gentle call, 'O tranquil soul'?",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why is الْمُطْمَئِنَّةُ translated as tranquil rather than merely happy?",
       "options": [
-        "The contrast makes both outcomes vivid and offers hope alongside the warning",
-        "The gentle ending cancels every warning that came before it",
-        "The change suggests that all souls receive exactly the same result",
-        "The final address returns the reader to the story of ancient pillars"
+        "it means the soul forgot every responsibility completely",
+        "it describes a soul settled in truth and secure",
+        "it means the soul never faced any test at all",
+        "it describes brief excitement about receiving wealth"
       ],
-      "answer": 0,
-      "explanation": "The severe scene shows the result of rebellion, while the direct and tender welcome shows the believer's opposite destination. The contrast strengthens both warning and hope.",
+      "answer": 1,
+      "explanation": "Ibn Kathir describes this soul as at rest and abiding by the truth, a deep steadiness not a passing feeling.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Fajr 89:21-30 contrasts punishment for wrongdoers with the direct welcome given to the tranquil soul. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:27 describes the tranquil soul as at rest and abiding by the truth and secure with Allah.",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "Which summary best captures the surah's full argument?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why do the ordered oaths by dawn and night come before stories of destroyed nations?",
       "options": [
-        "Worldly strength proves lasting honor when a civilization survives for many years",
-        "Ordered signs and past judgments expose false pride; faithful justice leads to the tranquil return",
-        "Restricted provision humiliates, while abundant wealth always proves Allah's approval",
-        "Impressive construction and military force are the clearest measures of success"
+        "oaths praise natural beauty without linking to accountability at all",
+        "signs show that ancient nations once controlled cycles of time fully",
+        "order in creation points to Ruler then histories show His judgment",
+        "oaths provide clear dates for when each nation was destroyed long ago"
       ],
-      "answer": 1,
-      "explanation": "Al-Fajr moves from ordered signs and historical judgment to the test of provision, the final reckoning, and the welcome of the faithful soul.",
+      "answer": 2,
+      "explanation": "The regular order of time points to Allah's wisdom and power to judge, then histories give concrete warnings.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Fajr. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Tafsir Ibn Kathir on 89:1-14 explains the oath is about times of worship and acts of worship and after mentioning these people and worship Allah says Saw you not how your Lord dealt with Ad showing order from oaths to judgment histories.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why does the surah move from correcting ideas about provision to the orphan, poor, and inheritance?",
+      "options": [
+        "it changes to a separate topic with no link to provision at all",
+        "it teaches that poverty always comes from unfair inheritance alone",
+        "it limits concern for the poor only to the very wealthy people",
+        "the test of provision appears in how people treat vulnerable rights"
+      ],
+      "answer": 3,
+      "explanation": "Attitude toward orphans, poor, inheritance, and wealth reveals whether the test of provision was answered justly.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:15-20 explains Wealth and Poverty are both a Test then says But you treat not the orphans with kindness and urge not one another on feeding the Miskin and you devour the Turath and you love wealth with love Jamma linking provision to social duties.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "What is the effect of the sharp word No after claims about wealth and honor?",
+      "options": [
+        "it rejects false thinking and awakens the listener before consequences",
+        "it politely leaves false claims open for later discussion",
+        "it marks a pause without correcting any belief held",
+        "it shifts attention away from accountability to wealth"
+      ],
+      "answer": 0,
+      "explanation": "The abrupt No breaks comfortable assumptions and opens the unavoidable scene of judgment.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:15-21 notes But no meaning the matter is not as he claims for indeed Allah gives wealth to those He loves and those He does not love and later Nay when the earth is flattened showing rejection before judgment.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Why does the surah shift from scenes of judgment to the gentle call O tranquil soul?",
+      "options": [
+        "final address returns the reader to ancient pillars",
+        "contrast makes both outcomes vivid and offers hope alongside warning",
+        "gentle ending cancels every warning that came before it",
+        "change suggests all souls receive the same final result"
+      ],
+      "answer": 1,
+      "explanation": "The severe scene shows rebellion's result while the tender welcome shows the believer's opposite destination, strengthening both warning and hope.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Tafsir Ibn Kathir on 89:21-30 contrasts When the earth is flattened Dakkan Dakka and Hellfire is brought near with the call O peaceful soul return to your Lord pleased and pleasing showing severe judgment then gentle welcome.",
+        "checkedAt": "2026-08-30"
       }
     }
   ],
   "fillBlanks": {
+    "wordBank": [
+      "الْفَجْرِ",
+      "الشَّفْعِ",
+      "الْوَتْرِ",
+      "حِجْرٍ",
+      "عَادٍ",
+      "الْعِمَادِ",
+      "ثَمُودَ",
+      "الْأَوْتَادِ",
+      "طَغَوْا",
+      "سَوْطَ",
+      "الْمِرْصَادِ",
+      "ابْتَلَاهُ",
+      "التُّرَاثَ",
+      "الْمُطْمَئِنَّةُ",
+      "رَاضِيَةً مَرْضِيَّةً",
+      "جَنَّتِي"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -1091,7 +1137,7 @@ export default {
           },
           {
             "b": "الْفَجْرِ",
-            "m": "the dawn / daybreak"
+            "m": "the dawn"
           }
         ]
       },
@@ -1138,7 +1184,7 @@ export default {
           },
           {
             "b": "حِجْرٍ",
-            "m": "understanding / restraining intellect"
+            "m": "understanding"
           }
         ]
       },
@@ -1162,7 +1208,7 @@ export default {
           },
           {
             "b": "الْعِمَادِ",
-            "m": "the lofty pillars / columns"
+            "m": "lofty pillars"
           }
         ]
       },
@@ -1197,7 +1243,7 @@ export default {
           },
           {
             "b": "الْأَوْتَادِ",
-            "m": "the stakes / pegs"
+            "m": "stakes"
           }
         ]
       },
@@ -1209,7 +1255,7 @@ export default {
           },
           {
             "b": "طَغَوْا",
-            "m": "they transgressed / rebelled"
+            "m": "they transgressed"
           },
           {
             "t": " فِي الْبِلَادِ"
@@ -1232,7 +1278,7 @@ export default {
           },
           {
             "b": "سَوْطَ",
-            "m": "a scourge / whip"
+            "m": "a scourge"
           },
           {
             "t": " عَذَابٍ"
@@ -1247,7 +1293,7 @@ export default {
           },
           {
             "b": "الْمِرْصَادِ",
-            "m": "the watchful lookout / observation post"
+            "m": "a place of watch"
           }
         ]
       },
@@ -1259,7 +1305,7 @@ export default {
           },
           {
             "b": "ابْتَلَاهُ",
-            "m": "He tested him / tried him"
+            "m": "He tested him"
           },
           {
             "t": " رَبُّهُ فَأَكْرَمَهُ وَنَعَّمَهُ فَيَقُولُ رَبِّي أَكْرَمَنِ"
@@ -1298,7 +1344,7 @@ export default {
           },
           {
             "b": "التُّرَاثَ",
-            "m": "the inheritance / legacy"
+            "m": "inheritance"
           },
           {
             "t": " أَكْلًا لَمًّا"
@@ -1369,7 +1415,7 @@ export default {
           },
           {
             "b": "الْمُطْمَئِنَّةُ",
-            "m": "the tranquil / reassured soul"
+            "m": "the tranquil soul"
           }
         ]
       },
@@ -1381,7 +1427,7 @@ export default {
           },
           {
             "b": "رَاضِيَةً مَرْضِيَّةً",
-            "m": "well-pleased and pleasing to Allah"
+            "m": "well-pleased and pleasing"
           }
         ]
       },
@@ -1401,13 +1447,31 @@ export default {
           },
           {
             "b": "جَنَّتِي",
-            "m": "My Paradise / My Garden"
+            "m": "My Paradise"
           }
         ]
       }
     ]
   },
   "fillBlanksEn": {
+    "wordBank": [
+      "the dawn",
+      "the even",
+      "the odd",
+      "understanding",
+      "'Aad, the people of Prophet Hud",
+      "lofty pillars",
+      "Thamud, the people of Prophet Salih",
+      "stakes",
+      "they transgressed",
+      "a scourge",
+      "a place of watch",
+      "He tested him",
+      "inheritance",
+      "the tranquil soul",
+      "well-pleased and pleasing",
+      "My Paradise"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -1416,7 +1480,7 @@ export default {
             "t": "By "
           },
           {
-            "b": "the dawn / daybreak",
+            "b": "the dawn",
             "m": "الْفَجْرِ"
           },
           {
@@ -1469,7 +1533,7 @@ export default {
             "t": "Is there not in that an oath for a person of "
           },
           {
-            "b": "understanding / restraining intellect",
+            "b": "understanding",
             "m": "حِجْرٍ"
           },
           {
@@ -1499,7 +1563,7 @@ export default {
             "t": "Iram, possessors of "
           },
           {
-            "b": "the lofty pillars / columns",
+            "b": "lofty pillars",
             "m": "الْعِمَادِ"
           },
           {
@@ -1526,7 +1590,7 @@ export default {
             "m": "ثَمُودَ"
           },
           {
-            "t": ", who carved the rocks in the valley,"
+            "t": ", who cut the rocks in the valley,"
           }
         ]
       },
@@ -1537,7 +1601,7 @@ export default {
             "t": "and Pharaoh, possessor of "
           },
           {
-            "b": "the stakes / pegs",
+            "b": "stakes",
             "m": "الْأَوْتَادِ"
           },
           {
@@ -1549,7 +1613,7 @@ export default {
         "n": 11,
         "segments": [
           {
-            "b": "they transgressed / rebelled",
+            "b": "they transgressed",
             "m": "طَغَوْا"
           },
           {
@@ -1572,7 +1636,7 @@ export default {
             "t": "So your Lord poured upon them "
           },
           {
-            "b": "a scourge / whip",
+            "b": "a scourge",
             "m": "سَوْطَ"
           },
           {
@@ -1587,7 +1651,7 @@ export default {
             "t": "Surely your Lord is at "
           },
           {
-            "b": "the watchful lookout / observation post",
+            "b": "a place of watch",
             "m": "الْمِرْصَادِ"
           },
           {
@@ -1599,14 +1663,14 @@ export default {
         "n": 15,
         "segments": [
           {
-            "t": "The verse says, '"
+            "t": "As for man, when his Lord "
           },
           {
-            "b": "He tested him / tried him",
+            "b": "He tested him",
             "m": "ابْتَلَاهُ"
           },
           {
-            "t": ", and honored and favored him,' so the person says, 'My Lord has honored me.'"
+            "t": " with honor and favor, he says, My Lord has honored me."
           }
         ]
       },
@@ -1614,7 +1678,7 @@ export default {
         "n": 16,
         "segments": [
           {
-            "t": "But when He tests him and restricts his provision, he says, 'My Lord has humiliated me.'"
+            "t": "But when He tests him and restricts his provision, he says, My Lord has humiliated me."
           }
         ]
       },
@@ -1641,7 +1705,7 @@ export default {
             "t": "You consume "
           },
           {
-            "b": "the inheritance / legacy",
+            "b": "inheritance",
             "m": "التُّرَاثَ"
           },
           {
@@ -1685,7 +1749,7 @@ export default {
         "n": 24,
         "segments": [
           {
-            "t": "He will say, 'I wish I had sent something ahead for my life.'"
+            "t": "He will say, I wish I had sent something ahead for my life."
           }
         ]
       },
@@ -1712,7 +1776,7 @@ export default {
             "t": "O "
           },
           {
-            "b": "the tranquil / reassured soul",
+            "b": "the tranquil soul",
             "m": "الْمُطْمَئِنَّةُ"
           },
           {
@@ -1727,7 +1791,7 @@ export default {
             "t": "return to your Lord "
           },
           {
-            "b": "well-pleased and pleasing to Allah",
+            "b": "well-pleased and pleasing",
             "m": "رَاضِيَةً مَرْضِيَّةً"
           },
           {
@@ -1750,7 +1814,7 @@ export default {
             "t": "and enter "
           },
           {
-            "b": "My Paradise / My Garden",
+            "b": "My Paradise",
             "m": "جَنَّتِي"
           },
           {

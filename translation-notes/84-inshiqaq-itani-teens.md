@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 84, Al-Inshiqaq
+# ClearQuran (Talal Itani) — teen level — Surah 84
 
 Source: https://www.quranfor.com/teens/84
-Retrieved: 2026-07-22
-Verses: 26
+Retrieved: 2026-08-30
+Numbered ayahs: 25 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

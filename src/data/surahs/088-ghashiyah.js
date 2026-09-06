@@ -367,176 +367,192 @@ export default {
       "q": "What does الْغَاشِيَةِ mean?",
       "options": [
         "the Overwhelming Event",
-        "the flowing spring",
-        "the lofty garden",
-        "the final return"
+        "joyful / radiant",
+        "couches / thrones",
+        "it will enter / burn in"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "الْغَاشِيَةِ means 'the Overwhelming Event' — The surah names the Day of Judgment as an event that will cover and overwhelm everyone."
     },
     {
       "type": "ar2en",
       "q": "What does خَاشِعَةٌ mean?",
       "options": [
-        "joyful and bright",
+        "laboring / working",
+        "exhausted / weary",
         "humbled / downcast",
-        "strong and raised",
-        "calm and satisfied"
+        "satisfied / pleased"
       ],
-      "answer": 1
+      "answer": 2,
+      "explanation": "خَاشِعَةٌ means 'humbled / downcast' — Some faces will be lowered in humiliation when the reality of judgment becomes clear."
     },
     {
       "type": "ar2en",
       "q": "What does عَامِلَةٌ mean?",
       "options": [
-        "resting",
-        "returning",
+        "humbled / downcast",
         "laboring / working",
-        "remembering"
+        "intensely hot / scorching",
+        "the camels"
       ],
-      "answer": 2
+      "answer": 1,
+      "explanation": "عَامِلَةٌ means 'laboring / working' — The punished faces are described as laboring without reaching relief or reward."
     },
     {
-      "type": "ar2en",
-      "q": "What does نَاصِبَةٌ mean?",
+      "type": "en2ar",
+      "q": "Which word means 'exhausted / weary'?",
       "options": [
-        "honored",
-        "nourished",
-        "protected",
-        "exhausted / weary"
+        "تَصْلَىٰ",
+        "حَامِيَةً",
+        "عَالِيَةٍ",
+        "نَاصِبَةٌ"
       ],
-      "answer": 3
+      "answer": 3,
+      "explanation": "نَاصِبَةٌ means 'exhausted / weary' — Their labor ends in complete weariness rather than rest."
     },
     {
       "type": "ar2en",
       "q": "What does تَصْلَىٰ mean?",
       "options": [
+        "a bitter thorny plant",
+        "humbled / downcast",
         "it will enter / burn in",
-        "it will drink freely",
-        "it will rise above",
-        "it will return safely"
+        "a reminder"
       ],
-      "answer": 0
+      "answer": 2,
+      "explanation": "تَصْلَىٰ means 'it will enter / burn in' — The downcast faces will enter and burn in an intensely hot fire."
     },
     {
-      "type": "ar2en",
-      "q": "What does حَامِيَةً mean?",
+      "type": "en2ar",
+      "q": "Which word means 'intensely hot / scorching'?",
       "options": [
-        "peaceful and cool",
-        "intensely hot / scorching",
-        "wide and level",
-        "soft and prepared"
+        "حَامِيَةً",
+        "رَاضِيَةٌ",
+        "لَاغِيَةً",
+        "عَامِلَةٌ"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "حَامِيَةً means 'intensely hot / scorching' — The fire is not ordinary heat; it is described as fiercely hot."
     },
     {
       "type": "ar2en",
       "q": "What does آنِيَةٍ mean?",
       "options": [
-        "flowing gently",
-        "frozen solid",
+        "couches / thrones",
         "boiling / scalding",
-        "sweet and clear"
+        "laboring / working",
+        "their return"
       ],
-      "answer": 2
+      "answer": 1,
+      "explanation": "آنِيَةٍ means 'boiling / scalding' — The drink comes from a spring that has reached extreme heat."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'a bitter thorny plant'?",
+      "options": [
+        "الْإِبِلِ",
+        "الْغَاشِيَةِ",
+        "ضَرِيعٍ",
+        "خَاشِعَةٌ"
+      ],
+      "answer": 2,
+      "explanation": "ضَرِيعٍ means 'a bitter thorny plant' — Their food neither nourishes nor removes hunger, adding misery rather than relief."
     },
     {
       "type": "ar2en",
-      "q": "What does ضَرِيعٍ mean?",
+      "q": "What does نَاعِمَةٌ mean?",
       "options": [
-        "a raised couch",
-        "a flowing spring",
-        "a prepared cup",
-        "a bitter thorny plant"
+        "high / elevated",
+        "it will enter / burn in",
+        "their return",
+        "joyful / radiant"
       ],
-      "answer": 3
+      "answer": 3,
+      "explanation": "نَاعِمَةٌ means 'joyful / radiant' — Other faces visibly show comfort and joy because their striving was accepted."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'joyful / radiant'?",
+      "type": "ar2en",
+      "q": "What does رَاضِيَةٌ mean?",
       "options": [
-        "نَاعِمَةٌ",
-        "خَاشِعَةٌ",
-        "نَاصِبَةٌ",
-        "حَامِيَةً"
+        "satisfied / pleased",
+        "boiling / scalding",
+        "vain / harmful speech",
+        "exhausted / weary"
       ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'satisfied / pleased'?",
-      "options": [
-        "عَامِلَةٌ",
-        "رَاضِيَةٌ",
-        "لَاغِيَةً",
-        "عَالِيَةٍ"
-      ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "رَاضِيَةٌ means 'satisfied / pleased' — The joyful faces are pleased with the result of the good effort they made in worldly life."
     },
     {
       "type": "en2ar",
       "q": "Which word means 'high / elevated'?",
       "options": [
-        "آنِيَةٍ",
-        "حَامِيَةً",
+        "سُرُرٌ",
         "عَالِيَةٍ",
-        "خَاشِعَةٌ"
+        "نَاعِمَةٌ",
+        "حَامِيَةً"
       ],
-      "answer": 2
+      "answer": 1,
+      "explanation": "عَالِيَةٍ means 'high / elevated' — Paradise is described as lofty in rank, place, brilliance, and security."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'vain / harmful speech'?",
+      "type": "ar2en",
+      "q": "What does لَاغِيَةً mean?",
       "options": [
-        "سُرُرٌ",
-        "ضَرِيعٍ",
-        "إِيَابَهُمْ",
-        "لَاغِيَةً"
+        "a reminder",
+        "a bitter thorny plant",
+        "vain / harmful speech",
+        "humbled / downcast"
       ],
-      "answer": 3
+      "answer": 2,
+      "explanation": "لَاغِيَةً means 'vain / harmful speech' — Paradise is free from foolish, false, or hurtful words that disturb peace."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'couches / thrones'?",
+      "type": "ar2en",
+      "q": "What does سُرُرٌ mean?",
       "options": [
-        "سُرُرٌ",
-        "الْإِبِلِ",
-        "مُذَكِّرٌ",
-        "الْغَاشِيَةِ"
+        "their return",
+        "couches / thrones",
+        "boiling / scalding",
+        "laboring / working"
       ],
-      "answer": 0
+      "answer": 1,
+      "explanation": "سُرُرٌ means 'couches / thrones' — Raised couches picture prepared honor, rest, and comfort in Paradise."
     },
     {
       "type": "en2ar",
       "q": "Which word means 'the camels'?",
       "options": [
-        "إِيَابَهُمْ",
         "الْإِبِلِ",
-        "سُرُرٌ",
-        "ضَرِيعٍ"
+        "نَاصِبَةٌ",
+        "عَالِيَةٍ",
+        "نَاعِمَةٌ"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "الْإِبِلِ means 'the camels' — The first listeners are directed to examine an animal they knew closely: strong, useful, and remarkably designed."
     },
     {
-      "type": "en2ar",
-      "q": "Which word means 'a reminder'?",
+      "type": "ar2en",
+      "q": "What does مُذَكِّرٌ mean?",
       "options": [
-        "الْغَاشِيَةِ",
-        "الْإِبِلِ",
-        "مُذَكِّرٌ",
-        "إِيَابَهُمْ"
+        "intensely hot / scorching",
+        "satisfied / pleased",
+        "the Overwhelming Event",
+        "a reminder"
       ],
-      "answer": 2
+      "answer": 3,
+      "explanation": "مُذَكِّرٌ means 'a reminder' — The Prophet's task is to convey and remind; he cannot force faith into people's hearts."
     },
     {
       "type": "en2ar",
       "q": "Which word means 'their return'?",
       "options": [
-        "رَاضِيَةٌ",
-        "عَالِيَةٍ",
-        "مُذَكِّرٌ",
-        "إِيَابَهُمْ"
+        "لَاغِيَةً",
+        "إِيَابَهُمْ",
+        "الْإِبِلِ",
+        "تَصْلَىٰ"
       ],
-      "answer": 3
+      "answer": 1,
+      "explanation": "إِيَابَهُمْ means 'their return' — Every person ultimately returns to Allah, and the final reckoning belongs to Him."
     }
   ],
   "quiz": [
@@ -544,72 +560,18 @@ export default {
       "category": "Vocabulary",
       "q": "What does الْغَاشِيَةِ mean?",
       "options": [
-        "the Overwhelming Event",
-        "the peaceful garden",
         "the flowing spring",
-        "the watchful reminder"
+        "the watchful reminder",
+        "the Overwhelming Event",
+        "the peaceful garden"
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "الْغَاشِيَةِ names the overwhelming event of the Day of Judgment.",
       "verified": {
         "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:1.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What two kinds of faces are contrasted in the surah?",
-      "options": [
-        "Young faces and old faces",
-        "Downcast faces and joyful faces",
-        "Familiar faces and unknown faces",
-        "Hidden faces and uncovered faces"
-      ],
-      "answer": 1,
-      "explanation": "Verses 2-9 contrast faces humbled by punishment with faces radiant and satisfied with their striving.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What is the difference between the labor of the punished and the striving of the rewarded?",
-      "options": [
-        "Only the punished people ever made an effort during worldly life",
-        "Only physical labor has value when final outcomes are decided",
-        "One ends in exhaustion, while faithful striving ends in satisfaction",
-        "Both kinds of effort lead to an identical result on Judgment Day"
-      ],
-      "answer": 2,
-      "explanation": "The surah contrasts laboring and exhausted faces with faces pleased by the result of their striving.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why is الْغَاشِيَةِ translated as 'the Overwhelming Event' rather than simply 'the Day'?",
-      "options": [
-        "It identifies the event as an ordinary twenty-four-hour period",
-        "It limits the event to people who already expect punishment",
-        "It describes only the fire and not the complete Day of Judgment",
-        "It preserves the sense of a reality that covers and overwhelms everyone"
-      ],
-      "answer": 3,
-      "explanation": "The name comes from the sense of covering or overwhelming. It presents Judgment as an inescapable reality that overtakes creation.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir identify Al-Ghashiyah as the overwhelming event of Resurrection and Judgment. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 19: 'Has the news of the overwhelming event reached you?'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -625,9 +587,207 @@ export default {
       "explanation": "ضَرِيعٍ is a bitter thorny plant that neither nourishes nor removes hunger.",
       "verified": {
         "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:6.",
-        "checkedAt": "2026-07-20"
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:6: 'No food will there be for them but from Dari`'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does نَاعِمَةٌ mean?",
+      "options": [
+        "boiling / scalding",
+        "exhausted / weary",
+        "humbled / downcast",
+        "joyful / radiant"
+      ],
+      "answer": 3,
+      "explanation": "نَاعِمَةٌ describes faces visibly joyful and comfortable.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 33: 'But on that day, faces will be joyful.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does سُرُرٌ mean?",
+      "options": [
+        "pillows and carpets",
+        "couches / thrones",
+        "mountains and hills",
+        "springs and rivers"
+      ],
+      "answer": 1,
+      "explanation": "سُرُرٌ is the plural of a couch or throne and appears among the prepared comforts of Paradise.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 43: 'And raised couches to rest on.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does الْإِبِلِ mean?",
+      "options": [
+        "the camels",
+        "the mountains",
+        "the heavens",
+        "the earth"
+      ],
+      "answer": 0,
+      "explanation": "الْإِبِلِ is the collective Arabic noun for camels.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:17: '(Do they not look at the camels, how they are created) Indeed it is an amazing creation'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does مُذَكِّرٌ mean?",
+      "options": [
+        "an accountant",
+        "a creator",
+        "a reminder",
+        "a controller"
+      ],
+      "answer": 2,
+      "explanation": "مُذَكِّرٌ is an active participle meaning one who reminds.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:21: '(So remind them -- you are only one who reminds.)'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does إِيَابَهُمْ mean?",
+      "options": [
+        "their reminder",
+        "their return",
+        "their punishment",
+        "their creation"
+      ],
+      "answer": 1,
+      "explanation": "إِيَابَهُمْ means their return, referring to humanity's return to Allah.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:25: '(Verily, to Us will be their return;) meaning, their place of return and their resort.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does آنِيَةٍ mean?",
+      "options": [
+        "flowing / fresh",
+        "raised / lofty",
+        "spread / level",
+        "boiling / scalding"
+      ],
+      "answer": 3,
+      "explanation": "آنِيَةٍ describes a spring at extreme boiling heat.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:5: 'meaning, its heat has reached its maximum limit and boiling point.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does رَاضِيَةٌ mean?",
+      "options": [
+        "satisfied / pleased",
+        "humbled / downcast",
+        "laboring / working",
+        "exhausted / weary"
+      ],
+      "answer": 0,
+      "explanation": "رَاضِيَةٌ describes the joyful faces as pleased with the result of their striving.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 35: 'Happy with their efforts.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does خَاشِعَةٌ mean?",
+      "options": [
+        "exhausted / weary",
+        "humbled / downcast",
+        "joyful / radiant",
+        "satisfied / pleased"
+      ],
+      "answer": 1,
+      "explanation": "خَاشِعَةٌ describes the faces of the punished on that Day — lowered in humiliation.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 21: 'On that day, some faces will be humbled.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does عَامِلَةٌ mean?",
+      "options": [
+        "humbled / downcast",
+        "exhausted / weary",
+        "laboring / working",
+        "intensely hot / scorching"
+      ],
+      "answer": 2,
+      "explanation": "عَامِلَةٌ means working hard — the punished are shown toiling, not idle.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 23: 'Working hard and exhausted.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does نَاصِبَةٌ mean?",
+      "options": [
+        "exhausted / weary",
+        "laboring / working",
+        "joyful / radiant",
+        "humbled / downcast"
+      ],
+      "answer": 0,
+      "explanation": "نَاصِبَةٌ means worn out from effort; it follows 'laboring' to complete the picture of their toil.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 23: 'Working hard and exhausted.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What two kinds of faces are contrasted in the surah?",
+      "options": [
+        "Familiar faces and unknown faces",
+        "Hidden faces and uncovered faces",
+        "Young faces and old faces",
+        "Downcast faces and joyful faces"
+      ],
+      "answer": 3,
+      "explanation": "Verses 2-9 contrast faces humbled by punishment with faces radiant and satisfied with their striving.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 21: 'On that day, some faces will be humbled.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -644,152 +804,26 @@ export default {
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does نَاعِمَةٌ mean?",
-      "options": [
-        "exhausted / weary",
-        "humbled / downcast",
-        "joyful / radiant",
-        "boiling / scalding"
-      ],
-      "answer": 2,
-      "explanation": "نَاعِمَةٌ describes faces visibly joyful and comfortable.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:8.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why are the faces in Paradise pleased with their striving?",
-      "options": [
-        "They no longer remember their choices",
-        "Their appearance earned the reward",
-        "They avoided every test in worldly life",
-        "They now see the good result of faithful effort"
-      ],
-      "answer": 3,
-      "explanation": "Their joy is connected to لِسَعْيِهَا, the striving whose accepted result they now experience.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why does the surah describe the punished faces before the joyful faces?",
-      "options": [
-        "The contrast moves from warning to hope and makes both outcomes clearer",
-        "The order teaches that every person must first enter punishment",
-        "The joyful scene is less important and is added only as decoration",
-        "The two passages describe different days with no connection"
-      ],
-      "answer": 0,
-      "explanation": "Ibn Kathir notes the deliberate change from the wretched people to the happy people. The contrast warns first, then opens the door of hope.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Ghashiyah 88:8 explicitly notes the shift from the wretched people to those who will be happy. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:6: 'This is of the worst, most disgusting and loathsome of foods.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "Which sound is absent from Paradise?",
       "options": [
-        "The sound of flowing water",
         "Vain, false, or harmful speech",
         "Words of peace and welcome",
-        "Conversation among its people"
+        "Conversation among its people",
+        "The sound of flowing water"
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "Verse 11 excludes lāghiyah: foolish, false, or harmful speech.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does سُرُرٌ mean?",
-      "options": [
-        "springs and rivers",
-        "pillows and carpets",
-        "couches / thrones",
-        "mountains and hills"
-      ],
-      "answer": 2,
-      "explanation": "سُرُرٌ is the plural of a couch or throne and appears among the prepared comforts of Paradise.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:13.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What do the prepared couches and spread furnishings communicate about Paradise?",
-      "options": [
-        "Its comforts must be built by new arrivals",
-        "Its blessings are temporary and uncertain",
-        "Its beauty matters more than Allah's acceptance",
-        "Honor, welcome, and rest are already prepared"
-      ],
-      "answer": 3,
-      "explanation": "The arranged comforts picture a secure welcome in which blessing and rest are ready for the people of Paradise.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الْإِبِلِ mean?",
-      "options": [
-        "the camels",
-        "the mountains",
-        "the heavens",
-        "the earth"
-      ],
-      "answer": 0,
-      "explanation": "الْإِبِلِ is the collective Arabic noun for camels.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:17.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) Why does the surah first ask its Arabian audience to examine camels?",
-      "options": [
-        "Camels were the only creatures Allah had made with remarkable features",
-        "Camels were familiar, useful, and visibly combined great strength with gentle service",
-        "The audience could understand faith only by traveling into the desert",
-        "The example proves that mountains and the sky are less important signs"
-      ],
-      "answer": 1,
-      "explanation": "Ibn Kathir explains that camels were the Arabs' most familiar domestic animals: powerful yet gentle, useful for loads, milk, hair, and food.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Ghashiyah 88:17 explains the camel's strength, gentleness, many benefits, and familiarity to the first Arab audience. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:11: 'No Laghw will they hear therein, nor any sinful speech.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -806,44 +840,8 @@ export default {
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What kind of looking is requested by 'Do they not look at the camels'?",
-      "options": [
-        "A quick glance that notices an animal's color and outward size",
-        "A search limited to ownership, travel, and the animal's market value",
-        "A comparison that ranks one camel's speed against another camel",
-        "Thoughtful observation that leads from design to the Creator"
-      ],
-      "answer": 3,
-      "explanation": "The command calls for reflection on how creation was made, so visible design becomes evidence of Allah's power.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does مُذَكِّرٌ mean?",
-      "options": [
-        "a reminder",
-        "a controller",
-        "an accountant",
-        "a creator"
-      ],
-      "answer": 0,
-      "explanation": "مُذَكِّرٌ is an active participle meaning one who reminds.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:21.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:20: 'Thus, He directs the bedouin to consider what he himself witnesses.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -860,206 +858,116 @@ export default {
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why can لَاغِيَةً be translated as 'vain' or 'harmful speech,' not merely 'noise'?",
-      "options": [
-        "It refers to the sound made by the flowing spring",
-        "It means that Paradise has complete silence",
-        "It names foolish, false, or sinful talk rather than sound itself",
-        "It describes voices that are too quiet to understand"
-      ],
-      "answer": 2,
-      "explanation": "Ibn Kathir explains lāghiyah through foolish, false, and sinful speech. The blessing is moral and emotional peace, not mere silence.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Ghashiyah 88:11 explains laghiyah as foolish, false, and sinful speech absent from Paradise. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does 'You are not a controller over them' teach about guidance?",
-      "options": [
-        "The message should never be explained clearly",
-        "People are not responsible for their choices",
-        "Only visible signs are needed, not revelation",
-        "A messenger conveys truth, but cannot force faith into hearts"
-      ],
-      "answer": 3,
-      "explanation": "Ibn Kathir explains that the Prophet conveys and reminds, while he cannot create or force belief in people's hearts.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does إِيَابَهُمْ mean?",
-      "options": [
-        "their return",
-        "their punishment",
-        "their creation",
-        "their reminder"
-      ],
-      "answer": 0,
-      "explanation": "إِيَابَهُمْ means their return, referring to humanity's return to Allah.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:25.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:21: 'meaning, \"O Muhammad! Remind the people with what you have been sent with to them.\"'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "Who owns the final return and reckoning?",
       "options": [
-        "The messenger who delivered the reminder",
-        "Allah alone",
         "The people who observed creation",
-        "The angels who arranged Paradise"
+        "The angels who arranged Paradise",
+        "The messenger who delivered the reminder",
+        "Allah alone"
       ],
-      "answer": 1,
+      "answer": 3,
       "explanation": "The final verses say their return is to Allah and their reckoning is upon Him.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "How do the creation signs support belief in resurrection?",
-      "options": [
-        "They show that desert life is always easy",
-        "They explain how to build mountains and roads",
-        "The One who created these great signs can recreate and judge humanity",
-        "They replace the need to consider moral responsibility"
-      ],
-      "answer": 2,
-      "explanation": "Creation already displays Allah's power; thoughtful observation supports confidence in His power to resurrect and judge.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why do the verses about camels, sky, mountains, and earth follow the scenes of the Hereafter?",
-      "options": [
-        "They begin a separate lesson about desert travel with no link to final Judgment",
-        "They identify which parts of creation will remain completely unchanged on the Last Day",
-        "They turn attention away from resurrection toward enjoyment of the present world",
-        "They provide visible evidence of the Creator's power after the unseen scenes of resurrection"
-      ],
-      "answer": 3,
-      "explanation": "After presenting unseen future outcomes, the surah points to signs already before the audience. The Creator of these wonders has power to resurrect and judge.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir connect the familiar creation signs in 88:17-20 with proof of Allah's power and the truth of the Hereafter. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does آنِيَةٍ mean?",
-      "options": [
-        "boiling / scalding",
-        "flowing / fresh",
-        "raised / lofty",
-        "spread / level"
-      ],
-      "answer": 0,
-      "explanation": "آنِيَةٍ describes a spring at extreme boiling heat.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:5.",
-        "checkedAt": "2026-07-20"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 67: 'Truly, to Us is their return.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "What happens to the person who turns away and rejects faith?",
       "options": [
-        "The messenger personally controls that person",
-        "Allah holds that person accountable and may punish him",
+        "Allah holds that person accountable and punishes him",
         "Creation signs disappear from that person's sight",
-        "The person's return and reckoning are canceled"
+        "The person's return and reckoning are canceled",
+        "The messenger personally controls that person"
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "The Prophet reminds, while Allah deals with rejection and owns the final account.",
       "verified": {
         "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 63: 'And cushions lined up neatly.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What is the difference between the labor of the punished and the striving of the rewarded?",
+      "options": [
+        "Only physical labor has value when final outcomes are decided",
+        "One ends in exhaustion, while faithful striving ends in satisfaction",
+        "Both kinds of effort lead to an identical result on Judgment Day",
+        "Only the punished people ever made an effort during worldly life"
+      ],
+      "answer": 1,
+      "explanation": "The surah contrasts laboring and exhausted faces with faces pleased by the result of their striving.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 23: 'Working hard and exhausted.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What do the prepared couches and spread furnishings communicate about Paradise?",
+      "options": [
+        "Its blessings are temporary and uncertain",
+        "Its beauty matters more than Allah's acceptance",
+        "Honor, welcome, and rest are already prepared",
+        "Its comforts must be built by new arrivals"
+      ],
+      "answer": 2,
+      "explanation": "The arranged comforts picture a secure welcome in which blessing and rest are ready for the people of Paradise.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 47: 'And cushions lined up neatly.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What kind of looking is requested by 'Do they not look at the camels'?",
+      "options": [
+        "Thoughtful observation that leads from design to the Creator",
+        "A quick glance that notices an animal's color and outward size",
+        "A search limited to ownership, travel, and the animal's market value",
+        "A comparison that ranks one camel's speed against another camel"
+      ],
+      "answer": 0,
+      "explanation": "The command calls for reflection on how creation was made, so visible design becomes evidence of Allah's power.",
+      "verified": {
+        "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:17: 'Indeed it is an amazing creation, and the way it has been fashioned is strange.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
       "q": "Which response best follows the command to examine creation?",
       "options": [
+        "Looking only at rare things far from ordinary experience",
         "Naming objects without considering how they were made",
         "Admiring nature while denying any Creator or purpose",
-        "Studying creation carefully and letting its design strengthen faith",
-        "Looking only at rare things far from ordinary experience"
+        "Studying creation carefully and letting its design strengthen faith"
       ],
-      "answer": 2,
+      "answer": 3,
       "explanation": "The surah invites thoughtful observation of familiar things so their design becomes evidence of the Creator.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does رَاضِيَةٌ mean?",
-      "options": [
-        "humbled / downcast",
-        "laboring / working",
-        "exhausted / weary",
-        "satisfied / pleased"
-      ],
-      "answer": 3,
-      "explanation": "رَاضِيَةٌ describes the joyful faces as pleased with the result of their striving.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus for Al-Ghashiyah 88:9.",
-        "checkedAt": "2026-07-20"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) What is the effect of telling the Prophet, 'You are only a reminder; you are not a controller over them'?",
-      "options": [
-        "It defines his role clearly while placing choice on listeners and final judgment with Allah",
-        "It tells him to stop giving reminders whenever a group rejects the message",
-        "It makes him responsible for creating and forcing faith inside every listener's heart",
-        "It removes final accountability from those who knowingly reject and turn away"
-      ],
-      "answer": 0,
-      "explanation": "The address gives the Prophet a clear and steady task: remind faithfully. Listeners remain responsible, and return and reckoning belong to Allah.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on Al-Ghashiyah 88:21-26 explains that the Messenger conveys and reminds, cannot force faith, and leaves reckoning to Allah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "note": "Ibn Kathir on 88:20: 'Thus, He directs the bedouin to consider what he himself witnesses.'",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -1075,10 +983,124 @@ export default {
       "explanation": "The surah moves through warning and hope, visible evidence, the duty to remind, and humanity's return to Allah.",
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against the cited tafsir passages for Surah Al-Ghashiyah. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-20"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/88-ghashiyah-itani-teens.md line 19: 'Has the news of the overwhelming event reached you?'",
+        "checkedAt": "2026-08-30"
       }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why does the teen translation render the fire in verse 5 as 'intensely hot' rather than simply 'burning'?",
+      "options": [
+        "Because burning is a softer English word",
+        "Because the verse is about a boiling spring",
+        "Because the Arabic word names heat at its peak",
+        "Because fire in Arabic has no other meaning"
+      ],
+      "answer": 2,
+      "explanation": "Ibn Kathir explains Hamiyah as 'hot with intense heat', so the translation keeps the idea of heat that has reached its limit rather than the general word burning.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:5: '(They will enter into Fire, Hamiyah) meaning, hot with intense heat.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why does the surah describe the punished faces before the joyful faces?",
+      "options": [
+        "The contrast moves from warning to hope and makes both outcomes clearer",
+        "The order teaches that every person must first enter punishment",
+        "The joyful scene is less important and is added only as decoration",
+        "The two passages describe different days with no connection"
+      ],
+      "answer": 0,
+      "explanation": "Ibn Kathir notes the deliberate change from the wretched people to the happy people. The contrast warns first, then opens the door of hope.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:1: 'The Day of Judgement and what will happen to the People of the Fire during it'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Nazm"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why does the surah first ask its Arabian audience to examine camels?",
+      "options": [
+        "The audience could understand faith only by traveling into the desert",
+        "The example proves that mountains and the sky are less important signs",
+        "Camels were the only creatures Allah had made with remarkable features",
+        "Camels were familiar, useful, and visibly combined great strength with gentle service"
+      ],
+      "answer": 3,
+      "explanation": "Ibn Kathir explains that camels were the Arabs' most familiar domestic animals: powerful yet gentle, useful for loads, milk, hair, and food.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:20: 'Thus, He directs the bedouin to consider what he himself witnesses. His camel that he rides upon'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Style of Address"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why can لَاغِيَةً be translated as 'vain' or 'harmful speech,' not merely 'noise'?",
+      "options": [
+        "It means that Paradise has complete silence",
+        "It names foolish, false, or sinful talk rather than sound itself",
+        "It describes voices that are too quiet to understand",
+        "It refers to the sound made by the flowing spring"
+      ],
+      "answer": 1,
+      "explanation": "Ibn Kathir explains lāghiyah through foolish, false, and sinful speech. The blessing is moral and emotional peace, not mere silence.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:11: 'But only the saying of: \"Salam! Salam!\"'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Meaning Construction"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why do the verses about camels, sky, mountains, and earth follow the scenes of the Hereafter?",
+      "options": [
+        "They identify which parts of creation will remain completely unchanged on the Last Day",
+        "They turn attention away from resurrection toward enjoyment of the present world",
+        "They provide visible evidence of the Creator's power after the unseen scenes of resurrection",
+        "They begin a separate lesson about desert travel with no link to final Judgment"
+      ],
+      "answer": 2,
+      "explanation": "After presenting unseen future outcomes, the surah points to signs already before the audience. The Creator of these wonders has power to resurrect and judge.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:17: 'Do they not look at the camels, how they are created'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Nazm"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "What is the effect of telling the Prophet, 'You are only a reminder; you are not a controller over them'?",
+      "options": [
+        "It tells him to stop giving reminders whenever a group rejects the message",
+        "It makes him responsible for creating and forcing faith inside every listener's heart",
+        "It removes final accountability from those who knowingly reject and turn away",
+        "It defines his role and leaves choice to listeners and judgment to Allah"
+      ],
+      "answer": 3,
+      "explanation": "The address gives the Prophet a clear and steady task: remind faithfully. Listeners remain responsible, and return and reckoning belong to Allah.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 88:22: 'You are not a dictator over them.\" This means that you cannot create faith in their hearts.'",
+        "checkedAt": "2026-08-30"
+      },
+      "rhetoricArea": "Style of Address"
     }
   ],
   "fillBlanks": {
@@ -1677,5 +1699,11 @@ export default {
         ]
       }
     ]
+  },
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary of 88:1-26 checked against Tafsir Ibn Kathir. On the fire: '(Laboring, weary. They will enter into Fire, Hamiyah.)' and '(They will enter into Fire, Hamiyah) meaning, hot with intense heat.' On its drink and food: '(They will be given to drink from a boiling (Aniyah) spring.) meaning, its heat has reached its maximum limit and boiling point' and 'No food will there be for them but from Dari` ... A tree from the Hellfire' and 'This is of the worst, most disgusting and loathsome of foods.' On Paradise: '(No Laghw will they hear therein, nor any sinful speech. But only the saying of: Salam! Salam!)' On the signs: '(Do they not look at the camels, how they are created) Indeed it is an amazing creation' and 'Thus, He directs the bedouin to consider what he himself witnesses. His camel that he rides upon, the sky that is above his head.' On the Prophet's task: '(You are not a Musaytir over them.) ... You are not a dictator over them. This means that you cannot create faith in their hearts.' On the end: '(Verily, to Us will be their return;) meaning, their place of return and their resort.' The intro's account of the two groups of faces being set side by side is a structural reading of the surah, not a quotation.",
+    "checkedAt": "2026-08-30"
   }
 };

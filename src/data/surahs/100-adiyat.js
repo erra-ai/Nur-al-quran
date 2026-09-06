@@ -5,18 +5,18 @@ export default {
   "number": 100,
   "nameArabic": "الْعَادِيَاتِ",
   "nameEnglish": "Al-'Adiyat",
-  "title": "The Courser",
-  "intro": "Surah Al-'Adiyat opens with five quick oaths that build one picture: warhorses running so hard they pant, their hooves striking sparks off the stones, attacking at dawn, kicking up a cloud of dust, and charging into the middle of the enemy. Then the surah turns to the human being. He is ungrateful to his Lord, and he himself knows it. He loves wealth fiercely. The surah ends with a question instead of a warning: does he not know what will happen when everything inside the graves is turned out, and everything hidden inside the chests is brought into the open? On that Day their Lord knows them completely.",
+  "title": "The Coursers",
+  "intro": "Surah Al-'Adiyat opens with five quick oaths that form one powerful scene: warhorses pant as they race, strike sparks from rocks, raid at dawn, raise a cloud of dust, and enter the middle of the enemy. Then the surah turns to the human being's deep ingratitude and intense attachment to wealth. This ingratitude is witnessed and cannot be hidden: Allah knows it, and a person's own words and actions can reveal it. The ending asks whether such a person realizes that the dead will be brought out from the graves and that hidden intentions will be exposed. This question is a warning about the Hereafter, when the All-Aware Lord will judge with complete knowledge and no injustice.",
   "introVerified": {
     "status": "verified",
     "by": "tafsir Ibn Kathir",
-    "note": "Summary of 100:1-11 checked against Tafsir Ibn Kathir. Racers explained as warhorses; 100:9 object is what is in the graves, not the graves themselves; 100:11 'that Day' kept because Ibn Kathir ties Allah's awareness there to recompense on that Day.",
+    "note": "Ibn Kathir on 100:1-11 says the horses 'run and pant,' their hooves cause 'sparks of fire,' and man is 'ungrateful for the favors of His Lord.' On 100:7 he records Allah as witness and also that man is a witness himself through his condition. He titles 100:9-11 'The Threat about the Hereafter' and says Allah 'does not do even the slightest amount of injustice.'",
     "checkedAt": "2026-07-21"
   },
   "vocabulary": [
     {
       "arabic": "الْعَادِيَاتِ",
-      "meaning": "the charging horses / racers",
+      "meaning": "the charging horses",
       "connection": "Allah swears by warhorses racing into battle, panting and striking sparks.",
       "hint": "Horses running at full speed, breath steaming in the cold dawn air.",
       "source": {
@@ -38,7 +38,7 @@ export default {
     },
     {
       "arabic": "ضَبْحًا",
-      "meaning": "panting / breathing heavily",
+      "meaning": "panting",
       "connection": "The horses pant as they charge — their breath is the sound of effort and speed.",
       "hint": "The heavy breathing of a runner pushing themselves to the limit.",
       "source": {
@@ -82,7 +82,7 @@ export default {
     },
     {
       "arabic": "الْمُغِيرَاتِ",
-      "meaning": "chargers at dawn",
+      "meaning": "the raiders",
       "connection": "The horses raid at dawn — the most surprising and effective time to attack.",
       "hint": "The first light of morning, when the enemy least expects an attack.",
       "source": {
@@ -104,7 +104,7 @@ export default {
     },
     {
       "arabic": "نَقْعًا",
-      "meaning": "dust / dust cloud",
+      "meaning": "a dust cloud",
       "connection": "The horses stir up clouds of dust as they race through the battlefield.",
       "hint": "A thick cloud of dirt rising from pounding hooves.",
       "source": {
@@ -126,7 +126,7 @@ export default {
     },
     {
       "arabic": "كَنُودٌ",
-      "meaning": "ungrateful / denying good",
+      "meaning": "deeply ungrateful",
       "connection": "Despite all the signs, the human being is ungrateful to his Lord — he does not thank.",
       "hint": "Taking gifts every day but never saying thank you to the Giver.",
       "source": {
@@ -148,7 +148,7 @@ export default {
     },
     {
       "arabic": "الْخَيْرِ",
-      "meaning": "wealth / good / possessions",
+      "meaning": "wealth",
       "connection": "His love for wealth is intense — it consumes him and makes him forget his Lord.",
       "hint": "The good things of this world that can make a heart forget the next world.",
       "source": {
@@ -170,7 +170,7 @@ export default {
     },
     {
       "arabic": "شَدِيدٌ",
-      "meaning": "intense / severe / fierce",
+      "meaning": "intense",
       "connection": "His love for wealth is not mild — it is شَدِيدٌ, extreme and powerful.",
       "hint": "A feeling so strong it controls everything you do.",
       "source": {
@@ -214,7 +214,7 @@ export default {
     },
     {
       "arabic": "خَبِيرٌ",
-      "meaning": "All-Aware / Fully Informed",
+      "meaning": "All-Aware",
       "connection": "On that Day, their Lord is خَبِيرٌ — fully aware of every deed, every secret, every hidden thought.",
       "hint": "Someone who knows everything about you — even what you hide in your heart.",
       "source": {
@@ -236,7 +236,7 @@ export default {
     },
     {
       "arabic": "صُبْحًا",
-      "meaning": "at dawn / in the morning",
+      "meaning": "at dawn",
       "connection": "The horses charge at dawn — the time of surprise and bravery.",
       "hint": "The first light of morning when the world is still waking up.",
       "source": {
@@ -258,7 +258,7 @@ export default {
     },
     {
       "arabic": "جَمْعًا",
-      "meaning": "a gathering / the center",
+      "meaning": "a gathering",
       "connection": "The horses plunge into the center of the enemy — the heart of danger.",
       "hint": "A crowd of people gathered together in one place.",
       "source": {
@@ -273,15 +273,15 @@ export default {
         "checkedAt": "2026-07-13"
       },
       "grammar": {
-        "english": "Accusative indefinite noun",
-        "arabic": "اسم منصوب نكرة",
-        "explanation": "جَمْعًا means a gathered body or group. It is accusative in the phrase describing the racers entering the center of a gathering."
+        "english": "Indefinite accusative direct object",
+        "arabic": "اسم نكرة منصوب مفعول به",
+        "explanation": "جَمْعًا means a gathered body or group. It is accusative as the group whose middle the charging horses enter."
       }
     },
     {
       "arabic": "لَشَهِيدٌ",
-      "meaning": "is surely a witness",
-      "connection": "Man himself is a witness against his own ingratitude.",
+      "meaning": "surely a witness",
+      "connection": "The ingratitude is witnessed and undeniable. The witness may refer to Allah, or to the human being whose condition reveals it.",
       "hint": "Someone who saw it happen and can tell the truth about it.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
@@ -290,9 +290,9 @@ export default {
       },
       "verified": {
         "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Meaning and grammar checked against the Qur'anic Arabic Corpus word-by-word analysis for Surah Al-'Adiyat.",
-        "checkedAt": "2026-07-13"
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:7 records, 'And indeed Allah is a witness to that,' and also that 'man is a witness himself' through his statements and deeds.",
+        "checkedAt": "2026-07-26"
       },
       "grammar": {
         "english": "Emphatic nominative active participle",
@@ -302,7 +302,7 @@ export default {
     },
     {
       "arabic": "بُعْثِرَ",
-      "meaning": "is scattered / turned over",
+      "meaning": "is brought out",
       "connection": "When what is in the graves is turned out and everything buried comes up.",
       "hint": "The ground being dug up and everything inside thrown out.",
       "source": {
@@ -319,7 +319,7 @@ export default {
       "grammar": {
         "english": "Third-person masculine singular passive perfect verb",
         "arabic": "فعل ماض مبني للمجهول",
-        "explanation": "بُعْثِرَ is a passive past-tense verb: 'was scattered or turned out.' It pictures the contents of graves being brought out without naming a human agent."
+        "explanation": "بُعْثِرَ is a passive past-tense verb meaning 'was brought out' or 'was turned out.' It pictures the contents of the graves being brought out without naming an agent."
       }
     }
   ],
@@ -328,155 +328,169 @@ export default {
       "type": "ar2en",
       "q": "What does الْعَادِيَاتِ mean?",
       "options": [
-        "the charging horses / racers",
-        "panting / breathing heavily",
-        "chargers at dawn",
-        "ungrateful / denying good"
+        "the charging horses",
+        "strikers of sparks",
+        "the raiders",
+        "a gathering"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "الْعَادِيَاتِ means 'the charging horses.' They race forward in the opening oath."
     },
     {
       "type": "ar2en",
       "q": "What does ضَبْحًا mean?",
       "options": [
-        "strikers of sparks",
-        "panting / breathing heavily",
-        "dust / dust cloud",
-        "wealth / good / possessions"
+        "at dawn",
+        "panting",
+        "intense",
+        "a dust cloud"
       ],
-      "answer": 1
+      "answer": 1,
+      "explanation": "ضَبْحًا means 'panting,' the sound of the horses breathing as they run hard."
     },
     {
       "type": "ar2en",
       "q": "What does الْمُورِيَاتِ mean?",
       "options": [
-        "chargers at dawn",
-        "ungrateful / denying good",
+        "the charging horses",
+        "the raiders",
         "strikers of sparks",
-        "intense / severe / fierce"
+        "deeply ungrateful"
       ],
-      "answer": 2
+      "answer": 2,
+      "explanation": "الْمُورِيَاتِ means 'strikers of sparks.' Their hooves strike rocks and produce sparks."
     },
     {
       "type": "ar2en",
       "q": "What does الْمُغِيرَاتِ mean?",
       "options": [
-        "dust / dust cloud",
-        "wealth / good / possessions",
+        "strikers of sparks",
         "the graves",
-        "chargers at dawn"
+        "the charging horses",
+        "the raiders"
       ],
-      "answer": 3
+      "answer": 3,
+      "explanation": "الْمُغِيرَاتِ means 'the raiders.' The next word, صُبْحًا, tells us that they raid at dawn."
     },
     {
       "type": "ar2en",
       "q": "What does نَقْعًا mean?",
       "options": [
-        "dust / dust cloud",
-        "ungrateful / denying good",
-        "intense / severe / fierce",
-        "All-Aware / Fully Informed"
+        "a dust cloud",
+        "a gathering",
+        "wealth",
+        "the graves"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "نَقْعًا means 'a dust cloud,' raised by the horses as they charge."
     },
     {
       "type": "ar2en",
       "q": "What does كَنُودٌ mean?",
       "options": [
-        "wealth / good / possessions",
-        "ungrateful / denying good",
-        "the graves",
-        "at dawn / in the morning"
+        "All-Aware",
+        "deeply ungrateful",
+        "intense",
+        "surely a witness"
       ],
-      "answer": 1
+      "answer": 1,
+      "explanation": "كَنُودٌ means 'deeply ungrateful,' describing someone who forgets Allah's favors."
     },
     {
       "type": "ar2en",
-      "q": "What does الْخَيْرِ mean?",
+      "q": "What does الْخَيْرِ mean here?",
       "options": [
-        "intense / severe / fierce",
-        "All-Aware / Fully Informed",
-        "wealth / good / possessions",
-        "a gathering / the center"
+        "a gathering",
+        "a dust cloud",
+        "wealth",
+        "panting"
       ],
-      "answer": 2
+      "answer": 2,
+      "explanation": "الْخَيْرِ means 'wealth' in this verse. The person is severely attached to it."
     },
     {
       "type": "ar2en",
       "q": "What does شَدِيدٌ mean?",
       "options": [
-        "the graves",
-        "at dawn / in the morning",
-        "is surely a witness",
-        "intense / severe / fierce"
+        "deeply ungrateful",
+        "All-Aware",
+        "surely a witness",
+        "intense"
       ],
-      "answer": 3
+      "answer": 3,
+      "explanation": "شَدِيدٌ means 'intense.' It describes the strength of the person's attachment to wealth."
     },
     {
       "type": "ar2en",
       "q": "What does الْقُبُورِ mean?",
       "options": [
         "the graves",
-        "All-Aware / Fully Informed",
-        "a gathering / the center",
-        "is scattered / turned over"
+        "the charging horses",
+        "strikers of sparks",
+        "the raiders"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "الْقُبُورِ means 'the graves,' whose contents will be brought out."
     },
     {
       "type": "ar2en",
       "q": "What does خَبِيرٌ mean?",
       "options": [
-        "at dawn / in the morning",
-        "All-Aware / Fully Informed",
-        "is surely a witness",
-        "the charging horses / racers"
+        "intense",
+        "All-Aware",
+        "deeply ungrateful",
+        "at dawn"
       ],
-      "answer": 1
+      "answer": 1,
+      "explanation": "خَبِيرٌ means 'All-Aware.' Allah knows every action and hidden intention."
     },
     {
       "type": "ar2en",
       "q": "What does صُبْحًا mean?",
       "options": [
-        "a gathering / the center",
-        "is scattered / turned over",
-        "at dawn / in the morning",
-        "panting / breathing heavily"
+        "panting",
+        "a gathering",
+        "at dawn",
+        "is brought out"
       ],
-      "answer": 2
+      "answer": 2,
+      "explanation": "صُبْحًا means 'at dawn,' telling when the raid occurs."
     },
     {
       "type": "ar2en",
       "q": "What does جَمْعًا mean?",
       "options": [
-        "is surely a witness",
-        "the charging horses / racers",
-        "strikers of sparks",
-        "a gathering / the center"
+        "a dust cloud",
+        "wealth",
+        "the graves",
+        "a gathering"
       ],
-      "answer": 3
+      "answer": 3,
+      "explanation": "جَمْعًا means 'a gathering,' the group whose middle the horses enter."
     },
     {
       "type": "ar2en",
       "q": "What does لَشَهِيدٌ mean?",
       "options": [
-        "is surely a witness",
-        "is scattered / turned over",
-        "panting / breathing heavily",
-        "chargers at dawn"
+        "surely a witness",
+        "is brought out",
+        "All-Aware",
+        "intense"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "لَشَهِيدٌ means 'surely a witness.' The prefixed لَ makes the statement stronger."
     },
     {
       "type": "ar2en",
       "q": "What does بُعْثِرَ mean?",
       "options": [
-        "the charging horses / racers",
-        "is scattered / turned over",
-        "strikers of sparks",
-        "dust / dust cloud"
+        "at dawn",
+        "is brought out",
+        "panting",
+        "a gathering"
       ],
-      "answer": 1
+      "answer": 1,
+      "explanation": "بُعْثِرَ means 'is brought out.' Verse 9 uses it for what is inside the graves."
     }
   ],
   "quiz": [
@@ -484,547 +498,547 @@ export default {
       "category": "Vocabulary",
       "q": "What does الْعَادِيَاتِ mean?",
       "options": [
-        "charging horses",
-        "quiet camels",
-        "flying birds",
-        "swimming fish"
+        "the charging horses",
+        "the gathered army",
+        "the buried dead",
+        "the hidden motives"
       ],
       "answer": 0,
-      "explanation": "الْعَادِيَاتِ means the charging horses — warhorses galloping into battle at full speed.",
+      "explanation": "الْعَادِيَاتِ means 'the charging horses.' They race forward in the opening oath.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:1: Allah swears by the horses when they are made to gallop into battle in His path.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 100:1 describes 'the horses when they are made to gallop into battle.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does ضَبْحًا mean?",
       "options": [
-        "sleeping / resting",
-        "panting / breathing",
-        "silence / peace",
-        "singing / music"
+        "striking sparks",
+        "panting",
+        "raising dust",
+        "entering a gathering"
       ],
       "answer": 1,
-      "explanation": "ضَبْحًا means panting — the sound horses make with their breath when they run hard.",
+      "explanation": "ضَبْحًا means 'panting,' the sound of the horses breathing as they run hard.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:1: ad-dabh is the sound the horses make when they run.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 100:1 calls it 'the sound that is heard from the horse when it runs.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does الْمُورِيَاتِ mean?",
       "options": [
-        "runners on sand",
-        "eaters of grass",
+        "raisers of dust",
+        "raiders at dawn",
         "strikers of sparks",
-        "drinkers of water"
+        "chargers into a gathering"
       ],
       "answer": 2,
-      "explanation": "الْمُورِيَاتِ means the strikers of sparks — horses whose hooves strike the rocks and make sparks of fire fly.",
+      "explanation": "الْمُورِيَاتِ means 'strikers of sparks.' Their hooves strike rocks and produce sparks.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:2: the striking of their hooves on the rocks, which causes sparks of fire to fly from them.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "rhetoricArea": "Meaning Construction",
-      "q": "Why does translating ضَبْحًا as 'panting' add more to the opening than simply saying the horses ran quickly?",
-      "options": [
-        "It explains that the horses stopped running because they could no longer breathe at all during the charge",
-        "It changes the racers into people whose speech could be heard across the battlefield by every listener",
-        "It proves that every animal makes exactly the same sound whenever it begins to move at full speed",
-        "It lets the listener hear their intense effort and feel the speed and strain of the charge"
-      ],
-      "answer": 3,
-      "explanation": "ضَبْحًا names the distinctive panting sound of running horses. The sound makes the oath immediate and physical rather than giving only a general statement about speed.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:1, where ضَبْح is explained as the sound the horses make with their breath when they run.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does نَقْعًا mean?",
-      "options": [
-        "dust / dust cloud",
-        "rain / water",
-        "fire / flame",
-        "grass / plants"
-      ],
-      "answer": 0,
-      "explanation": "نَقْعًا means dust — the thick cloud of dust stirred up by the galloping hooves.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:4: the dust stirred up at the place of the charge.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does كَنُودٌ mean?",
-      "options": [
-        "helpful",
-        "ungrateful",
-        "thankful",
-        "powerful"
-      ],
-      "answer": 1,
-      "explanation": "كَنُودٌ means ungrateful — someone who rejects the favours his Lord has given him. Al-Hasan described him as the person who counts his troubles and forgets Allah's blessings.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:6: al-Kanud means ungrateful, reported from Ibn 'Abbas, Mujahid, Qatadah and others; Al-Hasan al-Basri's definition quoted as printed.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الْخَيْرِ mean here?",
-      "options": [
-        "strength / power",
-        "water / rain",
-        "wealth / goods",
-        "darkness / night"
-      ],
-      "answer": 2,
-      "explanation": "الْخَيْرِ here means wealth and worldly goods. The verse says his love for it is severe.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:8: and indeed in his love of the good, which is wealth, he is severe.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does شَدِيدٌ mean?",
-      "options": [
-        "gentle / soft",
-        "weak / frail",
-        "slow / lazy",
-        "intense / fierce"
-      ],
-      "answer": 3,
-      "explanation": "شَدِيدٌ means intense, fierce or severe. Ibn Kathir gives two meanings and says both are correct: the person is severe in his love of wealth, and he is also stingy because he loves it so much.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:8: 'There are two opinions concerning this. One of them is that it means that he is severe in his love of wealth. The other view is that it means he is covetous and stingy due to the love of wealth. However, both views are correct.' Both are taught because Ibn Kathir endorses both — this is not a scholarly disagreement being hidden from students.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "rhetoricArea": "Meaning Construction",
-      "q": "In verse 8, why is الْخَيْرِ understood as 'wealth' rather than moral goodness?",
-      "options": [
-        "The surrounding criticism of ingratitude and intense attachment shows that worldly possessions are meant",
-        "The verse teaches that loving every good action is itself a form of blameworthy ingratitude",
-        "The word can only mean coins and never carries the broader Arabic meaning of good",
-        "The horses in the opening are described as carrying treasure taken from every grave"
-      ],
-      "answer": 0,
-      "explanation": "Khayr can mean good, but Arabic also uses it for wealth. Here the criticized person's severe attachment fits worldly possessions, not a passionate love of virtue.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:8, where الْخَيْر in this verse is explained as wealth.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does خَبِيرٌ mean?",
-      "options": [
-        "All-Silent",
-        "All-Aware",
-        "All-Forgetting",
-        "All-Sleeping"
-      ],
-      "answer": 1,
-      "explanation": "خَبِيرٌ means All-Aware or Fully Informed. Allah knows everything they used to do, and on that Day He will repay them for it without the slightest injustice.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:11: 'He knows all of that they used to do, and He will compensate them for it with the most deserving reward. He does not do even the slightest amount of injustice.'",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What is the surah describing in the first five verses?",
-      "options": [
-        "Birds flying south for winter",
-        "Ships sailing across the ocean",
-        "Warhorses charging into battle at dawn",
-        "Camels traveling through a desert"
-      ],
-      "answer": 2,
-      "explanation": "The surah swears by warhorses: panting, striking sparks, raiding at dawn, raising dust, and charging into the midst of the enemy.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:1-5. For 100:5, Ibn 'Abbas, 'Ata, 'Ikrimah, Qatadah and Ad-Dahhak all explained jam'an as the midst of the disbelieving enemy.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What do the horses' hooves strike to create sparks?",
-      "options": [
-        "The water's surface",
-        "The wooden gates",
-        "The soft grass",
-        "The rocky ground"
-      ],
-      "answer": 3,
-      "explanation": "قَدْحًا means striking sparks — the horses' hooves hitting the rocks, making sparks of fire fly out.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:2: the striking of their hooves on the rocks, which causes sparks of fire to fly from them. The earlier wording said 'metal horseshoes', a detail not found in the tafsir; removed 2026-07-21.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What does the surah accuse mankind of in verse 6?",
-      "options": [
-        "Being ungrateful to his Lord",
-        "Being too generous",
-        "Being too kind to animals",
-        "Being too quiet in prayer"
-      ],
-      "answer": 0,
-      "explanation": "إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ — indeed, the human being is ungrateful to his Lord. Ibn Kathir explains it as rejecting the favours his Lord has given him.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:6: he is ungrateful for the favors of His Lord and he rejects them.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "rhetoricArea": "Style of Address",
-      "q": "What is the effect of the rapid sequence: panting, striking sparks, charging at dawn, raising dust, and entering the center?",
-      "options": [
-        "The actions make the horses the final subject and leave no connection to human conduct",
-        "The linked actions accelerate the scene and carry the listener forward before the sudden moral verdict",
-        "The sequence slows the opening so each action feels completely separate from the next one",
-        "The details provide instructions for organizing a raid rather than evidence for the warning"
-      ],
-      "answer": 1,
-      "explanation": "The repeated movement creates speed and momentum. After the listener is drawn into the charge, verse 6 turns sharply to the real claim: the human being is ungrateful.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:1-6, which treats 100:1-5 as the oaths and 100:6 as the answer to them. The pacing description is drawn from the order of the verses themselves.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What does the person love intensely?",
-      "options": [
-        "Family and children",
-        "Learning and books",
-        "Wealth and possessions",
-        "Prayer and worship"
-      ],
-      "answer": 2,
-      "explanation": "وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ — in his love of wealth, he is severe.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:8: and indeed in his love of the good, which is wealth, he is severe.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الْقُبُورِ mean?",
-      "options": [
-        "the horses",
-        "the sparks",
-        "the clouds",
-        "the graves"
-      ],
-      "answer": 3,
-      "explanation": "الْقُبُورِ means the graves. Verse 9 says what is inside them will be turned out — the dead will be brought back up.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:9: 'the dead that are in it will be brought out.' Note the verb acts on what is in the graves, unlike Al-Infitar 82:4 where the graves are the subject. Converted from a Comprehension question to Vocabulary on 2026-07-22 to cover an untested vocabulary card.",
-        "checkedAt": "2026-07-22"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What will be brought out from inside people's chests?",
-      "options": [
-        "All hidden secrets and intentions",
-        "Gold and silver coins",
-        "Food and water supplies",
-        "Weapons and shields"
-      ],
-      "answer": 0,
-      "explanation": "وَحُصِّلَ مَا فِي الصُّدُورِ — what was inside them will be exposed and made plain: their intentions, their aims, and the reasons behind what they did.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:10: what was in their souls would be exposed and made apparent, covering intentions, aims and motives.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "In verse 7 the human being is called a witness. What does that mean?",
-      "options": [
-        "Nobody can know about his ingratitude, not even the person himself",
-        "He knows about his own ingratitude and cannot honestly deny it",
-        "The horses from the opening verses will speak and testify about him",
-        "Other people must come forward and describe everything he did wrong"
-      ],
-      "answer": 1,
-      "explanation": "Ibn Kathir explains that the person is a witness against himself. His own words and actions show his ingratitude, so he cannot deny it.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:7. Ibn Kathir reports two readings: Qatadah and Sufyan Ath-Thawri take Allah as the witness; Muhammad bin Ka'b Al-Qurazi takes the man himself, and Ibn Kathir remarks that this 'is obvious in his condition'. He does not explicitly rule between them. The module teaches only the second reading because it is written for ages 10-12 and should not present the disagreement.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "rhetoricArea": "Nazm",
-      "q": "Why does the surah move from the powerful racing scene to the statement that the human being is ungrateful?",
-      "options": [
-        "The racing scene shows that animals will be judged while human choices carry no responsibility on that final Day",
-        "The transition praises every raid and then criticizes people only for failing to own horses and valuable weapons themselves",
-        "The five oaths build one rising scene, and verse 6 is the statement they were all leading up to",
-        "The change proves the first five verses and the final six verses belong to unrelated surahs with completely different messages"
-      ],
-      "answer": 2,
-      "explanation": "The first five verses are the oaths and verse 6 is the answer to them. Ibn Kathir explains that Allah swears by these racing horses and then states what He is swearing about: the human being is ungrateful to his Lord.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:6, which identifies verse 6 as the answer to the oaths in 100:1-5.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 100:2 explains 'the striking of their hooves on the rocks.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does الْمُغِيرَاتِ mean?",
       "options": [
-        "sleepers at night",
-        "builders of walls",
-        "sellers of cloth",
-        "chargers at dawn"
+        "horses raising dust",
+        "horses entering a gathering",
+        "horses striking sparks",
+        "the raiders"
       ],
       "answer": 3,
-      "explanation": "الْمُغِيرَاتِ means the chargers at dawn — the horses making their raid in the early morning.",
+      "explanation": "الْمُغِيرَاتِ means 'the raiders.' The following word tells us that they raid at dawn.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:3: 'the raid that is carried out in the early morning time.' Replaced a question that could not be answered from the surah, intro, or vocabulary alone on 2026-07-22.",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 100:3 explains 'the raid that is carried out in the early morning time.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does نَقْعًا mean?",
+      "options": [
+        "a dust cloud",
+        "a gathered army",
+        "a morning raid",
+        "a hidden secret"
+      ],
+      "answer": 0,
+      "explanation": "نَقْعًا means 'a dust cloud,' raised at the place where the horses charge.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:4 explains it as 'dust at the place of the battle with the horses.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does كَنُودٌ mean?",
+      "options": [
+        "deeply devoted",
+        "deeply ungrateful",
+        "strongly aware",
+        "openly generous"
+      ],
+      "answer": 1,
+      "explanation": "كَنُودٌ means 'deeply ungrateful,' describing someone who forgets Allah's favors.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:6 says man is 'ungrateful for the favors of His Lord.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does الْخَيْرِ mean in verse 8?",
+      "options": [
+        "moral goodness",
+        "physical strength",
+        "wealth",
+        "hidden intentions"
+      ],
+      "answer": 2,
+      "explanation": "الْخَيْرِ means 'wealth' in this verse. The passage criticizes severe attachment to it.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:8 explains 'the good, which is wealth.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does شَدِيدٌ mean?",
+      "options": [
+        "thankful",
+        "aware",
+        "gathered",
+        "intense"
+      ],
+      "answer": 3,
+      "explanation": "شَدِيدٌ means 'intense.' It describes the strength of the person's attachment to wealth.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:8 says the person is 'severe in his love of wealth.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does صُبْحًا mean?",
       "options": [
-        "at dawn / in the morning",
-        "at night / in the dark",
-        "at noon / in full sun",
-        "at dusk / as light fades"
+        "at dawn",
+        "at sunset",
+        "at midnight",
+        "at midday"
       ],
       "answer": 0,
-      "explanation": "صُبْحًا means at dawn. The raid in verse 3 happens in the early morning, not at any other time of day.",
+      "explanation": "صُبْحًا means 'at dawn,' telling when the raid takes place.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:3: 'the raid that is carried out in the early morning time.' Replaced a question that required knowing what a named scholar said, which a student cannot get from the module on 2026-07-22.",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 100:3 calls it 'the raid that is carried out in the early morning time.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
-      "category": "Comprehension",
-      "q": "What does بُعْثِرَ describe in verse 9?",
+      "category": "Vocabulary",
+      "q": "What does خَبِيرٌ mean?",
       "options": [
-        "The hidden intentions in hearts remaining covered and impossible to examine during judgment",
-        "The contents of the graves being turned out and the dead being raised",
-        "The dust from the horses settling quietly over an empty battlefield after the raid",
-        "Worldly wealth being divided equally before anyone reaches the graves on the final Day"
+        "Most Forgiving",
+        "All-Aware",
+        "Most Generous",
+        "Most Powerful"
       ],
       "answer": 1,
-      "explanation": "The passive verb pictures what is in the graves being brought out. Ibn Kathir explains this as the dead being raised.",
+      "explanation": "خَبِيرٌ means 'All-Aware.' Allah knows every action and hidden intention.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:9, which explains the verse as the dead being raised out of the graves.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 100:11 says, 'He knows all of that they used to do.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
-      "category": "Rhetoric",
-      "rhetoricArea": "Nazm",
-      "q": "Why do the final verses move from opened graves, to exposed hearts, and then to Allah's complete awareness?",
+      "category": "Vocabulary",
+      "q": "What does الْقُبُورِ mean?",
       "options": [
-        "They present three separate events with no relationship to accountability or moral choice on that Day",
-        "They teach that outward actions are judged while motives are deliberately ignored by their Lord alone",
-        "They move from bodily resurrection to hidden motives and finally to fully informed and just judgment",
-        "They suggest bodies return but inner intentions remain permanently unknown even to Allah during final judgment"
+        "the chests",
+        "the horses",
+        "the graves",
+        "the sparks"
       ],
       "answer": 2,
-      "explanation": "The order makes accountability complete. People are raised, what was hidden inside them is examined, and the All-Aware Lord judges with knowledge of actions and motives.",
+      "explanation": "الْقُبُورِ means 'the graves,' whose contents will be brought out.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:9-11: the dead are raised, what was concealed in the chests is made to appear, and their Lord is fully aware of them on that Day.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "The surah says 'when the graves are scattered' and 'the chests are emptied.' What is being exposed?",
-      "options": [
-        "Only the gold buried with the body",
-        "Only the names on the tombstones",
-        "Nothing — it is just a metaphor",
-        "Every hidden deed, intention, and secret"
-      ],
-      "answer": 3,
-      "explanation": "Two things are brought out: the dead who were in the graves, and what was inside people's chests — their intentions and the reasons behind their actions. Nothing stays hidden on that Day.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:9 (the dead will be brought out) and 100:10 (what was in their souls would be exposed and made apparent).",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why are the hidden motives in people's hearts exposed on the Day of Judgment?",
-      "options": [
-        "Complete justice considers both the outward deed and the intention that produced it",
-        "Motives replace actions completely, so visible conduct will never be considered",
-        "People can hide intentions from Allah until the graves are physically opened",
-        "Only emotions are judged because actions leave no evidence after death"
-      ],
-      "answer": 0,
-      "explanation": "Ibn Kathir explains verse 10 as what was hidden in the chests being made to appear openly. Judgment then covers not only what a person did, but what was inside them while they did it.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on Al-'Adiyat 100:10, where what is concealed in the breasts is made manifest and exposed. The second sentence is the lesson's own application of that point.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "The surah criticises the love of wealth. Does that mean owning money is wrong?",
-      "options": [
-        "No — it says loving wealth is fine as long as you feel grateful",
-        "No — it criticises loving it so much that nothing else matters",
-        "Yes — it says all money must be given away straight away",
-        "Yes — it says wealth is the worst thing a person can own"
-      ],
-      "answer": 1,
-      "explanation": "Verse 8 does not say wealth is evil. It describes how he loves it: شَدِيدٌ, so severely that he becomes stingy with it. What is criticised is the grip that love has on him.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:8 gives two accepted meanings of the description — severe in his love of wealth, and stingy because of that love — both aimed at the intensity of the attachment, not at ownership. Answerable from the شَدِيدٌ vocabulary card and the verse. Rephrased on 2026-07-22: the earlier version asked what Ibn Kathir said, which a student cannot know from the module.",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 100:9 says, 'the dead that are in it will be brought out.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Vocabulary",
       "q": "What does بُعْثِرَ mean?",
       "options": [
-        "is washed / made clean",
-        "is counted / written down",
-        "is scattered / turned over",
-        "is locked / sealed shut"
+        "is concealed",
+        "is gathered",
+        "is questioned",
+        "is brought out"
       ],
-      "answer": 2,
-      "explanation": "بُعْثِرَ means is scattered or turned over. In verse 9 it describes what is inside the graves being turned out, so nothing stays buried.",
+      "answer": 3,
+      "explanation": "بُعْثِرَ means 'is brought out.' Verse 9 uses it for what is inside the graves.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 100:9: 'the dead that are in it will be brought out.' Converted from a Comprehension question that duplicated the verse 10 question, to Vocabulary covering an untested card, on 2026-07-22.",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 100:9 says, 'the dead that are in it will be brought out.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What scene do the first five verses build?",
+      "options": [
+        "A fast horse charge into battle.",
+        "A caravan returning from a journey.",
+        "A herd escaping from a storm.",
+        "A race held for public entertainment."
+      ],
+      "answer": 0,
+      "explanation": "The opening follows warhorses panting, striking sparks, raiding at dawn, raising dust, and entering the enemy.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:1-5 says the horses 'gallop into battle' and enter 'the midst of the disbelieving enemy.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "How do the horses create sparks?",
+      "options": [
+        "Their riders strike metal shields.",
+        "Their hooves strike the rocky ground.",
+        "Their reins strike against their saddles.",
+        "Their feet strike through deep water."
+      ],
+      "answer": 1,
+      "explanation": "The horses' hooves strike rocks as they run, causing sparks to fly.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:2 explains 'the striking of their hooves on the rocks, which causes sparks of fire.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What fault does verse 6 identify in the human being?",
+      "options": [
+        "Fear of the charging horses.",
+        "Weakness during times of hardship.",
+        "Deep ingratitude to his Lord.",
+        "Confusion about the source of wealth."
+      ],
+      "answer": 2,
+      "explanation": "Verse 6 identifies deep ingratitude: the person rejects or forgets the favors of his Lord.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:6 says man is 'ungrateful for the favors of His Lord and he rejects them.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does verse 8 criticize?",
+      "options": [
+        "Concern for the horses in battle.",
+        "Hope for praise from other people.",
+        "Fear of losing a place in society.",
+        "An intense and stingy attachment to wealth."
+      ],
+      "answer": 3,
+      "explanation": "Verse 8 criticizes severe attachment to wealth, which can make a person covetous and stingy.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:8 says the person is 'covetous and stingy due to the love of wealth.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What will be exposed from inside people's chests?",
+      "options": [
+        "Hidden intentions and motives.",
+        "Buried wealth and possessions.",
+        "Names recorded by other people.",
+        "Memories of the horse charge."
+      ],
+      "answer": 0,
+      "explanation": "What people concealed within themselves will be exposed and made apparent.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:10 says 'what was in their souls would be exposed and made apparent.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "How should the 'witness' in verse 7 be understood in this lesson?",
+      "options": [
+        "It refers only to horses witnessing the person's choices.",
+        "It may refer to Allah or the person's revealing condition.",
+        "It means other people must discover every private intention.",
+        "It leaves the person's ingratitude without any witness."
+      ],
+      "answer": 1,
+      "explanation": "Ibn Kathir records both readings: Allah witnesses the ingratitude, and the person's own condition can also reveal it.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:7 records, 'And indeed Allah is a witness to that,' and also that 'man is a witness himself.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What happens when the contents of the graves are brought out?",
+      "options": [
+        "The graves are moved to another place.",
+        "Buried wealth is divided among people.",
+        "The dead are raised from the graves.",
+        "The graves remain closed during judgment."
+      ],
+      "answer": 2,
+      "explanation": "Verse 9 refers to the dead being brought out from the graves at resurrection.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:9 explains that 'the dead that are in it will be brought out.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Which habit best shows the ingratitude described by كَنُودٌ?",
+      "options": [
+        "Remembering favors during a difficult week.",
+        "Using wealth carefully without becoming attached.",
+        "Admitting both blessings and hardships honestly.",
+        "Counting hardships while forgetting Allah's favors."
+      ],
+      "answer": 3,
+      "explanation": "A deeply ungrateful person notices every hardship but forgets the favors Allah has given.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir quotes, 'Al-Kanud is the one who counts the calamities' and 'forgets Allah's favors.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What danger can grow from severe love of wealth?",
+      "options": [
+        "It can make a person covetous and stingy.",
+        "It makes every possession forbidden to own.",
+        "It prevents a person from recognizing any blessing.",
+        "It proves that wealth itself is always harmful."
+      ],
+      "answer": 0,
+      "explanation": "The problem is not ownership itself. Severe attachment can make a person covetous and stingy.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:8 says one meaning is 'covetous and stingy due to the love of wealth.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What does exposing what is hidden in the chests teach about accountability?",
+      "options": [
+        "Only visible results matter during judgment.",
+        "Intentions and motives cannot remain hidden forever.",
+        "Private motives matter more than every outward action.",
+        "People will judge one another's intentions on that Day."
+      ],
+      "answer": 1,
+      "explanation": "Accountability reaches what people concealed inside themselves, not only what others could see.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:10 says 'what was in their souls would be exposed and made apparent.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "How does the ending answer someone who thinks burial hides everything forever?",
+      "options": [
+        "Only possessions buried with a person return.",
+        "Bodies return while inner motives stay concealed.",
+        "The dead and their hidden motives are exposed.",
+        "The graves remain closed but actions are forgotten."
+      ],
+      "answer": 2,
+      "explanation": "The dead are raised from the graves, and what was hidden within people is made apparent.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:9-10 says 'the dead that are in it will be brought out' and souls are 'exposed and made apparent.'",
+        "checkedAt": "2026-07-26"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "A person is absorbed in wealth and forgets accountability. Which response best follows the surah?",
+      "options": [
+        "Wealth matters most because it remains after death.",
+        "Hidden motives are unimportant if actions look good.",
+        "Only public ingratitude will be examined later.",
+        "Remember that deeds and motives will be fully known."
+      ],
+      "answer": 3,
+      "explanation": "The surah turns from attachment to wealth toward resurrection, exposed motives, and Allah's complete knowledge.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir introduces 100:9 by encouraging 'abstinence from worldly things and striving for the Hereafter.'",
+        "checkedAt": "2026-07-26"
       }
     },
     {
       "category": "Rhetoric",
-      "rhetoricArea": "Style of Address",
-      "q": "What is the effect of repeating emphatic forms in لَكَنُودٌ, لَشَهِيدٌ, and لَشَدِيدٌ?",
+      "q": "Why is الْخَيْرِ understood as 'wealth' in verse 8 rather than moral goodness?",
       "options": [
-        "The repeated emphasis turns each statement into a possibility that may never actually occur on the final Day",
-        "The repeated emphasis shows the three expressions all have exactly the same dictionary meaning in Arabic",
-        "The repeated emphasis softens the criticism so the listener feels no need for self-examination at all",
-        "The repeated emphasis makes the charges of ingratitude, witness, and intense love impossible to dismiss lightly"
-      ],
-      "answer": 3,
-      "explanation": "Each prefixed لَ strengthens its statement. The middle section sounds like firm testimony: the ingratitude is real, it is witnessed, and the attachment to wealth is intense.",
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Emphatic لَ on each of لَكَنُودٌ, لَشَهِيدٌ, لَشَدِيدٌ checked against the Qur'anic Arabic Corpus morphology for Al-'Adiyat 100:6-8.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "After describing the love of wealth, why does the surah turn to the graves?",
-      "options": [
-        "To turn people away from this world and toward the Hereafter",
-        "To explain how graves were dug and prepared in the ancient days",
-        "To prove that a person's wealth should be buried along with them",
-        "To show that the warhorses would one day be buried in the same way"
+        "The context criticizes severe attachment, fitting worldly wealth.",
+        "The word always means coins wherever it appears in Arabic.",
+        "The charging horses are described as carrying valuable goods.",
+        "The ending changes every good action into worldly wealth."
       ],
       "answer": 0,
-      "explanation": "Ibn Kathir introduces verse 9 by saying that Allah then encourages people to turn away from worldly things and strive for the Hereafter, and tells them what they will face after this life.",
+      "explanation": "The surrounding criticism concerns a severe, stingy attachment. That context makes 'wealth' the suitable meaning here.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir before 100:9, under the heading 'The Threat about the Hereafter': 'Then Allah encourages abstinence from worldly things and striving for the Hereafter, and He informs of what the situation will be after this present condition, and what man will face of horrors.' Replaced an unsourced reflection about knowing versus changing on 2026-07-22.",
-        "checkedAt": "2026-07-22"
-      }
+        "note": "Ibn Kathir on 100:8 explains 'the good, which is wealth' and says the person is severe in loving it.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Meaning Construction"
     },
     {
-      "category": "Critical Thinking",
-      "q": "Which summary best fits Surah Al-'Adiyat as a whole?",
+      "category": "Rhetoric",
+      "q": "What does the word ضَبْحًا, 'panting,' add to the opening horse scene?",
       "options": [
-        "An oath by the pen and the book, about how the Qur'an was first written down",
-        "An oath by the horses of war, about man's ingratitude and love of wealth",
-        "An oath by the night and the day, about the making of the very first people",
-        "An oath by the mountains and the seas, about the rules for giving charity"
+        "It explains how long the horses rested before charging.",
+        "It lets listeners hear the horses' effort and speed.",
+        "It shifts attention from the charge to the riders' speech.",
+        "It makes the opening quieter and less physically immediate."
       ],
       "answer": 1,
-      "explanation": "Ibn Kathir titles this passage 'Swearing by the Horses of War about the Ungratefulness of Man and His Zeal for Wealth', which is the shape of the whole surah: the oaths come first, then what they are sworn about.",
+      "explanation": "Naming the panting sound makes the charge immediate: listeners can almost hear the horses' effort.",
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir's own section heading for Surah 100: 'Swearing by the Horses of War about the Ungratefulness of Man and His Zeal for Wealth.' Replaced a reflection prompt that had no objectively correct option, on 2026-07-22.",
-        "checkedAt": "2026-07-22"
-      }
+        "note": "Ibn Kathir on 100:1 calls panting 'the sound that is heard from the horse when it runs.' Cautious style inference: naming the sound makes the scene more immediate.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Meaning Construction"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why does the surah move from the horse charge to the verdict about human ingratitude?",
+      "options": [
+        "The horse scene replaces the later lesson about accountability.",
+        "The transition limits ingratitude to riders in a battle.",
+        "The five oaths build toward the verdict about human ingratitude.",
+        "The opening and verdict describe two unrelated subjects."
+      ],
+      "answer": 2,
+      "explanation": "The first five verses form the oath, and verse 6 states the truth that the oath emphasizes.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:6 calls human ingratitude 'the subject what is being sworn about.' Cautious structural inference: the five-part scene builds toward that verdict.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Nazm"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "What is the effect of repeating the strengthening لَ in لَكَنُودٌ, لَشَهِيدٌ, and لَشَدِيدٌ?",
+      "options": [
+        "It makes the statements sound uncertain and open to doubt.",
+        "It gives all three words exactly the same dictionary meaning.",
+        "It limits the criticism to one moment during the battle.",
+        "It makes the three statements sound firm and undeniable."
+      ],
+      "answer": 3,
+      "explanation": "The repeated لَ strengthens each statement: the ingratitude is real, it is witnessed, and the attachment is intense.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:6-8 renders the claims as 'Verily, man is ungrateful,' says a witness 'bears witness,' and describes the person as 'severe in his love of wealth.' Cautious style inference: the repeated strengthening makes the claims firm.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Style of Address"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why do the final verses move from raised bodies, to exposed hearts, and then to Allah's complete awareness?",
+      "options": [
+        "They move from resurrection to motives and then informed judgment.",
+        "They separate resurrection from every question of accountability.",
+        "They show that motives are examined before bodies are raised.",
+        "They return from judgment to the earlier horse charge."
+      ],
+      "answer": 0,
+      "explanation": "The order makes accountability complete: people are raised, hidden motives are exposed, and the All-Aware Lord judges justly.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 100:9-11 says the dead 'will be brought out,' souls are 'exposed and made apparent,' and Allah 'knows all of that they used to do.' Cautious structural inference: the sequence moves toward fully informed judgment.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Nazm"
+    },
+    {
+      "category": "Rhetoric",
+      "q": "Why does the surah end its warning with the question, 'Does he not know?'",
+      "options": [
+        "It makes resurrection sound like an event that may not happen.",
+        "It confronts the listener directly with the warning of the Hereafter.",
+        "It asks the listener to supply facts that the surah leaves unknown.",
+        "It softens the ending by removing every link to judgment."
+      ],
+      "answer": 1,
+      "explanation": "The question challenges the listener to stop ignoring what is certain: resurrection, exposed motives, and informed judgment.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir titles 100:9-11 'The Threat about the Hereafter' and says man will face 'horrors.' Cautious style inference: the question confronts the listener with that warning.",
+        "checkedAt": "2026-07-26"
+      },
+      "rhetoricArea": "Style of Address"
     }
   ],
   "fillBlanks": {
@@ -1037,14 +1051,14 @@ export default {
           },
           {
             "b": "الْعَادِيَاتِ",
-            "m": "the charging horses / racers"
+            "m": "the charging horses"
           },
           {
             "t": " "
           },
           {
             "b": "ضَبْحًا",
-            "m": "panting / breathing heavily"
+            "m": "panting"
           }
         ]
       },
@@ -1071,14 +1085,14 @@ export default {
           },
           {
             "b": "الْمُغِيرَاتِ",
-            "m": "chargers at dawn"
+            "m": "the raiders"
           },
           {
             "t": " "
           },
           {
             "b": "صُبْحًا",
-            "m": "at dawn / in the morning"
+            "m": "at dawn"
           }
         ]
       },
@@ -1090,7 +1104,7 @@ export default {
           },
           {
             "b": "نَقْعًا",
-            "m": "dust / dust cloud"
+            "m": "a dust cloud"
           }
         ]
       },
@@ -1102,7 +1116,7 @@ export default {
           },
           {
             "b": "جَمْعًا",
-            "m": "a gathering / the center"
+            "m": "a gathering"
           }
         ]
       },
@@ -1114,7 +1128,7 @@ export default {
           },
           {
             "b": "كَنُودٌ",
-            "m": "ungrateful / denying good"
+            "m": "deeply ungrateful"
           }
         ]
       },
@@ -1126,7 +1140,7 @@ export default {
           },
           {
             "b": "لَشَهِيدٌ",
-            "m": "is surely a witness"
+            "m": "surely a witness"
           }
         ]
       },
@@ -1138,14 +1152,14 @@ export default {
           },
           {
             "b": "الْخَيْرِ",
-            "m": "wealth / good / possessions"
+            "m": "wealth"
           },
           {
             "t": " لَ"
           },
           {
             "b": "شَدِيدٌ",
-            "m": "intense / severe / fierce"
+            "m": "intense"
           }
         ]
       },
@@ -1157,7 +1171,7 @@ export default {
           },
           {
             "b": "بُعْثِرَ",
-            "m": "is scattered / turned over"
+            "m": "is brought out"
           },
           {
             "t": " مَا فِي "
@@ -1184,7 +1198,7 @@ export default {
           },
           {
             "b": "خَبِيرٌ",
-            "m": "All-Aware / Fully Informed"
+            "m": "All-Aware"
           }
         ]
       }
@@ -1199,14 +1213,14 @@ export default {
             "t": "By "
           },
           {
-            "b": "the charging horses / racers",
+            "b": "the charging horses",
             "m": "الْعَادِيَاتِ"
           },
           {
             "t": ", "
           },
           {
-            "b": "panting / breathing heavily",
+            "b": "panting",
             "m": "ضَبْحًا"
           },
           {
@@ -1218,11 +1232,14 @@ export default {
         "n": 2,
         "segments": [
           {
+            "t": "And by the "
+          },
+          {
             "b": "strikers of sparks",
             "m": "الْمُورِيَاتِ"
           },
           {
-            "t": ", striking sparks."
+            "t": "."
           }
         ]
       },
@@ -1230,14 +1247,17 @@ export default {
         "n": 3,
         "segments": [
           {
-            "b": "chargers at dawn",
+            "t": "And by "
+          },
+          {
+            "b": "the raiders",
             "m": "الْمُغِيرَاتِ"
           },
           {
             "t": " "
           },
           {
-            "b": "at dawn / in the morning",
+            "b": "at dawn",
             "m": "صُبْحًا"
           },
           {
@@ -1249,10 +1269,10 @@ export default {
         "n": 4,
         "segments": [
           {
-            "t": "Then raising "
+            "t": "Then they raise "
           },
           {
-            "b": "dust / dust cloud",
+            "b": "a dust cloud",
             "m": "نَقْعًا"
           },
           {
@@ -1264,10 +1284,10 @@ export default {
         "n": 5,
         "segments": [
           {
-            "t": "Then entering the center of "
+            "t": "Then they enter the middle of "
           },
           {
-            "b": "a gathering / the center",
+            "b": "a gathering",
             "m": "جَمْعًا"
           },
           {
@@ -1282,7 +1302,7 @@ export default {
             "t": "Indeed, the human being is "
           },
           {
-            "b": "ungrateful / denying good",
+            "b": "deeply ungrateful",
             "m": "كَنُودٌ"
           },
           {
@@ -1294,10 +1314,10 @@ export default {
         "n": 7,
         "segments": [
           {
-            "t": "And he "
+            "t": "And there is "
           },
           {
-            "b": "is surely a witness",
+            "b": "surely a witness",
             "m": "لَشَهِيدٌ"
           },
           {
@@ -1312,14 +1332,14 @@ export default {
             "t": "And he is "
           },
           {
-            "b": "intense / severe / fierce",
+            "b": "intense",
             "m": "شَدِيدٌ"
           },
           {
-            "t": " in love of "
+            "t": " in his love of "
           },
           {
-            "b": "wealth / good / possessions",
+            "b": "wealth",
             "m": "الْخَيْرِ"
           },
           {
@@ -1331,18 +1351,18 @@ export default {
         "n": 9,
         "segments": [
           {
-            "t": "Does he not know when "
-          },
-          {
-            "b": "is scattered / turned over",
-            "m": "بُعْثِرَ"
-          },
-          {
-            "t": " what is in "
+            "t": "Does he not know when what is in "
           },
           {
             "b": "the graves",
             "m": "الْقُبُورِ"
+          },
+          {
+            "t": " "
+          },
+          {
+            "b": "is brought out",
+            "m": "بُعْثِرَ"
           },
           {
             "t": "?"
@@ -1364,11 +1384,11 @@ export default {
             "t": "Indeed, their Lord is "
           },
           {
-            "b": "All-Aware / Fully Informed",
+            "b": "All-Aware",
             "m": "خَبِيرٌ"
           },
           {
-            "t": " about them on that Day."
+            "t": " of them on that Day."
           }
         ]
       }

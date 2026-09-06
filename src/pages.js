@@ -9,6 +9,9 @@ import {
 } from "./state.js";
 import { startQuiz } from "./activities/quiz.js";
 import { startVerseOrder } from "./activities/verse-order.js";
+import { fetchSurahFromQuranCom } from "./quran-api.js?v=20260830-tajweed-ikhafa";
+import { ITANI_TEEN_TRANSLATIONS } from "./data/translations/itani-teens.js";
+import { UTHMANI_FALLBACK } from "./data/quran-fallback.js";
 
 /* ---------- LIFESKILLS ---------- */
 function renderLifeSkills() {
@@ -211,6 +214,97 @@ function renderHome() {
 }
 
 /* ---------- INTRO ---------- */
+const LOCAL_BASMALA_ARABIC = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ";
+const ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩";
+
+function toArabicIndic(number) {
+  return String(number).replace(/\d/g, (digit) => ARABIC_INDIC_DIGITS[Number(digit)]);
+}
+
+// The offline Arabic comes from the dedicated verified Uthmani fallback
+// (src/data/quran-fallback.js) — never reconstructed from fillBlanks.
+function fallbackArabicVerses(ayahTexts) {
+  return ayahTexts
+    .map((text, index) => `<span class="intro-api-verse">${text} <span class="ayah-end">${toArabicIndic(index + 1)}</span></span>`)
+    .join(" ");
+}
+
+// The shared Mushaf-style panel: rendered for every surah with the local
+// verified text, then upgraded in a second pass (hydrateIntroQuranText) with
+// sanitised Quran.com Uthmani Tajweed text.
+function introSurahText(module) {
+  const fallback = UTHMANI_FALLBACK[module.number];
+  const arabicAyahs = fallback?.ayahs;
+  if (!Array.isArray(arabicAyahs) || arabicAyahs.length === 0) return "";
+
+  const translation = ITANI_TEEN_TRANSLATIONS[module.number];
+  if (!translation || !Array.isArray(translation.ayahs) || translation.ayahs.length !== arabicAyahs.length) return "";
+
+  // Al-Fatiha: the basmala is ayah 1 (never shown separately). At-Tawbah: none.
+  const showBasmala = module.number !== 1 && module.number !== 9 && fallback.basmala != null;
+  const basmalaBlock = showBasmala
+    ? `
+      <div class="intro-basmala arabic" dir="rtl">${fallback.basmala}</div>
+      <div class="intro-basmala-english">${translation.basmala}</div>`
+    : "";
+
+  const translations = translation.ayahs.map((text, index) => {
+    return `
+      <div class="intro-translation-row">
+        <span class="intro-translation-number">${index + 1}</span>
+        <span>${text}</span>
+      </div>`;
+  }).join("");
+
+  return `
+    <section class="intro-surah-text" data-quran-chapter="${module.number}" aria-label="${module.nameEnglish} Arabic text and English translation">
+      <div class="intro-surah-heading">
+        <span>Surah ${module.number} · ${module.nameEnglish}</span>
+        <span>Recite with meaning</span>
+      </div>
+      ${basmalaBlock}
+      <div class="intro-mushaf-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="intro-mushaf-arabic arabic" dir="rtl">
+        ${fallbackArabicVerses(arabicAyahs)}
+      </div>
+      <div class="intro-mushaf-translations">${translations}</div>
+      <div class="intro-translation-source">
+        <span class="intro-quran-status">Loading Uthmani Tajweed text from Quran.com…</span>
+        <span>English: ClearQuran (Talal Itani) · teen reference</span>
+      </div>
+    </section>`;
+}
+
+async function hydrateIntroQuranText(module) {
+  const chapter = module.number;
+  const panel = document.querySelector(`[data-quran-chapter="${chapter}"]`);
+  if (!panel) return;
+
+  const basmalaEl = panel.querySelector(".intro-basmala");
+  const arabicEl = panel.querySelector(".intro-mushaf-arabic");
+  const statusEl = panel.querySelector(".intro-quran-status");
+  const expected = ITANI_TEEN_TRANSLATIONS[chapter]?.ayahs?.length ?? 0;
+
+  try {
+    const quran = await fetchSurahFromQuranCom(chapter);
+    if (!document.body.contains(panel)) return;
+    if (expected && quran.verseCount !== expected) {
+      throw new Error(`Quran.com returned ${quran.verseCount} verses for surah ${chapter}, expected ${expected}`);
+    }
+    arabicEl.innerHTML = quran.verses
+      .map((verse) => `<span class="intro-api-verse" data-verse-key="${verse.key}">${verse.html}</span>`)
+      .join(" ");
+    if (basmalaEl) basmalaEl.innerHTML = quran.basmalaHtml ?? "";
+    statusEl.textContent = `Arabic: Quran.com API · Uthmani Tajweed · Page ${quran.pageLabel}`;
+    panel.classList.add("quran-api-ready");
+  } catch (error) {
+    if (!document.body.contains(panel)) return;
+    statusEl.textContent = "Arabic: local verified fallback · Quran.com temporarily unavailable";
+    panel.classList.add("quran-api-fallback");
+    console.warn(`Could not load Quran.com text for surah ${chapter}; using the local verified fallback.`, error);
+  }
+}
+
 function renderIntro() {
   const m = getModule();
   const isHadith = state.moduleType === "hadith";
@@ -219,13 +313,15 @@ function renderIntro() {
     <div class="card intro-card elevated">
        <div class="ribbon">${isHadith ? 'Learn the sayings of the Prophet \uFDFA. One hadith at a time, the way the companions learned.' : 'Learn Qur\'anic Arabic with understanding.'}</div>
       <div class="intro-title">
-        <div>
-          <div class="meta">${label} · ${m.title}</div>
-          <h2>${m.nameEnglish}</h2>
+        <div class="intro-title-main">
+          <div class="meta">${isHadith ? `${label} · ${m.title}` : label}</div>
+          <h2>${isHadith ? m.nameEnglish : m.title}</h2>
           ${isHadith ? `<div class="arabic arabic-name" style="font-size:1.6rem; color:var(--green-deep); margin-top:8px; text-align:left; direction:rtl;">${m.text}</div>
-          <div class="muted small" style="margin-top:4px;">${m.narrator} — ${m.source}</div>` : `<div class="arabic arabic-name">${m.nameArabic}</div>`}
+          <div class="muted small" style="margin-top:4px;">${m.narrator} — ${m.source}</div>` : ""}
         </div>
+        ${isHadith ? "" : `<div class="arabic arabic-name">${m.nameArabic}</div>`}
       </div>
+      ${isHadith ? "" : introSurahText(m)}
       <p class="intro-body">${m.intro}</p>
       <div class="intro-actions">
         <button id="btnVocab">Start Vocabulary Cards →</button>
@@ -238,6 +334,7 @@ function renderIntro() {
       </div>
     </div>
   `;
+  hydrateIntroQuranText(m);
   document.getElementById("btnVocab").addEventListener("click", () => {
     state.vocabIndex = 0;
     state.view = "vocab";

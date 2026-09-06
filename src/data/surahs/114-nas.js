@@ -6,405 +6,423 @@ export default {
   "nameArabic": "النَّاسِ",
   "nameEnglish": "An-Nas",
   "title": "Mankind",
-  "intro": "An-Nas is the last surah of the Qur'an. It teaches the believer to say, 'I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the whisperer who withdraws, who whispers in the chests of mankind, from among the jinn and mankind.' It is a surah about protection. It tells us the danger is real — there is a hidden whisperer — but the cure is also real: refuge is with Allah, the Lord of all people, not just one tribe or one land.",
+  "intro": "An-Nas is the last surah of the Qur'an, and it is a prayer of protection. Allah tells us to say it out loud, and He tells us whose protection to ask for: the Lord of all people, the King of all people, the God of all people. Ibn Kathir explains that these are three attributes of Allah — lordship, sovereignty and divinity — and that everything is created by Him, owned by Him and subservient to Him, so He commands whoever wants protection to seek refuge with Him. Then the surah names the danger: the whisperer who sneaks away, who whispers into the hearts of people, from among jinn and among people. Ibn Kathir explains that this whisperer is the devil assigned to every child of Adam, and that he whispers when a person is heedless and sneaks away when Allah is remembered. The danger is real, but so is the cure — and the last surah of the Qur'an leaves every reader with the words to ask for it.",
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary of 114:1-6 checked against Tafsir Ibn Kathir: 'These are three attributes from the attributes of the Lord, the Mighty and Majestic. They are lordship, sovereignty and divinity'; 'All things are created by Him, owned by Him, and subservient to Him'; 'He commands whoever is seeking protection to seek refuge with the One Who has these attributes from the evil of the whisperer who withdraws'; 'This (the whisperer) is the devil that is assigned to man'; and on 114:6, 'Of Jinn and An-Nas' is 'an explanation of who is it that whispers into the breasts of mankind'. Which group the word An-Nas in 114:5 covers is given as two views in the tafsir, so the student intro does not settle it.",
+    "checkedAt": "2026-08-30"
+  },
   "vocabulary": [
     {
-      "arabic": "أَعُوذُ",
-      "meaning": "I seek refuge",
-      "connection": "The Prophet ﷺ is commanded: 'I seek refuge in the Lord of mankind.'",
-      "hint": "Running to a safe shelter from a danger.",
-      "grammar": {
-        "english": "Imperfect verb, first-person singular",
-        "arabic": "فعل مضارع للمتكلم المفرد",
-        "explanation": "This verb describes the speaker's action: 'I seek refuge.' The imperfect form makes the request immediate and ongoing, as if the learner is turning to Allah right now."
-      },
+      "arabic": "قُلْ",
+      "meaning": "Say",
+      "connection": "The surah opens with a command: Allah tells the Prophet ﷺ, and every reader after him, to say this prayer of protection out loud.",
+      "hint": "A one-word order to speak what follows.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:1 (root: ع-و-ذ, Form I)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:1 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Word-by-word data for 114:1 renders أَعُوذُ as 'I seek refuge'.",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 19: 'Say, \"I seek protection with the Lord of all people.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Command verb, second person masculine singular",
+        "arabic": "فعل أمر للمخاطب المفرد المذكر",
+        "explanation": "قُلْ is an order given to one listener, the Prophet ﷺ. It is built from the root ق-و-ل, 'to say,' and its final sukūn shows the jussive form a command takes."
+      }
+    },
+    {
+      "arabic": "أَعُوذُ",
+      "meaning": "I seek protection",
+      "connection": "This is the action the whole surah is built on: turning to Allah for shelter from a hidden enemy.",
+      "hint": "Running into a safe place and closing the door.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "An-Nas 114:1 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 19: 'I seek protection with the Lord of all people.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Imperfect verb, first person singular",
+        "arabic": "فعل مضارع للمتكلم المفرد",
+        "explanation": "The opening أ marks the speaker, so the verb means 'I seek protection.' The imperfect form keeps the request open: I am seeking it now, and I keep seeking it."
+      }
+    },
+    {
+      "arabic": "بِرَبِّ",
+      "meaning": "the Lord",
+      "connection": "Protection is asked from Allah first as Lord — the One who creates, owns and cares for people.",
+      "hint": "The Master who nourishes and looks after what He owns.",
+      "source": {
+        "primary": "Qur'anic Arabic Corpus",
+        "ref": "An-Nas 114:1 word-by-word morphology",
+        "checkedAt": "2026-08-30"
+      },
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 114:1-3: 'These are three attributes from the attributes of the Lord... They are lordship, sovereignty and divinity. Thus, He is the Lord of everything.' Corpus gives بِ as the preposition 'in / with' attached to رَبِّ.",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Preposition with a genitive noun",
+        "arabic": "جار ومجرور: الباء + اسم مجرور",
+        "explanation": "بِرَبِّ joins the preposition بِ to رَبِّ. The kasrah at the end of رَبِّ is the sign of the genitive case, and the word is mudāf because it is completed by what follows it."
       }
     },
     {
       "arabic": "النَّاسِ",
-      "meaning": "mankind / the people",
-      "connection": "Allah is described as the Lord, the King, the God of mankind — three times.",
-      "hint": "All human beings together.",
-      "grammar": {
-        "english": "Genitive plural noun",
-        "arabic": "اسم جمع مجرور",
-        "explanation": "This plural noun means all people. It is majrur each time because it completes the phrases 'Lord of mankind,' 'King of mankind,' and 'God of mankind.'"
-      },
+      "meaning": "all people",
+      "connection": "Allah is Lord, King and God of all people — the refuge on offer belongs to everyone, not to one tribe.",
+      "hint": "Every human being you have ever met, and every one not yet born.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:1, 114:2, 114:3 (root: ن-و-س, plural)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:1 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:1-3: 'These are three attributes from the attributes of the Lord... They are lordship, sovereignty and divinity. Thus, He is the Lord of everything, the King of everything and the God of everything.'",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 19: 'the Lord of all people.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Definite noun, genitive singular in form, collective in meaning",
+        "arabic": "اسم معرف بالإلف واللام مجرور اللفظ",
+        "explanation": "النَّاسِ carries al- (الْـ) and a kasrah because it sits in the place of the genitive after بِرَبِّ. Its meaning is collective: all human beings."
       }
     },
     {
       "arabic": "مَلِكِ",
-      "meaning": "king / sovereign",
-      "connection": "He is the King of mankind — He rules over every soul.",
-      "hint": "The one who holds authority over a people.",
-      "grammar": {
-        "english": "Genitive noun",
-        "arabic": "اسم مجرور",
-        "explanation": "This noun is joined to رَبِّ as another description of the One whose refuge is sought. Its kasrah shows that it is majrur: the King of mankind."
-      },
+      "meaning": "the King",
+      "connection": "The second title: the One who rules every soul, so no ruler stands above the refuge we are asking for.",
+      "hint": "The one whose command is never refused in his kingdom.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:2 (root: م-ل-ك, active participle, mudaf)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:2 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:1-3: 'These are three attributes from the attributes of the Lord... They are lordship, sovereignty and divinity. Thus, He is the Lord of everything, the King of everything and the God of everything.'",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 114:1-3: 'They are lordship, sovereignty and divinity. Thus, He is the Lord of everything, the King of everything and the God of everything.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun in the genitive case, mudāf (defined by what follows)",
+        "arabic": "اسم مجرور وإضافة ما بعده إليه",
+        "explanation": "مَلِكِ is pronounced with a kasrah because it continues the description started by رَبِّ, and it is mudāf: its meaning is completed by النَّاسِ straight after it."
       }
     },
     {
       "arabic": "إِلَٰهِ",
-      "meaning": "god / deity",
-      "connection": "He is the God of mankind — the One alone worthy of worship.",
-      "hint": "The one being that is worshipped.",
-      "grammar": {
-        "english": "Genitive noun",
-        "arabic": "اسم مجرور",
-        "explanation": "This noun names the One who alone deserves worship. Its final kasrah shows that it is majrur and linked to the opening phrase of seeking refuge."
-      },
+      "meaning": "the God",
+      "connection": "The third title: the One who alone deserves the worship of people, so to Him alone a person flees for safety.",
+      "hint": "The One who is worshipped, and Him alone.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:3 (root: أ-ل-ه, defective form, mudaf)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:3 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:1-3: 'These are three attributes from the attributes of the Lord... They are lordship, sovereignty and divinity. Thus, He is the Lord of everything, the King of everything and the God of everything.'",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 23: 'The God of all people.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun in the genitive case, mudāf",
+        "arabic": "اسم مجرور وإضافة ما بعده إليه",
+        "explanation": "إِلَٰهِ is the third description in the same genitive chain, so it ends in a kasrah, and it is completed by النَّاسِ after it. The final vowel is its sign; the underlying root is أ-ل-ه."
       }
     },
     {
       "arabic": "شَرِّ",
-      "meaning": "evil / harm",
-      "connection": "We seek refuge from the evil of the whisperer.",
-      "hint": "The bad side of a thing.",
-      "grammar": {
-        "english": "Genitive noun",
-        "arabic": "اسم مجرور",
-        "explanation": "The preposition مِنْ means 'from' and makes شَرِّ majrur. The kasrah shows exactly what the believer seeks Allah's protection from: evil or harm."
-      },
+      "meaning": "evil",
+      "connection": "This is what we ask to be kept away from: the harm the whisperer tries to pull us into.",
+      "hint": "The harmful side of something.",
       "source": {
         "primary": "Lane Lexicon",
-        "ref": "root ش-ر-ر 'evil, harm, mischief'; cf. Wehr 4e",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:4 (root ش-ر-ر, 'evil, harm, mischief'; cf. Wehr 4e)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:4: refuge from 'the evil of the whisperer who withdraws'.",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 25: 'From the evil of the whisperer, who sneaks away.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun in the genitive case after the preposition مِنْ",
+        "arabic": "اسم مجرور بحرف الجرّ مِنْ",
+        "explanation": "The preposition مِنْ, 'from,' puts the noun after it in the genitive, which is why شَرِّ carries a kasrah. It is mudāf, completed by الْوَسْوَاسِ."
       }
     },
     {
       "arabic": "الْوَسْوَاسِ",
       "meaning": "the whisperer",
-      "connection": "The whisperer who pulls back after whispering.",
-      "hint": "A voice that breathes into your ear.",
-      "grammar": {
-        "english": "Genitive noun",
-        "arabic": "اسم مجرور",
-        "explanation": "This noun names the source of repeated, hidden suggestions. It is majrur because the verse seeks refuge 'from the evil of the whisperer.'"
-      },
+      "connection": "The enemy named in this surah is not an army but a voice: one who whispers suggestions into the heart.",
+      "hint": "A soft voice repeated inside your head.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:4 (root: و-س-و-س, Form II intensive active participle)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:4 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:4, from Ibn 'Abbas: 'The devil who is squatting (perched) upon the heart of the Son of Adam. So when he becomes absentminded and heedless he whispers. Then, when he remembers Allah he withdraws.'",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 114:4: 'The devil who is squatting (perched) upon the heart of the Son of Adam. So when he becomes absentminded and heedless he whispers.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Intensive active participle, definite, genitive",
+        "arabic": "اسم فاعل مبالغة للتكثير, معرف ومجرور",
+        "explanation": "الْوَسْوَاسِ is from the repeated pattern وَسْوَسَ, so the word pictures an action done again and again: the one who keeps whispering. Al- makes it definite, and the kasrah comes from شَرِّ before it."
       }
     },
     {
       "arabic": "الْخَنَّاسِ",
-      "meaning": "the one who withdraws / retreats",
-      "connection": "He withdraws when Allah is remembered, returns when Allah is forgotten.",
-      "hint": "Pulls back like a creature into its hole.",
-      "grammar": {
-        "english": "Genitive adjective",
-        "arabic": "صفة مجرورة",
-        "explanation": "This adjective describes الْوَسْوَاسِ. It tells what kind of whisperer he is: one who repeatedly retreats, especially when Allah is remembered."
-      },
+      "meaning": "who sneaks away",
+      "connection": "The same whisperer is described by his other habit: he slips away the moment Allah is remembered, then comes back.",
+      "hint": "Slipping off like an animal into its hole, ready to return.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:4 (root: خ-ن-س, Form I intensive active participle)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:4 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:4, from Ibn 'Abbas: 'The devil who is squatting (perched) upon the heart of the Son of Adam. So when he becomes absentminded and heedless he whispers. Then, when he remembers Allah he withdraws.'",
-        "checkedAt": "2026-07-22"
+        "note": "Ibn Kathir on 114:4: 'Then, when he remembers Allah he withdraws.' ClearQuran teen wording, line 25: 'the whisperer, who sneaks away.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Intensive active participle, definite, genitive, as an adjective",
+        "arabic": "اسم فاعل مبالغة, معرف ومجرور صفة",
+        "explanation": "الْخَنَّاسِ is from خ-ن-س, to retreat. It sits in the genitive as a second description of الْوَسْوَاسِ, and the intensive pattern suggests it happens repeatedly, not once."
       }
     },
     {
       "arabic": "يُوَسْوِسُ",
-      "meaning": "he whispers",
-      "connection": "He whispers evil thoughts into the chests of mankind.",
-      "hint": "A soft, repeated voice inside the chest.",
-      "grammar": {
-        "english": "Imperfect verb",
-        "arabic": "فعل مضارع",
-        "explanation": "The imperfect verb presents whispering as an action that can keep happening. Its repeated sounds also suit the quiet, repeated nature of waswasah."
-      },
+      "meaning": "whispers",
+      "connection": "Verse 5 spells out the job of the whisperer: this is the action he keeps doing inside people's hearts.",
+      "hint": "What someone does when he speaks softly into your ear.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:5 (root: و-س-و-س, Form II, 3rd person masculine singular)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:5 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:4, from Ibn 'Abbas: 'The devil who is squatting (perched) upon the heart of the Son of Adam. So when he becomes absentminded and heedless he whispers. Then, when he remembers Allah he withdraws.'",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 27: 'Who whispers into the hearts of people.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Form II imperfect verb, third person masculine singular",
+        "arabic": "فعل مضارع مزيد فيه للتكثير للغائب المفرد المذكر",
+        "explanation": "يُوَسْوِسُ is the tense that covers the present, so the whispering is described as ongoing. The middle of the word repeats the sound وَسْ, which itself pictures a repeated quiet action."
       }
     },
     {
       "arabic": "صُدُورِ",
-      "meaning": "chests / hearts",
-      "connection": "He whispers in the chests of mankind — the inner place of feelings.",
-      "hint": "The place in the body where feelings sit.",
-      "grammar": {
-        "english": "Genitive plural noun",
-        "arabic": "اسم جمع مجرور",
-        "explanation": "صُدُورِ is the plural of صَدْر, 'chest.' It follows فِي, 'in,' so it is majrur and points to the inward place reached by whispering."
-      },
+      "meaning": "hearts / chests",
+      "connection": "The whispering is aimed inward, at the chest where a person's thoughts and feelings are carried.",
+      "hint": "The inside of your chest, where your thoughts live.",
       "source": {
         "primary": "Lane Lexicon",
-        "ref": "root ص-د-ر 'chest, breast, the interior'; cf. Wehr 4e",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:5 (root ص-د-ر, 'chest, breast, the interior'; plural of صَدْر; cf. Wehr 4e)",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:5: 'Who whispers in the breasts of An-Nas.'",
-        "checkedAt": "2026-07-22"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 27: 'Who whispers into the hearts of people.' Ibn Kathir on 114:5 renders it 'Who whispers in the breasts of An-Nas.'",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Sound masculine plural noun, genitive after فِي",
+        "arabic": "جمع مذكر سالم مجرور بحرف الجرّ فِي",
+        "explanation": "صُدُورِ is the plural of صَدْر, 'chest.' The preposition فِي makes it genitive, so it ends in a kasrah, and it is in turn completed by النَّاسِ."
       }
     },
     {
       "arabic": "الْجِنَّةِ",
-      "meaning": "the jinn",
-      "connection": "The whisperer is from among the jinn and mankind — both kinds of creation.",
-      "hint": "Unseen beings that people cannot see.",
-      "grammar": {
-        "english": "Genitive collective noun",
-        "arabic": "اسم جمع مجرور",
-        "explanation": "This collective noun refers to the jinn as a group. It follows مِنَ, 'from among,' so its final kasrah shows that it is majrur."
-      },
+      "meaning": "jinn",
+      "connection": "The last verse names where the whisperers come from: some are jinn, and some are people.",
+      "hint": "Creation made from fire that ordinary eyes cannot see.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:6 (root: ج-ن-ن, plural of جنيّ)",
-        "checkedAt": "2026-06-30"
+        "ref": "An-Nas 114:6 word-by-word morphology",
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:6: '(Of Jinn and An-Nas.)'",
-        "checkedAt": "2026-07-22"
-      }
-    },
-    {
-      "arabic": "بِرَبِّ",
-      "meaning": "in the Lord / by the Lord",
-      "connection": "We seek refuge in the Lord — placing all our trust in Him.",
-      "hint": "Taking shelter inside something stronger than yourself.",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/114-nas-itani-teens.md line 29: 'From among jinn and among people.'",
+        "checkedAt": "2026-08-30"
+      },
       "grammar": {
-        "english": "Preposition with a genitive noun",
-        "arabic": "جار ومجرور: الباء + اسم مجرور",
-        "explanation": "The بِ means 'in' or 'with,' and رَبِّ means 'Lord.' The preposition makes رَبِّ majrur, so the two parts work together as one phrase."
-      },
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:1",
-        "checkedAt": "2026-06-30"
-      },
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Ibn Kathir on 114:1-3: 'These are three attributes from the attributes of the Lord... They are lordship, sovereignty and divinity. Thus, He is the Lord of everything, the King of everything and the God of everything.'",
-        "checkedAt": "2026-07-22"
-      }
-    },
-    {
-      "arabic": "قُلْ",
-      "meaning": "Say (the command)",
-      "connection": "Allah commands the Prophet ﷺ, and every reciter after him, to speak this prayer of refuge.",
-      "hint": "A direct instruction to say the words that follow.",
-      "grammar": {
-        "english": "Imperative verb",
-        "arabic": "فعل أمر",
-        "explanation": "An imperative gives a direct command. قُلْ tells the Prophet ﷺ to say this prayer aloud and teaches every believer the exact words for seeking refuge."
-      },
-      "source": {
-        "primary": "Qur'anic Arabic Corpus",
-        "ref": "An-Nas 114:1 (root: ق-و-ل, imperative)",
-        "checkedAt": "2026-07-13"
-      },
-      "verified": {
-        "status": "verified",
-        "by": "corpus.quran.com",
-        "note": "Command verb; word-by-word data for 114:1 renders قُلْ as Say.",
-        "checkedAt": "2026-07-22"
+        "english": "Collective noun, definite, genitive after مِنْ",
+        "arabic": "اسم جمع معرف مجرور بحرف الجرّ مِنَ",
+        "explanation": "الْجِنَّةِ is a collective word for the jinn. It follows مِنَ, 'from among,' so it is genitive, and وَالنَّاسِ is joined to it by وَ, 'and.'"
       }
     }
   ],
   "practice": [
     {
       "type": "ar2en",
+      "q": "What does قُلْ mean?",
+      "options": [
+        "Tell a lie",
+        "Say",
+        "Be quiet",
+        "Read it slowly"
+      ],
+      "answer": 1,
+      "explanation": "قُلْ is a command meaning 'Say.' Allah orders the Prophet ﷺ to speak the words of protection that follow."
+    },
+    {
+      "type": "ar2en",
       "q": "What does أَعُوذُ mean?",
       "options": [
-        "I seek refuge",
-        "I make a mistake",
-        "I travel far",
-        "I fall asleep"
+        "I seek protection",
+        "I give charity",
+        "I set out to travel",
+        "I forgive someone"
       ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does النَّاسِ mean here?",
-      "options": [
-        "mankind / the people",
-        "the angels only",
-        "the rulers alone",
-        "the unseen beings"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does مَلِكِ mean here?",
-      "options": [
-        "king / sovereign",
-        "sick person",
-        "tired traveler",
-        "lost merchant"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does الْوَسْوَاسِ mean?",
-      "options": [
-        "the whisperer",
-        "the morning star",
-        "the heavy rain",
-        "the loud speaker"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does الْخَنَّاسِ mean?",
-      "options": [
-        "the one who withdraws",
-        "the one who shouts",
-        "the one who sleeps",
-        "the one who writes"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'evil / harm'?",
-      "options": [
-        "شَرِّ",
-        "صُدُورِ",
-        "النَّاسِ",
-        "إِلَٰهِ"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'the jinn'?",
-      "options": [
-        "الْجِنَّةِ",
-        "الْوَسْوَاسِ",
-        "الْخَنَّاسِ",
-        "يُوَسْوِسُ"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'he whispers'?",
-      "options": [
-        "يُوَسْوِسُ",
-        "أَعُوذُ",
-        "مَلِكِ",
-        "النَّاسِ"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "meaning",
-      "q": "صُدُورِ refers to:",
-      "options": [
-        "the chests of people",
-        "the wide open markets",
-        "the very tall mountains",
-        "the swiftly flowing rivers"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "meaning",
-      "q": "إِلَٰهِ النَّاسِ means:",
-      "options": [
-        "the God of mankind",
-        "the king of a city",
-        "the slave of a tribe",
-        "the road to a land"
-      ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "أَعُوذُ means 'I seek protection.' The opening أ tells you the speaker is saying it about himself."
     },
     {
       "type": "ar2en",
       "q": "What does بِرَبِّ mean?",
       "options": [
-        "in the Lord",
-        "against the Lord",
-        "far from the Lord",
-        "without the Lord"
+        "the servant",
+        "the house",
+        "the Lord",
+        "the messenger"
       ],
-      "answer": 0
+      "answer": 2,
+      "explanation": "بِرَبِّ means 'the Lord' — the preposition بِ is attached to رَبِّ, the Master who creates and cares for what He owns."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'all people'?",
+      "options": [
+        "النَّاسِ",
+        "شَرِّ",
+        "صُدُورِ",
+        "الْجِنَّةِ"
+      ],
+      "answer": 0,
+      "explanation": "النَّاسِ means all people. It is repeated after Lord, King and God to show that every one of them belongs to Allah."
     },
     {
       "type": "ar2en",
-      "q": "What does قُلْ mean?",
+      "q": "What does مَلِكِ mean?",
       "options": [
-        "Say (the command)",
-        "Listen carefully",
-        "Walk away",
-        "Remain silent"
+        "the helper",
+        "the King",
+        "the guest",
+        "the neighbour"
       ],
-      "answer": 0
+      "answer": 1,
+      "explanation": "مَلِكِ means 'the King.' It is the second of the three titles in the surah."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'the God'?",
+      "options": [
+        "مَلِكِ",
+        "شَرِّ",
+        "إِلَٰهِ",
+        "قُلْ"
+      ],
+      "answer": 2,
+      "explanation": "إِلَٰهِ means 'the God' — the One who alone deserves worship, and here the third title of the One we ask for protection."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'evil'?",
+      "options": [
+        "شَرِّ",
+        "النَّاسِ",
+        "صُدُورِ",
+        "الْجِنَّةِ"
+      ],
+      "answer": 0,
+      "explanation": "شَرِّ means 'evil' or harm. It comes after مِنْ, 'from,' which is what we are asking to be kept away from."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does الْوَسْوَاسِ mean?",
+      "options": [
+        "the loud caller",
+        "the whisperer",
+        "the swift rider",
+        "the hidden treasure"
+      ],
+      "answer": 1,
+      "explanation": "الْوَسْوَاسِ is 'the whisperer' — a word from a repeated pattern, describing the one who keeps whispering suggestions."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does الْخَنَّاسِ mean?",
+      "options": [
+        "the one who creates",
+        "the one who hears all",
+        "who sneaks away",
+        "the one who sees far"
+      ],
+      "answer": 2,
+      "explanation": "الْخَنَّاسِ means 'who sneaks away.' He slips off when Allah is remembered and returns when a person is heedless."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does يُوَسْوِسُ mean?",
+      "options": [
+        "whispers",
+        "shouts",
+        "promises",
+        "forgets"
+      ],
+      "answer": 0,
+      "explanation": "يُوَسْوِسُ is the verb 'whispers,' and its repeated middle sound pictures an action done over and over."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'hearts / chests'?",
+      "options": [
+        "الْجِنَّةِ",
+        "صُدُورِ",
+        "النَّاسِ",
+        "قُلْ"
+      ],
+      "answer": 1,
+      "explanation": "صُدُورِ is the plural of صَدْر, 'chest.' It is the inward place the whispering is aimed at."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does الْجِنَّةِ mean?",
+      "options": [
+        "the angels",
+        "the prophets",
+        "the devils of mankind only",
+        "jinn"
+      ],
+      "answer": 3,
+      "explanation": "الْجِنَّةِ means 'jinn' — the unseen beings named in the last verse along with people."
     }
   ],
   "quiz": [
@@ -962,28 +980,31 @@ export default {
         "segments": [
           {
             "b": "قُلْ",
-            "m": "Say (the command)"
+            "m": "Say"
           },
           {
             "t": " "
           },
           {
             "b": "أَعُوذُ",
-            "m": "I seek refuge"
+            "m": "I seek protection"
           },
           {
             "t": " "
           },
           {
             "b": "بِرَبِّ",
-            "m": "in the Lord / by the Lord"
+            "m": "the Lord"
           },
           {
             "t": " "
           },
           {
             "b": "النَّاسِ",
-            "m": "mankind / the people"
+            "m": "all people"
+          },
+          {
+            "t": "."
           }
         ]
       },
@@ -992,10 +1013,10 @@ export default {
         "segments": [
           {
             "b": "مَلِكِ",
-            "m": "king / sovereign"
+            "m": "the King"
           },
           {
-            "t": " النَّاسِ"
+            "t": " النَّاسِ."
           }
         ]
       },
@@ -1004,10 +1025,10 @@ export default {
         "segments": [
           {
             "b": "إِلَٰهِ",
-            "m": "god / deity"
+            "m": "the God"
           },
           {
-            "t": " النَّاسِ"
+            "t": " النَّاسِ."
           }
         ]
       },
@@ -1015,11 +1036,11 @@ export default {
         "n": 4,
         "segments": [
           {
-            "t": "مِن "
+            "t": "مِنْ "
           },
           {
             "b": "شَرِّ",
-            "m": "evil / harm"
+            "m": "evil"
           },
           {
             "t": " "
@@ -1033,7 +1054,7 @@ export default {
           },
           {
             "b": "الْخَنَّاسِ",
-            "m": "the one who withdraws / retreats"
+            "m": "who sneaks away"
           }
         ]
       },
@@ -1041,18 +1062,18 @@ export default {
         "n": 5,
         "segments": [
           {
-            "t": "ٱلَّذِى "
+            "t": "الَّذِي "
           },
           {
             "b": "يُوَسْوِسُ",
-            "m": "he whispers"
+            "m": "whispers"
           },
           {
-            "t": " فِى "
+            "t": " فِي "
           },
           {
             "b": "صُدُورِ",
-            "m": "chests / hearts"
+            "m": "hearts / chests"
           },
           {
             "t": " النَّاسِ"
@@ -1067,7 +1088,7 @@ export default {
           },
           {
             "b": "الْجِنَّةِ",
-            "m": "the jinn"
+            "m": "jinn"
           },
           {
             "t": " وَالنَّاسِ"
@@ -1082,28 +1103,28 @@ export default {
         "n": 1,
         "segments": [
           {
-            "b": "Say (the command)",
+            "b": "Say",
             "m": "قُلْ"
           },
           {
-            "t": ": "
+            "t": ", \""
           },
           {
-            "b": "I seek refuge",
+            "b": "I seek protection",
             "m": "أَعُوذُ"
           },
           {
-            "t": " "
+            "t": " with "
           },
           {
-            "b": "in the Lord / by the Lord",
+            "b": "the Lord",
             "m": "بِرَبِّ"
           },
           {
             "t": " of "
           },
           {
-            "b": "mankind / the people",
+            "b": "all people",
             "m": "النَّاسِ"
           },
           {
@@ -1115,14 +1136,11 @@ export default {
         "n": 2,
         "segments": [
           {
-            "t": "The "
-          },
-          {
-            "b": "king / sovereign",
+            "b": "the King",
             "m": "مَلِكِ"
           },
           {
-            "t": " of mankind."
+            "t": " of all people."
           }
         ]
       },
@@ -1130,14 +1148,11 @@ export default {
         "n": 3,
         "segments": [
           {
-            "t": "The "
-          },
-          {
-            "b": "god / deity",
+            "b": "the God",
             "m": "إِلَٰهِ"
           },
           {
-            "t": " of mankind."
+            "t": " of all people."
           }
         ]
       },
@@ -1148,7 +1163,7 @@ export default {
             "t": "From the "
           },
           {
-            "b": "evil / harm",
+            "b": "evil",
             "m": "شَرِّ"
           },
           {
@@ -1162,7 +1177,7 @@ export default {
             "t": ", "
           },
           {
-            "b": "the one who withdraws / retreats",
+            "b": "who sneaks away",
             "m": "الْخَنَّاسِ"
           },
           {
@@ -1174,21 +1189,21 @@ export default {
         "n": 5,
         "segments": [
           {
-            "t": "The one who — "
+            "t": "Who "
           },
           {
-            "b": "he whispers",
+            "b": "whispers",
             "m": "يُوَسْوِسُ"
           },
           {
-            "t": " — in the "
+            "t": " into the "
           },
           {
-            "b": "chests / hearts",
+            "b": "hearts / chests",
             "m": "صُدُورِ"
           },
           {
-            "t": " of mankind."
+            "t": " of people."
           }
         ]
       },
@@ -1199,20 +1214,14 @@ export default {
             "t": "From among "
           },
           {
-            "b": "the jinn",
+            "b": "jinn",
             "m": "الْجِنَّةِ"
           },
           {
-            "t": " and mankind."
+            "t": " and among people.\""
           }
         ]
       }
     ]
-  },
-  "introVerified": {
-    "status": "verified",
-    "by": "tafsir Ibn Kathir",
-    "note": "Summary of 114:1-6 checked against Tafsir Ibn Kathir: the three attributes are 'lordship, sovereignty and divinity'; the whisperer 'is the devil that is assigned to man'; and 114:6 explains who whispers. That the surah addresses all people rather than one tribe is the lesson's own framing of 'the Lord of everything'.",
-    "checkedAt": "2026-07-22"
   }
 };

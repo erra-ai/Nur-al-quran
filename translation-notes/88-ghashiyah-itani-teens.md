@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 88, Al-Ghashiyah
+# ClearQuran (Talal Itani) — teen level — Surah 88
 
 Source: https://www.quranfor.com/teens/88
-Retrieved: 2026-07-22
-Verses: 27
+Retrieved: 2026-08-30
+Numbered ayahs: 26 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

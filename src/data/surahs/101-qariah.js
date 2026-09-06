@@ -1328,7 +1328,7 @@ export default {
         "n": 6,
         "segments": [
           {
-            "t": "Then the one whose "
+            "t": "Then the one for whom "
           },
           {
             "b": "his scales",

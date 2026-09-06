@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 99, Az-Zalzalah
+# ClearQuran (Talal Itani) — teen level — Surah 99
 
 Source: https://www.quranfor.com/teens/99
-Retrieved: 2026-07-22
-Verses: 9
+Retrieved: 2026-07-26
+Numbered ayahs: 8 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

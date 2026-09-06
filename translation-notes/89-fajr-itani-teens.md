@@ -1,8 +1,8 @@
-# ClearQuran (Talal Itani) — teen level — Surah 89, Al-Fajr
+# ClearQuran (Talal Itani) — teen level — Surah 89
 
 Source: https://www.quranfor.com/teens/89
-Retrieved: 2026-07-22
-Verses: 31
+Retrieved: 2026-08-30
+Numbered ayahs: 30 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

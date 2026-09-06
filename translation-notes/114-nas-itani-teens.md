@@ -1,8 +1,8 @@
 # ClearQuran (Talal Itani) — teen level — Surah 114
 
 Source: https://www.quranfor.com/teens/114
-Retrieved: 2026-07-22
-Verses: 7
+Retrieved: 2026-08-30
+Numbered ayahs: 6 (plus the basmalah reference at entry 0)
 
 Teen-level rendering from Talal Itani's ClearQuran project. This is the
 wording reference for `verified: { by: "ClearQuran (Talal Itani)" }` in this

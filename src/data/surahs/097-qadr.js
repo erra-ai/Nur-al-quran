@@ -6,23 +6,28 @@ export default {
   "nameArabic": "الْقَدْرِ",
   "nameEnglish": "Al-Qadr",
   "title": "The Power",
-  "intro": "Surah Al-Qadr is one of the most beloved surahs about the Qur'an itself. It announces that the Qur'an was sent down on a single night — the Night of Decree — a night so powerful and blessed that worship in it is better than worship in a thousand months. On that night, the angels and the Spirit (Jibril عليه السلام) descend by their Lord's permission, carrying every divine command and decree for the coming year. The entire night is peace — no harm, no evil, no disturbance — until the first light of dawn breaks. This is the night hidden in the last ten nights of Ramadan, a night of mercy, forgiveness, and the answering of supplications.",
+  "intro": "Surah Al-Qadr is a short surah that tells us about the Qur'an itself. It opens with the news that Allah sent the Book down on a single night — the Night of Decree — a night so blessed that worship in it is worth more than worship in a thousand months. On that night the angels and the Spirit (Jibril عليه السلام) come down by their Lord's permission, carrying every command. The whole night is peace — no harm, no evil, no disturbance — until the first light of dawn breaks. The surah never fixes a date for it; the Prophet ﷺ directed us to seek it in the last ten nights of Ramadan, standing in prayer and asking the Pardoning One to pardon.",
   "vocabulary": [
     {
-      "arabic": "أَنزَلْنَاهُ",
+      "arabic": "أَنزَلْنَـٰهُ",
       "meaning": "We sent it down / We revealed it",
       "connection": "Allah sent the Qur'an down from the Preserved Tablet to the lowest heaven.",
       "hint": "A gift lowered from the highest place to reach those below.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:1 (root: ن-ز-ل, Form IV, 1st person + pronoun)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"Allah informs that He sent the Qur'an down during the Night of Al-Qadr\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Form IV past verb, first person plural, with a third-person object pronoun",
+        "arabic": "فعل ماضٍ المزيد بالهمزة، ونون الفاعلين، والهاء للمفعول",
+        "explanation": "Form IV carries 'cause to come down'. The subject is the plural of majesty, and 'it' is the Qur'an, which the surah never actually names."
       }
     },
     {
@@ -33,47 +38,62 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:1 (root: ل-ي-ل, definite, mudaf)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 19: \"We sent it down on the Night of Power.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Feminine noun, genitive by preposition, governing the next word",
+        "arabic": "اسم مؤنث مجرور بحرف الجر، وهو مضاف",
+        "explanation": "The preposition puts it in the genitive, and it then governs al-qadr, so the phrase reads 'of the Night of Decree'."
       }
     },
     {
-      "arabic": "الْقَدْرِ",
+      "arabic": "ٱلْقَدْرِ",
       "meaning": "the Decree / the Power / the Destiny",
       "connection": "The Night of Decree — when Allah decrees all matters for the coming year.",
       "hint": "A night when the decisions of the universe are written and sent down.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:1 (root: ق-د-ر, definite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"The Virtues of the Night of Al-Qadr (the Decree)\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Verbal noun, definite, genitive as the governed word",
+        "arabic": "مصدر من ق د ر، مضاف إليه مجرور بالكسرة",
+        "explanation": "قَدْر holds measuring, decreeing and worth at once, which is why one name gives both 'the Night of Decree' and 'the Night of Power'."
       }
     },
     {
-      "arabic": "خَيْرٌ",
+      "arabic": "خَيْرٌۭ",
       "meaning": "better / greater than",
       "connection": "This single night is better than a thousand months of worship.",
       "hint": "Something so precious that a moment of it outweighs a lifetime of effort.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:3 (root: خ-ي-ر, indefinite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Comparative noun (ism tafdīl), nominative as the report",
+        "arabic": "اسم تفضيل، خبر مرفوع بالضمة",
+        "explanation": "خير is already comparative in meaning, so the مِنْ after it carries 'than': better than a thousand months."
       }
     },
     {
@@ -84,81 +104,106 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:3 (root: أ-ل-ف, indefinite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Numeral noun, genitive, governing the counted word",
+        "arabic": "اسم مجرور بالكسرة، وهو مضاف",
+        "explanation": "After ألف the counted word is singular in form but plural in sense, which is why شهر reads as 'months'."
       }
     },
     {
-      "arabic": "شَهْرٍ",
+      "arabic": "شَهْرٍۢ",
       "meaning": "months",
       "connection": "A thousand months of worship — but this one night surpasses them all.",
       "hint": "The passing of moons, each one carrying days and nights that add up to years.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:3 (root: ش-ه-ر, plural, indefinite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Singular in wording, genitive as the governed word, plural in meaning",
+        "arabic": "مفرد لفظاً جمع معنى، مضاف إليه مجرور",
+        "explanation": "One thousand of what? شهر answers in the singular form while meaning whole months — about eighty-three years."
       }
     },
     {
-      "arabic": "تَنَزَّلُ",
+      "arabic": "تَنَزَّلُ",
       "meaning": "they descend / come down",
       "connection": "The angels and the Spirit descend on this night, filling the earth with mercy.",
       "hint": "Coming down from above, wave after wave, until the sky meets the earth.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:4 (root: ن-ز-ل, Form V, 3rd person)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Form V imperfect verb (intensive), nominative",
+        "arabic": "فعل مضارع على صيغة التفعيل للتكثير، مرفوع بالضمة",
+        "explanation": "The heavier pattern pictures descent in waves rather than one coming down; the verb is treated with feminine agreement because a non-human plural counts as one feminine subject."
       }
     },
     {
-      "arabic": "الْمَلَائِكَةُ",
+      "arabic": "ٱلْمَلَـٰٓئِكَةُ",
       "meaning": "the angels",
       "connection": "Countless angels descend on this night, filling every space with light and peace.",
       "hint": "Beings of pure light, created to obey, coming down in uncountable numbers.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:4 (root: م-ل-ك, plural, definite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"the angels descend in abundance during the Night of Al-Qadr due to its abundant blessings\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Broken plural of مَلَك, definite, nominative as the subject",
+        "arabic": "جمع ملك، معرفة، فاعل مرفوع بالضمة",
+        "explanation": "The angels are the ones who descend, and Ibn Kathir notes they come down in abundance that night because of its abundant blessings."
       }
     },
     {
-      "arabic": "الرُّوحُ",
+      "arabic": "ٱلرُّوحُ",
       "meaning": "the Spirit (Jibril AS)",
       "connection": "Jibril عليه السلام, the greatest angel, descends with the angels on this night.",
       "hint": "The most honored messenger, coming down to earth with peace and decrees.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:4 (root: ر-و-ح, definite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"In reference to Ar-Ruh, it is said that here it means the angel Jibril\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun with the definite article, conjoined with وَ, nominative",
+        "arabic": "معطوف بالواو مرفوع بالضمة",
+        "explanation": "Grammatically it shares the angels' ruling. Tafsir explains ar-Ruh here as the angel Jibril, named apart from the group to single him out."
       }
     },
     {
@@ -169,377 +214,462 @@ export default {
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:4 (preposition + root أ-ذ-ن, indefinite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Preposition بِ with the verbal noun إذن, genitive and governing",
+        "arabic": "الباء حرف جر، وإذن اسم مجرور بها وهو مضاف",
+        "explanation": "'By their Lord's permission' sets a condition on the descent: the angels come down only when they are given leave."
       }
     },
     {
-      "arabic": "سَلَامٌ",
+      "arabic": "سَلَـٰمٌ",
       "meaning": "peace / safety",
       "connection": "The entire night is peace — no evil, no harm, no disturbance until dawn.",
       "hint": "A feeling of complete safety, like a warm blanket wrapped around the whole world.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:5 (root: س-ل-م, indefinite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:5: \"It is security in which Shaytan cannot do any evil or any harm\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Verbal noun from س-ل-م, indefinite, nominative as the report",
+        "arabic": "مصدر من س ل م، نكرة مرفوعة خبراً",
+        "explanation": "The indefinite form places the whole night under one label: it is nothing but peace, from the same root as salām and safety."
       }
     },
     {
-      "arabic": "الْفَجْرِ",
+      "arabic": "ٱلْفَجْرِ",
       "meaning": "the dawn / the break of light",
       "connection": "This peace lasts until the first light of dawn — when the night's blessing ends.",
       "hint": "The thin line of light on the horizon that ends the night and begins the day.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Qadr 97:5 (root: ف-ج-ر, definite)",
-        "checkedAt": "2026-06-30"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Meaning written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 27: \"Peace it is, until the break of dawn.\"",
+        "checkedAt": "2026-08-30"
+      },
+      "grammar": {
+        "english": "Noun فَجْر ('daybreak'), definite, genitive as the governed word",
+        "arabic": "مضاف إليه مجرور بالكسرة، ومعطوف على ما جرّ بحَتَّى",
+        "explanation": "The peace runs 'until the rising of dawn', so the boundary of the blessing is the first light of morning."
       }
     }
   ],
   "practice": [
     {
       "type": "ar2en",
-      "q": "What does الْقَدْرِ mean?",
+      "q": "What does أَنزَلْنَـٰهُ mean?",
       "options": [
-        "the Decree / Power",
-        "the River / Water",
-        "the Mountain / Rock",
-        "the Garden / Tree"
+        "the Decree / the Power / the Destiny",
+        "We sent it down / We revealed it",
+        "by permission / with the leave",
+        "they descend / come down"
       ],
-      "answer": 0
+      "answer": 1,
+      "explanation": "أَنزَلْنَـٰهُ means 'We sent it down / We revealed it' — Allah sent the Qur'an down from the Preserved Tablet to the lowest heaven."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does لَيْلَةِ mean?",
+      "options": [
+        "the angels",
+        "a thousand",
+        "peace / safety",
+        "the night"
+      ],
+      "answer": 3,
+      "explanation": "لَيْلَةِ means 'the night' — The Qur'an was revealed on a single night — the most blessed night of the year."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does ٱلْقَدْرِ mean?",
+      "options": [
+        "the Decree / the Power / the Destiny",
+        "better / greater than",
+        "the dawn / the break of light",
+        "months"
+      ],
+      "answer": 0,
+      "explanation": "ٱلْقَدْرِ means 'the Decree / the Power / the Destiny' — The Night of Decree — when Allah decrees all matters for the coming year."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'better / greater than'?",
+      "options": [
+        "تَنَزَّلُ",
+        "أَنزَلْنَـٰهُ",
+        "خَيْرٌۭ",
+        "بِإِذْنِ"
+      ],
+      "answer": 2,
+      "explanation": "خَيْرٌۭ means 'better / greater than' — This single night is better than a thousand months of worship."
     },
     {
       "type": "ar2en",
       "q": "What does أَلْفِ mean?",
       "options": [
+        "months",
         "a thousand",
-        "a hundred",
-        "a million",
-        "a dozen"
+        "the night",
+        "the Spirit (Jibril AS)"
       ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does تَنَزَّلُ mean?",
-      "options": [
-        "they descend",
-        "they rise up",
-        "they run away",
-        "they hide inside"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does الرُّوحُ mean?",
-      "options": [
-        "the Spirit (Jibril)",
-        "the Wind / Air",
-        "the Rain / Water",
-        "the Fire / Flame"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "ar2en",
-      "q": "What does سَلَامٌ mean?",
-      "options": [
-        "peace / safety",
-        "war / battle",
-        "fear / terror",
-        "hunger / thirst"
-      ],
-      "answer": 0
+      "answer": 1,
+      "explanation": "أَلْفِ means 'a thousand' — Better than a thousand months — that is over eighty-three years of worship."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'We sent it down'?",
+      "q": "Which word means 'months'?",
       "options": [
-        "أَنزَلْنَاهُ",
-        "تَنَزَّلُ",
-        "بِإِذْنِ",
-        "سَلَامٌ"
-      ],
-      "answer": 0
-    },
-    {
-      "type": "en2ar",
-      "q": "Which word means 'better / greater'?",
-      "options": [
-        "خَيْرٌ",
+        "شَهْرٍۢ",
         "أَلْفِ",
-        "شَهْرٍ",
-        "لَيْلَةِ"
+        "ٱلْمَلَـٰٓئِكَةُ",
+        "ٱلْفَجْرِ"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "شَهْرٍۢ means 'months' — A thousand months of worship — but this one night surpasses them all."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does تَنَزَّلُ mean?",
+      "options": [
+        "We sent it down / We revealed it",
+        "better / greater than",
+        "they descend / come down",
+        "peace / safety"
+      ],
+      "answer": 2,
+      "explanation": "تَنَزَّلُ means 'they descend / come down' — The angels and the Spirit descend on this night, filling the earth with mercy."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'the dawn'?",
+      "q": "Which word means 'the angels'?",
       "options": [
-        "الْفَجْرِ",
-        "الْقَدْرِ",
-        "الرُّوحُ",
-        "الْمَلَائِكَةُ"
+        "ٱلرُّوحُ",
+        "لَيْلَةِ",
+        "ٱلْقَدْرِ",
+        "ٱلْمَلَـٰٓئِكَةُ"
       ],
-      "answer": 0
+      "answer": 3,
+      "explanation": "ٱلْمَلَـٰٓئِكَةُ means 'the angels' — Countless angels descend on this night, filling every space with light and peace."
     },
     {
-      "type": "meaning",
-      "q": "لَيْلَةُ الْقَدْرِ is:",
+      "type": "ar2en",
+      "q": "What does ٱلرُّوحُ mean?",
       "options": [
-        "the Night of Decree",
-        "the Day of Battle",
-        "the Month of Fasting",
-        "the Hour of Prayer"
+        "the Spirit (Jibril AS)",
+        "by permission / with the leave",
+        "the dawn / the break of light",
+        "a thousand"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "ٱلرُّوحُ means 'the Spirit (Jibril AS)' — Jibril عليه السلام, the greatest angel, descends with the angels on this night."
     },
     {
-      "type": "meaning",
-      "q": "خَيْرٌ مِّنْ أَلْفِ شَهْرٍ means:",
+      "type": "en2ar",
+      "q": "Which word means 'by permission / with the leave'?",
       "options": [
-        "better than a thousand months",
-        "equal to a thousand days",
-        "less than a hundred years",
-        "same as ten nights"
+        "أَنزَلْنَـٰهُ",
+        "بِإِذْنِ",
+        "تَنَزَّلُ",
+        "خَيْرٌۭ"
       ],
-      "answer": 0
+      "answer": 1,
+      "explanation": "بِإِذْنِ means 'by permission / with the leave' — They descend by the permission of their Lord — nothing happens without His command."
+    },
+    {
+      "type": "ar2en",
+      "q": "What does سَلَـٰمٌ mean?",
+      "options": [
+        "the dawn / the break of light",
+        "the Decree / the Power / the Destiny",
+        "the angels",
+        "peace / safety"
+      ],
+      "answer": 3,
+      "explanation": "سَلَـٰمٌ means 'peace / safety' — The entire night is peace — no evil, no harm, no disturbance until dawn."
+    },
+    {
+      "type": "en2ar",
+      "q": "Which word means 'the dawn / the break of light'?",
+      "options": [
+        "لَيْلَةِ",
+        "شَهْرٍۢ",
+        "ٱلْفَجْرِ",
+        "بِإِذْنِ"
+      ],
+      "answer": 2,
+      "explanation": "ٱلْفَجْرِ means 'the dawn / the break of light' — This peace lasts until the first light of dawn — when the night's blessing ends."
     }
   ],
   "quiz": [
     {
       "category": "Vocabulary",
-      "q": "What does أَنزَلْنَاهُ mean?",
+      "q": "What does أَنزَلْنَـٰهُ mean?",
       "options": [
-        "We sent it down",
-        "We lifted it up",
-        "We hid it away",
-        "We wrote it down"
+        "by permission / with the leave",
+        "the dawn / the break of light",
+        "We sent it down / We revealed it",
+        "the Decree / the Power / the Destiny"
       ],
-      "answer": 0,
-      "explanation": "أنزلناه means We sent it down — the Qur'an was revealed from above.",
+      "answer": 2,
+      "explanation": "أنزلناه is 'We sent it down': the verb form means 'cause to come down', and the object 'it' is the Qur'an the surah never names.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"Allah informs that He sent the Qur'an down during the Night of Al-Qadr\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does الْقَدْرِ mean?",
+      "q": "Which meaning fits لَيْلَةِ?",
       "options": [
-        "the Decree / Power",
-        "the River / Water",
-        "the Mountain / Rock",
-        "the Garden / Tree"
+        "the night",
+        "better / greater than",
+        "they descend / come down",
+        "peace / safety"
       ],
       "answer": 0,
-      "explanation": "القدر means the Decree — the night when Allah decrees all matters.",
+      "explanation": "ليلة is simply 'night' in the genitive — the word that gives the whole surah its subject.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 19: \"We sent it down on the Night of Power.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does خَيْرٌ mean?",
+      "q": "What does ٱلْقَدْرِ mean?",
       "options": [
-        "better / greater",
-        "worse / lesser",
-        "same / equal",
-        "quick / fast"
+        "We sent it down / We revealed it",
+        "by permission / with the leave",
+        "the dawn / the break of light",
+        "the Decree / the Power / the Destiny"
       ],
-      "answer": 0,
-      "explanation": "خير means better. This night is better than a thousand months of worship.",
+      "answer": 3,
+      "explanation": "القدر is the loaded name of the night: decree, measure and worth in one word.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"The Virtues of the Night of Al-Qadr (the Decree)\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does أَلْفِ شَهْرٍ mean?",
+      "q": "Which meaning fits خَيْرٌۭ?",
       "options": [
-        "a thousand months",
-        "a hundred years",
-        "ten thousand days",
-        "a million hours"
+        "the dawn / the break of light",
+        "better / greater than",
+        "they descend / come down",
+        "the Spirit (Jibril AS)"
       ],
-      "answer": 0,
-      "explanation": "ألف شهر means a thousand months — over 83 years of continuous worship.",
+      "answer": 1,
+      "explanation": "خير is comparative before it ever meets مِنْ, so the pair reads 'better than'.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does تَنَزَّلُ mean?",
+      "q": "What does أَلْفِ mean?",
       "options": [
-        "they descend",
-        "they rise up",
-        "they run away",
-        "they hide inside"
+        "a thousand",
+        "the night",
+        "better / greater than",
+        "months"
       ],
       "answer": 0,
-      "explanation": "تنزل means they descend. The angels come down on this night.",
+      "explanation": "ألف is 'a thousand' — the number that turns one night into roughly eighty-three years.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does الْمَلَائِكَةُ mean?",
+      "q": "Which meaning fits شَهْرٍۢ?",
       "options": [
-        "the angels",
-        "the animals",
-        "the mountains",
-        "the oceans"
+        "the night",
+        "better / greater than",
+        "months",
+        "a thousand"
       ],
-      "answer": 0,
-      "explanation": "الملائكة means the angels. They descend in countless numbers on this night.",
+      "answer": 2,
+      "explanation": "شهر stands after 'a thousand', singular in wording but plural in meaning: months.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does الرُّوحُ mean?",
+      "q": "What does تَنَزَّلُ mean?",
+      "options": [
+        "We sent it down / We revealed it",
+        "they descend / come down",
+        "better / greater than",
+        "by permission / with the leave"
+      ],
+      "answer": 1,
+      "explanation": "تنزل is 'they descend', in the heavier form that suggests coming down again and again.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "Which meaning fits ٱلْمَلَـٰٓئِكَةُ?",
       "options": [
         "the Spirit (Jibril AS)",
-        "the Wind / Air",
-        "the Rain / Water",
-        "the Fire / Flame"
+        "the night",
+        "they descend / come down",
+        "the angels"
       ],
-      "answer": 0,
-      "explanation": "الروح means the Spirit — Jibril عليه السلام, the greatest angel.",
+      "answer": 3,
+      "explanation": "الملائكة are 'the angels', the subject who descend in abundance on that night.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"the angels descend in abundance during the Night of Al-Qadr due to its abundant blessings\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does بِإِذْنِ mean?",
+      "q": "What does ٱلرُّوحُ mean?",
       "options": [
-        "by permission / with leave",
-        "by force / by might",
-        "by speed / by haste",
-        "by silence / by quiet"
+        "the Spirit (Jibril AS)",
+        "the dawn / the break of light",
+        "better / greater than",
+        "peace / safety"
       ],
       "answer": 0,
-      "explanation": "بإذن means by permission. They descend only by Allah's command.",
+      "explanation": "الروح is 'the Spirit' — named apart from the angels, and explained in tafsir as Jibril.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"In reference to Ar-Ruh, it is said that here it means the angel Jibril\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does سَلَامٌ mean?",
+      "q": "Which meaning fits بِإِذْنِ?",
       "options": [
+        "they descend / come down",
+        "by permission / with the leave",
+        "We sent it down / We revealed it",
+        "the Decree / the Power / the Destiny"
+      ],
+      "answer": 1,
+      "explanation": "بإذن is 'by permission', and it is attached to their Lord: the descent is given, not taken.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does سَلَـٰمٌ mean?",
+      "options": [
+        "the night",
+        "the Spirit (Jibril AS)",
         "peace / safety",
-        "war / battle",
-        "fear / terror",
-        "hunger / thirst"
+        "the dawn / the break of light"
       ],
-      "answer": 0,
-      "explanation": "سلام means peace. The entire night is peace until the dawn.",
+      "answer": 2,
+      "explanation": "سلام is 'peace / safety' — the single word the surah uses for the whole night.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:5: \"It is security in which Shaytan cannot do any evil or any harm\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Vocabulary",
-      "q": "What does الْفَجْرِ mean?",
+      "q": "Which meaning fits ٱلْفَجْرِ?",
       "options": [
-        "the dawn / daybreak",
-        "the sunset / evening",
-        "the noon / midday",
-        "the midnight / darkness"
+        "the dawn / the break of light",
+        "We sent it down / We revealed it",
+        "the Decree / the Power / the Destiny",
+        "by permission / with the leave"
       ],
       "answer": 0,
-      "explanation": "الفجر means the dawn — when the night's blessing ends and light returns.",
+      "explanation": "الفجر is 'the dawn', and it marks the far edge of the night's peace.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 27: \"Peace it is, until the break of dawn.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "On which night was the Qur'an sent down?",
       "options": [
-        "The Night of Decree (Laylat al-Qadr)",
         "The Night of the Full Moon",
         "The Night of the Storm",
-        "The Night of the Journey"
+        "The Night of the Journey",
+        "The Night of Decree (Laylat al-Qadr)"
       ],
-      "answer": 0,
+      "answer": 3,
       "explanation": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ — We sent it down on the Night of Decree.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 19: \"We sent it down on the Night of Power.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "How much is this one night worth compared to other nights?",
       "options": [
+        "The surah does not say",
         "Better than a thousand months of worship",
         "Equal to exactly one month",
-        "Worth less than an ordinary night",
-        "The surah does not say"
+        "Worth less than an ordinary night"
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "خَيْرٌ مِّنْ أَلْفِ شَهْرٍ — better than a thousand months (over 83 years).",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 23: \"The Night of Power is better than a thousand months.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
@@ -554,107 +684,71 @@ export default {
       "answer": 0,
       "explanation": "تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ — the angels and the Spirit descend.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "By whose permission do the angels descend?",
       "options": [
-        "By permission of their Lord",
-        "By their own choice alone",
         "By permission of the people",
-        "They do not need permission"
+        "They do not need permission",
+        "By permission of their Lord",
+        "By their own choice alone"
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "بِإِذْنِ رَبِّهِمْ — by the permission of their Lord.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What is the entire night filled with?",
-      "options": [
-        "Peace, until the break",
-        "Thunder and lightning",
-        "Darkness and fear",
-        "Silence and emptiness"
-      ],
-      "answer": 0,
-      "explanation": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ — peace it is until dawn.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 25: \"On that night, angels and the Spirit come down, with their Lord's permission, bringing every command.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "When does the Night of Decree end?",
       "options": [
+        "It never ends",
         "At the break of dawn",
         "At the middle of the night",
-        "At sunset the next day",
-        "It never ends"
+        "At sunset the next day"
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "حَتَّىٰ مَطْلَعِ الْفَجْرِ — until the rising of dawn.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "Quote from translation-notes/97-qadr-itani-teens.md line 27: \"Peace it is, until the break of dawn.\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
       "q": "In which month is the Night of Decree hidden?",
       "options": [
-        "In the last ten nights of Ramadan",
         "In the first ten days of Dhul-Hijjah",
         "In the middle of Sha'ban",
-        "In the month of Muharram"
+        "In the month of Muharram",
+        "In the last ten nights of Ramadan"
       ],
-      "answer": 0,
-      "explanation": "The Prophet ﷺ told us to seek it in the last ten nights of Ramadan, especially the odd nights.",
+      "answer": 3,
+      "explanation": "The surah itself does not date it. Ibn Kathir cites the Prophet ﷺ: 'The Night of Al-Qadr occurs during the last ten (nights)', and it is an odd night.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"This is the Night of Al-Qadr and it occurs during the month of Ramadan\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Comprehension",
-      "q": "What is the main lesson of Surah Al-Qadr?",
+      "q": "Why is it called the Night of 'Decree' (ٱلْقَدْرِ)?",
       "options": [
-        "One night of sincere worship can outweigh a lifetime",
-        "Only the angels benefit from this night",
-        "The night is only about sleep and rest",
-        "Worship on this night is optional"
-      ],
-      "answer": 0,
-      "explanation": "The surah teaches that a single night — when worshiped with sincerity — is worth more than 83 years of worship. Value every moment.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "Why is it called the Night of 'Decree' (الْقَدْرِ)?",
-      "options": [
-        "Because Allah decrees all matters for the coming year on",
+        "Because Allah decrees every matter for the coming year",
         "Because the stars align that night",
         "Because it is the shortest night of the year",
         "Because people gather to decree laws"
@@ -662,208 +756,214 @@ export default {
       "answer": 0,
       "explanation": "القدر means decree or destiny. On this night, Allah writes the decrees for every soul for the coming year.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What should a believer do on this night?",
-      "options": [
-        "Seek it in prayer, Qur'an, and supplication",
-        "Sleep through it like any other night",
-        "Celebrate with parties and music",
-        "Ignore it because it is hidden"
-      ],
-      "answer": 0,
-      "explanation": "The Prophet ﷺ would pray long into the night during the last ten days of Ramadan, seeking this blessed night.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"The matters are determined during it, and the times of death and provisions are measured out\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
       "q": "Why is one night worth more than a thousand months?",
       "options": [
-        "It is not the night itself — it is what happened on it: the Qur'an was revealed",
+        "It is only a metaphor with no real meaning",
+        "The night is honoured by what happened in it",
         "All nights are exactly equal in value",
-        "The moon is brighter on that night",
-        "It is only a metaphor with no real meaning"
+        "The moon is brighter on that night"
       ],
-      "answer": 0,
-      "explanation": "The night's greatness comes from what it contains: the revelation of the Qur'an, the descent of angels, and the decrees of mercy. The container is honored by what it holds.",
+      "answer": 1,
+      "explanation": "The verse does not praise the darkness; it praises what came down in it. The night carries the revelation, so its worth comes from its content, not its length.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"worship during the Night of Al-Qadr is equivalent to worship performed for a period of one thousand months\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "Why does the surah mention the angels descending 'مِن كُلِّ أَمْرٍ' (for every matter)?",
+      "q": "Why does the surah mention the angels descending for every matter, not for one matter?",
       "options": [
-        "Every single affair of creation — life, death, provision, mercy — is decreed on this night",
-        "Only one matter is decreed each year",
-        "The angels descend for no reason",
-        "The phrase means the angels are confused"
+        "The angels descend for no reason at all",
+        "The phrase means the angels are confused",
+        "Every matter of life and provision is settled",
+        "Only one matter is decreed each year"
       ],
-      "answer": 0,
-      "explanation": "The angels come carrying every command for the year: who will live, who will die, who will be provided for, who will be forgiven. The entire year is written on this single night.",
+      "answer": 2,
+      "explanation": "Ibn Kathir reports Qatadah saying that matters are determined during it and the times of death and provisions are measured out — nothing of what Allah decrees is left outside the phrase.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"The matters are determined during it, and the times of death and provisions are measured out\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
-      "q": "The surah says the night is 'سَلَامٌ' (peace). What kind of peace is this?",
+      "q": "The surah says the night is \"سَلَـٰمٌ\" (peace). What kind of peace is this?",
       "options": [
-        "Complete safety from all harm, evil, and disturbance — a divine gift of tranquility",
+        "Safety from every harm Shaytan could bring",
         "Peace means the weather is calm only",
         "It means people stop fighting that night",
         "The word peace has no special meaning here"
       ],
       "answer": 0,
-      "explanation": "This is not just the absence of war. It is سلام from Allah Himself. No devil can harm, no evil can occur, no misfortune strikes. The entire earth is wrapped in a peace that comes directly from the heavens.",
+      "explanation": "Mujahid, cited by Ibn Kathir, calls it 'security in which Shaytan cannot do any evil or any harm', and Qatadah adds that all of it is good with no evil in it until dawn.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is this night hidden rather than announced clearly?",
-      "options": [
-        "So believers strive to find it, staying up many nights in worship, increasing their reward",
-        "It was lost in history and no one remembers",
-        "Allah wants to keep it a secret forever",
-        "The Prophet forgot which night it was"
-      ],
-      "answer": 0,
-      "explanation": "If the exact date were known, people might worship only that one night. By hiding it in the last ten nights, Allah invites the believer to worship for all ten — multiplying the effort and the reward.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:5: \"It is security in which Shaytan cannot do any evil or any harm\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
       "q": "The surah says the Spirit (Jibril) descends with the angels. Why mention Jibril separately?",
       "options": [
-        "Jibril is the greatest angel — his presence shows the supreme importance of this night",
-        "Jibril is a different type of being than angels",
-        "It is a random mention with no significance",
-        "Only Jibril descends, not other angels"
+        "Because Jibril is not an angel at all",
+        "Because the angels do not descend with him",
+        "To repeat the same information twice over",
+        "To give him a distinct mention of his own"
       ],
-      "answer": 0,
-      "explanation": "Jibril عليه السلام is the angel who brought the Qur'an to the Prophet ﷺ. On the anniversary of revelation, he returns to earth with all the angels. His name is mentioned separately to honor him and to show that even the mightiest angel bows to Allah's command.",
+      "answer": 3,
+      "explanation": "Ibn Kathir explains the wording as naming the distinct object apart from the general group, so Jibril is set out by himself to show the weight of the night.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Which summary best fits Al-Qadr's message?",
-      "options": [
-        "One night of revelation outweighs a lifetime; seek it in worship, for angels descend and peace covers the earth",
-        "A guide to counting months and years",
-        "A warning about the dangers of the night",
-        "A description of the moon and stars"
-      ],
-      "answer": 0,
-      "explanation": "Al-Qadr teaches that a single night can change your entire destiny. The Qur'an came down, angels fill the sky, and peace descends until dawn.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What does this surah teach about the value of time in Islam?",
-      "options": [
-        "Quality matters more than quantity — one sincere moment can outweigh years of routine",
-        "All time is equal with no special times",
-        "Only daytime matters in Islam",
-        "Time has no value in worship"
-      ],
-      "answer": 0,
-      "explanation": "A thousand months is over 83 years — almost an entire lifetime. Yet one night of sincerity can surpass it all. Islam teaches that moments are not measured by the clock but by the heart.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "The night ends at dawn. Why is this detail important?",
-      "options": [
-        "It marks the boundary of the blessing — seek it before the light comes or lose it until next year",
-        "Dawn means the night never ends",
-        "The timing has no importance at all",
-        "Dawn only matters for the dawn prayer"
-      ],
-      "answer": 0,
-      "explanation": "حتى مطلع الفجر — until dawn. The window is narrow. The blessing is limited. The believer who knows this will not waste a single hour of the night in sleep.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"a method of adding the name of the distinct object (in this case Jibril) separate from the general group\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
       "category": "Critical Thinking",
       "q": "The Qur'an was sent down on one night, yet it was revealed over 23 years. How can both be true?",
       "options": [
-        "It descended as a whole to the lowest heaven on that night, then was revealed gradually to the Prophet",
+        "The Qur'an was revealed twice on two different nights",
+        "It came down at one time, then in parts",
         "The surah contradicts itself",
-        "One of the statements must be wrong",
-        "The Qur'an was revealed twice on two different nights"
+        "One of the statements must be wrong"
       ],
-      "answer": 0,
-      "explanation": "The scholars explain that the Qur'an was sent down in its entirety from the Preserved Tablet to the lowest heaven on Laylat al-Qadr. Then Jibril brought it down to the Prophet ﷺ piece by piece over 23 years. Both are true.",
+      "answer": 1,
+      "explanation": "Ibn Kathir transmits Ibn `Abbas: the Qur'an went down all at one time from the Preserved Tablet to the House of Might in the heaven of this world, then came down in parts to the Messenger over twenty-three years.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"Allah sent the Qur'an down all at one time from the Preserved Tablet (Al-Lawh Al-Mahfuz) to the House of Might\"",
+        "checkedAt": "2026-08-30"
       }
     },
     {
-      "category": "Critical Thinking",
-      "q": "If you could only worship Allah on one night this year, which would you choose based on this surah?",
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why does the surah use the heavier verb form for 'descend' instead of the plain word for coming down?",
       "options": [
-        "A night in the last ten of Ramadan, seeking Laylat al-Qadr",
-        "Any random night of the year in this world",
-        "Only the night of Eid in this world",
-        "The surah does not help decide in this world"
+        "It is the only verb Arabic allows here",
+        "There is no difference between the two words",
+        "It adds the sense of repeated, abundant descent",
+        "It makes the angels seem smaller in number"
+      ],
+      "answer": 2,
+      "explanation": "The intensified pattern suggests much coming and going, and Ibn Kathir says the angels descend in abundance during the night due to its abundant blessings.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:4: \"the angels descend in abundance during the Night of Al-Qadr due to its abundant blessings\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "The teen translation calls ٱلْقَدْرِ 'Power' while Ibn Kathir's heading renders it 'the Decree'. Why keep the Arabic name?",
+      "options": [
+        "The single Arabic word holds several senses",
+        "Translators were unsure which sense was right",
+        "The name has no meaning in Arabic at all",
+        "Only scholars are allowed to read the title"
       ],
       "answer": 0,
-      "explanation": "The surah tells us the value of this night. The Prophet ﷺ told us where to find it. Together, they guide every believer: seek this night with all your heart, and even if you miss it, the effort itself is blessed.",
+      "explanation": "Both renderings appear in our approved references — the teen translation says 'Power' and Ibn Kathir's section heading says 'the Decree' — so keeping the name preserves the range instead of flattening it into one English word.",
       "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Feedback written from memory; needs cross-check against ClearQuran (Talal Itani), Saheeh International, Abdul Haleem, and tafsir Ibn Kathir.",
-        "checkedAt": ""
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"The Virtues of the Night of Al-Qadr (the Decree)\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Verses 2 and 3 repeat 'the Night of Power' instead of using a pronoun. What does that arrangement do?",
+      "options": [
+        "It copies the line without any purpose",
+        "It shortens the surah for memorisation only",
+        "It signals that a new topic has begun",
+        "It builds wonder before the answer arrives"
+      ],
+      "answer": 3,
+      "explanation": "The question is asked and then the words are said again before the worth is given. Ibn Kathir reads exactly this movement as Allah magnifying the status of the night He chose for the revelation of the Mighty Qur'an.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:2: \"Then Allah magnified the status of the Night of Al-Qadr, which He chose for the revelation of the Mighty Qur'an\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Verse 5 puts the word for 'peace' ahead of 'it is'. What does that word order carry?",
+      "options": [
+        "Peace had to come first to finish the rhyme",
+        "It stresses that the night is nothing but peace",
+        "Arabic word order carries no meaning here",
+        "The verse simply follows the verse before it"
+      ],
+      "answer": 1,
+      "explanation": "Leading with the quality makes it the whole report about the night. Qatadah and Ibn Zayd, quoted by Ibn Kathir, take it this way: all of it is good and there is no evil in it until dawn.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:5: \"This means all of it is good and there is no evil in it until the coming of Fajr\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Verse 2 addresses the Prophet ﷺ with 'And what can make you understand what the Night of Power is?' What does that style of address do?",
+      "options": [
+        "No one is addressed; it is a plain statement",
+        "The question is aimed at the angels alone",
+        "It is a question meant to stir wonder",
+        "The reader is asked to answer the question"
+      ],
+      "answer": 2,
+      "explanation": "The one addressed already knows the answer, so the question is not for information. Ibn Kathir treats it as Allah magnifying the status of the night before stating its worth.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:2: \"And what will make you know what the Night of Al-Qadr is\"",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Allah speaks of Himself with 'We sent it down'. What does that style of address signal?",
+      "options": [
+        "Several beings shared in sending it down",
+        "The verse was addressed to a whole crowd",
+        "It is the ordinary Arabic word for I",
+        "The plural here is one of majesty and honour"
+      ],
+      "answer": 3,
+      "explanation": "The plural of the verb is the majestic plural of the one speaker. Ibn Kathir's own retelling shows the single doer clearly: Allah informs that He sent the Qur'an down during the Night of Al-Qadr.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 97:1: \"Allah informs that He sent the Qur'an down during the Night of Al-Qadr\"",
+        "checkedAt": "2026-08-30"
       }
     }
   ],
@@ -979,5 +1079,133 @@ export default {
         ]
       }
     ]
+  },
+  "fillBlanksEn": {
+    "ayahs": [
+      {
+        "n": 1,
+        "segments": [
+          {
+            "b": "We sent it down / We revealed it",
+            "m": "أَنزَلْنَـٰهُ"
+          },
+          {
+            "t": " on the "
+          },
+          {
+            "b": "the night",
+            "m": "لَيْلَةِ"
+          },
+          {
+            "t": " of "
+          },
+          {
+            "b": "the Decree / the Power / the Destiny",
+            "m": "ٱلْقَدْرِ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 2,
+        "segments": [
+          {
+            "t": "And what can make you understand what the Night of Power is?"
+          }
+        ]
+      },
+      {
+        "n": 3,
+        "segments": [
+          {
+            "t": "The Night of Power is "
+          },
+          {
+            "b": "better / greater than",
+            "m": "خَيْرٌۭ"
+          },
+          {
+            "t": " "
+          },
+          {
+            "b": "a thousand",
+            "m": "أَلْفِ"
+          },
+          {
+            "t": " "
+          },
+          {
+            "b": "months",
+            "m": "شَهْرٍۢ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      },
+      {
+        "n": 4,
+        "segments": [
+          {
+            "t": "On that night, "
+          },
+          {
+            "b": "the angels",
+            "m": "ٱلْمَلَـٰٓئِكَةُ"
+          },
+          {
+            "t": " and "
+          },
+          {
+            "b": "the Spirit (Jibril AS)",
+            "m": "ٱلرُّوحُ"
+          },
+          {
+            "t": " "
+          },
+          {
+            "b": "they descend / come down",
+            "m": "تَنَزَّلُ"
+          },
+          {
+            "t": ", "
+          },
+          {
+            "b": "by permission / with the leave",
+            "m": "بِإِذْنِ"
+          },
+          {
+            "t": " of their Lord, bringing every command."
+          }
+        ]
+      },
+      {
+        "n": 5,
+        "segments": [
+          {
+            "b": "peace / safety",
+            "m": "سَلَـٰمٌ"
+          },
+          {
+            "t": " it is, until "
+          },
+          {
+            "b": "the dawn / the break of light",
+            "m": "ٱلْفَجْرِ"
+          },
+          {
+            "t": "."
+          }
+        ]
+      }
+    ]
+  },
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Summary of 97:1-5 checked against Tafsir Ibn Kathir. On the descent: 'Allah informs that He sent the Qur'an down during the Night of Al-Qadr, and it is a blessed night'. On how it came down: 'Allah sent the Qur'an down all at one time from the Preserved Tablet (Al-Lawh Al-Mahfuz) to the House of Might (Baytul-`Izzah), which is in the heaven of this world. Then it came down in parts to the Messenger of Allah'. On the worth of the night: 'worship during the Night of Al-Qadr is equivalent to worship performed for a period of one thousand months'. On who descends: 'the angels descend in abundance during the Night of Al-Qadr due to its abundant blessings' and 'In reference to Ar-Ruh, it is said that here it means the angel Jibril'. On every command: 'The matters are determined during it, and the times of death and provisions are measured out (i.e., decided) during it.' On the peace and its end: 'It is security in which Shaytan cannot do any evil or any harm' and 'This means all of it is good and there is no evil in it until the coming of Fajr (dawn).' On seeking it: 'for verily I saw the Night of Al-Qadr, and I was caused to forget it, and indeed it is during the last ten (nights). It is during an odd night' and the supplication 'O Allah! Verily, You are the Of the Pardoning, You love to pardon, so pardon me.' Two things are readings of the surah rather than quotations: the statement that the surah never fixes a date, which comes from looking at all five ayat, and the description of the surah as a short surah about the Qur'an itself.",
+    "checkedAt": "2026-08-30"
   }
 };

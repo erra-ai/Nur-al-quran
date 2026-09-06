@@ -1,28 +1,34 @@
 // Surah 84 · Al-Inshiqaq
-// Lesson data only. Shared behavior lives in the modules under src/.
+// Lesson data only. Shared behavior lives in src/app.js.
 export default {
   "id": "inshiqaq",
   "number": 84,
   "nameArabic": "الانْشِقَاقِ",
   "nameEnglish": "Al-Inshiqaq",
   "title": "The Sundering",
-  "intro": "Surah Al-Inshiqaq opens with a powerful description of cosmic submission on the Day of Judgment. The sky splits open and the earth stretches flat, casting out everything within it — both obeying their Lord in complete submission. The surah then addresses humanity's continuous struggle: every person is laboring toward their Lord and will certainly meet Him. People will be divided into two groups: those who receive their record in their right hand will enjoy an easy accounting and return to their families joyful, while those given their record behind their back will cry out for destruction in a blazing fire. Swearing by the twilight, the night, and the full moon, Allah reminds us that human life moves through inescapable stages toward resurrection, calling all people to believe, bow in prostration, and seek the uninterrupted reward promised to the righteous.",
+  "intro": "Surah Al-Inshiqaq shows what happens when Allah commands the end of this world: the sky splits open and the earth is stretched flat, throwing out everything inside it — both obeying their Lord as they must. Then Allah speaks directly to you: O human being, you are working hard through this life toward your Lord, and you will surely meet Him. Some will receive their record in their right hand and have an easy judgment, returning happily to their families in Paradise. Others will receive it behind their back, cry out for destruction, and enter a blazing fire because they thought they would never return to Allah. Allah swears by the glow of sunset, the night and all it covers, and the moon when it becomes full, that you will surely move from stage to stage — so why do some still not believe or bow down when the Qur'an is recited?",
+  "introVerified": {
+    "status": "verified",
+    "by": "tafsir Ibn Kathir",
+    "note": "Ibn Kathir on 84:1-5 explains splitting the heavens asunder and stretching the earth forth on the Day of Resurrection: 'When the heaven is split asunder' (84:1) meaning it listens to its Lord and obeys His command to split apart, and 'And when the earth is stretched forth' (84:3) meaning when the earth is expanded, spread out and extended, and 'And has cast out all that was in it and became empty' (84:4) meaning it throws out the dead inside of it.",
+    "checkedAt": "2026-08-30"
+  },
   "vocabulary": [
     {
       "arabic": "انشَقَّتْ",
-      "meaning": "has split open / has torn",
+      "meaning": "splits open",
       "connection": "The sky will split open on the Day of Judgment, obeying its Lord.",
       "hint": "A fabric tearing apart from top to bottom, letting light pour through.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:1 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:1 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:1 as: 'When the sky splits open.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Perfect verb, third person feminine singular (Form VII)",
@@ -32,19 +38,19 @@ export default {
     },
     {
       "arabic": "أَذِنَتْ",
-      "meaning": "listened / obeyed",
+      "meaning": "listens and obeys",
       "connection": "The sky and earth listen attentively to Allah's command and submit completely.",
       "hint": "Listening with complete obedience, as a servant listens to their Master.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:2 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:2 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 84:2 explains: 'And listens to and obeys its Lord' meaning, it listens to its Lord and obeys His command to split apart. This will occur on the Day of Judgement.",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Perfect verb, third person feminine singular",
@@ -54,19 +60,19 @@ export default {
     },
     {
       "arabic": "مُدَّتْ",
-      "meaning": "has been stretched / extended",
+      "meaning": "is stretched out",
       "connection": "The earth will be flattened and stretched out flat, leaving no mountains or valleys.",
       "hint": "Unrolling a leather scroll until it is completely flat and wide.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:3 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:3 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:3 as: 'And when the earth is stretched out.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Passive perfect verb, third person feminine singular",
@@ -76,41 +82,41 @@ export default {
     },
     {
       "arabic": "أَلْقَتْ",
-      "meaning": "has cast out / thrown out",
+      "meaning": "throws out",
       "connection": "The earth will throw out the dead buried inside it and become empty.",
       "hint": "Turning a box upside down and shaking it until everything falls out.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:4 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:4 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:4 as: 'And throws out everything inside it, becoming empty.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Perfect verb, Form IV, third person feminine singular",
         "arabic": "فعل ماض من الباب الرابع للمؤنث المفرد",
-        "explanation": "أَلْقَتْ is a past-tense Form IV verb (أَفْعَلَ) meaning 'it threw out / expelled.' The feminine ending تْ matches الْأَرْضُ (the earth)."
+        "explanation": "أَلْقَتْ is a past-tense Form IV verb (أَفْعَلَ) meaning 'it threw out.' The feminine ending تْ matches الْأَرْضُ (the earth)."
       }
     },
     {
       "arabic": "كَادِحٌ",
-      "meaning": "laboring / striving hard",
+      "meaning": "working hard",
       "connection": "Every human being is struggling and working through life toward their Lord.",
       "hint": "Someone climbing a steep hill, every single step an effort toward the top.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:6 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:6 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:6 as: 'O human being, you are working hard toward your Lord, and you will surely meet Him.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Nominative masculine singular active participle",
@@ -120,19 +126,19 @@ export default {
     },
     {
       "arabic": "مُلَاقِيهِ",
-      "meaning": "meet Him / meet the consequences",
+      "meaning": "will meet Him",
       "connection": "After all your labor in life, you will certainly meet your Lord and see your deeds.",
       "hint": "Reaching the end of a long journey and standing face-to-face with the host.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:6 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:6 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 84:6 explains: 'and you will meet' then you will meet that which you did of good or evil. He says whatever deed you do, you will meet Allah with it, whether it is good or bad.",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Active participle with third person masculine singular attached pronoun",
@@ -142,19 +148,19 @@ export default {
     },
     {
       "arabic": "يُحَاسَبُ",
-      "meaning": "he will be judged / called to account",
+      "meaning": "will have an easy judgment",
       "connection": "The believer who receives their record in the right hand will face an easy accounting.",
       "hint": "Standing before a judge who reviews your book with mercy and forgiveness.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:8 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:8 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 84:8 explains: 'he surely will receive an easy reckoning' meaning, easy without any difficulty. This means that he will not be investigated for all the minute details of his deeds.",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Passive imperfect verb, Form III, third person masculine singular",
@@ -164,19 +170,19 @@ export default {
     },
     {
       "arabic": "مَسْرُورًا",
-      "meaning": "happy / rejoicing / delighted",
+      "meaning": "happily",
       "connection": "The believer returns to their family in Paradise overjoyed with their good record.",
       "hint": "A face glowing with joy, running home to share wonderful news.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:9 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:9 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:9 as: 'And will return happily to their family.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine singular passive participle",
@@ -186,19 +192,19 @@ export default {
     },
     {
       "arabic": "ثُبُورًا",
-      "meaning": "destruction / ruin / death",
+      "meaning": "destruction",
       "connection": "The disbeliever given their record behind their back will scream for destruction.",
       "hint": "Crying out for an end because what lies ahead is too terrible to bear.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:11 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:11 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:11 as: 'Will cry out for destruction.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine singular verbal noun",
@@ -208,19 +214,19 @@ export default {
     },
     {
       "arabic": "سَعِيرًا",
-      "meaning": "a Blaze / a blazing fire",
+      "meaning": "a blazing fire",
       "connection": "The disbeliever will enter and burn in a fiercely blazing Hellfire.",
       "hint": "A raging fire that roars and burns with relentless intensity.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:12 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:12 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:12 as: 'And will enter a blazing fire.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine singular indefinite noun",
@@ -230,19 +236,19 @@ export default {
     },
     {
       "arabic": "يَحُورَ",
-      "meaning": "return / turn back",
+      "meaning": "return",
       "connection": "The disbeliever falsely assumed he would never return to Allah for judgment.",
       "hint": "A traveler who thinks his trip will last forever and he will never come home.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:14 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:14 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 84:14 explains: 'Verily, he thought that he would never return' meaning, he used to believe that he would not return to Allah, nor would Allah bring him back to life after his death.",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Subjunctive imperfect verb, third person masculine singular",
@@ -252,19 +258,19 @@ export default {
     },
     {
       "arabic": "الشَّفَقِ",
-      "meaning": "the twilight / the sunset glow",
+      "meaning": "the glow of sunset",
       "connection": "Allah swears by the twilight — the fading red sky at dusk marking the passage of day.",
       "hint": "The soft red glow in the western sky right after the sun sets.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:16 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:16 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:16 as: 'I swear by the glow of sunset.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Genitive masculine singular definite noun",
@@ -274,19 +280,19 @@ export default {
     },
     {
       "arabic": "وَسَقَ",
-      "meaning": "envelops / gathers together",
+      "meaning": "covers",
       "connection": "The oath continues by the night and all the creatures and shadows it gathers together.",
       "hint": "A blanket folding over everything, gathering birds, animals, and people into rest.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:17 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:17 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:17 as: 'And by the night and all it covers.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Perfect verb, third person masculine singular",
@@ -296,19 +302,19 @@ export default {
     },
     {
       "arabic": "اتَّسَقَ",
-      "meaning": "becomes full / reaches fullness",
+      "meaning": "becomes full",
       "connection": "And by the moon when its light comes together and reaches full completion.",
       "hint": "A silver moon growing night by night until it forms a perfect complete circle.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:18 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:18 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:18 as: 'And by the moon when it becomes full.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Perfect verb, Form VIII, third person masculine singular",
@@ -318,19 +324,19 @@ export default {
     },
     {
       "arabic": "طَبَقًا",
-      "meaning": "stage after stage / state by state",
+      "meaning": "stage after stage",
       "connection": "Human beings travel through continuous phases — from birth to age, death, and resurrection.",
       "hint": "Stepping from one step of a staircase to the next, never remaining in one place.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:19 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
         "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:19 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "note": "Ibn Kathir on 84:19 explains: 'You shall certainly travel from stage to stage' stage after stage. Your Prophet has said this. Al-Bukhari recorded this statement with this wording.",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Accusative masculine singular noun",
@@ -340,24 +346,24 @@ export default {
     },
     {
       "arabic": "غَيْرُ مَمْنُونٍ",
-      "meaning": "uninterrupted / never-ending",
+      "meaning": "never ends",
       "connection": "The reward of the believers in Paradise is continuous, eternal, and never cut off.",
       "hint": "A fountain that flows forever without stopping or drying up.",
       "source": {
         "primary": "Qur'anic Arabic Corpus",
         "ref": "Al-Inshiqaq 84:25 word-by-word morphology",
-        "checkedAt": "2026-07-21"
+        "checkedAt": "2026-08-30"
       },
       "verified": {
         "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Qur'anic Arabic Corpus for 84:25 and Tafsir Ibn Kathir. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:25 as: 'Except those who believe and do good deeds; for them is a reward that never ends.'",
+        "checkedAt": "2026-08-30"
       },
       "grammar": {
         "english": "Noun with genitive passive participle in a possessive construction",
         "arabic": "مضاف ومضاف إليه (اسم مفعول مجرور)",
-        "explanation": "غَيْرُ is a nominative adjective modifying أَجْرٌ, and مَمْنُونٍ is a genitive passive participle ('cut off / diminished'), meaning 'uninterrupted.'"
+        "explanation": "غَيْرُ is a nominative adjective modifying أَجْرٌ, and مَمْنُونٍ is a genitive passive participle ('cut off'), meaning 'uninterrupted.'"
       }
     }
   ],
@@ -366,180 +372,762 @@ export default {
       "type": "ar2en",
       "q": "What does انشَقَّتْ mean?",
       "options": [
-        "has split open / has torn",
-        "has reached complete fullness",
-        "he will be called to account",
-        "stage after stage / state by state"
+        "splits open",
+        "is stretched out",
+        "throws out",
+        "working hard"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "انشَقَّتْ means splits open. In 84:1 the sky splits open when Allah commands it on the Day of Judgment."
     },
     {
       "type": "ar2en",
       "q": "What does أَذِنَتْ mean?",
       "options": [
-        "has cast out / thrown out",
-        "happy / rejoicing / delighted",
-        "envelops / gathers together",
-        "listened / obeyed"
+        "listens and obeys",
+        "becomes full",
+        "covers",
+        "the glow of sunset"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "أَذِنَتْ means listens and obeys. The sky and the earth listen to their Lord and obey His command."
     },
     {
       "type": "ar2en",
       "q": "What does مُدَّتْ mean?",
       "options": [
-        "destruction / ruin / death",
-        "the twilight / the sunset glow",
-        "has been stretched / extended",
-        "return / turn back"
+        "is stretched out",
+        "splits open",
+        "happily",
+        "destruction"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "مُدَّتْ means is stretched out. The earth is spread flat and extended on that Day."
     },
     {
       "type": "ar2en",
       "q": "What does أَلْقَتْ mean?",
       "options": [
-        "laboring / striving hard",
-        "uninterrupted / never-ending",
-        "a Blaze / a blazing fire",
-        "has cast out / thrown out"
+        "throws out",
+        "a blazing fire",
+        "return",
+        "never ends"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "أَلْقَتْ means throws out. The earth throws out everything inside it and becomes empty."
     },
     {
       "type": "ar2en",
       "q": "What does كَادِحٌ mean?",
       "options": [
-        "laboring / striving hard",
-        "becomes full / reaches fullness",
-        "meet Him / meet the consequences",
-        "the twilight / the sunset glow"
+        "working hard",
+        "stage after stage",
+        "becomes full",
+        "the glow of sunset"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "كَادِحٌ means working hard. Every person is working hard through life toward their Lord."
     },
     {
       "type": "ar2en",
       "q": "What does مُلَاقِيهِ mean?",
       "options": [
-        "has been stretched / extended",
-        "meet Him / meet the consequences",
-        "he will be judged / called to account",
-        "destruction / ruin / death"
+        "will meet Him",
+        "is stretched out",
+        "destruction",
+        "covers"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "مُلَاقِيهِ means will meet Him. After your striving you will meet your Lord — or meet the deeds you sent ahead."
     },
     {
       "type": "ar2en",
       "q": "What does يُحَاسَبُ mean?",
       "options": [
-        "has cast out / thrown out",
-        "happy / rejoicing / delighted",
-        "he will be judged / called to account",
-        "uninterrupted / never-ending"
+        "will have an easy judgment",
+        "splits open",
+        "listens and obeys",
+        "happily"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "يُحَاسَبُ means will have an easy judgment. The believer given his record in the right hand receives an easy reckoning."
     },
     {
       "type": "ar2en",
       "q": "What does مَسْرُورًا mean?",
       "options": [
-        "listened / obeyed",
-        "stage after stage / state by state",
-        "a Blaze / a blazing fire",
-        "happy / rejoicing / delighted"
+        "happily",
+        "a blazing fire",
+        "return",
+        "throws out"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "مَسْرُورًا means happily. The believer returns to his family happily, delighted with what Allah has given him."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'destruction / ruin / death'?",
+      "q": "Which Arabic word means 'destruction'?",
       "options": [
         "ثُبُورًا",
         "سَعِيرًا",
         "يَحُورَ",
         "الشَّفَقِ"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "ثُبُورًا means destruction. The person given his record behind his back cries out for destruction."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'a Blaze / a blazing fire'?",
+      "q": "Which Arabic word means 'a blazing fire'?",
       "options": [
-        "وَسَقَ",
         "سَعِيرًا",
+        "وَسَقَ",
         "اتَّسَقَ",
         "طَبَقًا"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "سَعِيرًا means a blazing fire, the punishment entered after calling for destruction."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'return / turn back'?",
+      "q": "Which Arabic word means 'return'?",
       "options": [
-        "انشَقَّتْ",
-        "أَذِنَتْ",
         "يَحُورَ",
-        "مُدَّتْ"
+        "مُدَّتْ",
+        "انشَقَّتْ",
+        "أَذِنَتْ"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "يَحُورَ means return. The disbeliever thought he would never return to Allah for judgment."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'the twilight / the sunset glow'?",
+      "q": "Which Arabic word means 'the glow of sunset'?",
       "options": [
+        "الشَّفَقِ",
         "أَلْقَتْ",
         "كَادِحٌ",
-        "مُلَاقِيهِ",
-        "الشَّفَقِ"
+        "مُلَاقِيهِ"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "الشَّفَقِ means the glow of sunset. Allah swears by this fading red light at dusk."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'envelops / gathers together'?",
+      "q": "Which Arabic word means 'covers'?",
       "options": [
         "وَسَقَ",
         "يُحَاسَبُ",
         "مَسْرُورًا",
         "ثُبُورًا"
       ],
-      "answer": 0
+      "answer": 0,
+      "explanation": "وَسَقَ means covers or gathers. The night covers and gathers what the day scattered."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'becomes full / reaches fullness'?",
+      "q": "Which Arabic word means 'becomes full'?",
       "options": [
-        "سَعِيرًا",
         "اتَّسَقَ",
+        "سَعِيرًا",
         "يَحُورَ",
         "الشَّفَقِ"
       ],
-      "answer": 1
+      "answer": 0,
+      "explanation": "اتَّسَقَ means becomes full. It describes the moon when its light comes together completely."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'stage after stage / state by state'?",
+      "q": "Which Arabic word means 'stage after stage'?",
       "options": [
+        "طَبَقًا",
         "وَسَقَ",
         "اتَّسَقَ",
-        "طَبَقًا",
         "غَيْرُ مَمْنُونٍ"
       ],
-      "answer": 2
+      "answer": 0,
+      "explanation": "طَبَقًا means stage after stage. People move from one condition to another until resurrection."
     },
     {
       "type": "en2ar",
-      "q": "Which word means 'uninterrupted / never-ending'?",
+      "q": "Which Arabic word means 'never ends'?",
       "options": [
+        "غَيْرُ مَمْنُونٍ",
         "انشَقَّتْ",
         "أَذِنَتْ",
-        "مُدَّتْ",
-        "غَيْرُ مَمْنُونٍ"
+        "مُدَّتْ"
       ],
-      "answer": 3
+      "answer": 0,
+      "explanation": "غَيْرُ مَمْنُونٍ means never ends. The reward for believers is a gift that never ends."
+    }
+  ],
+  "quiz": [
+    {
+      "category": "Vocabulary",
+      "q": "What does انشَقَّتْ mean in 84:1?",
+      "options": [
+        "splits open",
+        "is stretched out",
+        "throws out",
+        "covers"
+      ],
+      "answer": 0,
+      "explanation": "انشَقَّتْ means splits open. The sky splits apart when Allah commands it.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:1 as: 'When the sky splits open.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does أَذِنَتْ mean when describing the sky in 84:2?",
+      "options": [
+        "was silent and still",
+        "listens and obeys",
+        "was folded and hidden",
+        "was darkened and dimmed"
+      ],
+      "answer": 1,
+      "explanation": "أَذِنَتْ means listens and obeys. The sky listens to its Lord as it must.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:2 explains: 'And listens to and obeys its Lord' meaning, it listens to its Lord and obeys His command to split apart.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does مُدَّتْ mean about the earth in 84:3?",
+      "options": [
+        "is raised into peaks",
+        "is flooded with water",
+        "is stretched out",
+        "is shaken into dust"
+      ],
+      "answer": 2,
+      "explanation": "مُدَّتْ means is stretched out. The earth is expanded and spread flat.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:3 as: 'And when the earth is stretched out.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does أَلْقَتْ mean in 84:4?",
+      "options": [
+        "throws out",
+        "holds tightly inside",
+        "paints over with light",
+        "divides into two halves"
+      ],
+      "answer": 3,
+      "explanation": "أَلْقَتْ means throws out. The earth throws out the dead within it.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:4 as: 'And throws out everything inside it, becoming empty.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does كَادِحٌ mean in 84:6?",
+      "options": [
+        "working hard",
+        "resting peacefully",
+        "sleeping deeply",
+        "waiting patiently"
+      ],
+      "answer": 0,
+      "explanation": "كَادِحٌ means working hard. Every human is toiling toward their Lord.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:6 as: 'O human being, you are working hard toward your Lord, and you will surely meet Him.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does مُلَاقِيهِ mean at the end of 84:6?",
+      "options": [
+        "will forget Him",
+        "will meet Him",
+        "will avoid His call",
+        "will question His mercy"
+      ],
+      "answer": 1,
+      "explanation": "مُلَاقِيهِ means will meet Him — meeting your Lord or meeting the deeds you sent ahead.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:6 explains: 'and you will meet' then you will meet that which you did of good or evil. Whatever deed you do, you will meet Allah with it.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does يُحَاسَبُ describe for the believer in 84:8?",
+      "options": [
+        "will have an easy judgment",
+        "will be left with no judgment",
+        "will be judged with harsh questioning",
+        "will be delayed for a final judgment"
+      ],
+      "answer": 2,
+      "explanation": "يُحَاسَبُ here means will have an easy judgment — a light presentation of deeds, not a harsh interrogation.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:8 explains: 'he surely will receive an easy reckoning' meaning, easy without any difficulty. This means that he will not be investigated for all the minute details.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does مَسْرُورًا mean in 84:9?",
+      "options": [
+        "happily",
+        "angrily",
+        "anxiously",
+        "wearily"
+      ],
+      "answer": 3,
+      "explanation": "مَسْرُورًا means happily. The believer returns to his family happily in Paradise.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:9 as: 'And will return happily to their family.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does ثُبُورًا mean in 84:11?",
+      "options": [
+        "destruction",
+        "forgiveness",
+        "guidance",
+        "provision"
+      ],
+      "answer": 0,
+      "explanation": "ثُبُورًا means destruction. Given his record behind his back, he cries for his own destruction.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:11 as: 'Will cry out for destruction.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does سَعِيرًا mean in 84:12?",
+      "options": [
+        "a quiet garden",
+        "a blazing fire",
+        "a flowing river",
+        "a lofty mountain"
+      ],
+      "answer": 1,
+      "explanation": "سَعِيرًا means a blazing fire that burns intensely.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:12 as: 'And will enter a blazing fire.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does يَحُورَ mean in 84:14?",
+      "options": [
+        "to forgive",
+        "to return",
+        "to remain",
+        "to forget"
+      ],
+      "answer": 2,
+      "explanation": "يَحُورَ means to return. He thought he would never return to Allah.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:14 explains: 'Verily, he thought that he would never return' meaning, he used to believe that he would not return to Allah, nor would Allah bring him back to life after his death.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Vocabulary",
+      "q": "What does الشَّفَقِ mean in 84:16?",
+      "options": [
+        "the bright noon sun",
+        "the dark midnight sky",
+        "the clear morning light",
+        "the glow of sunset"
+      ],
+      "answer": 3,
+      "explanation": "الشَّفَقِ means the glow of sunset — the redness that remains after the sun sets.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:16 as: 'I swear by the glow of sunset.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What happens to the sky and the earth at the opening of the surah (84:1-5)?",
+      "options": [
+        "The sky splits open and the earth is stretched out, both obeying Allah",
+        "The sky is folded like paper while the earth sinks into oceans",
+        "The sky turns green and the earth grows taller mountains",
+        "The sky remains unchanged but the earth shakes slightly"
+      ],
+      "answer": 0,
+      "explanation": "84:1-5: The sky splits open and the earth is stretched forth, each listening to its Lord as it must.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:1-5 explains: 'When the heaven is split asunder' and 'And when the earth is stretched forth' meaning when the earth is expanded, spread out and extended.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does 84:6 teach about every human being?",
+      "options": [
+        "They are working hard toward their Lord and will surely meet Him",
+        "They are resting while the earth does all the work",
+        "They can choose to stay in one stage forever",
+        "They will never see the result of their deeds"
+      ],
+      "answer": 1,
+      "explanation": "84:6 says you are working hard toward your Lord, and you will surely meet Him — meeting your deeds and meeting Him for recompense.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:6 as: 'O human being, you are working hard toward your Lord, and you will surely meet Him.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What is the difference between the two groups in 84:7-12?",
+      "options": [
+        "Both groups receive the same light reckoning and same home",
+        "The right-hand group returns happily; the behind-the-back group cries for destruction and enters a blazing fire",
+        "The right-hand group is punished first, then the other group is rewarded",
+        "Neither group feels joy or sorrow about their record"
+      ],
+      "answer": 2,
+      "explanation": "84:7-9: easy judgment and happy return; 84:10-12: cry for destruction and a blazing fire.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:7-12 explains: 'he surely will receive an easy reckoning' and 'He will invoke destruction' meaning, loss and destruction, 'And he shall enter a blazing Fire.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "Why did the person in 84:13-14 enjoy life but then call for destruction?",
+      "options": [
+        "He thought he would never return to Allah and was not watchful",
+        "He prayed at night but forgot the daytime",
+        "He gave charity but hoped for praise from people",
+        "He remembered Allah but disliked his own family"
+      ],
+      "answer": 3,
+      "explanation": "84:13-14: He was happy among his people and thought he would never return. 84:15 answers: Yes, his Lord was ever watching him.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:14 explains: 'Verily, he thought that he would never return' meaning he would not return to Allah. Ibn Kathir on 84:15 explains: 'Yes! Verily, his Lord has been ever beholding him' meaning All-Knowing and All-Aware.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What do the oaths in 84:16-18 point to?",
+      "options": [
+        "The sunset glow, the night and what it covers, and the full moon",
+        "The bright sunrise, the desert wind, and the shining stars at noon time",
+        "The tall mountains, the flowing rivers, and the green trees in springtime",
+        "The busy markets of Makkah and the passing trade caravans outside daily"
+      ],
+      "answer": 0,
+      "explanation": "84:16-18 swears by the sunset glow, the night and what it gathers, and the moon when it becomes full.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:16-18 as: 'I swear by the glow of sunset. And by the night and all it covers. And by the moon when it becomes full.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does 84:19 warn that humanity will certainly do?",
+      "options": [
+        "Travel from stage to stage",
+        "Stay in one condition without change",
+        "Avoid every test and difficulty",
+        "Return to childhood after old age"
+      ],
+      "answer": 1,
+      "explanation": "84:19: You will surely ride stage after stage — from life to death to resurrection.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:19 explains: 'You shall certainly travel from stage to stage' stage after stage. Your Prophet has said this. Ikrimah said stage after stage, weaned after he was breast feeding, and an old man after he was a young man.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Comprehension",
+      "q": "What does 84:20-23 say about those who disbelieve when the Qur'an is recited?",
+      "options": [
+        "They believe at once and prostrate with humility",
+        "They deny and reject, though Allah knows what they hide",
+        "They ask for more chapters to be revealed immediately",
+        "They already received an easy reckoning beforehand"
+      ],
+      "answer": 2,
+      "explanation": "84:20-23: They do not believe; when the Qur'an is recited they do not prostrate; they deny while Allah knows what they conceal.",
+      "verified": {
+        "status": "verified",
+        "by": "ClearQuran (Talal Itani)",
+        "note": "ClearQuran translates 84:20-23 as: 'So why don't they believe? And when the Quran is recited to them, why don't they bow down? In fact, those who disbelieve keep rejecting the truth. But Allah knows best what they hide inside.'",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "A person says, 'I was joyful with my family, so I must be safe.' What does 84:13-15 teach?",
+      "options": [
+        "Worldly joy guarantees an easy judgment",
+        "Joy among family without returning to Allah leads to loss; Allah was always watching",
+        "Only those who never felt joy can enter Paradise",
+        "Happiness should be hidden from others to avoid testing"
+      ],
+      "answer": 3,
+      "explanation": "The joy in 84:13 was heedless joy that forgot return to Allah. Safety comes from faith, not mere worldly happiness, and Allah is ever beholding.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:13-15 explains: 'Verily, he was among his people in joy' meaning happy, he did not think about consequences, and 'Yes! Verily, his Lord has been ever beholding him' meaning All-Knowing and All-Aware.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Why does the surah mention that the sky and earth obey Allah before describing human judgment?",
+      "options": [
+        "To show human beings have no choice in anything they do",
+        "To show even the greatest creations submit, so human submission and accountability are fitting",
+        "To suggest people should worship the sky and earth instead",
+        "To prove judgment will never happen to people"
+      ],
+      "answer": 0,
+      "explanation": "If the vast sky and firm earth listen and obey as they must, how much more should human beings prepare for their meeting with their Lord?",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:2 explains: 'and it must do so' meaning, it is right for it to obey the command of its Lord, because it is great and cannot be rejected. The same submission is required of the earth in 84:5.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Someone thinks an easy judgment means deeds are not shown at all. What does the surah's tafsir clarify?",
+      "options": [
+        "Easy means a harsh detailed interrogation of every single deed",
+        "Easy means a light presentation; detailed interrogation is punishment",
+        "Easy means the record is handed behind the back in secret",
+        "Easy means the person never worked hard in this life at all"
+      ],
+      "answer": 1,
+      "explanation": "Ibn Kathir cites the hadith: whoever is interrogated in detail is punished; the easy reckoning is the light presentation of deeds.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:7-8 explains: 'he surely will receive an easy reckoning' meaning, easy without any difficulty. This means that he will not be investigated for all the minute details of his deeds. For verily, whoever is reckoned like that, he will certainly be destroyed.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "What does moving 'stage after stage' imply for planning your life?",
+      "options": [
+        "You can remain in one stage if you hold tightly to it",
+        "You should prepare for the next stage — death and return to Allah — while you are in this one",
+        "Stages are chosen by other people, so no preparation matters",
+        "The oath by the moon means stages only happen at night"
+      ],
+      "answer": 2,
+      "explanation": "The stage-to-stage movement is inevitable; the surah calls people to believe and bow down before the next stage arrives.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:19 explains: 'You shall certainly travel from stage to stage' stage after stage. Al-Hasan said ease after difficulty, difficulty after ease, wealth after poverty, health after sickness, and sickness after health.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Critical Thinking",
+      "q": "Which response shows true benefit from 84:25?",
+      "options": [
+        "Believe and do righteous deeds, seeking a reward that never ends",
+        "Delay belief until the earth throws out its contents",
+        "Reject the Qur'an yet expect the uninterrupted reward",
+        "Keep rejecting the truth while hiding it inside"
+      ],
+      "answer": 3,
+      "explanation": "84:25 excepts 'those who believe and do righteous good deeds — for them is a reward that never ends.' This reward is without end or decrease.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:25 explains: 'Save those who believe and do righteous good deeds, for them is a reward that will never come to an end' Ibn Abbas said without being decreased, Mujahid said without measure, it is without end.",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why is انشَقَّتْ translated as 'splits open' rather than simply 'opened' in 84:1?",
+      "options": [
+        "It pictures a gentle opening like a door swinging ajar",
+        "It pictures the sky truly tearing apart in obedience to Allah",
+        "It pictures the sky changing colour at sunset only",
+        "It pictures the sky expanding without any tear"
+      ],
+      "answer": 0,
+      "explanation": "The Form VII verb shows the sky being split apart in response to its Lord's command, not merely opening slightly.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:1 explains: 'When the heaven is split asunder' This refers to the Day of Judgement. And 'And listens to and obeys its Lord' meaning, it listens to its Lord and obeys His command to split apart. 84:1",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Meaning Construction",
+      "q": "Why does the surah say غَيْرُ مَمْنُونٍ ('never ends') for the believers' reward in 84:25?",
+      "options": [
+        "It means a reward given once and then taken back",
+        "It means a reward that is never cut off or decreased",
+        "It means a reward only for this worldly life",
+        "It means a reward that must be earned again each day"
+      ],
+      "answer": 1,
+      "explanation": "غَيْرُ مَمْنُونٍ means not cut off — Ibn Abbas says without being decreased, Mujahid says without measure, meaning without end.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:25 explains: 'that will never come to an end' Ibn Abbas said Without being decreased. Mujahid and Ad-Dahhak both said Without measure. The result is that it is without end. 84:25",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why does the surah repeat 'And listens to its Lord — as it must' for both sky (84:2) and earth (84:5)?",
+      "options": [
+        "To fill space with repeated sounds only",
+        "To stress that all creation above and below submits willingly to Allah",
+        "To suggest the earth refused first and then obeyed",
+        "To show the sky and earth are the same object"
+      ],
+      "answer": 2,
+      "explanation": "The repetition frames the cosmic signs: neither the vast sky nor the firm earth resists Allah's command; both hear and obey as is right for them.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:2-5 explains: 'and it must do so' meaning, it is right for it to obey the command of its Lord, because it is great and cannot be rejected. The explanation for 84:5 'And listens to and obeys its Lord, and it must do so' is the same as what has preceded. 84:2-5",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Nazm",
+      "q": "Why does the surah move from the splitting sky and stretched earth (84:1-5) directly to 'O human being, you are working hard' (84:6)?",
+      "options": [
+        "To change the topic with no link to what came before",
+        "To suggest human work causes the cosmic events",
+        "To connect the end of the universe with the end of each person's journey to Allah",
+        "To describe two different days unrelated to each other"
+      ],
+      "answer": 3,
+      "explanation": "After showing the cosmos submitting to its Lord, the surah turns to the human being whose lifelong striving is also moving toward a meeting with his Lord.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:1-6 explains: 'When the heaven is split asunder' This refers to the Day of Judgement, and 'O man! Verily, you are returning towards your Lord with your deeds and actions, a sure returning' meaning you are hastening to your Lord and working deeds. 84:1-6",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Why does the surah address 'O human being' directly in 84:6 instead of speaking only in the third person?",
+      "options": [
+        "To make the warning personal and unmistakable for every listener",
+        "To limit the message to one particular person in the past",
+        "To soften the warning so no one feels addressed",
+        "To replace the earlier oaths with a new unrelated subject"
+      ],
+      "answer": 0,
+      "explanation": "The vocative 'O human being' turns the cosmic scene into a personal call: your own striving leads to your Lord.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:6 explains: 'O man! Verily, you are returning towards your Lord with your deeds and actions, a sure returning' meaning, verily you are hastening to your Lord and working deeds. 84:6",
+        "checkedAt": "2026-08-30"
+      }
+    },
+    {
+      "category": "Rhetoric",
+      "rhetoricArea": "Style of Address",
+      "q": "Why does the surah swear by the glow of sunset, the night, and the full moon (84:16-18) before saying 'You will surely travel stage to stage'?",
+      "options": [
+        "To describe beautiful scenery with no link to the message at all",
+        "To use daily light changes to make the stage-to-stage journey feel certain",
+        "To tell people to worship sunset, night, and moon themselves directly",
+        "To suggest the human journey only happens during the night time"
+      ],
+      "answer": 1,
+      "explanation": "The visible, gradual changes in the sky — dusk after day, night gathering, moon becoming full — make the gradual human journey through stages credible and near.",
+      "verified": {
+        "status": "verified",
+        "by": "tafsir Ibn Kathir",
+        "note": "Ibn Kathir on 84:16-19 explains: 'Ash-Shafaq is the redness that appears from the setting of sun' and 'and what it Wasaqa means What it gathers' and 'And by the moon when it Ittasaqa When it comes together and becomes full' then 'You shall certainly travel from stage to stage.' 84:16-19",
+        "checkedAt": "2026-08-30"
+      }
     }
   ],
   "fillBlanks": {
+    "wordBank": [
+      "انشَقَّتْ",
+      "أَذِنَتْ",
+      "مُدَّتْ",
+      "أَلْقَتْ",
+      "كَادِحٌ",
+      "مُلَاقِيهِ",
+      "يُحَاسَبُ",
+      "مَسْرُورًا",
+      "ثُبُورًا",
+      "سَعِيرًا",
+      "يَحُورَ",
+      "الشَّفَقِ",
+      "وَسَقَ",
+      "اتَّسَقَ",
+      "طَبَقًا",
+      "غَيْرُ مَمْنُونٍ"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -549,7 +1137,7 @@ export default {
           },
           {
             "b": "انشَقَّتْ",
-            "m": "has split open / has torn"
+            "m": "splits open"
           }
         ]
       },
@@ -561,7 +1149,7 @@ export default {
           },
           {
             "b": "أَذِنَتْ",
-            "m": "listened / obeyed"
+            "m": "listens and obeys"
           },
           {
             "t": " لِرَبِّهَا وَحُقَّتْ"
@@ -576,7 +1164,7 @@ export default {
           },
           {
             "b": "مُدَّتْ",
-            "m": "has been stretched / extended"
+            "m": "is stretched out"
           }
         ]
       },
@@ -588,7 +1176,7 @@ export default {
           },
           {
             "b": "أَلْقَتْ",
-            "m": "has cast out / thrown out"
+            "m": "throws out"
           },
           {
             "t": " مَا فِيهَا وَتَخَلَّتْ"
@@ -611,14 +1199,14 @@ export default {
           },
           {
             "b": "كَادِحٌ",
-            "m": "laboring / striving hard"
+            "m": "working hard"
           },
           {
             "t": " إِلَىٰ رَبِّكَ كَدْحًا ف"
           },
           {
             "b": "مُلَاقِيهِ",
-            "m": "meet Him / meet the consequences"
+            "m": "will meet Him"
           }
         ]
       },
@@ -638,7 +1226,7 @@ export default {
           },
           {
             "b": "يُحَاسَبُ",
-            "m": "he will be judged / called to account"
+            "m": "will have an easy judgment"
           },
           {
             "t": " حِسَابًا يَسِيرًا"
@@ -653,7 +1241,7 @@ export default {
           },
           {
             "b": "مَسْرُورًا",
-            "m": "happy / rejoicing / delighted"
+            "m": "happily"
           }
         ]
       },
@@ -673,7 +1261,7 @@ export default {
           },
           {
             "b": "ثُبُورًا",
-            "m": "destruction / ruin / death"
+            "m": "destruction"
           }
         ]
       },
@@ -685,7 +1273,7 @@ export default {
           },
           {
             "b": "سَعِيرًا",
-            "m": "a Blaze / a blazing fire"
+            "m": "a blazing fire"
           }
         ]
       },
@@ -705,7 +1293,7 @@ export default {
           },
           {
             "b": "يَحُورَ",
-            "m": "return / turn back"
+            "m": "return"
           }
         ]
       },
@@ -725,7 +1313,7 @@ export default {
           },
           {
             "b": "الشَّفَقِ",
-            "m": "the twilight / the sunset glow"
+            "m": "the glow of sunset"
           }
         ]
       },
@@ -737,7 +1325,7 @@ export default {
           },
           {
             "b": "وَسَقَ",
-            "m": "envelops / gathers together"
+            "m": "covers"
           }
         ]
       },
@@ -749,7 +1337,7 @@ export default {
           },
           {
             "b": "اتَّسَقَ",
-            "m": "becomes full / reaches fullness"
+            "m": "becomes full"
           }
         ]
       },
@@ -761,7 +1349,7 @@ export default {
           },
           {
             "b": "طَبَقًا",
-            "m": "stage after stage / state by state"
+            "m": "stage after stage"
           },
           {
             "t": " عَن طَبَقٍ"
@@ -816,13 +1404,31 @@ export default {
           },
           {
             "b": "غَيْرُ مَمْنُونٍ",
-            "m": "uninterrupted / never-ending"
+            "m": "never ends"
           }
         ]
       }
     ]
   },
   "fillBlanksEn": {
+    "wordBank": [
+      "splits open",
+      "listens and obeys",
+      "is stretched out",
+      "throws out",
+      "working hard",
+      "will meet Him",
+      "will have an easy judgment",
+      "happily",
+      "destruction",
+      "a blazing fire",
+      "return",
+      "the glow of sunset",
+      "covers",
+      "becomes full",
+      "stage after stage",
+      "never ends"
+    ],
     "ayahs": [
       {
         "n": 1,
@@ -831,7 +1437,7 @@ export default {
             "t": "When the sky "
           },
           {
-            "b": "has split open / has torn",
+            "b": "splits open",
             "m": "انشَقَّتْ"
           }
         ]
@@ -843,11 +1449,11 @@ export default {
             "t": "And "
           },
           {
-            "b": "listened / obeyed",
+            "b": "listens and obeys",
             "m": "أَذِنَتْ"
           },
           {
-            "t": " to its Lord, as it was bound to do"
+            "t": " its Lord, as it must"
           }
         ]
       },
@@ -858,7 +1464,7 @@ export default {
             "t": "And when the earth "
           },
           {
-            "b": "has been stretched / extended",
+            "b": "is stretched out",
             "m": "مُدَّتْ"
           }
         ]
@@ -870,7 +1476,7 @@ export default {
             "t": "And "
           },
           {
-            "b": "has cast out / thrown out",
+            "b": "throws out",
             "m": "أَلْقَتْ"
           },
           {
@@ -882,7 +1488,7 @@ export default {
         "n": 5,
         "segments": [
           {
-            "t": "And listened to its Lord, as it was bound to do"
+            "t": "And listens to its Lord, as it must"
           }
         ]
       },
@@ -893,14 +1499,14 @@ export default {
             "t": "O human being! You are "
           },
           {
-            "b": "laboring / striving hard",
+            "b": "working hard",
             "m": "كَادِحٌ"
           },
           {
             "t": " toward your Lord, and you will "
           },
           {
-            "b": "meet Him / meet the consequences",
+            "b": "will meet Him",
             "m": "مُلَاقِيهِ"
           }
         ]
@@ -909,7 +1515,7 @@ export default {
         "n": 7,
         "segments": [
           {
-            "t": "Then as for whoever is given his record in his right hand"
+            "t": "Then as for whoever is given their record in their right hand"
           }
         ]
       },
@@ -917,14 +1523,11 @@ export default {
         "n": 8,
         "segments": [
           {
-            "t": "So "
+            "t": "He "
           },
           {
-            "b": "he will be judged / called to account",
+            "b": "will have an easy judgment",
             "m": "يُحَاسَبُ"
-          },
-          {
-            "t": " with an easy accounting"
           }
         ]
       },
@@ -935,7 +1538,7 @@ export default {
             "t": "And he will return to his family "
           },
           {
-            "b": "happy / rejoicing / delighted",
+            "b": "happily",
             "m": "مَسْرُورًا"
           }
         ]
@@ -944,7 +1547,7 @@ export default {
         "n": 10,
         "segments": [
           {
-            "t": "But as for whoever is given his record behind his back"
+            "t": "But as for whoever is given their record behind their back"
           }
         ]
       },
@@ -955,7 +1558,7 @@ export default {
             "t": "He will cry out for "
           },
           {
-            "b": "destruction / ruin / death",
+            "b": "destruction",
             "m": "ثُبُورًا"
           }
         ]
@@ -967,7 +1570,7 @@ export default {
             "t": "And he will enter "
           },
           {
-            "b": "a Blaze / a blazing fire",
+            "b": "a blazing fire",
             "m": "سَعِيرًا"
           }
         ]
@@ -976,7 +1579,7 @@ export default {
         "n": 13,
         "segments": [
           {
-            "t": "Indeed, he used to live among his people in joy"
+            "t": "Indeed, he used to be happy among his family"
           }
         ]
       },
@@ -987,7 +1590,7 @@ export default {
             "t": "He thought that he would never "
           },
           {
-            "b": "return / turn back",
+            "b": "return",
             "m": "يَحُورَ"
           },
           {
@@ -1010,7 +1613,7 @@ export default {
             "t": "So I swear by "
           },
           {
-            "b": "the twilight / the sunset glow",
+            "b": "the glow of sunset",
             "m": "الشَّفَقِ"
           }
         ]
@@ -1022,7 +1625,7 @@ export default {
             "t": "And by the night and all that it "
           },
           {
-            "b": "envelops / gathers together",
+            "b": "covers",
             "m": "وَسَقَ"
           }
         ]
@@ -1034,7 +1637,7 @@ export default {
             "t": "And by the moon when it "
           },
           {
-            "b": "becomes full / reaches fullness",
+            "b": "becomes full",
             "m": "اتَّسَقَ"
           }
         ]
@@ -1046,7 +1649,7 @@ export default {
             "t": "You will surely move "
           },
           {
-            "b": "stage after stage / state by state",
+            "b": "stage after stage",
             "m": "طَبَقًا"
           },
           {
@@ -1098,556 +1701,14 @@ export default {
         "n": 25,
         "segments": [
           {
-            "t": "Except those who believe and do righteous deeds; for them is a reward that is "
+            "t": "Except those who believe and do righteous deeds; for them is a reward that "
           },
           {
-            "b": "uninterrupted / never-ending",
+            "b": "never ends",
             "m": "غَيْرُ مَمْنُونٍ"
           }
         ]
       }
     ]
-  },
-  "quiz": [
-    {
-      "category": "Vocabulary",
-      "q": "What does انشَقَّتْ mean in the opening verse of Surah Al-Inshiqaq?",
-      "options": [
-        "has split open / has torn",
-        "has built strong foundations",
-        "has disappeared completely",
-        "has turned dark and shadowy"
-      ],
-      "answer": 0,
-      "explanation": "انشَقَّتْ means has split open. Verse 1 describes the sky tearing open at Allah's command on Judgment Day.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does أَذِنَتْ mean when describing the sky and earth?",
-      "options": [
-        "refused to listen",
-        "demanded a sign",
-        "remained motionless",
-        "listened / obeyed"
-      ],
-      "answer": 3,
-      "explanation": "أَذِنَتْ means listened and obeyed. Both the sky and earth listen attentively to their Lord's command.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does مُدَّتْ mean in reference to the earth on Judgment Day?",
-      "options": [
-        "has been shaken into dust",
-        "has been raised into mountains",
-        "has been stretched / extended",
-        "has been flooded with water"
-      ],
-      "answer": 2,
-      "explanation": "مُدَّتْ means has been stretched out. The earth will be flattened flat like a scroll, leaving no mountains.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why is ٱنشَقَّتْ translated as 'split open' or 'sundered,' rather than simply 'opened'?",
-      "options": [
-        "It describes a gentle opening that allows angels to descend peacefully",
-        "It describes the sky truly splitting apart in obedience to Allah's command",
-        "It indicates that the sky will be painted a new color on that Day",
-        "It means the sky will expand outward without any tears or cracks"
-      ],
-      "answer": 1,
-      "explanation": "انشَقَّتْ comes from the root ش-ق-ق, which means splitting or cleaving. The verse describes the sky actually splitting apart as it obeys Allah's command, not merely opening like a door.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on Al-Inshiqaq 84:1 and root morphology in Qur'anic Arabic Corpus.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does أَلْقَتْ mean in Verse 4?",
-      "options": [
-        "has gathered treasures together",
-        "has covered everything in shadow",
-        "has absorbed water from above",
-        "has cast out / thrown out"
-      ],
-      "answer": 3,
-      "explanation": "أَلْقَتْ means has cast out or expelled. The earth will expel the dead from within it.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does كَادِحٌ mean in Verse 6?",
-      "options": [
-        "laboring / striving hard",
-        "resting peacefully at home",
-        "seeking worldly wealth only",
-        "traveling to distant lands"
-      ],
-      "answer": 0,
-      "explanation": "كَادِحٌ means laboring or striving hard. Every human being is making continuous effort through life toward Allah.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does مُلَاقِيهِ mean when addressed to the human being?",
-      "options": [
-        "escaping from Him safely",
-        "meet Him / meet the consequences",
-        "forgetting His clear commands",
-        "requesting more time from Him"
-      ],
-      "answer": 1,
-      "explanation": "مُلَاقِيهِ means meeting Him. After all your labor in life, you will meet your Lord and see your deeds.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does يُحَاسَبُ mean for the person who receives their record in the right hand?",
-      "options": [
-        "he will be punished severely",
-        "he will be turned away unexamined",
-        "he will be made to wait forever",
-        "he will be judged / called to account"
-      ],
-      "answer": 3,
-      "explanation": "يُحَاسَبُ means he will be judged or called to account. The righteous face an easy, forgiving audit.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why does the surah transition directly from cosmic collapse to addressing the human being with 'كَادِحٌ' (laboring)?",
-      "options": [
-        "To suggest that human labor and worldly work are what directly cause the cosmic collapse",
-        "To contrast the grand scale of cosmic creation with the complete insignificance of human labor",
-        "To connect the ultimate end of the universe with the end of each person's individual struggle",
-        "To change the overall subject completely from Judgment Day to ordinary earthly human occupations"
-      ],
-      "answer": 2,
-      "explanation": "After showing the sky and earth submitting to Allah's final command, the surah reminds man that his lifelong striving is also moving rapidly toward a final meeting with his Lord.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on Al-Inshiqaq 84:1-6. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does مَسْرُورًا mean when describing the believer's return to his family?",
-      "options": [
-        "anxious and filled with fear",
-        "silent and contemplating past sins",
-        "weary from the long journey",
-        "happy / rejoicing / delighted"
-      ],
-      "answer": 3,
-      "explanation": "مَسْرُورًا means happy and delighted. The believer returns home in Paradise filled with joy over their easy record.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does ثُبُورًا mean when uttered by the disbeliever receiving his record behind his back?",
-      "options": [
-        "destruction / ruin / death",
-        "forgiveness and second chance",
-        "wealth and worldly honor",
-        "patience and peaceful quiet"
-      ],
-      "answer": 0,
-      "explanation": "ثُبُورًا means destruction or ruin. Seeing his record, he cries out for death to end his misery.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does سَعِيرًا mean in Verse 12?",
-      "options": [
-        "a garden with flowing rivers",
-        "a Blaze / a blazing fire",
-        "a deep ocean of darkness",
-        "a cold valley of ice"
-      ],
-      "answer": 1,
-      "explanation": "سَعِيرًا means a fiercely blazing fire. It describes the intense punishment for those who denied accountability.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does يَحُورَ mean in Verse 14?",
-      "options": [
-        "perform righteous deeds",
-        "speak truthful words",
-        "return / turn back",
-        "build permanent homes"
-      ],
-      "answer": 2,
-      "explanation": "يَحُورَ means to return or turn back. The disbeliever foolishly assumed he would never return to Allah for judgment.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) Why does the surah repeat 'وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ' for both the sky and the earth?",
-      "options": [
-        "To complete a poetic rhyme scheme across the opening verses without adding any new meaning",
-        "To emphasize that all parts of creation, above and below, submit willingly and obediently to Allah",
-        "To reveal that the sky and the earth initially refused Allah's command before submitting",
-        "To suggest that the sky above and the earth below share the exact same physical form"
-      ],
-      "answer": 1,
-      "explanation": "The dual repetition establishes that neither the vast sky above nor the solid earth below can resist Allah's command; both listen and obey as is their true nature.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on Al-Inshiqaq 84:2-5.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Vocabulary",
-      "q": "What does الشَّفَقِ mean in Verse 16?",
-      "options": [
-        "the bright morning sun in sky",
-        "the dark midnight hour of night",
-        "the full shining moon at dusk",
-        "the twilight / the sunset glow"
-      ],
-      "answer": 3,
-      "explanation": "الشَّفَقِ means the twilight or red sunset glow. Allah swears by it as a sign of day turning to night.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Was signed off against ClearQuran (Talal Itani) (Dr. Mustafa Khattab), replaced by ClearQuran (Talal Itani) on 2026-07-22. The two translations word things differently, so this has NOT been re-checked and returns to unverified. Check the wording against Itani before signing off.",
-        "checkedAt": ""
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What happens to the sky and earth at the start of Surah Al-Inshiqaq?",
-      "options": [
-        "The sky splits open and the earth stretches flat, both obeying Allah",
-        "The sun rises from the west while mountains turn into clouds",
-        "The oceans freeze into ice and the stars fall into the sea",
-        "The moon splits into two halves while rivers dry up"
-      ],
-      "answer": 0,
-      "explanation": "Verses 1-4 state that the sky splits open and the earth stretches flat, both listening and obeying Allah.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:1-5. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "How will the accounting be for the person who receives their record in their right hand?",
-      "options": [
-        "They will face a strict, line-by-line examination of every small mistake",
-        "They will be given an easy accounting and return home to Paradise joyful",
-        "Their record will be thrown away without any review by the noble angels",
-        "They will be asked to account for other people's sins and mistakes"
-      ],
-      "answer": 1,
-      "explanation": "Verses 7-9 explain that receiving the record in the right hand leads to an easy accounting (حِسَابًا يَسِيرًا) and joyful reunion.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:7-9. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What is the reaction of the person who receives their record behind their back?",
-      "options": [
-        "He celebrates with his old companions in luxury",
-        "He claims that the record belongs to someone else",
-        "He cries out for destruction and enters a blazing fire",
-        "He asks for more time to perform good deeds"
-      ],
-      "answer": 2,
-      "explanation": "Verses 10-12 state that receiving the record behind the back causes the person to call for destruction (ثُبُورًا) and enter Hellfire.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:10-12. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Meaning Construction & Translation) Why is غَيْرُ مَمْنُونٍ translated as 'uninterrupted' or 'never-ending,' rather than just 'generous'?",
-      "options": [
-        "It emphasizes that the final reward is given only once at the very beginning of entry into Paradise",
-        "It means the eternal reward in Paradise requires constant ongoing payment and hard physical labor from the believers",
-        "It shows that the reward will never be cut off or decreased in any way",
-        "It indicates that the reward in Paradise is strictly limited to a fixed temporary period of time overall"
-      ],
-      "answer": 2,
-      "explanation": "According to Tafsir Ibn Kathir, غَيْرُ مَمْنُونٍ means a reward that is without end, decrease, or interruption.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Rhetoric point checked against Tafsir Ibn Kathir on Al-Inshiqaq 84:25. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What false belief led the wrongdoer to live carelessly among his family in worldly life?",
-      "options": [
-        "He believed that wealth would protect him from old age",
-        "He believed that angels would intercede for him without faith",
-        "He believed that good deeds were unnecessary for salvation",
-        "He thought that he would never return to Allah for judgment"
-      ],
-      "answer": 3,
-      "explanation": "Verse 14 states 'إِنَّهُ ظَنَّ أَن لَّن يَحُورَ' — he assumed he would never return to Allah to face accountability.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:13-14. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What three natural signs does Allah swear by in Verses 16-18?",
-      "options": [
-        "The twilight, the night and what it envelops, and the full moon",
-        "The morning sun, the mountain peaks, and the deep ocean",
-        "The blowing winds, the heavy rain clouds, and thunder",
-        "The stars of the sky, the olive tree, and Mount Sinai"
-      ],
-      "answer": 0,
-      "explanation": "Verses 16-18 swear by the twilight (الشَّفَقِ), night (اللَّيْلِ), and moon when full (الْقَمَرِ إِذَا اتَّسَقَ).",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:16-18. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What question does the surah ask regarding those who deny the message despite seeing these signs?",
-      "options": [
-        "Why do they not build stronger houses for protection against storms?",
-        "What is wrong with them that they do not believe or prostrate?",
-        "Why do they not travel across the earth to seek wealth?",
-        "Who taught them to recite poetry instead of seeking divine truth?"
-      ],
-      "answer": 1,
-      "explanation": "Verses 20-21 ask: 'What is wrong with them that they do not believe, and when the Qur'an is recited to them they do not prostrate?'",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:20-21. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Comprehension",
-      "q": "What ultimate promise is given to those who believe and do righteous deeds?",
-      "options": [
-        "They will receive worldly kingdoms and endless wealth",
-        "They will be tested again with hardship in Paradise",
-        "They will have an uninterrupted, never-ending reward",
-        "They will be elevated above the noble angels in rank"
-      ],
-      "answer": 2,
-      "explanation": "Verse 25 promises 'لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ' — an uninterrupted, perpetual reward in Paradise.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:25. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Nazm / Structure) Why do the oaths of twilight, night, and full moon immediately precede 'You will move stage after stage'?",
-      "options": [
-        "Visible transitions in creation mirror humanity's movement through one ordained stage after another",
-        "The oaths are intended to teach astronomical calculations for night prayers",
-        "The night and moon are mentioned to show that spiritual growth happens only in darkness",
-        "The passage separates cosmic phenomena from human accountability"
-      ],
-      "answer": 0,
-      "explanation": "Twilight turns to night, and the crescent grows into a full moon. These visible changes prepare the listener for humanity's own passage through life, death, resurrection, and judgment.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Structural connection checked against on Al-Inshiqaq 84:16-19, which links the changing natural phenomena with humanity moving from stage to stage. Removed tafsir was the only source checked here, so this returns to unverified on 2026-07-22; re-check against tafsir-notes/ before signing off.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why does the surah emphasize that both the sky and earth 'listened and obeyed' Allah?",
-      "options": [
-        "To remind arrogant human beings that massive creation submits to Allah, so man should submit as well",
-        "To explain that the sky above and the earth below possess human-like ears, speech, and independent intelligence",
-        "To prove that physical nature operates completely independently of divine decree and divine authority",
-        "To suggest that inanimate physical objects will be rewarded in Paradise alongside all the righteous human believers"
-      ],
-      "answer": 0,
-      "explanation": "If even the vast heavens and solid earth submit instantly to Allah's command, human beings — who are far smaller — have no reason for arrogance or disobedience.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:2-5. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What lesson does 'كَادِحٌ إِلَىٰ رَبِّكَ' (laboring toward your Lord) teach about human effort in this life?",
-      "options": [
-        "Only physical manual labor and hard work have true spiritual value in Islam",
-        "Life inherently involves effort and struggle, and every single action leads toward meeting Allah",
-        "Human effort and continuous labor can alter the timing of the Judgment Day",
-        "Striving and laboring are required only during times of severe worldly personal hardship"
-      ],
-      "answer": 1,
-      "explanation": "Every person works hard in life for something; the surah reminds us that all our striving is ultimately a journey leading to our Creator.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Checked against on 84:6. Removed tafsir was the only source checked here, so this returns to unverified on 2026-07-22; re-check against tafsir-notes/ before signing off.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "Why is receiving the record 'behind the back' a sign of disgrace and dread?",
-      "options": [
-        "Because the left hand is severely injured and cannot hold any heavy paper record on that Day",
-        "Because the person is forced by the angels to read their record upside down from behind",
-        "Because it is placed in the left hand while the hand is bent behind the back in humiliation",
-        "Because angels stand behind all human beings when the final records of deeds are distributed"
-      ],
-      "answer": 2,
-      "explanation": "Receiving the record behind the back is a sign of extreme humiliation. Tafsir Ibn Kathir mentions the record is placed in the left hand which is bent behind the back.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:10. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What contrast does the surah draw between worldly joy and Hereafter joy?",
-      "options": [
-        "Worldly joy is completely eternal while Hereafter joy is temporary and short-lived for all the believers",
-        "Worldly joy comes from sincere worship while Hereafter joy comes strictly from accumulating worldly wealth",
-        "Both forms of joy lead to the exact same final outcome on the Day of Judgment",
-        "Careless worldly joy forgetting Allah leads to ruin, while righteous effort leads to permanent joy in Paradise"
-      ],
-      "answer": 3,
-      "explanation": "The disbeliever was joyful among his family while ignoring Allah and met ruin; the believer strives with care and earns everlasting joy in Paradise.",
-      "verified": {
-        "status": "verified",
-        "by": "tafsir Ibn Kathir",
-        "note": "Checked against Tafsir Ibn Kathir on 84:9 & 13. Non-Ibn-Kathir tafsir removed 2026-07-22; sign-off now rests on the remaining source and has not been re-read against tafsir-notes/.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Rhetoric",
-      "q": "(Rhetoric - Style of Address) Why does the surah use 'فَبَشِّرْهُم' (give them good news) when announcing a painful punishment?",
-      "options": [
-        "It is an error in translation, as the root word bashar only means happy news",
-        "It is a powerful rhetorical irony (tahakkum) that highlights the grim reality waiting for persistent deniers",
-        "It promises that the severe punishment will eventually turn into a lasting spiritual blessing for all",
-        "It is addressed exclusively to believers to comfort them during times of severe worldly persecution"
-      ],
-      "answer": 1,
-      "explanation": "Using 'good news' (بَشِّرْهُم) for a painful torment is a form of stylistic irony (تَهَكُّم), sarcastically contrasting their expectation of worldly success with their actual painful fate.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Rhetoric point checked against on Al-Inshiqaq 84:24, which supports the interpretation of tahakkum (rhetorical irony). Removed tafsir was the only source checked here, so this returns to unverified on 2026-07-22; re-check against tafsir-notes/ before signing off.",
-        "checkedAt": "2026-07-21"
-      }
-    },
-    {
-      "category": "Critical Thinking",
-      "q": "What spiritual lesson does 'طَبَقًا عَن طَبَقٍ' (stage after stage) provide for a believer's daily life?",
-      "options": [
-        "Change is constant, so a believer must remain steadfast in faith through every transition of life",
-        "Human beings remain in a single unchanging spiritual state from birth until their final death",
-        "Physical aging is the only transformation and transition mentioned anywhere in the entire holy Qur'an",
-        "Believers should avoid planning for the future because life stages change randomly without divine purpose"
-      ],
-      "answer": 0,
-      "explanation": "Understanding that life moves through stages reminds the believer that earthly hardship and ease are temporary, encouraging patience and focus on the eternal goal.",
-      "verified": {
-        "status": "unverified",
-        "by": "self",
-        "note": "Checked against on 84:19. Removed tafsir was the only source checked here, so this returns to unverified on 2026-07-22; re-check against tafsir-notes/ before signing off.",
-        "checkedAt": "2026-07-21"
-      }
-    }
-  ]
+  }
 };
