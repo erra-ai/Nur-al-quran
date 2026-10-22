@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guilt, Regret, and Tawbah · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 6 · When the Heart Feels Dirty</div><h1>Guilt, Regret, and Tawbah</h1><div class="rule">Guilt is Allah's mercy knocking — tawbah answers the door.</div><p class="subtitle">A story-centered Islamic SEL lesson that teaches children the difference between guilt that drives them TO Allah and regret that drives them into hiding — and how real tawbah works, every single time.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Moral repair</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Tawbah Path: Stop — Regret — Seek — Return</span></div></div></header>
+
+<article class="section emerald" id="story"><h2>1. Main Story: Yusuf and the Five Dirhams</h2><div class="story-box"><p>It was small. That is the part nobody understands. Mama kept five dirhams in the tin on the fridge. Yusuf took them — just five — because Samir's card pack cost exactly five and his allowance was gone. 'Mama has plenty in the drawer,' his brain whispered, 'she will not even notice.'</p></div><div class="story-box"><p>She noticed that evening. She did not shout. She only said, very tired: 'Yusuf, the money from the tin was for the medicine.' Those five words hurt worse than a beating.</p></div><div class="story-box"><p>That night the guilt moved in and sat on his chest. His prayer mat felt too small to stand on. Saying his own name out loud felt dirty. And a LOUD thought started pacing the room:</p></div><div class="thought harmful">'Allah will never forgive a thief. Mama will remember this forever. I AM a bad person — not just a bad moment. Hide. Never tell. If you say nothing, maybe it disappears.'</div><div class="checkpoint"><h4>Which is TRUE?</h4><button class="option" data-correct="true" data-feedback="Yes. The verse of hope says &#x27;do not despair of Allah&#x27;s mercy — He forgives ALL sins.&#x27; The &#x27;I am beyond repair&#x27; voice is the one guest to throw out.">Allah forgives all sins for those who turn to Him (39:53) — and Shaytan&#x27;s favorite lie is that you are past the door.</button><button class="option" data-correct="false" data-feedback="The size of the feeling shows Yusuf&#x27;s heart is alive — his guilt had a purpose.">Small sins never count; nobody would notice anyway.</button><button class="option" data-correct="false" data-feedback="That is despair wearing Mama&#x27;s voice.">Mama&#x27;s disappointment is permanent, so tawbah is useless.</button><div class="feedback"></div></div><div class="story-box"><p>At Fajr — after two sleepless nights — Yusuf did it. He cried on the prayer mat, wudu-face still cold, and said the words of his father Adam and the prayer of Yunus: <strong>أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ</strong>. Then the hard part: he walked to Mama with his pocket money — six weeks saved — and said, 'I took the five. I am sorry. I will pay for the medicine back.'</p></div><div class="story-box"><p>Mama hugged him so hard he almost floated. 'My son,' she said, 'you took something and returned it with honesty — you carried Allah's pleasure and my heart with it. The Prophet ﷺ said Allah is happier with your repentance than a man who finds his lost camel in the desert.' And the stone on his chest? Gone within the hour it arrived.</p></div><div class="thought wise">'I did a wrong thing. I am NOT a wrong person. Tawbah is the door that has never been locked.'</div><div class="checkpoint"><h4>What made the guilt disappear?</h4><button class="option" data-correct="true" data-feedback="Real tawbah = stop + regret + istighfar + return what you took / make it right with people when their rights are involved.">Honest tawbah to Allah PLUS repairing the harm with the person hurt.</button><button class="option" data-correct="false" data-feedback="Secrets keep the stone — repair removes it.">Waiting until everyone forgot.</button><button class="option" data-correct="false" data-feedback="That is distraction, not healing.">Buying himself something nice as a reward.</button><div class="feedback"></div></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Allah tells us what tawbah can do — and what no sin can do to it:</p><div class="quran-box"><p class="arabic">قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا</p><p class="trans">&ldquo;Say, 'O My servants who have transgressed against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.'&rdquo;</p><p class="ref">Surah Az-Zumar 39:53 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ تُوبُوٓا۟ إِلَى ٱللَّهِ تَوْبَةً نَّصُوحًا</p><p class="trans">&ldquo;O you who have believed, turn to Allah with sincere repentance.&rdquo;</p><p class="ref">Surah At-Tahrim 66:8 · ClearQuran (Talal Itani)</p></div><p>No verse says 'repent only if your sin was small enough.' The door's sign reads: ALL. Nasuha — sincere — means: you stop, you feel it, you fix what can be fixed, you mean it when you say never again.</p><div class="balance-card"><p>Important balance: guilt has a purpose — it is the alarm, not the arsonist. It tells you something crossed your fitrah and pushes you toward the door. Shaytan uses the SAME feeling to push you AWAY from the door: 'you are too far gone' is his oldest trick. Correct guilt walks you TO Allah.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>Two hadiths that shatter the 'too dirty' lie forever:</p><div class="hadith-box"><p class="hadith-arabic">كُلُّ بَنِي آدَمَ خَطَّاءٌ، وَخَيْرُ الْخَطَّائِينَ التَّوَّابُونَ</p><p class="hadith-en">"Every son of Adam sins, and the best of those who sin are those who repent."</p><p class="hadith-ref">Jami' at-Tirmidhi 2499 · graded hasan-sahih by al-Albani (verified at hadeethenc.com #5344)</p></div><div class="hadith-box"><p class="hadith-arabic">لَلَّهُ أَشَدُّ فَرَحًا بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ</p><p class="hadith-en">"Allah is more pleased with the repentance of His servant than one of you who, in a barren land, suddenly finds his camel he had given up on."</p><p class="hadith-ref">Sahih Muslim 2747 · Sahih al-Bukhari 6309 (verified at hadeethenc.com #4313)</p></div><p>Sit with the camel image: lost water, lost food, lost hope — then the animal appears right in front of you. The Prophet ﷺ says YOUR tawbah lands with Allah like THAT — with joy, not with scolding.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">Guilt that is mercy</h4><p style="margin:0;font-size:.9rem;">"A right was crossed — go back, fix it, the door is open."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">Guilt that is Shaytan</h4><p style="margin:0;font-size:.9rem;">"You are ruined. Hide. Prayer is for clean people."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Yusuf met both voices. The first walked him to the mat and to Mama. The second tried to keep him in bed until noon.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"A line was crossed. My fitrah hurts. The pain means my heart is still alive — and repair exists."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I am a bad person. Hide it forever. Allah won't accept me twice."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Stop the sin. Regret with the heart. Istighfar with the tongue. Return what is owed. Then get UP — Allah loves the ones who keep returning.</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "Once caught, always remembered" — no: tawbah wipes the record with Allah, and honest repair softens hearts with people. And NEVER tell a child 'Allah will punish you for this feeling' — the feeling is the alarm that saves, not the crime.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">If a person has been hurt: tawbah TO Allah does not skip making it right WITH them. If direct repair is unsafe (someone who would react with violence), bring a trusted adult to stand in the bridge — Allah accepts the honest attempt.</p></div></article>
+
+<article class="section emerald" id="skill"><h2>5. The Tawbah Path: four steps</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Stop the act</h4><div class="ar-step">أَقْلِعْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Leave the wrong NOW — even mid-error, even before anyone asks. The door stays open while you walk through it.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Feel the regret</h4><div class="ar-step">اِنْدَمْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">That hurt in your chest is the fitrah working — the mercy alarm. Do not numb it with hiding; use it as fuel.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Ask forgiveness</h4><div class="ar-step">اِسْتَغْفِرْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ — with tears if they come. The hadith says Allah REJOICES — this is joy, not anger, on the other side of the words.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Return & repair</h4><div class="ar-step">اُرْجِعْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Resolve not to repeat. If a person is owed: return, repay, or apologize. An adult holds your hand when the door feels scary.</p></div></div><div class="rule-card"><p>Stop. Regret. Seek. Return. The door has never once stayed shut — not for five dirhams, not for a hundred.</p></div><h3>The Guilt Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Small ouch</div><div class="sc-do">"I shouldn't have said that." Quick istighfar and fix it while it is still small.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">The knot</div><div class="sc-do">The feeling lingers at night. Do the whole path — INCLUDING the repair conversation if someone is owed.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Heavy chest</div><div class="sc-do">Ashamed to pray, avoiding everyone. Say out loud: 'I am NOT past 39:53.' Wudu, two rak'ahs, one honest sentence to Allah — then one to the person.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">'Unforgivable'</div><div class="sc-do">Shaytan's final lie at full volume. Break it out loud: 39:53 says ALL. Tell a trusted adult TODAY. If the wrong is big and you feel trapped — adults are the bridge, never the punishment.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: The Broken Book</h2><div class="story-box"><p>Nadia borrowed Amina's special storybook, dropped it in a puddle — cover warped, page 4 smeared. She shoved it back on the shelf before anyone saw.</p></div><div class="checkpoint"><h4>What completes her tawbah?</h4><button class="option" data-correct="true" data-feedback="Yes — the person&#x27;s right is PART of the path, not extra credit.">Stop hiding, regret it, istighfar — then tell Amina honestly and offer to replace the book.</button><button class="option" data-correct="false" data-feedback="Half a path; the rights of people are forgiven with repair, not silence.">Pray and never mention it to Amina.</button><button class="option" data-correct="false" data-feedback="Kind money — but the honesty Amina deserves is the real return.">Buy a new one and leave it on her desk anonymously.</button><div class="feedback"></div></div><div class="story-box"><p>The two minutes it took to say 'I ruined it, I am sorry' felt like ten. Amina's face did the hurt first — then, slower, the respect. 'You could have hidden it forever. Thank you for telling me. Let's ask your mama if the bookshop still has it.' Guilt turned into something like being trusted. That is what the Return step carries.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Clean-Heart Kit</h2><div class="challenge-card"><h3>Put these where you can find them — guilt arrives uninvited:</h3><ol><li><strong>My dhikr card:</strong> أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ — on your mirror or desk.</li><li><strong>My repair list:</strong> the ONE unreturned pen / unspoken apology sitting on your chest.</li><li><strong>My verse:</strong> 39:53 — read it once tonight: ALL sins. Never despair.</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Do one repair from your list before the next lesson.</p></div><div class="balance-card"><p>No shame in this kit: the hadith already announced it — 'every son of Adam errs.' The skill is the RETURN. The best of you are not the ones who never fell.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"You never learn." (identity attack — 'bad person' language)</li><li>"Go ask Allah alone — don't tell me." (repair with people was part of tawbah)</li><li>Name the ACT, never the child: not 'thief', but 'you took what was not yours'</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Your bad feeling has a purpose — let's use it."</li><li>"What does the person need from you to make it right?"</li><li>"The tawbah path has four steps — which one are you on? Let's walk it together."</li><li>"Brave kids repair."</li></ul></div></div><h3>Interactive Teach-Back: Put the Tawbah Path in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the four steps.</div><div class="checkpoint" style="margin-top:24px;"><h4>Karim lied about his test grade and now dreads Friday when Mama sees the paper. What is the whole path?</h4><button class="option" data-correct="true" data-feedback="Tawbah + repair with brave timing — the hard, clean way.">Stop lying, regret it, istighfar — and show Mama the paper BEFORE Friday with a plan to fix the grade.</button><button class="option" data-correct="false" data-feedback="Hiding is the Shaytan voice in a disguise.">Wait and hide the paper until it is forgotten.</button><button class="option" data-correct="false" data-feedback="Her right to truth sits in the middle of the path.">Only pray and never tell Mama.</button><button class="option" data-correct="false" data-feedback="Friend-sympathy is comfort, not repair.">Confess to a friend and hope the lie disappears.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">A child confessing a big wrong needs a CALM adult: address the act, protect the bond, praise the honesty — a punished confession teaches hiding, not tawbah. Watch the 9–10 zone: repeated 'I am worthless' loops or scrupulosity (endless re-wudu, re-prayer doubts) — that pattern is a professional's territory alongside dua; never pile more guilt on a child already drowning in it.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Stop", "Regret", "Seek", "Return"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First: stop the act itself.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

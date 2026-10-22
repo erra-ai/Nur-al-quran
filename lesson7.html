@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hurt, Rejection, and Self-Worth · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 7 · When You Feel Left Out</div><h1>Hurt, Rejection, and Self-Worth</h1><div class="rule">Your worth was set by Allah before anyone voted on it.</div><p class="subtitle">A story-centered Islamic SEL lesson that teaches children what to do when exclusion and cold rejection hit — honor the hurt, anchor self-worth in Allah's words, and respond in a way that protects your dignity.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Identity & resilience</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Worth Anchor: Grieve — Anchor — Respond — Move</span></div></div></header>
+
+<article class="section rose" id="story"><h2>1. Main Story: Salma and the Unsent Invite</h2><div class="story-box"><p>Hania's party was the whole week's weather forecast. The class girls counted down to it. Then on Wednesday, Salma saw it from a girl's story: the party group photo existed — and her name was not in it.</p></div><div class="story-box"><p>The ache was physical — like swallowing a stone. She had rehearsed lunch alone all week in her head already. At night the thought loop opened its shop:</p></div><div class="thought harmful">'I am not enough. Nobody would even notice if I disappeared. I will act sick on Monday, delete the chat, and never care about ANY of them again.'</div><div class="checkpoint"><h4>What hurt Salma?</h4><button class="option" data-correct="true" data-feedback="And it is a real, human pain. Allah never called that pain foolish. What she builds ON TOP of the pain is the lesson.">Rejection — the pain of being excluded from people she wanted to belong with.</button><button class="option" data-correct="false" data-feedback="That is not what the story describes.">Hunger — she had not eaten lunch.</button><button class="option" data-correct="false" data-feedback="Never minimize the wound.">Nothing real — it&#x27;s just a party.</button><div class="feedback"></div></div><div class="story-box"><p>Mama found the tears around midnight. She did not fix it — she sat in it WITH her. Then she asked one question: 'When Allah wants to tell you your value, which page does He open: Hania's guest list, or THIS?' She showed Salma a verse: <em>We honored the children of Adam</em> (17:70) — honored, not 'honored IF you get invited.' And one more: <em>We created you in the best of stature</em> (95:4).</p></div><div class="story-box"><p>Salma grieved it fully — no pretending she did not care. She wrote three lines: 'I feel hurt. That does NOT mean I am worthless. Their choice is news about THEM, not a verdict on my value.' Then she did the hardest and bravest thing: she called her older cousin and asked to come over. She refused to be alone with the loop.</p></div><div class="thought wise">'I am allowed to be sad. But my name in Allah's book never got left out.'</div><div class="checkpoint"><h4>Which response protects BOTH her heart and her dignity?</h4><button class="option" data-correct="true" data-feedback="Exactly the four steps — no pretending, no revenge, no drowning.">Grieve honestly, anchor on Allah&#x27;s words about her worth, ask for company, and respond with calm dignity afterward.</button><button class="option" data-correct="false" data-feedback="The wound typing with claws — it costs HER, not them.">Send everyone a &#x27;you guys are the worst&#x27; message and leave.</button><button class="option" data-correct="false" data-feedback="Fake armor — the hurt stays and hardens underneath.">Pretend she did not care at all and never speak to them.</button><div class="feedback"></div></div><div class="story-box"><p>On Monday, Hania said hi like it was a normal day. And the truth came out: the invite list was made by Hania's mom at speed, and two girls' names were dropped by accident. Salma neither exploded nor chased. She felt the hurt, held her anchor, and kept building the wide circle of friends who never forget that they want her.</p></div><div class="story-box"><p>Her worth had been set before the guest list was ever written. That is still true today, and still true tomorrow.</p></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Allah wrote your worth BEFORE any human meeting ever voted on it:</p><div class="quran-box"><p class="arabic">وَلَقَدْ كَرَّمْنَا بَنِىٓ ءَادَمَ</p><p class="trans">&ldquo;And We have certainly honored the children of Adam.&rdquo;</p><p class="ref">Surah Al-Isra 17:70 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ</p><p class="trans">&ldquo;We have certainly created man in the best of stature.&rdquo;</p><p class="ref">Surah At-Tin 95:4 · ClearQuran (Talal Itani)</p></div><p>And Allah stated plainly what the real scales are: the most honored of you in His sight is the most righteous (49:13) — not the most popular. A guest list is not a creation story.</p><div class="balance-card"><p>Important balance: feeling rejected HURTS — and Allah did not call the hurt silly. The lie that rejection adds on top is 'their choice measures my value.' It never does. Your worth was set by the One who designed you, before anyone's opinion existed.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>The Prophet ﷺ was mocked, stoned, and rejected by whole cities. What did he trust about his own worth? Allah's words — never the crowd's list. And he taught the believer the real scale:</p><div class="hadith-box"><p class="hadith-arabic">إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ</p><p class="hadith-en">"Indeed Allah does not look at your appearances or your wealth — He looks at your hearts and your deeds."</p><p class="hadith-ref">Sahih Muslim 2564 (verified at hadeethenc.com #4555)</p></div><div class="hadith-box"><p class="hadith-arabic">وَلَا تَسْتَوِى الْحَسَنَةُ وَلَا السَّيِّئَةُ ادْفَعْ بِالَّتِي هِيَ أَحْسَنُ فَإِذَا الَّذِي بَيْنَكَ وَبَيْنَهُ عَدَاوَةٌ كَأَنَّهُ وَلِيٌّ حَمِيمٌ</p><p class="hadith-en">"And not equal are the good deed and the bad. Repel evil by that which is better — and then the one between whom and you there was enmity will become as though he were a devoted friend."</p><p class="hadith-ref">Surah Fussilat 41:34 — the Quran's strategy for the hand that pushed you away</p></div><p>Remember Salma's Monday: calm dignity met an ordinary hello, and nothing was lost. Repel the cold with BETTER — never with revenge, never with begging.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What rejection whispers</h4><p style="margin:0;font-size:.9rem;">"They did not choose you — so you are less."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What Allah states</h4><p style="margin:0;font-size:.9rem;">"I honored you, built you best — and My scales read heart and deed."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">One invitation is a data point about one family's logistics that week. It is not a verdict from the Heavens.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I was hurt or excluded — belonging is a need Allah INSTALLED in me. The ache is real, and it points me toward company and toward Him."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I am worthless. They proved it. Get revenge, chase them, or shrink to nothing."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Grieve honestly → anchor on 17:70 / 95:4 / Muslim 2564 → answer with dignified kindness (41:34) → WIDEN the circle: go find the people who do want you.</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "If they reject you, you must have done something — work harder to be liked." Rejection is neither a punishment from Allah nor a report card on your value. And never say to a child 'it's just a party' — to a twelve-year-old heart a party can feel like a funeral. Validate FIRST, then anchor.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Red flag adults must know: a child who says 'nobody would care if I disappeared' is NOT seeking attention — that sentence is a hand reaching up. Answer it now, seriously, with love and help.</p></div></article>
+
+<article class="section rose" id="skill"><h2>5. The Worth Anchor: four steps</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Grieve honestly</h4><div class="ar-step">اِبْكِ بِأَدَبٍ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Say it plainly: 'I feel rejected and it HURTS.' Tears are mercy, not weakness (Bukhari 1284, Lesson 3). Do not pretend-numb your way out of a feeling that needs carrying.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Anchor your worth</h4><div class="ar-step">تَذَكَّرْ قِيمَتَكَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Open Allah's page first: 17:70 honored, 95:4 best-built, Muslim 2564 — hearts and deeds, not popularity. Read ONE line before you read their photo again.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Respond with dignity</h4><div class="ar-step">اُدْفَعْ بِالَّتِي أَحْسَنُ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">No revenge-texts. No chasing. Answer with better (41:34), or with a silence that keeps your head up. Dignity is quiet; pain without anchors gets loud.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Widen the circle</h4><div class="ar-step">اِسْعَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Make the du'a for good company, then GO make one: call a cousin, join the masjid class, be the friend to the new lonely kid. Allah sends doors to feet that walk.</p></div></div><div class="rule-card"><p>Their list is not my verdict. I grieve, I anchor, I answer with better, I keep moving.</p></div><h3>The Hurt Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">The sting</div><div class="sc-do">"Ouch — I feel left out." Say it, dhikr, go be with family. Small hurts pass fast when they are named out loud.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">The loop</div><div class="sc-do">The photo replays itself. Do all four steps; write the three lines. Log off the feeds for a day — the wound heals better offline.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Dark hours</div><div class="sc-do">Sleep and appetite wobble; revenge speeches rehearse themselves. Send NO texts — send one message to an adult instead: 'I need to talk tonight.'</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">'Gone' thoughts</div><div class="sc-do">'Nobody would care if I disappeared.' SAY IT OUT LOUD TO AN ADULT RIGHT NOW. Allah already stated your worth in His book; the people here still need your name on their lists.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: Zayd and the Team Roster</h2><div class="story-box"><p>Coach posted the tournament roster. Zayd's name sat under 'alternates.' His first instinct: quit the club, never show up again, and post that the coach plays favorites.</p></div><div class="checkpoint"><h4>Which move is the Worth Anchor?</h4><button class="option" data-correct="true" data-feedback="Dignity + effort + du&#x27;a + no revenge: the anchor under stadium lights.">Feel it, name it to a parent, keep practicing, ask the coach honestly what to fix — and cheer loud for the starters on match day.</button><button class="option" data-correct="false" data-feedback="The wound with a megaphone — costs Zayd, not them.">Post the roster screenshot with &#x27;fairness level: 0&#x27;.</button><button class="option" data-correct="false" data-feedback="Running from a list is still letting the list rule you.">Quit that night so nobody can cut him again first.</button><div class="feedback"></div></div><div class="story-box"><p>Zayd did the anchor. Two months later, when a starter traveled away, the coach sent him in FIRST. And the boys he had cheered for cheered for him. His name's value did not change because of a heading — it proved its value under pressure.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Worth Page</h2><div class="challenge-card"><h3>Three lines — write them where the loop cannot reach:</h3><ol><li><strong>My verse:</strong> 17:70 or 95:4 — copy it by hand once; a verse you wrote is a verse you own.</li><li><strong>My people:</strong> name the three who ALWAYS want me — family counts loudly.</li><li><strong>My next door:</strong> one place this week I will bring myself and my smile — new circle, new practice.</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Tell your safe person one moment you chose the anchor over the sting.</p></div><div class="balance-card"><p>A closed door can also be protection — you do not know what was behind that party or that group. But your name will go on lists that were never drafted for you to miss; keep walking toward the open ones.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"It's just a party / team / group chat."</li><li>"Don't care about them anyway."</li><li>"You probably did something to deserve it." — that is victim-blaming the wound.</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Being left out HURTS — sit with me."</li><li>"Where did Allah say your worth lives?"</li><li>"There are three ways to answer: revenge, begging, or dignity. Let's build the third."</li></ul></div></div><h3>Interactive Teach-Back: Put the Worth Anchor in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the four steps.</div><div class="checkpoint" style="margin-top:24px;"><h4>Amina sees her two best friends laughing together without her — for the third time this month. What is wisest?</h4><button class="option" data-correct="true" data-feedback="Direct + widening: both at once. Courage and dignity together.">Tell one of them honestly and gently, &#x27;I feel left out sometimes&#x27; — AND go build another friendship.</button><button class="option" data-correct="false" data-feedback="Pre-emptive revenge protects nothing; it just ends things first.">Cut them both off before they can cut her out.</button><button class="option" data-correct="false" data-feedback="The ache begging is still the ache — and it pushes friends away.">Ask them every day &#x27;you still like me, right?&#x27; until they tire of her.</button><button class="option" data-correct="false" data-feedback="Fake pride — loneliness wearing a crown.">Pretend she has always preferred being alone and isolate.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Belonging pain at this age is brain-real, not drama. Hold the anchor AND check patterns: repeated exclusion IS bullying, and that is ADULT work with the school. If worth-talk slides toward 'I don't deserve to exist' — that is the 9–10 zone: professionals now, alongside love and dhikr, never instead of them.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Grieve", "Anchor", "Respond", "Move"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. Grieve the hurt honestly first.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
-import { app, getModule, renderApp, state } from "../state.js";
-import { ayahText } from "./meaning-banks.js";
+import { app, getModule, renderApp, state } from "../state.js?v=20260907-topnav2";
+import { ayahText } from "./meaning-banks.js?v=20260907-topnav2";
 
 function startVerseOrder() {
   const m = getModule();

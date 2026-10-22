@@ -4,7 +4,7 @@ import {
   renderApp,
   shuffle,
   state,
-} from "../state.js";
+} from "../state.js?v=20260907-topnav2";
 
 function ayahText(ayah) {
   return ayah.segments.map(seg => seg.t || seg.b || "").join("");

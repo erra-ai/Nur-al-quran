@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anger: Pause Before Harm · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--rose);font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--rose-light);color:#9f1239;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--rose-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(225,29,72,.14);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#9f1239;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--emerald);}
+.section.gold{border-left-color:var(--gold);}
+.section.rose{border-left-color:var(--rose);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--emerald);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.rose h2::after{background:var(--rose);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--emerald);background:var(--emerald-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.weather-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0;}
+.weather-card{background:var(--cream);border-radius:var(--radius-sm);padding:14px 8px;text-align:center;border:1px solid #e8e3db;box-shadow:0 1px 3px rgba(0,0,0,.03);}
+.weather-card .wc-icon{font-size:1.6rem;margin-bottom:4px;}
+.weather-card .wc-label{font-weight:700;font-size:.82rem;color:#3a3333;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.rose{border-left:4px solid var(--rose);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--emerald-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #b8dcd0;}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--rose);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#e8748d;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#115e59;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--emerald-light);border:2px solid #b8dcd0;border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:var(--emerald-dark);margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--rose-light),#ffd9e0);border:2px solid var(--rose-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#9f1239;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Anger scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--rose);}
+.scale-card.open{border-color:var(--rose);background:var(--rose-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#9f1239;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--emerald);background:var(--emerald-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .weather-grid{grid-template-columns:repeat(3,1fr);}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .weather-grid{grid-template-columns:1fr 1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--rose);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <div class="part">Part 2 · Managing Strong Feelings</div>
+  <h1>Anger: Pause Before Harm</h1>
+  <div class="rule">Anger is a feeling, not a command.</div>
+  <p class="subtitle">A story-centered Islamic SEL lesson that teaches children what to do in the first seconds of anger — the pause where a wise choice protects their words, their hands, and their relationships.</p>
+  <div class="meta">
+    <div class="meta-card"><strong>Age</strong><span>10–13</span></div>
+    <div class="meta-card"><strong>Time</strong><span>25–30 min</span></div>
+    <div class="meta-card"><strong>SEL Skill</strong><span>Self-management</span></div>
+    <div class="meta-card"><strong>Main Tool</strong><span>The Pause: Sit — Seek refuge — Silence — Slow down</span></div>
+  </div>
+</header>
+
+<!-- 1. MAIN STORY -->
+<article class="section rose" id="story">
+<h2>1. Main Story: Karim's Tower</h2>
+<div class="story-box">
+<p>Karim had spent the whole afternoon building a tower out of wooden blocks. His little sister Mariam handed him each block carefully, and together they made it taller than ever before.</p>
+<p>His older cousin Ammar came inside chasing a bouncing ball. He did not look where he was running. His knee hit the corner of the table.</p>
+<p>The tower fell. Blocks scattered across the floor. Three hours of careful work — gone in one second.</p>
+<p>Karim's face became hot. His hands closed into fists. His jaw tightened and his heart pounded. A thought appeared inside him:</p>
+</div>
+<div class="thought harmful">"He did it on purpose! He always ruins my things! Push him — break his game — make him feel what I feel!"</div>
+<div class="checkpoint">
+<h4>What is Karim feeling?</h4>
+<button class="option" data-correct="true" data-feedback="Good noticing. Anger arrived fast, and hurt arrived with it. Both feelings are real.">A. Anger, mixed with hurt and frustration</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">B. Only happiness</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">C. Nothing at all</button>
+<div class="feedback"></div>
+</div>
+<div class="checkpoint">
+<h4>Which body signs show the anger is becoming strong?</h4>
+<button class="option" data-correct="false" data-feedback="That is not a body sign of anger.">A. His sister is handing him blocks</button>
+<button class="option" data-correct="true" data-feedback="Hot face, clenched fists, tight jaw, pounding heart — these are the storm warnings. The body knows before the tongue does.">B. Hot face, clenched fists, tight jaw, and a pounding heart</button>
+<button class="option" data-correct="false" data-feedback="That is part of the setting, not a body sign.">C. The blocks are made of wood</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>Karim's first urge was to act right now — to push, to shout, to break something of Ammar's. But Karim remembered what his father taught him after the last time anger won: <strong>"Between the feeling and the action, there is a pause. The pause is where your iman lives."</strong></p>
+<p>So instead of moving toward Ammar, Karim moved toward the couch. He sat down. He said quietly:</p>
+</div>
+<div class="thought wise">"أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ — I seek refuge in Allah from Shaytan. I feel angry. That does not prove Ammar did it on purpose. I will stay silent until the first wave passes."</div>
+<div class="checkpoint">
+<h4>What did Karim do in the first seconds of anger?</h4>
+<button class="option" data-correct="false" data-feedback="Acting instantly is exactly what the pause protects us from.">A. He shouted immediately and pushed Ammar</button>
+<button class="option" data-correct="true" data-feedback="Yes — he changed his position (sat down), sought refuge in Allah, and kept silent. These are the Prophet's ﷺ own instructions for the angry moment.">B. He sat down, sought refuge in Allah, and kept silent</button>
+<button class="option" data-correct="false" data-feedback="Pretending feelings do not exist does not make them go away.">C. He pretended he was not angry at all</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>Karim sat for a full minute. Then he washed his face with cool water and made wudu for Maghrib prayer, earlier than usual. When he came back, his chest was no longer on fire.</p>
+<p>Ammar was on the floor picking up blocks, looking sorry. "I did not see the tower," he said. "I was only watching the ball. I am really sorry, Karim. I will help you rebuild it — even better."</p>
+<p>It turned out Ammar had not ruined anything on purpose. He had not even seen it.</p>
+<p>Karim was still a little angry — the feeling did not vanish completely, and it did not need to. But because he paused, his hands stayed safe, his words stayed safe, and his cousin stayed his friend. They rebuilt the tower together, and Mariam handed them the blocks.</p>
+<p><strong>One second of anger, handled badly, could have cost him months of regret. One minute of pause saved all of it.</strong></p>
+</div>
+</article>
+
+<!-- 2. QURAN ANCHOR -->
+<article class="section gold" id="quran">
+<h2>2. Quran Anchor</h2>
+<div class="quran-box">
+<p class="arabic">ٱلَّذِينَ يُنفِقُونَ فِى ٱلسَّرَّآءِ وَٱلضَّرَّآءِ وَٱلْكَـٰظِمِينَ ٱلْغَيْظَ وَٱلْعَافِينَ عَنِ ٱلنَّاسِ ۗ وَٱللَّهُ يُحِبُّ ٱلْمُحْسِنِينَ</p>
+<p class="trans">"Who spend [in the cause of Allah] during ease and hardship and who restrain anger and who pardon the people — and Allah loves the doers of good."</p>
+<p class="ref">Surah Ali 'Imran 3:134 · ClearQuran (Talal Itani)</p>
+</div>
+<p>Look carefully at the three steps hidden inside this one verse. First: <strong>they restrain anger</strong> (الْكَاظِمِينَ الْغَيْظَ) — the anger rises, and they hold it back from becoming harm. Second: <strong>they pardon people</strong> — they go one step further and let it go. Third: <strong>Allah loves them</strong> — He names them muhsineen, doers of good.</p>
+<div class="balance-card">
+<p>Important balance: The verse says "restrain anger" — NOT "never feel anger." Allah does not blame you for the storm arriving. He loves you for what you choose while the storm is passing through.</p>
+</div>
+<div class="weather-grid">
+  <div class="weather-card"><div class="wc-icon">⛈️</div><div class="wc-label">Anger · the storm</div></div>
+  <div class="weather-card"><div class="wc-icon">🏠</div><div class="wc-label">The heart · the house</div></div>
+  <div class="weather-card"><div class="wc-icon">⏸️</div><div class="wc-label">The pause · the shelter</div></div>
+  <div class="weather-card"><div class="wc-icon">🌤️</div><div class="wc-label">Calm · after the storm</div></div>
+  <div class="weather-card"><div class="wc-icon">🌈</div><div class="wc-label">Pardon · the rainbow</div></div>
+</div>
+<p style="text-align:center;font-weight:600;color:#3a3333;">A storm always passes. The house that survives is the one that shelters during the storm instead of running outside to fight it.</p>
+</article>
+
+<!-- 3. PROPHETIC LENS -->
+<article class="section gold" id="prophetic">
+<h2>3. Prophetic Lens: The Pause Was Taught to Us</h2>
+<p>Long before anyone studied emotions in a laboratory, the Prophet ﷺ gave us a complete anger plan — for the body, the tongue, and the heart.</p>
+<div class="hadith-box">
+<p class="hadith-arabic">أَنَّ رَجُلًا قَالَ لِلنَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: أَوْصِنِي، قَالَ: «لَا تَغْضَبْ» فَرَدَّدَ مِرَارًا، قَالَ: «لَا تَغْضَبْ»</p>
+<p class="hadith-en">"A man said to the Prophet ﷺ: 'Advise me.' He said: 'Do not become angry.' The man repeated his request several times, and each time he said: 'Do not become angry.'"</p>
+<p class="hadith-ref">Sahih al-Bukhari 6116</p>
+</div>
+<div class="hadith-box">
+<p class="hadith-arabic">إِذَا غَضِبَ أَحَدُكُمْ وَهُوَ قَائِمٌ فَلْيَجْلِسْ، فَإِنْ ذَهَبَ عَنْهُ الْغَضَبُ وَإِلَّا فَلْيَضْطَجِعْ</p>
+<p class="hadith-en">"When one of you becomes angry while standing, let him sit down. If the anger leaves him, [all well and good]; otherwise let him lie down."</p>
+<p class="hadith-ref">Sunan Abi Dawud 4782 · Sahih</p>
+</div>
+<div class="hadith-box">
+<p class="hadith-arabic">إِذَا غَضِبَ أَحَدُكُمْ فَلْيَسْكُتْ</p>
+<p class="hadith-en">"When any of you becomes angry, let him keep silent."</p>
+<p class="hadith-ref">Musnad Ahmad · Sahih (al-Albani)</p>
+</div>
+<p>The Prophet ﷺ also told us about a word that cools the fire. When he saw an angry man, he said: <em>"I know a word which, if he were to say it, what he feels would go away: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ — I seek refuge in Allah from the accursed Shaytan.'"</em> (Sahih al-Bukhari 6115)</p>
+<div class="grid-2">
+  <div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What the Prophet ﷺ taught</h4><p style="margin:0;font-size:.9rem;">Change your position, seek refuge in Allah, keep silent, and let the wave pass. Every step is a pause between feeling and harm.</p></div>
+  <div class="card gold" style="text-align:center;"><h4 style="color:#8b6914;margin-top:0;">How he ﷺ himself lived</h4><p style="margin:0;font-size:.9rem;">Aisha رضي الله عنها said the Prophet ﷺ never struck anything with his hand, not a servant and not anyone else (Sahih Muslim 2328). He felt anger for Allah's sake — but never let anger make his hands or tongue harm anyone.</p></div>
+</div>
+<p style="text-align:center;font-weight:600;color:#3a3333;">Remember Hadith lesson 16 in this app: "The strong one is not the good wrestler — the strong one is the one who controls himself when angry." (Bukhari &amp; Muslim)</p>
+</article>
+
+<!-- 4. UNDERSTAND THE DIFFERENCE -->
+<article class="section" id="difference">
+<h2>4. Understand the Difference</h2>
+<div class="grid-3">
+  <div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Something feels unfair. A limit was crossed. My body is preparing to defend."</p></div>
+  <div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"He did it ON PURPOSE. I must hurt him back RIGHT NOW."</p></div>
+  <div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Pause first. Check the thought. Then choose words and actions that please Allah.</p></div>
+</div>
+<div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "Anger is haram" or "good Muslims never get angry." Anger is a created feeling — even the Prophet ﷺ felt anger when Allah's limits were crossed. What we are responsible for is the pause: what we do with the anger in the seconds after it arrives.</p></div>
+<div class="card" style="background:var(--cream);text-align:center;">
+<p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Anger can even protect what is right — like when you feel angry seeing someone bullied. That anger is a signal to help, not to explode. The same pause applies: check the thought, choose a safe and wise action, and ask a trusted adult when it is bigger than you.</p>
+</div>
+</article>
+
+<!-- 5. MAIN SEL TOOL -->
+<article class="section rose" id="skill">
+<h2>5. The Pause: Four Steps from the Sunnah</h2>
+<div class="skill-grid">
+  <div class="skill-card s1"><div class="step-num">1</div><h4>Sit Down</h4><div class="ar-step">اجْلِسْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Change your body position.<br><br>· Standing → sit<br>· Still angry → lie down<br>· Or walk away from the room<br><br>A standing body is ready to strike. A sitting body is not.</p></div>
+  <div class="skill-card s2"><div class="step-num">2</div><h4>Seek Refuge</h4><div class="ar-step">اِسْتَعِذْ بِاللَّهِ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Say, with your tongue or your heart:<br><br><strong>أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</strong><br><br>"I seek refuge in Allah from the accursed Shaytan." Shaytan loves to fan the fire. This word asks Allah to cool it.</p></div>
+  <div class="skill-card s3"><div class="step-num">3</div><h4>Stay Silent</h4><div class="ar-step">اُسْكُتْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">No words, no messages, no replies — until the first wave passes.<br><br>Silence protects words you cannot take back. A typed sentence lives forever; a held tongue costs nothing.</p></div>
+  <div class="skill-card s4"><div class="step-num">4</div><h4>Slow Down &amp; Cool</h4><div class="ar-step">اِهْدَأْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Breathe slowly. Splash cool water on your face, or make wudu.<br><br>Anger is heat. Water and slow breaths cool the body, and the body calms the heart.</p></div>
+</div>
+<div class="rule-card"><p>Anger arrives in seconds. Harm can last for years. In between is the PAUSE — and with Allah's help, the pause belongs to me.</p></div>
+<h3>The Anger Scale: What to Do at Each Level</h3>
+<p>Click each level to see the plan.</p>
+<div class="scale-grid">
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">1–3</div>
+    <div class="sc-name">Annoyed · a small spark</div>
+    <div class="sc-do">Notice it early: "I am starting to feel annoyed." Name it before it grows. One slow breath is usually enough here.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">4–6</div>
+    <div class="sc-name">Angry · the fire is lit</div>
+    <div class="sc-do">Start the pause now: seek refuge in Allah, stay silent, breathe slowly. Do not send the message. Do not make the decision.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">7–8</div>
+    <div class="sc-name">Very angry · the storm</div>
+    <div class="sc-do">Move your body: sit down or leave the room. Cool water on the face or wudu. Wait until your heart slows before any words.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">9–10</div>
+    <div class="sc-name">Overwhelming · need help</div>
+    <div class="sc-do">Get a trusted adult NOW — a parent, teacher, or older sibling. Asking for help at level 9–10 is not weakness; it is the wisest pause of all.</div>
+  </button>
+</div>
+</article>
+
+<!-- 6. TRANSFER PRACTICE -->
+<article class="section" id="transfer">
+<h2>6. Transfer Practice: Hana's Group Chat</h2>
+<div class="story-box">
+<p>Hana came home from school and opened the class group chat. There was a new message: two classmates were joking about an answer she gave in science — the one where she mixed up two planets and the whole class laughed.</p>
+<p>Hana's face grew hot. Her fingers started moving before she decided anything. She began typing a sharp reply — something that would make them laugh at someone else instead.</p>
+<p>Then she stopped. She remembered Karim's story and the four steps.</p>
+</div>
+<div class="checkpoint">
+<h4>What is the FIRST pause move Hana should make?</h4>
+<button class="option" data-correct="true" data-feedback="Yes. Putting the phone down removes the danger from her hands, and seeking refuge cools the fire. The message can wait — it always can.">A. Put the phone down and say "أعوذ بالله من الشيطان الرجيم"</button>
+<button class="option" data-correct="false" data-feedback="Typing faster is letting the storm hold the phone instead of Hana.">B. Type the sharp reply faster before she changes her mind</button>
+<button class="option" data-correct="false" data-feedback="Deleting the whole app forever is not a pause skill — it is avoiding the problem.">C. Delete the group chat and never speak to them again</button>
+<div class="feedback"></div>
+</div>
+<div class="checkpoint">
+<h4>Which response best follows Sit — Seek Refuge — Silence — Slow Down?</h4>
+<button class="option" data-correct="false" data-feedback="Public revenge is harm, and harm is exactly what the pause prevents.">A. Post an embarrassing secret about one of them so they learn a lesson</button>
+<button class="option" data-correct="true" data-feedback="This is the pause in action: cool down first, then handle it calmly and privately — and involve a trusted adult if the teasing continues.">B. Wait until she is calm, then privately tell them it hurt her feelings, and tell a trusted adult if it keeps happening</button>
+<button class="option" data-correct="false" data-feedback="Saying nothing and letting the hurt grow inside is not pardoning — pardoning comes after the heart has cooled, not before.">C. Say nothing, stay hurt inside, and avoid them forever</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>Hana put the phone face-down on her desk. She said the ta'awwudh quietly. She went to help her mother set the table, and by Maghrib the fire had mostly cooled.</p>
+<p>The next day at school, she walked up to the two classmates calmly and said, "Yesterday's joke about the planets — it made me feel bad. Please don't do it again." One of them looked genuinely surprised: "We were joking about ourselves too! We were being silly. Sorry, Hana."</p>
+<p>It was not bullying — it was a stupid joke. But Hana could not have known that if she had replied while the storm was inside her. Her silence saved the friendship. The sharp message she almost sent would have cost it.</p>
+</div>
+</article>
+
+<!-- 7. HOME CHALLENGE -->
+<article class="section gold" id="challenge">
+<h2>7. My Anger Pause Plan</h2>
+<div class="challenge-card">
+<h3>Write your own plan this week (one line each is enough):</h3>
+<ol>
+  <li><strong>My body sign:</strong> How does anger show up in MY body first? (hot face? clenched fists? fast heart?)</li>
+  <li><strong>My first pause move:</strong> Which of the four steps will I do first, and where? (sit down / say ta'awwudh / stay silent / cool water)</li>
+  <li><strong>My safe person:</strong> Who can I talk to when the anger feels like a 9 or 10?</li>
+</ol>
+<p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Mission: use the pause once before the next lesson, then tell your safe person what happened. No long journal required.</p>
+</div>
+<div class="balance-card"><p>The pause is a skill, not a switch. The first try may only be half a pause. That still counts. Every pause makes the next one easier — bi'idhnillah.</p></div>
+</article>
+
+<!-- 8. PARENT / TEACHER GUIDE -->
+<article class="section" id="guide">
+<h2>8. Parent / Teacher Guide</h2>
+<div class="grid-2">
+  <div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Anger is haram."</li><li>"Good Muslims don't get angry."</li><li>"Stop feeling that."</li><li>"You are overreacting."</li></ul></div>
+  <div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Your anger is a signal. What is it telling you?"</li><li>"Let's do the pause together — sit, ta'awwudh, silence."</li><li>"The Prophet ﷺ taught us exactly what to do in this moment."</li><li>"You paused. That took real strength."</li></ul></div>
+</div>
+
+<h3>Interactive Teach-Back: Put the Pause Steps in Order</h3>
+<p>Click the steps in the order the child should learn them.</p>
+<div class="order-grid" id="orderGrid"></div>
+<p class="order-feedback" id="orderFeedback"></p>
+<button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button>
+<div class="order-complete" id="orderComplete">Excellent. You know the four-step anger pause.</div>
+
+<div class="checkpoint" style="margin-top:24px;">
+<h4>Yusuf's brother broke his favorite pen on purpose and is now laughing. Yusuf is at level 8. What should he do first?</h4>
+<button class="option" data-correct="false" data-feedback="At level 8 the storm is too strong for instant conversation. Responding now risks words and actions he will regret.">A. Immediately argue with his brother until he apologizes</button>
+<button class="option" data-correct="true" data-feedback="Correct. At level 8: move the body, seek refuge, stay silent, cool down — and if it keeps happening or someone is being harmed on purpose, bring a trusted adult in.">B. Leave the room, say ta'awwudh, splash water on his face, and tell a parent calmly once he is cool</button>
+<button class="option" data-correct="false" data-feedback="Breaking something back is harm answering harm — exactly the cycle the pause exists to stop.">C. Break something of his brother's so they are even</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card" style="background:var(--cream);text-align:center;margin-top:16px;">
+<p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Teach the difference between anger FOR myself (my pen, my tower, my joke) and anger FOR what is right (injustice, bullying, Allah's limits). The first needs the pause most of all. The second needs the pause too — so the response protects people instead of harming them. If a child's anger is frequent, intense, or long-lasting, consider speaking with a qualified professional; the pause skill supports care, it does not replace it.</p>
+</div>
+</article>
+
+</div>
+
+<script>
+(function(){
+
+// --- MCQ checkpoints ---
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct="true"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+
+// --- Anger scale cards ---
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+
+// --- Ordering Activity ---
+const steps=['Sit Down','Seek Refuge','Stay Silent','Slow Down & Cool'];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>4){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='✅ Step '+orderIdx+' of 4 placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent='That step comes later. First move the body away from danger.';
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+
+orderReset.addEventListener('click',initOrder);
+initOrder();
+
+})();
+</script>
+</body>
+</html>

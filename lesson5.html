@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jealousy and Comparison · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 5 · When the Heart Compares</div><h1>Jealousy and Comparison</h1><div class="rule">The sting is human — the choice that follows is worship.</div><p class="subtitle">A story-centered Islamic SEL lesson that teaches children how to feel the jealous sting honestly, turn it into du'a and gratitude, and measure life with the right ruler.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Social awareness</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Mizan Check: Feel — Ask Allah — Bless them — Look down</span></div></div></header>
+
+<article class="section gold" id="story"><h2>1. Main Story: Lina's Stinging Minute</h2><div class="story-box"><p>Lina practiced her recitation for weeks. When the class finally listened, Yara was praised first — 'Masha'Allah, Yara, your voice!' — and the room lit up for her. Lina smiled from the back row, but inside a hot wire pulled tight: <em>Why not me? Everyone loves her more. She just got the better voice anyway.</em></p></div><div class="thought harmful">The sting said: 'Yara does not deserve this. I hope her bad day comes. I should post something that makes her look small.'</div><div class="checkpoint"><h4>What was the feeling that arrived first?</h4><button class="option" data-correct="true" data-feedback="Correct. Even young hearts feel it. The Prophet ﷺ gave us what to DO with the sting — not how to pretend it never arrives.">A normal human sting — the doorway to envy. The sting itself is not a sin; what she does next is the test.</button><button class="option" data-correct="false" data-feedback="The story is honest — something did hurt, and honesty is the start.">She was truly happy and nothing hurt.</button><button class="option" data-correct="false" data-feedback="That thought came from the wire, not from Lina&#x27;s real heart.">She hated Yara forever.</button><div class="feedback"></div></div><div class="story-box"><p>Lina remembered a hadith her teacher explained: <em>look at those below you in this world, not above</em>. She thought of little Huda in the class next door who had asthma and could not recite the long surahs even once — yet Huda laughed like money was nothing. And Lina realized: she HAD been given the same gift as Yara; she had just stopped counting it.</p></div><div class="story-box"><p>Then she did something harder than smiling. She walked to Yara and said, 'Masha'Allah, your voice truly was beautiful — and I was jealous of it, and I am sorry for that thought.' Yara hugged her: 'You are the only person in this class who practiced more than me — you will pass me next round. I hope you do.' Lina's chest opened the way it never does after swallowing feelings.</p></div><div class="thought wise">'I feel jealous — that is human. I will name it, ask Allah from His bounty (4:32), make du'a for her, and count what I already hold.'</div><div class="checkpoint"><h4>What turned the sting into something good?</h4><button class="option" data-correct="true" data-feedback="Exactly. The verse 4:32 tells us to ask Allah from His bounty instead of wishing away what others have — the opposite of a heart at war.">Honest naming + du&#x27;a to Allah + blessing her + counting her own gifts.</button><button class="option" data-correct="false" data-feedback="Hidden envy grows teeth; it never shrinks from silence.">Suppressing it and hating Yara in silence.</button><button class="option" data-correct="false" data-feedback="That is letting the sting drive the car.">Publicly pretending she did not care while sabotaging her.</button><div class="feedback"></div></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Two compass needles for the comparing heart:</p><div class="quran-box"><p class="arabic">وَلَا تَتَمَنَّوْا۟ مَا فَضَّلَ ٱللَّهُ بِهِۦ بَعْضَكُمْ عَلَىٰ بَعْضٍۢ ... وَسْـَٔلُوا۟ ٱللَّهَ مِن فَضْلِهِۦٓ</p><p class="trans">&ldquo;And do not wish for that by which Allah has made some of you exceed others ... And ask Allah of His bounty.&rdquo;</p><p class="ref">Surah An-Nisa 4:32 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</p><p class="trans">&ldquo;And from the evil of an envier when he envies.&rdquo;</p><p class="ref">Surah Al-Falaq 113:5 · ClearQuran (Talal Itani)</p></div><p>An-Nisa teaches the exit: do not wish their blessing away — ask Allah for your own. And the surah we all learned by heart reminds us that envy, if obeyed, can harm. The cure is not fear of the heart — it is training it.</p><div class="balance-card"><p>Important balance: feeling the sting does not make you a bad Muslim. The hadith even makes a good kind of jealousy lawful: admiring someone's good and wanting it for yourself (ghibta) — without ever wishing it to leave them.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>The Prophet ﷺ gave the comparing heart two directions to look: where to look down, and where to look up:</p><div class="hadith-box"><p class="hadith-arabic">انْظُرُوا إِلَى مَنْ أَسْفَلَ مِنْكُمْ، وَلَا تَنْظُرُوا إِلَى مَنْ هُوَ فَوْقَكُمْ، فَهُوَ أَجْدَرُ أَنْ لَا تَزْدَرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ</p><p class="hadith-en">"Look at those below you, and do not look at those above you — that is more fitting that you not belittle the blessing of Allah upon you."</p><p class="hadith-ref">Sahih Muslim 2963 · Sahih al-Bukhari 6490 (verified at hadeethenc.com #5341)</p></div><div class="hadith-box"><p class="hadith-arabic">لَا حَسَدَ إِلَّا فِي اثْنَتَيْنِ: رَجُلٌ آتَاهُ اللَّهُ مَالًا فَسَلَّطَهُ عَلَى هَلَكَتِهِ فِي الْحَقِّ، وَرَجُلٌ آتَاهُ اللَّهُ حِكْمَةً فَهُوَ يَقْضِي بِهَا وَيُعَلِّمُهَا</p><p class="hadith-en">"There is no envy [that is praiseworthy] except in two: a man to whom Allah gave wealth and he spends it in truth, and a man to whom Allah gave wisdom and he acts by it and teaches it."</p><p class="hadith-ref">Sahih al-Bukhari 73 · Sahih Muslim 816 (verified at hadeethenc.com #3772)</p></div><p>Two hadiths, one map: in worldly blessing look <em>down</em> and gratitude returns; in obedience and good deeds look <em>up</em> and ambition awakens. That is the only comparison the Prophet ﷺ left us.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">Blameworthy hasad</h4><p style="margin:0;font-size:.9rem;">"I want their blessing GONE — and harm to fall on them for having it."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">Praised ghibta</h4><p style="margin:0;font-size:.9rem;">"Their blessing makes me want the same from Allah — so I do good too."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Lina's sting became ghibta the second she turned it into a du'a for herself and a kind word for Yara.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I want what they have — my heart is telling me this gift matters to me. It is information, not a verdict on them."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"She does not deserve it. Wish it away. Make them small so I look big."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Name the sting → ask Allah from His bounty (4:32) → make du'a FOR them → look down at your own unseen blessings → do your own next good deed.</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "Jealousy means you are ungrateful and Allah is angry with you" — that shames the feeling and hides the cure. Teach instead: feelings are signals (Lesson 1); envy in the heart does not sin you until you act or speak on it — and even then the door of tawbah is open (Lesson 6).</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Also: comparing your INSIDE with everyone else's OUTSIDE is cheating. Nobody posts their hard mornings.</p></div></article>
+
+<article class="section gold" id="skill"><h2>5. The Mizan Check: four moves</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Feel the sting</h4><div class="ar-step">اِشْعُرْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Name it honestly: 'I feel jealous.' A named feeling shrinks; a hidden one grows — Lesson 1 gave it a name, Lesson 3 taught you to carry it.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Ask Allah</h4><div class="ar-step">سَلِ اللَّهَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">4:32 — stop wishing theirs away; ask Allah to give YOU from His bounty. Envy becomes ambition pointed at the Right Giver.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Du'a for them</h4><div class="ar-step">بَارِكْ لَهُ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Say 'Allahumma barik lahu — bless them.' The hardest, most healing sentence. It frees your heart more than theirs.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Look down</h4><div class="ar-step">اُنْظُرْ أَسْفَلَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Muslim 2963 — remember blessings you hold that they do not. The scales of the heart level again.</p></div></div><div class="rule-card"><p>I feel the sting. I ask Allah. I bless them. I count mine. The Mizan of the heart stays level.</p></div><h3>The Sting Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Spark</div><div class="sc-do">"I wish I had that too." Fine — say masha'Allah, ask Allah's bounty, move on.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">The wire</div><div class="sc-do">The sting hurts and talks cruel. Do all four moves — the du'a for them is the strongest key.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Burning</div><div class="sc-do">You wish the blessing gone. Put the phone away. Do not post. Do not speak. Pray two rak'ahs; name it to a trusted friend or parent.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">Plotting</div><div class="sc-do">Acting on it — sabotage, rumors, wishing harm out loud. That is a wrong ACTION, not a feeling: tawbah (Lesson 6 path), repair the harm, bring an adult.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: Omar and the Leaderboard</h2><div class="story-box"><p>Omar lost his third straight match to the same teammate. The scoreboard photo went around the group chat with his name laughing under it. His hands itched to type: <em>'The router was lagging — he's just lucky.'</em> Making excuses is the sting wearing a suit.</p></div><div class="checkpoint"><h4>What is the Mizan move here?</h4><button class="option" data-correct="true" data-feedback="That is the four moves plus hard work — the prophetic combination.">Say nothing in the chat; say masha&#x27;Allah to the winner in person; ask Allah for strength for himself; study the ONE thing he loses the point with.</button><button class="option" data-correct="false" data-feedback="That is the sting&#x27;s plot at level 9–10.">Tell the group chat the winner &#x27;cheats&#x27;.</button><button class="option" data-correct="false" data-feedback="Running from your own wire.">Quit the game forever so nobody ever wins against him again.</button><div class="feedback"></div></div><div class="story-box"><p>Omar typed the hardest message of his season: <strong>GG, you deserved it. Rematch Friday?</strong> Friday he lost again — 1–0. But his wire felt quiet, and his game was getting better, and the chat was safe again. Losing while growing is a win the scoreboard cannot print.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Blessing Count-Down</h2><div class="challenge-card"><h3>Three small practices this week:</h3><ol><li><strong>Gone first:</strong> before sleep, list 3 blessings you have today that the person you compared yourself to may not have.</li><li><strong>Bless them:</strong> say masha'Allah out loud once for someone who beat you today.</li><li><strong>Ask, don't wish:</strong> turn one 'I wish I had their...' sentence into 'Allahumma atini min fadlik' (4:32).</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Report one count-down to your safe person this week.</p></div><div class="balance-card"><p>If comparison is stealing your joy every day, tell an adult — the sting is manageable; a heart on fire needs water from people AND from Allah.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"You are just jealous — you have no right to feel hurt."</li><li>"She IS better than you." (comparing people as WORTH, not as skills)</li><li>"Stop feeling it." — the Prophet ﷺ taught handling, not deleting.</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Feeling the sting is human — what do we do with it?"</li><li>"Let's make du'a for them — watch how it frees your heart."</li><li>"What is a blessing only YOU have? Name three."</li></ul></div></div><h3>Interactive Teach-Back: Put the Mizan Check in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the four moves.</div><div class="checkpoint" style="margin-top:24px;"><h4>Sara's cousin received a bigger Eid gift. Sara wants to throw hers in the corner and pout all week. Which move fits?</h4><button class="option" data-correct="true" data-feedback="The four moves in one breath.">Say masha&#x27;Allah for the cousin, count her OWN gifts out loud, and make du&#x27;a for more from Allah.</button><button class="option" data-correct="false" data-feedback="That is the wire pulling the tongue.">Ask her mother to demand equal gifts from everyone.</button><button class="option" data-correct="false" data-feedback="Hidden hasad ferments — the opposite of blessing them.">Hide the feeling and silently dislike the cousin.</button><button class="option" data-correct="false" data-feedback="That is caring too much — in anger.">Throw her gift away to show she doesn&#x27;t care.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Do not punish the sting — guide the behavior. And watch feeds: the comparison machine runs 24/7; a device curfew lowers the whole class's envy. For the 9–10 band (sabotage, cruelty), do repair work WITH an adult — that is teaching, not shaming.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Feel it", "Ask Allah", "Bless them", "Look down"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First feel and name the sting honestly.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

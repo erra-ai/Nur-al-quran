@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hope and Rising Again · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 12 · After Every End, a Beginning</div><h1>Hope and Rising Again</h1><div class="rule">Despair is the only real defeat — while you are breathing, Allah has more chapters.</div><p class="subtitle">The closing lesson of the program: the strongest hope in Islam — no sin too big, no situation too closed, no year too lost — and the prophetic habit of starting again.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Hope & renewal</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Rising Loop: Turn — Hope — One step — Again</span></div></div></header>
+
+<article class="section emerald" id="story"><h2>1. Main Story: The Hundredth Chapter</h2><div class="story-box"><p>Karim had lost everything that matters to a thirteen-year-old inside one year: thrown off the team after the fight, grades below passing, his best friend moved cities, and the girl he never spoke to now called him 'the angry one.' By December he sat on the roof and made a decision that was not a decision — he simply stopped trying. 'Nothing I do fixes anything. I am the mistake.'</p></div><div class="story-box"><p>His uncle Yusuf — yes, the name matters — found him there one evening and sat down beside him. He did not lecture. He told a story: a man who killed ninety-nine people asked whether repentance was even possible for him; one ignorant man said NO — and the next scholar said YES: 'And what stands between you and repentance?' The man ran toward a land of good people, and died halfway. The angels of mercy and the angels of punishment both claimed him — so they measured the distance between the two towns, and Allah took him because he was ONE CUBIT closer to the destination of repentance (Sahih Muslim 2766 · Sahih al-Bukhari 3470). Then Uncle Yusuf finished:</p></div><div class="thought harmful">'You are your worst chapter. The book is finished. Nobody with a record like yours gets a next page.'</div><div class="checkpoint"><h4>What was Karim's real trap?</h4><button class="option" data-correct="true" data-feedback="And despair is the ONE guest 39:53 locks out: &#x27;do not despair of the mercy of Allah — He forgives ALL sins.&#x27; Not &#x27;some.&#x27; Not &#x27;the small ones.&#x27; ALL.">Despair — the belief that his past holds the final vote on his future.</button><button class="option" data-correct="false" data-feedback="His problem was not effort-management — he had decided effort was pointless.">Laziness.</button><button class="option" data-correct="false" data-feedback="Luck-theology replaces Allah with coincidence — and gives despair a nicer costume.">Bad luck.</button><div class="feedback"></div></div><div class="story-box"><p>They did not fix the year in a day — that is the lie of comeback movies. Uncle Yusuf set the Rising Loop. TURN: Karim apologized to the coach for the fight (his part only — not the whole world). HOPE: he read 39:53 every night until the verse started feeling true instead of printed. ONE STEP: a single retest — math, first, nothing else. AGAIN: when he relapsed into anger twice that spring, he used Lessons 2 and 6 — pause, istighfar, restart. Same day. Every time.</p></div><div class="story-box"><p>By June: retest passed — barely, but HIS. Not back on the team, but training with the juniors, and the coach now said his name with respect instead of warning. He spoke to the girl once; it was completely normal and nobody died. His best friend from the old city? Online football every Saturday — distance is not death. The year was not repaired. Karim was RISING — and rising is all hope ever promised.</p></div><div class="thought wise">'My record is not my sentence. As long as Allah gives me breath, He gives me another chapter — the only real defeat is the book you decide never to open again.'</div><div class="checkpoint"><h4>What is the true Islamic teaching about a fallen year?</h4><button class="option" data-correct="true" data-feedback="Exactly. &#x27;Every son of Adam sins, and the best of those who sin are those who keep returning&#x27; (Tirmidhi 2499). Returning is not failing — refusing to return is.">It is one chapter — and the Rising Loop is a lifetime skill: turn, hope, one step, again and again.</button><button class="option" data-correct="false" data-feedback="39:53 says the opposite, using jamee&#x27;an — ALL.">A wasted year means Allah is done with you.</button><button class="option" data-correct="false" data-feedback="Fast-fix stories make slow risers feel like failures — real hope is patient.">Fixed lives happen fast if you really mean it.</button><div class="feedback"></div></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Hope in Islam is not a mood — it is revealed information. Two verses to memorize for your worst days:</p><div class="quran-box"><p class="arabic">لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا</p><p class="trans">&ldquo;Do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.&rdquo;</p><p class="ref">Surah Az-Zumar 39:53 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">وَلَا تَا۟يْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ ۖ إِنَّهُۥ لَا يَا۟يْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ</p><p class="trans">&ldquo;And do not despair of relief from Allah. Indeed, no one despairs of relief from Allah except the disbelieving people.&rdquo;</p><p class="ref">Surah Yusuf 12:87 — said by Yaqub AFTER decades of grief · ClearQuran (Talal Itani)</p></div><p>Yaqub — nearly blind from sorrow — sent his sons back to SEARCH for Yusuf. That is what hope looks like when every fact says stop: ONE MORE SEARCH. And 39:53 was revealed for people with records much worse than yours — and mine. Read it as if it is addressed to you by name. It is.</p><div class="balance-card"><p>Important balance: hope is NOT pretending the fall didn't happen. Hope looks at the record honestly, then looks at Allah honestly, and knows which of the two gets the last word. The last word is His: 'My mercy precedes My wrath' (Sahih al-Bukhari 7404).</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>Two prophetic proof-packs for the person at the end of their rope:</p><div class="hadith-box"><p class="hadith-arabic">إِنَّ اللَّهَ يَبْسُطُ يَدَهُ بِاللَّيْلِ لِيَتُوبَ مُسِيءُ النَّهَارِ، وَيَبْسُطُ يَدَهُ بِالنَّهَارِ لِيَتُوبَ مُسِيءُ اللَّيْلِ</p><p class="hadith-en">"Allah extends His hand at night so that the one who sinned by day may repent, and He extends His hand by day so that the one who sinned at night may repent."</p><p class="hadith-ref">Sahih Muslim 2759 — the door's opening hours: ALL of them</p></div><div class="hadith-box"><p class="hadith-arabic">كُلُّ بَنِي آدَمَ خَطَّاءٌ، وَخَيْرُ الْخَطَّائِينَ التَّوَّابُونَ</p><p class="hadith-en">"Every son of Adam sins, and the best of those who sin are those who repent."</p><p class="hadith-ref">Jami' at-Tirmidhi 2499 (verified at hadeethenc.com #5344)</p></div><p>And the ninety-nine-murderer story — the one Uncle Yusuf told — is the ceiling-smasher: in Islam, no case file is ever sealed. The man died halfway on the road and Allah judged him by the DIRECTION of his heart. One honest cubit was enough.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What despair says</h4><p style="margin:0;font-size:.9rem;">"You are your worst record. No chapter after that."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What Allah says</h4><p style="margin:0;font-size:.9rem;">"Do not despair — I forgive ALL. My hand is outstretched by day AND by night, waiting for you."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Karim's June was no miracle movie — one retest, one junior practice, one conversation. The Rising Loop runs on small honest circles, not explosions.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Everything is closed — I am done, and the evidence feels complete."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Never open the book again. One bad chapter means the whole book is bad."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">TURN (face your real part honestly + istighfar) → HOPE (read 39:53 & 12:87 as YOUR addresses) → ONE STEP (the smallest real action — not a grand plan) → AGAIN (when you fall: pause, istighfar, restart the SAME DAY — as many times as it takes).</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "You have sinned too much / failed too many times — Allah is finished with you." That sentence is the ONLY voice in this entire program with no verse behind it. 39:53 says ALL. And never tell a fallen teen 'just snap out of it' — hope is built from one true step plus company.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">The closing note of the whole program: hope is not a mood stapled on at lesson 12 — it is what MAKES lessons 1–11 possible. Without hope nobody pauses anger, names sadness, repents, or rises. Every tool in this series is a door into this one room.</p></div></article>
+
+<article class="section emerald" id="skill"><h2>5. The Rising Loop</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Turn around</h4><div class="ar-step">تُبْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Face the record honestly + istighfar + repair your part. Turning is the only truly brave act left in a deep hole.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Read the addresses</h4><div class="ar-step">اِرْجُ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">39:53 and 12:87 are addressed to YOUR file. Recite them nightly until the feeling catches up with the truth — hope is trained by the tongue first.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>The smallest step</h4><div class="ar-step">قَدِمْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">One retest. One practice. One apology sent. Not a new life — one true step. Then the next. Rising is a series of small circles.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Again. And again.</h4><div class="ar-step">أَعِدْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Relapse is INSIDE the loop, not outside it: pause (L2), istighfar (L6), restart the SAME DAY. The best of sinners are the repeaters of return.</p></div></div><div class="rule-card"><p>My record is not my sentence. I turn, I hope, I step, I rise — and if I fall, I rise again. Every breath is a new chapter.</p></div><h3>The How-Deep Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Stumble</div><div class="sc-do">A bad week, dropped habits, some fights. Run the loop today: turn, one small step, done. Being human and returning fast IS the skill.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">Pattern</div><div class="sc-do">Repeated sin or failure and the voice 'always, always.' 39:53 nightly + tell ONE real person. Secrets stall the loop; speaking restarts it.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">'I'm done'</div><div class="sc-do">'I don't even care anymore.' Care is not gone — it is buried under exhaustion. Tell an adult that exact sentence today. Someone must find your roof.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">The roof</div><div class="sc-do">Any thought of not wanting to be here anymore: this is an EMERGENCY — tell an adult NOW; call for help if you cannot speak it. The desert-camel joy of Muslim 2747 belongs to YOU. Stay — one chapter at a time.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: The Second Hijab</h2><div class="story-box"><p>Maryam restarted praying five times in Ramadan. Then Shawwal exams crushed the routine — two weeks of nothing. The old voice returned: 'See? You're fake. Why start again when you always drop it?'</p></div><div class="checkpoint"><h4>What does the Rising Loop say?</h4><button class="option" data-correct="true" data-feedback="That is 39:53 + Muslim 2759 lived. Shaytan&#x27;s strategy is to make restarting feel embarrassing; Allah&#x27;s strategy is to make the door infinite.">Restart NOW — the loop has unlimited re-starts: turn (no shame spiral), hope (His hand is out day and night), one step (Fajr tomorrow only — that&#x27;s it), again (and after the next slip — again).</button><button class="option" data-correct="false" data-feedback="That is despair scheduling its own appointments.">Wait until next Ramadan — the timing is ruined now.</button><button class="option" data-correct="false" data-feedback="Grand comebacks collapse; small honest circles climb.">Force all five plus extra night prayers to &#x27;make up&#x27; the loss.</button><div class="feedback"></div></div><div class="story-box"><p>Maryam prayed Fajr alone the next morning and cried the whole walk to school — and it counted. Six weeks later, two-of-five had become four of five. Nobody announced it. The most beloved deeds to Allah are the consistent ones, even if few (Sahih al-Bukhari 6464). Rising is usually invisible — and invisible risings are exactly where Allah's hand is outstretched, day and night, waiting for the next honest step.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Next Chapter</h2><div class="challenge-card"><h3>Write it once — keep it forever:</h3><ol><li><strong>My verse card:</strong> 39:53 — copy it by hand; keep it in your wallet or as your phone lock.</li><li><strong>My smallest circle:</strong> the one honest step THIS WEEK, after the thing you dropped or broke.</li><li><strong>My again-promise:</strong> 'When I fall — and I will — I restart the same day. Falling is human; staying down is the trap.'</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Before leaving this program: tell one adult your next-chapter step. The rule of the whole series — every ending is a beginning.</p></div><div class="balance-card"><p>You have just completed Strong Heart, Wise Mind: twelve lessons, twelve tools. Return to any door whenever a feeling, a season, or a year breaks you open. The whole series lives in one prophetic line: 'Every son of Adam errs — and the best of them keep returning.'</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"You've failed too many times."</li><li>"You promised — this time had to be different."</li><li>Treating a restart like a second-class event — the third attempt is as honored as the first.</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Fall down seven, stand up eight — with bismillah each time."</li><li>"The door has no closing hours (Muslim 2759)."</li><li>"One step. Just one. I'll walk it with you."</li></ul></div></div><h3>Interactive Teach-Back: Put the Rising Loop in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the loop. Now run it whenever life asks.</div><div class="checkpoint" style="margin-top:24px;"><h4>Rami broke his no-phone-at-night rule for the fifth time. What is the loop?</h4><button class="option" data-correct="true" data-feedback="The loop — run honestly and immediately. Attempt five is still &#x27;again,&#x27; not &#x27;always.&#x27;">Turn (honest istighfar, no self-hate speech), hope (the verse on his lock screen), one step (the charger sleeps in the kitchen tonight), again (restart any morning he slips).</button><button class="option" data-correct="false" data-feedback="That is despair winning a phone habit.">Declare himself hopeless and give up all routines.</button><button class="option" data-correct="false" data-feedback="Delayed restarts turn small falls into long ones.">Tell nobody and start &#x27;fresh&#x27; next year.</button><button class="option" data-correct="false" data-feedback="Harshness is not the method of the One whose hand is outstretched.">Punish himself with a sleepless night of study.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Closing counsel for adults: our response to a child's FALL decides whether they RISE or HIDE. Welcome restarts loudly — make the second attempt as honorable as the first. And any 9–10 signal: treat not-wanting-to-be-here talk as a medical emergency, never laziness of faith — stay present, get help, stay present some more. Hope taught by how we respond is the hope that outlives this program.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Turn", "Hope", "One step", "Again"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First turn honestly \u2014 no cover, no shame spiral.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

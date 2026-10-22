@@ -6,214 +6,261 @@ import {
   renderApp,
   state,
   surahs,
-} from "./state.js";
-import { startQuiz } from "./activities/quiz.js";
-import { startVerseOrder } from "./activities/verse-order.js";
-import { fetchSurahFromQuranCom } from "./quran-api.js?v=20260830-tajweed-ikhafa";
-import { ITANI_TEEN_TRANSLATIONS } from "./data/translations/itani-teens.js";
-import { UTHMANI_FALLBACK } from "./data/quran-fallback.js";
+} from "./state.js?v=20260907-topnav2";
+import { startQuiz } from "./activities/quiz.js?v=20260907-topnav2";
+import { startVerseOrder } from "./activities/verse-order.js?v=20260907-topnav2";
+import { fetchSurahFromQuranCom } from "./quran-api.js?v=20260907-topnav2";
+import { ITANI_TEEN_TRANSLATIONS } from "./data/translations/itani-teens.js?v=20260907-topnav2";
+import { UTHMANI_FALLBACK } from "./data/quran-fallback.js?v=20260907-topnav2";
+import { LIFE_SKILL_LESSONS, LIFE_SKILL_SECTIONS } from "./data/life-skills.js?v=20260907-topnav2";
+import {
+  PAGE_SIZE, catalog, categoriesOf, filterCatalog, browse,
+  pageOf, setPage, setQuery, setCategory, openEntry, openByIdentity,
+  neighborOfCurrent, goHome,
+} from "./catalog.js?v=20260907-topnav2";
+
+/* ---------- small helpers ---------- */
+function attrEsc(s) {
+  return String(s ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+const COLLECTION_META = {
+  quran: {
+    title: "Quran",
+    lead: "Choose a surah to study — read the words, learn the meanings, then test yourself.",
+  },
+  hadith: {
+    title: "Hadith",
+    lead: "Thirty Prophetic lessons, ﷺ. Filter by topic or search, then open one to study.",
+  },
+  lifeskills: {
+    title: "Strong Heart, Wise Mind",
+    lead: "Twelve life-skill lessons in order. Each opens a full guided lesson.",
+  },
+};
+
+/* ===========================================================
+   LESSON BAR — breadcrumbs + lesson chooser + prev/next,
+   shared by surah/hadith intros and Life Skills lessons.
+   =========================================================== */
+function currentCollectionKey() {
+  if (state.view === "lifeSkills") return "lifeskills";
+  return state.moduleType === "hadith" ? "hadith" : "quran";
+}
+
+function lessonBarHtml() {
+  const key = currentCollectionKey();
+  const meta = COLLECTION_META[key];
+  const list = catalog(key);
+  const currentNumber = key === "lifeskills" ? state.lifeSkillLesson
+    : (list[state.surahIndex] ? list[state.surahIndex].number : null);
+  const entry = list.find(e => e.number === currentNumber);
+  const label = entry ? `${entry.kind} · ${entry.title}` : "—";
+  const canPrev = !!neighborOfCurrent(-1);
+  const canNext = !!neighborOfCurrent(1);
+  return `
+    <div class="lesson-bar">
+      <button class="lb-crumb" id="lbHome">Home</button>
+      <span class="lb-sep">/</span>
+      <span class="lb-crumb dim">${meta.title}</span>
+      <span class="lb-sep">/</span>
+      <span class="lb-current">${label}</span>
+      <div class="lb-actions">
+        <select id="lbChooser" class="lb-chooser" aria-label="Choose another lesson">
+          ${list.map(e => `<option value="${e.number}" ${e.number === currentNumber ? "selected" : ""}>${e.number}. ${attrEsc(e.title)}</option>`).join("")}
+        </select>
+        <button class="ghost lb-step" id="lbPrev" ${canPrev ? "" : "disabled"} title="Previous lesson">←</button>
+        <button class="ghost lb-step" id="lbNext" ${canNext ? "" : "disabled"} title="Next lesson">→</button>
+      </div>
+    </div>`;
+}
+
+function wireLessonBar() {
+  const key = currentCollectionKey();
+  document.getElementById("lbHome")?.addEventListener("click", () => { state.view = "home"; renderApp(); });
+  document.getElementById("lbPrev")?.addEventListener("click", () => {
+    const n = neighborOfCurrent(-1);
+    if (n) openEntry(n);
+  });
+  document.getElementById("lbNext")?.addEventListener("click", () => {
+    const n = neighborOfCurrent(1);
+    if (n) openEntry(n);
+  });
+  document.getElementById("lbChooser")?.addEventListener("change", (e) => {
+    openByIdentity(key, Number(e.target.value));
+  });
+}
 
 /* ---------- LIFESKILLS ---------- */
 function renderLifeSkills() {
-  // Hide left sidebar to give iframe more space
-  document.getElementById("sidebar").style.display = "none";
-  document.getElementById("sidebarToggle").style.display = "none";
-  app.style.marginLeft = "0";
-
+  const lesson = LIFE_SKILL_LESSONS.find(l => l.id === state.lifeSkillLesson) || LIFE_SKILL_LESSONS[0];
   app.innerHTML = `
+    ${lessonBarHtml()}
     <div class="fb-nav">
-      <span>Strong Heart, Wise Mind</span>
-      <button class="ghost" id="btnLsBack">← Back to Home</button>
+      <span class="fb-nav-title">Strong Heart, Wise Mind · ${lesson.name}</span>
+      <div class="fb-nav-tools">
+        <select id="lsJump" class="lb-chooser" aria-label="Jump to section in this lesson">
+          <option value="">Jump to section…</option>
+          ${LIFE_SKILL_SECTIONS.map(s => `<option value="${s.id}">${s.label}</option>`).join("")}
+        </select>
+        <button class="ghost" id="btnLsBack">← Back to library</button>
+      </div>
     </div>
-    <iframe src="lesson1.html" style="width:100%;height:calc(100vh - 70px);border:none;border-radius:var(--radius-lg);box-shadow:var(--shadow);"></iframe>
+    <iframe id="lsFrame" title="${attrEsc(lesson.name)} — Life Skills lesson" src="${lesson.file}"></iframe>
   `;
-  document.getElementById("btnLsBack").addEventListener("click", () => {
-    // Restore left sidebar
-    document.getElementById("sidebar").style.display = "";
-    document.getElementById("sidebarToggle").style.display = "";
-    app.style.marginLeft = "";
-    state.view = "home";
-    renderApp();
+  wireLessonBar();
+  document.getElementById("btnLsBack").addEventListener("click", goHome);
+  document.getElementById("lsJump").addEventListener("change", (ev) => {
+    const id = ev.target.value;
+    if (!id) return;
+    try {
+      const doc = ev.currentTarget.closest("#app").querySelector("#lsFrame").contentDocument;
+      const el = doc && doc.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) { /* cross-frame guard */ }
+    ev.target.selectedIndex = 0;
+  });
+  fitLifeSkillsFrame();
+}
+
+// Grow the iframe to its content height so the outer page is the single
+// scroll surface (content grows as checkpoints expand). Same-origin only;
+// failures fall back to the tall-frame default.
+function fitLifeSkillsFrame() {
+  const frame = document.getElementById("lsFrame");
+  if (!frame) return;
+  let ro = null;
+  const fit = () => {
+    try {
+      const doc = frame.contentDocument;
+      if (!doc || !doc.documentElement) return;
+      const h = doc.documentElement.scrollHeight;
+      if (h > 200) frame.style.height = (h + 28) + "px";
+    } catch (e) { /* keep default height */ }
+  };
+  frame.addEventListener("load", () => {
+    fit();
+    setTimeout(fit, 800);
+    setTimeout(fit, 2500); // web fonts landing
+    try {
+      const win = frame.contentWindow;
+      if (win && win.ResizeObserver) {
+        ro = new win.ResizeObserver(fit);
+        ro.observe(frame.contentDocument.documentElement);
+      }
+    } catch (e) { /* observer optional */ }
   });
 }
 
-/* ---------- HOME ---------- */
-function hero() {
-  const vocabCount = Math.max(...surahs.map(s => s.vocabulary.length));
-  return `
-    <section class="hero">
-      <div class="hero-pattern"></div>
-      <div class="hero-frame"></div>
-      <div class="hero-glow"></div>
-      <div class="basmala">بسم الله الرحمن الرحيم</div>
-      <div class="title-kicker">Qur'an Arabic for Understanding</div>
-      <h1>Nur <span class="accent">al-Qur'an</span></h1>
-      <div class="hero-divider">
-        <span class="hd-line"></span>
-        <span class="hd-diamond"></span>
-        <span class="hd-dot"></span>
-        <span class="hd-diamond"></span>
-        <span class="hd-line"></span>
-      </div>
-      <p>Read the words, learn the meanings, and connect each surah to reflection and action.</p>
-      <div class="stats">
-        <span><b>${surahs.length}</b> Surah${surahs.length === 1 ? "" : "s"} available</span>
-        <span><b>30</b> questions per quiz</span>
-        <span><b>${vocabCount}</b> core vocabulary cards</span>
-      </div>
-    </section>`;
-}
-
+/* ---------- HOME (library) ---------- */
 function renderHome() {
-  const cards = surahs.map((s, idx) => {
-    const prog = getSurahProgress(s.id);
-    const status = prog.completed
-      ? `<span class="badge done">Completed</span><span class="badge">Best ${prog.bestScore}/30</span>`
-      : (prog.lastScore
-          ? `<span class="badge">In progress</span><span class="badge">Last ${prog.lastScore}/30</span>`
-          : `<span class="badge">Not started</span>`);
-    return `
-      <div class="surah-card">
-        <div class="row">
-          <span class="num">Surah ${s.number}</span>
-          <span class="english-name">${s.nameEnglish}</span>
-        </div>
-        <div class="arabic arabic-name">${s.nameArabic}</div>
-        <div class="title">${s.title}</div>
-        <div class="desc">${s.intro.split('. ')[0]}.</div>
-        <div class="status">${status}</div>
-        <div class="actions">
-          <button data-action="start" data-idx="${idx}">Start Learning →</button>
-        </div>
-      </div>
-    `;
-  }).join("");
+  const key = state.activeCollection in COLLECTION_META ? state.activeCollection : "quran";
+  const meta = COLLECTION_META[key];
+  const b = browse[key];
+  const chipsHtml = key === "hadith"
+    ? `<div class="cat-chips" id="libChips"></div>` : "";
 
   app.innerHTML = `
-    ${hero()}
-    <nav class="home-tabs" id="homeTabs">
-      <button class="ht-tab active" data-target="sec-quran">Quran</button>
-      <button class="ht-tab" data-target="sec-hadith">Hadith</button>
-      <button class="ht-tab" data-target="sec-lifeskills">Life Skills <span class="ht-badge">1</span></button>
-    </nav>
-    <section class="home-section" id="sec-quran">
-      <div class="section-title">
-        <h2>Surahs</h2>
-        <div class="line"></div>
-      </div>
-      <p class="lede">Pick a surah to begin. Each surah includes a short introduction, vocabulary cards, practice, and a quiz.</p>
-      <div class="surah-grid">${cards}</div>
-    </section>
-    <section class="home-section" id="sec-hadith" style="margin-top:28px;">
-      <div class="section-title">
-        <h2>Hadith Lessons</h2>
-        <div class="line"></div>
-      </div>
-      <p class="lede">Learn the sayings of the Prophet ﷺ — one hadith at a time, following the way he taught his companions.</p>
-      <div class="surah-grid" id="hadith-grid"></div>
-    </section>
-    <section class="life-skills-section" id="sec-lifeskills">
-      <div class="section-title">
-        <h2>Strong Heart, Wise Mind</h2>
-        <div class="line"></div>
-      </div>
-      <p class="lede">Quranic Life Skills for Muslim Kids — stories, reflection tools, and prophetic guidance for real-life situations.</p>
-      <div class="surah-grid" id="life-skills-grid"></div>
-    </section>
-  `;
-
-  // Render hadith cards
-  const hGrid = document.getElementById("hadith-grid");
-  hGrid.innerHTML = hadiths.map((h, idx) => `
-    <div class="surah-card" style="border-left: 3px solid var(--gold);">
-      <div class="row">
-        <span class="num">ﷺ Hadith</span>
-        <span class="english-name">${h.nameEnglish}</span>
-      </div>
-      <div class="arabic arabic-name" style="font-size:1.3rem; line-height:1.8;">${h.text}</div>
-      <div class="title">${h.title}</div>
-      <div class="desc">${h.narrator} — ${h.source}</div>
-      <div class="actions">
-        <button data-action="start-hadith" data-idx="${idx}">Start Lesson →</button>
-      </div>
+    <div class="lib-head">
+      <h1 class="lib-title">${meta.title}</h1>
+      <p class="lib-lead">${meta.lead}</p>
     </div>
-  `).join("");
-
-  app.querySelectorAll("button[data-action='start']").forEach(b => {
-    b.addEventListener("click", e => {
-      state.surahIndex = Number(e.currentTarget.getAttribute("data-idx"));
-      state.moduleType = "surah";
-      state.view = "intro";
-      renderApp();
-    });
-  });
-  hGrid.querySelectorAll("button[data-action='start-hadith']").forEach(b => {
-    b.addEventListener("click", e => {
-      state.surahIndex = Number(e.currentTarget.getAttribute("data-idx"));
-      state.moduleType = "hadith";
-      state.view = "intro";
-      renderApp();
-    });
-  });
-
-  const lsGrid = document.getElementById("life-skills-grid");
-  lsGrid.innerHTML = `
-    <div class="surah-card" style="border-left: 3px solid #0f766e;">
-      <div class="row">
-        <span class="num" style="color:#0f766e;">Lesson 1</span>
-        <span class="english-name">My Heart Feels, But My Feelings Do Not Lead Me</span>
-      </div>
-      <div class="title">Understanding feelings and learning self-control</div>
-      <div class="desc">Ages 10–13 · Story-centered lesson about anger, patience, and choosing what pleases Allah.</div>
-      <div class="actions">
-        <button data-action="start-lifeskill" data-idx="0">Start Lesson →</button>
-      </div>
+    <div class="home-toolbar">
+      <input id="libSearch" class="search-input" type="search" placeholder="Search ${meta.title.toLowerCase()} by name, number or topic…" aria-label="Search ${meta.title}" value="${attrEsc(b.query)}">
+      ${chipsHtml}
+      <button class="clear-filters" id="libClear" ${b.query || b.category !== "All" ? "" : "hidden"}>Clear ✕</button>
     </div>
-    <div class="surah-card" style="border-left: 3px solid #d4a24c; opacity:0.5;">
-      <div class="row">
-        <span class="num" style="color:#d4a24c;">Lesson 2</span>
-        <span class="english-name">Coming Soon</span>
-      </div>
-      <div class="title">More lessons coming inshaAllah</div>
-      <div class="desc">11 more lessons planned in this series.</div>
+    <p class="lib-meta" id="libMeta" aria-live="polite"></p>
+    <div class="surah-grid dense-grid" id="libGrid"></div>
+    <div class="lib-pager" id="libPager" hidden>
+      <button class="show-more" id="pgPrev">← Previous</button>
+      <span class="pg-label" id="pgLabel"></span>
+      <button class="show-more" id="pgNext">Next →</button>
     </div>
   `;
 
-  // Life Skills button listeners
-  document.querySelectorAll("button[data-action='start-lifeskill']").forEach(b => {
-    b.addEventListener("click", e => {
-      state.view = "lifeSkills";
-      renderApp();
-    });
-  });
+  const grid = document.getElementById("libGrid");
+  const search = document.getElementById("libSearch");
+  const clearBtn = document.getElementById("libClear");
+  const pager = document.getElementById("libPager");
+  const chipsWrap = document.getElementById("libChips");
 
-  // Tab bar — click to scroll
-  document.querySelectorAll('.ht-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.ht-tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const target = document.getElementById(tab.dataset.target);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
+  function renderGrid() {
+    const bb = browse[key];
+    let entries = filterCatalog(key, { query: bb.query, category: bb.category });
+    const total = entries.length;
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    bb.page = Math.min(Math.max(1, bb.page), totalPages);
+    const start = (bb.page - 1) * PAGE_SIZE;
+    const visible = entries.slice(start, start + PAGE_SIZE);
 
-  // Tab bar — highlight active on scroll
-  const tabObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        document.querySelectorAll('.ht-tab').forEach(t => t.classList.remove('active'));
-        const tab = document.querySelector('.ht-tab[data-target="' + e.target.id + '"]');
-        if (tab) tab.classList.add('active');
+    grid.innerHTML = visible.map(e => {
+      let status = "";
+      if (e.coll === "quran") {
+        const prog = getSurahProgress(e.ref.id);
+        status = prog.completed
+          ? `<span class="badge done">✓ ${prog.bestScore}/30</span>`
+          : (prog.lastScore ? `<span class="badge">▸ ${prog.lastScore}/30</span>` : `<span class="badge idle">—</span>`);
       }
+      const arabicLine = e.arabic ? `<span class="arabic dc-ar">${e.arabic}</span>`
+        : `<span class="lc-kind">${e.coll === "hadith" ? "ﷺ" : e.kind}</span>`;
+      const catLine = e.coll === "hadith" && e.category ? `<span class="dc-cat">${e.category}</span>` : "";
+      return `
+      <button class="surah-card dense lib-card" data-entry="${e.key}" aria-label="Open ${attrEsc(e.title)}">
+        <div class="dc-top"><span class="num">${e.number}</span>${arabicLine}${status}</div>
+        <div class="dc-name lc-title">${e.title}</div>
+        <div class="dc-title lc-sub">${e.sub}</div>
+        <div class="dc-catrow">${catLine}<span class="dc-num">${e.coll === "hadith" ? "Hadith " + e.number : ""}</span></div>
+        <span class="dc-go">Open →</span>
+      </button>`;
+    }).join("") || `<div class="lib-empty">Nothing matches your search. <button class="clear-filters" id="emptyClear">Clear search ✕</button></div>`;
+
+    document.getElementById("libMeta").textContent =
+      total ? `Showing ${start + 1}–${start + visible.length} of ${total} ${key === "lifeskills" ? "lessons" : key}` : "No results.";
+    document.getElementById("pgLabel").textContent = `Page ${bb.page} of ${totalPages}`;
+    pager.hidden = totalPages <= 1;
+    document.getElementById("pgPrev").disabled = bb.page <= 1;
+    document.getElementById("pgNext").disabled = bb.page >= totalPages;
+    clearBtn.hidden = !(bb.query || bb.category !== "All");
+
+    if (chipsWrap) {
+      const cats = ["All", ...categoriesOf("hadith")];
+      chipsWrap.innerHTML = cats.map(c => {
+        const n = filterCatalog("hadith", c === "All" ? {} : { category: c }).length;
+        return `<button class="cat-chip${bb.category === c ? " active" : ""}" data-cat="${c}">${c}<span>${n}</span></button>`;
+      }).join("");
+    }
+    document.getElementById("emptyClear")?.addEventListener("click", () => {
+      setQuery(key, ""); setCategory(key, "All"); search.value = ""; renderGrid();
     });
-  }, { rootMargin: '-80px 0px -60% 0px' });
-  ['sec-quran', 'sec-hadith', 'sec-lifeskills'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) tabObserver.observe(el);
+  }
+
+  search.addEventListener("input", () => { setQuery(key, search.value); renderGrid(); });
+  clearBtn.addEventListener("click", () => {
+    setQuery(key, ""); setCategory(key, "All"); search.value = ""; renderGrid();
   });
+  document.getElementById("pgPrev").addEventListener("click", () => { setPage(key, pageOf(key) - 1); renderGrid(); });
+  document.getElementById("pgNext").addEventListener("click", () => { setPage(key, pageOf(key) + 1); renderGrid(); });
+  if (chipsWrap) {
+    chipsWrap.addEventListener("click", (e) => {
+      const chip = e.target.closest(".cat-chip");
+      if (!chip) return;
+      setCategory(key, chip.dataset.cat);
+      renderGrid();
+    });
+  }
+  grid.addEventListener("click", (e) => {
+    const card = e.target.closest(".lib-card");
+    if (!card) return;
+    const found = catalog(key).find(x => x.key === card.dataset.entry);
+    if (found) openEntry(found);
+  });
+
+  renderGrid();
 }
 
-/* ---------- INTRO ---------- */
+/* ---------- INTRO (surah / hadith) ---------- */
+/* ---------- HERO REMOVED: the library heading above carries identity ---------- */
 const LOCAL_BASMALA_ARABIC = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ";
 const ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩";
 
@@ -305,23 +352,42 @@ async function hydrateIntroQuranText(module) {
   }
 }
 
+// Hadith intros use the same ornamental Mushaf-style panel as surah intros so
+// the Prophetic text is displayed, not crammed into the title row.
+function introHadithText(m) {
+  return `
+    <section class="intro-surah-text" aria-label="${m.nameEnglish} hadith Arabic text">
+      <div class="intro-surah-heading">
+        <span>Hadith ${m.number} · ${m.nameEnglish}</span>
+        <span>الحديث النبوي</span>
+      </div>
+      <div class="intro-mushaf-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="intro-mushaf-arabic hadith-arabic-display arabic" dir="rtl">
+        ${m.text}
+      </div>
+      <div class="intro-translation-source">
+        <span>${m.narrator}</span>
+        <span>${m.source}</span>
+      </div>
+    </section>`;
+}
+
 function renderIntro() {
   const m = getModule();
   const isHadith = state.moduleType === "hadith";
   const label = isHadith ? `Hadith ${m.number}` : `Surah ${m.number}`;
   app.innerHTML = `
+    ${lessonBarHtml()}
     <div class="card intro-card elevated">
        <div class="ribbon">${isHadith ? 'Learn the sayings of the Prophet \uFDFA. One hadith at a time, the way the companions learned.' : 'Learn Qur\'anic Arabic with understanding.'}</div>
       <div class="intro-title">
         <div class="intro-title-main">
           <div class="meta">${isHadith ? `${label} · ${m.title}` : label}</div>
           <h2>${isHadith ? m.nameEnglish : m.title}</h2>
-          ${isHadith ? `<div class="arabic arabic-name" style="font-size:1.6rem; color:var(--green-deep); margin-top:8px; text-align:left; direction:rtl;">${m.text}</div>
-          <div class="muted small" style="margin-top:4px;">${m.narrator} — ${m.source}</div>` : ""}
         </div>
         ${isHadith ? "" : `<div class="arabic arabic-name">${m.nameArabic}</div>`}
       </div>
-      ${isHadith ? "" : introSurahText(m)}
+      ${isHadith ? introHadithText(m) : introSurahText(m)}
       <p class="intro-body">${m.intro}</p>
       <div class="intro-actions">
         <button id="btnVocab">Start Vocabulary Cards →</button>
@@ -330,10 +396,11 @@ function renderIntro() {
         <button class="ghost" id="btnMeaningBank">Meaning Bank</button>
         <button class="ghost" id="btnVerseOrder">Order the Verses</button>
         <button class="ghost" id="btnFillBlanks">Meaning Blanks</button>
-        <button class="ghost" id="btnBack">← Back to Home</button>
+        <button class="ghost" id="btnBack">← Back to library</button>
       </div>
     </div>
   `;
+  wireLessonBar();
   hydrateIntroQuranText(m);
   document.getElementById("btnVocab").addEventListener("click", () => {
     state.vocabIndex = 0;

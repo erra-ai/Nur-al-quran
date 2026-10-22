@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tawakkul and Uncertainty · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 10 · When You Don't Know What Happens Next</div><h1>Tawakkul and Uncertainty</h1><div class="rule">Tie your camel, then trust Allah — the heart rests where the hands work.</div><p class="subtitle">A story-centered Islamic SEL lesson that teaches children how to act bravely when the future is fog: do your honest part, tie the camel, and hand the result to the Only One who owns tomorrow.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Trust & decision-making</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Two-Hand Rule: Do — Tie — Ask — Let go</span></div></div></header>
+
+<article class="section gold" id="story"><h2>1. Main Story: The Camp Decision</h2><div class="story-box"><p>Two choices sat on the kitchen table like a fork in the road: the football camp Baba could barely afford, or the science week the teacher called 'once in a lifetime.' Eleven days to decide. And the fog was thick — what if the camp coach hates me? What if science week is boring and we wasted the money?</p></div><div class="story-box"><p>Zayd spiralled. He asked seven people what to do, redrew the pros-and-cons list three times, and slept badly for two nights — because the truth nobody said out loud was this: <em>none of the answers could be KNOWN.</em> That is what uncertainty IS. His mother watched him a day, then said: 'Ya habibi, let me show you the two hands.'</p></div><div class="thought harmful">'I have to get this PERFECT, because if I choose wrong, my whole year breaks. I must decide it all by myself, right now, with total certainty!'</div><div class="checkpoint"><h4>What did Zayd's loop actually demand of him?</h4><button class="option" data-correct="true" data-feedback="Exactly. No human has those. The demand itself is the illness — uncertainty is not a puzzle to defeat; it is a fog to walk through with a Guide.">Impossible things — certainty about the unseen, and the power of a whole year inside one camp choice.</button><button class="option" data-correct="false" data-feedback="Flippancy is not peace either. His hands still had work to do.">Nothing — he should just pick anything.</button><button class="option" data-correct="false" data-feedback="Handing your fog to others feels like relief and grows dependence.">Only an adult&#x27;s answer.</button><div class="feedback"></div></div><div class="story-box"><p>Mama took two sticky notes. HAND ONE — DO what you own: ask the science teacher what the week actually covers; get the camp coach's number and ask about him; write the real budget with Baba. HAND TWO — ASK Allah: consult the wise, pray salat al-istikhara (the prayer of asking Allah for good), and then Mama said the sentence she had learned twice in her life and lived both times: 'The result was never yours.'</p></div><div class="story-box"><p>Zayd did his part for six days, slept properly for the first time on night two, and chose camp. Half of science week's 'magic' turned out to be videos the teacher could have shown on any Tuesday. The camp was one of the hardest, best weeks of his summer — and his best friend there is now his team captain. Not because he guessed right, but because he DID his part and LET GO of the part he never owned.</p></div><div class="thought wise">'I work with my hands, I tie with my effort, I ask Allah — and I release the future to its Owner. The result was never mine, and I was never alone in it.'</div><div class="checkpoint"><h4>Why did Zayd sleep better on night two?</h4><button class="option" data-correct="true" data-feedback="That transfer is the entire engine of tawakkul — the heart rests at the shore of what it CAN control, handing the rest over.">Because he finally stopped trying to own the unseen and started doing his own visible part.</button><button class="option" data-correct="false" data-feedback="Indifference is not trust; he cared deeply and acted.">Because he stopped caring.</button><button class="option" data-correct="false" data-feedback="Outsourcing is not tawakkul either — that is the cousin of the bird that never leaves the nest.">Because he let others decide.</button><div class="feedback"></div></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>The Quran's definition of trust is a sequence of verbs, not a feeling:</p><div class="quran-box"><p class="arabic">فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ</p><p class="trans">&ldquo;And when you have decided, then rely upon Allah. Indeed, Allah loves those who rely [upon Him].&rdquo;</p><p class="ref">Surah Ali 'Imran 3:159 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ</p><p class="trans">&ldquo;And whoever relies upon Allah — then He is sufficient for him.&rdquo;</p><p class="ref">Surah At-Talaq 65:3 · ClearQuran (Talal Itani)</p></div><p>Read 3:159's ORDER: consult → decide → THEN rely. The verse never says 'guess and hope.' And 'hasbuh' in 65:3 means Allah is SUFFICIENT — yet the bird hadith proves the bird still flies at dawn: trust has shoes.</p><div class="balance-card"><p>Important balance: tawakkul is NOT 'I don't care, Allah will sort it' — that is laziness wearing a pious coat. The Prophet ﷺ answered the man who wanted to leave his camel untied: 'Tie it, AND trust.' Full effort with a fully free heart — hands working, heart resting.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>Two prophetic moments that define the whole lesson:</p><div class="hadith-box"><p class="hadith-arabic">قَالَ رَجُلٌ: يَا رَسُولَ اللَّهِ, أُرْسِلُهَا وَأَتَوَكَّلُ, أَوْ أَعْقِلُهَا وَأَتَوَكَّلُ? قَالَ: اعْقِلْهَا وَتَوَكَّلْ</p><p class="hadith-en">A man asked: 'O Messenger of Allah — should I release my camel and trust, or tie it and trust?' He said: "Tie it, and trust."</p><p class="hadith-ref">Jami' at-Tirmidhi 2517 · hasan (graded in Sahih al-Jami' 1068 by al-Albani)</p></div><div class="hadith-box"><p class="hadith-arabic">لَوْ أَنَّكُمْ تَتَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرَزَقَكُمْ كَمَا يَرْزُقُ الطَّيْرَ, تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا</p><p class="hadith-en">"If you relied upon Allah with true reliance, He would provide for you as He provides for the bird: it leaves hungry in the morning and returns full in the evening."</p><p class="hadith-ref">Jami' at-Tirmidhi 2344 · sahih (verified at hadeethenc.com #4721)</p></div><p>Look at the bird: it does not fly out full — it flies out HUNGRY. Dependence on Allah and daily movement are ONE act in that image. Your uncertain week is the morning flight; the full return is what you cannot yet see.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">The fog whispers</h4><p style="margin:0;font-size:.9rem;">"You must control the outcome or you're finished."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">Tawakkul answers</h4><p style="margin:0;font-size:.9rem;">"I own the effort, Allah owns the result — and I was never carrying what was never mine."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Zayd's six days of honest work were his camel-rope; istikhara and the released heart were his flying out hungry. Both together — that is the whole religion of decisions.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"The future is unseen and my mind is trying to solve it like a math problem. It is not a problem to solve; it is a fog to walk through with a Guide."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Decide with total certainty NOW — or refuse to decide at all — or let ten people decide for me."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">DO your owned part fully → TIE the camel (all the preparation) → ASK Allah (shura + istikhara) → LET GO of the result with hasbunallahu wa ni'mal wakil.</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "If you truly had tawakkul you'd never feel anxious about the future" — false. The Prophet ﷺ prepared, consulted, and felt the weight of decisions too. Tawakkul is action PLUS release; anxiety is the brain asking for certainty Allah never gave anyone. Teaching children that uncertainty-feelings equal weak faith creates either panic or fake bravado.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Name istikhara simply: 'O Allah, I ask You for good in this choice and to turn what is harmful away from me.' It is a prayer you pray AFTER gathering facts — not a dream lottery.</p></div></article>
+
+<article class="section gold" id="skill"><h2>5. The Two-Hand Rule</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Do your part</h4><div class="ar-step">اِسْعَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">List the facts you own: ask the teacher, make the calls, write the numbers. The visible list kills the invisible monster.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Tie the camel</h4><div class="ar-step">اِعْقِلْهَا</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Preparation is part of trust, not its opposite. Every rope you tie is a sentence you say to Allah: 'I take this seriously.'</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Ask Allah</h4><div class="ar-step">سْتَخِرْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Consult the wise (shura). Pray istikhara: ask Allah to pull this choice toward your good and push the harmful away.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Release the result</h4><div class="ar-step">فَوَكِّلْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">After the decision: hasbunallahu wa ni'mal wakil. You are the worker, not the Owner — and sleep belongs to Allah.</p></div></div><div class="rule-card"><p>Hands busy, heart surrendered. I tie the camel and I trust. The result was never mine.</p></div><h3>The Fog Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Mist</div><div class="sc-do">A normal small unknown (a quiz topic, weekend plans). Run the two hands — twenty minutes of facts, one du'a, decide.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">Fog</div><div class="sc-do">A real fork (teams, schools, friend drama): shura with two adults, istikhara, a pros/cons sheet. Write the fears — they get shorter on paper.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Whiteout</div><div class="sc-do">Sleep gone, mind looping the same thirty scenes nightly: the body is over-owning the unseen. Tell an adult, shrink the decision to one small next step at a time.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">Lost</div><div class="sc-do">No decision feels possible, panic about everything: anxiety needs professional help — and alongside it, dhikr, patience, and the promise that with hardship comes ease.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: The School Trip Form</h2><div class="story-box"><p>The trip form due Friday needed a forty-dirham fee, and Omar knew Baba's paycheck was late — again. His instinct: don't ask, just tell the teacher no, and hide that he wanted to go badly. He called that being 'understanding'; really it was grieving in advance to dodge the conversation.</p></div><div class="checkpoint"><h4>Which move is the Two-Hand Rule?</h4><button class="option" data-correct="true" data-feedback="Ask, tie what is askable, and release what is released. Honesty first — hiding the need is the rope never tied.">Tell Baba honestly what the trip means and what it costs; ask if there is a way — and if the answer is truly no, accept it and walk the sadness out with friends and an activity.</button><button class="option" data-correct="false" data-feedback="The mind makes villains out of empty rooms it never entered.">Never tell anyone; sit home and decide Baba doesn&#x27;t care.</button><button class="option" data-correct="false" data-feedback="Confusing feelings with force — and the bill is real.">Demand the money and rage at the family budget.</button><div class="feedback"></div></div><div class="story-box"><p>Baba's answer: 'We ask Allah tonight, together. If it is meant, a way appears.' That night they made du'a. Wednesday: Mama's neighbor offered to lend the amount until payday — simply, warmly, no drama. Omar went on the trip. Sometimes the camel you tied with honesty gets pulled across the river by doors you could never have pushed open alone.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Next Foggy Decision</h2><div class="challenge-card"><h3>Pick ONE real decision you are carrying:</h3><ol><li><strong>My facts list:</strong> the three questions I will actually ask this week (a teacher, an adult, the coach).</li><li><strong>My istikhara night:</strong> schedule it — two rak'ahs and the du'a this week, for THIS decision.</li><li><strong>My release line:</strong> write 'I own the effort; the result belongs to Allah' — tape it where the fog loops at you.</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Run the two hands on your foggy decision before the next lesson, and report where the rope got tied.</p></div><div class="balance-card"><p>Wrong choices are survivable — that is the secret nobody tells children: adults live with decisions that were wrong, and the sky stayed down anyway. Allah is closer to the one who acted honestly, even imperfectly, than to the one who froze perfectly.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Just trust — stop thinking so much."</li><li>"Whatever happens happens" (shrugging is not tawakkul).</li><li>"You should have known better" — punishing the learner for fog.</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"What part is yours? What part is Allah's? Put each in its own box."</li><li>"Tell me what you're afraid of — let's look at it once, fully."</li><li>"Want to make istikhara together?"</li></ul></div></div><h3>Interactive Teach-Back: Put the Two Hands in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the rule.</div><div class="checkpoint" style="margin-top:24px;"><h4>Amina must choose between two school tracks. Every day she imagines five disasters. What breaks the loop?</h4><button class="option" data-correct="true" data-feedback="Do → Tie → Ask → Let go, in order.">Ask each teacher exactly what the track covers, talk to an older student, pray istikhara, choose — and write: &#x27;result owned by Allah.&#x27;</button><button class="option" data-correct="false" data-feedback="Searching people for what only Allah and your own effort can answer.">Ask ten more friends every day until one sounds certain.</button><button class="option" data-correct="false" data-feedback="Randomness is not release — it is skipping the rope.">Flip a coin and never discuss it.</button><button class="option" data-correct="false" data-feedback="Deadline panic is the worst decision-maker there is.">Delay until the school office forces a decision.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Model the two hands out loud: families that narrate their own istikhara and preparation raise kids who neither panic nor shrug in fog. And when a child's decision turns 'wrong,' never say 'I told you so' — ask 'what does this teach the next one?' The goal is not a perfect childhood record but a trained decider.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Do", "Tie", "Ask", "Let go"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First do the honest work of gathering facts.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

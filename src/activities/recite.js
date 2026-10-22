@@ -1,8 +1,8 @@
-import { app, getModule, renderApp, state } from "../state.js";
-import { fetchSurahFromQuranCom } from "../quran-api.js?v=20260830-tajweed-ikhafa";
-import { ITANI_TEEN_TRANSLATIONS } from "../data/translations/itani-teens.js";
-import { ayahText } from "./meaning-banks.js";
-import { startQuiz } from "./quiz.js";
+import { app, getModule, renderApp, state } from "../state.js?v=20260907-topnav2";
+import { fetchSurahFromQuranCom } from "../quran-api.js?v=20260907-topnav2";
+import { ITANI_TEEN_TRANSLATIONS } from "../data/translations/itani-teens.js?v=20260907-topnav2";
+import { ayahText } from "./meaning-banks.js?v=20260907-topnav2";
+import { startQuiz } from "./quiz.js?v=20260907-topnav2";
 
 // English line for an ayah, rebuilt verbatim from the verified fillBlanksEn
 // segments so the wording always tracks src/data/surahs/<surah>.js.

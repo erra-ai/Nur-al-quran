@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fear and Worry · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header">
+  <div class="part">Part 4 · When the Worry Won't Stop</div>
+  <h1>Fear and Worry</h1>
+  <div class="rule">Fear is a signal, not a fact — dhikr is the shelter.</div>
+  <p class="subtitle">A story-centered Islamic SEL lesson that teaches children how to stand with fear and worry, cool the heart with dhikr and du'a, and take one small brave step.</p>
+  <div class="meta">
+    <div class="meta-card"><strong>Age</strong><span>10–13</span></div>
+    <div class="meta-card"><strong>Time</strong><span>25–30 min</span></div>
+    <div class="meta-card"><strong>SEL Skill</strong><span>Self-management</span></div>
+    <div class="meta-card"><strong>Main Tool</strong><span>The Anchor: Call — Answer — Slow — Move</span></div>
+  </div>
+</header>
+
+<article class="section sky" id="story"><h2>1. Main Story: Amina's What-If Loop</h2><div class="story-box"><p>It was only Tuesday, but Amina's brain had already rehearsed Friday's math exam forty times. <em>What if I freeze? What if everyone laughs? What if I fail and Mama is disappointed? What if — what if — what if?</em></p></div><div class="story-box"><p>The loop got louder at night. Her heart beat fast like she had run. Her stomach tied in a knot. Her hands felt sweaty even though the room was cool. She checked the exam date on the calendar for the sixth time, as if the number could help.</p></div><div class="thought harmful">If I'm this scared, something bad is definitely going to happen. Worry is a warning from my body — I should listen to it all night!</div><div class="checkpoint"><h4>What was Amina's worry doing to her body?</h4><button class="option" data-correct="true" data-feedback="Yes — fear can hit the body&#x27;s alarm before anything is actually wrong. The knot, the racing heart, the sweaty hands — all real, all just feelings, not facts.">Making her body act like something dangerous was happening right now, even though the exam was days away.</button><button class="option" data-correct="false" data-feedback="That is not what the story describes.">Nothing — fear only happens in your imagination.</button><button class="option" data-correct="false" data-feedback="That is not what the story describes.">It made her stronger — worry is always helpful.</button><div class="feedback"></div></div><div class="story-box"><p>Mama found her wide awake. "Tell me your biggest what-if," Mama said. Amina whispered, "What if I fail?" Mama sat down beside her. "Okay. We cannot delete tomorrow with worry — worry never solved a single problem alone. But you and Allah can handle it. Let's do the anchor."</p></div><div class="story-box"><p>They recited the ayah Mama knew by heart: <em>أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</em> — "Unquestionably, by the remembrance of Allah hearts are assured" (13:28). Then they made the du'a of Yunus in the whale's darkness: <strong>لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ</strong>.</p></div><div class="story-box"><p>Amina asked: "Is my what-if even certain?" No — last time she was scared, she got 84%. "Is there one thing I can DO tonight?" Yes — twenty careful minutes on the two chapters that felt shaky. She studied, breathed slowly, and slept.</p></div><div class="thought wise">"I feel worried. My heart is loud, but it is not a prophet — it does not know the future. I call on Allah, I check the thought, I do my one small thing — and I leave the result with Allah."</div><div class="checkpoint"><h4>Which response is the anchor?</h4><button class="option" data-correct="true" data-feedback="Exactly — worship AND preparation, together. That is how the Prophet ﷺ taught it.">Name the fear, recite dhikr and the du&#x27;a of Yunus, check whether the feared thing is certain, and take one small practical action.</button><button class="option" data-correct="false" data-feedback="That is letting fear drive the plan — and the body still trembles at dawn.">Study all night and skip sleep so nothing can go wrong.</button><button class="option" data-correct="false" data-feedback="Hiding fear does not anchor it — it just makes the waves bigger in secret.">Pretend she is not scared at all.</button><div class="feedback"></div></div><div class="story-box"><p>Friday came. Her heart sped up again — the fear did not vanish; she was not expecting it to. But now she had a shelter inside it. She breathed, said the short du'a under her breath, read the paper, and found three easy questions waiting on the first page like friends.</p></div><div class="story-box"><p>She got 91%. That is not the point, though. The point is: Amina learned she could be afraid and still move her feet toward the thing. The what-if loop became a what-is loop — and what-is can be handled.</p></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Allah did not leave us without shelter for the fearful heart. Two anchors:</p><div class="quran-box"><p class="arabic">ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ</p><p class="trans">&ldquo;Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured.&rdquo;</p><p class="ref">Surah Ar-Ra'd 13:28 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسُ قَدْ جَمَعُوا۟ لَكُمْ فَٱخْشَوْهُمْ فَزَادَهُمْ إِيمَـٰنًا وَقَالُوا۟ حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ</p><p class="trans">&ldquo;Those to whom people said, 'Indeed, the people have gathered against you, so fear them.' But it increased them in faith, and they said, 'Sufficient for us is Allah, and He is the best Disposer of affairs.'&rdquo;</p><p class="ref">Surah Ali 'Imran 3:173 · ClearQuran (Talal Itani)</p></div><p>Notice 3:173: the danger was real — and they were STILL not told to panic. They were shown what a heart does when fear arrives: it turns to its Owner. <em>Hasbunallahu wa ni'mal wakil</em> — Allah is enough for us.</p><div class="balance-card"><p>Important balance: Islam does not say "never be afraid." Even the Prophet ﷺ and his companions felt real danger in the cave — and there Allah revealed comfort: "Do not grieve; indeed Allah is with us" (9:40). Fear is a guest; dhikr is the shelter; the fear is not allowed to drive the car.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>When Prophet Yunus ﷺ was swallowed into triple darkness — the sea, the night, the whale's belly — he did not panic-pray. He said the words the Prophet ﷺ later taught us are never said in a real trouble without Allah answering:</p><div class="hadith-box"><p class="hadith-arabic">دَعْوَةُ ذِي النُّونِ إِذْ دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ: لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ، فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلَّا اسْتَجَابَ اللَّهُ لَهُ</p><p class="hadith-en">"The du'a of the man of the fish, when he called while he was in the belly of the whale: 'There is no god but You; glory be to You; indeed I was among the wrongdoers' — no Muslim ever calls with it concerning anything but that Allah answers him."</p><p class="hadith-ref">Jami' at-Tirmidhi 3505 · authenticated by al-Albani (verified at hadeethenc.com #65919)</p></div><div class="hadith-box"><p class="hadith-arabic">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ</p><p class="hadith-en">"O Allah, I seek refuge in You from anxiety and grief, from weakness and laziness, from cowardice and miserliness, from being overwhelmed by debt and overpowered by men."</p><p class="hadith-ref">Sahih al-Bukhari 6369 — the Prophet's ﷺ regular morning and evening shelter</p></div><p>Think about it: the best of creation made this du'a <em>regularly</em>. If a ten-year-old's racing heart is too much for Yunus's du'a, it would be too much for the prophets — and it isn't.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What fear says</h4><p style="margin:0;font-size:.9rem;">"Something bad is coming and you are alone in it."</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What Allah says</h4><p style="margin:0;font-size:.9rem;">"I am with you — call Me and I answer (40:60). Hearts settle with My dhikr (13:28)."</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Worry about the exam is not a sin; the worry was Amina's brain trying to protect her. She just had to show it where the protection really lives.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Something matters to me and I feel unprepared or unsafe. My body is asking: where is your shelter?"</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"The bad thing is CERTAIN. I must worry until it proves me wrong. Nobody can help. Allah forgot my case."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Name the fear out loud. Recite dhikr + Yunus's du'a. Check: is it certain, probable, or just loud? Do my small honest part. Leave the result to Allah.</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "If you had real tawakkul you would not be scared" — that turns fear into a sin and lies about deen. The companions felt real fear and were praised. Teach: fear + turning to Allah = exactly how the strongest believers lived.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">One more do-not: do not let worry grow into never facing the thing. Avoidance feeds fear; one small step, repeated, starves it.</p></div></article>
+
+<article class="section sky" id="skill"><h2>5. The Anchor: C.A.L.M.</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Call to Allah</h4><div class="ar-step">اُدْعُ اللَّهَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Say the dhikr and Yunus's du'a: <strong>لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ</strong>. The tongue recites, the heart lands.</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Check the thought</h4><div class="ar-step">اُنْظُرْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Ask the what-if loop: <strong>Is this certain?</strong> What happened last time I feared this? Fear that gets checked gets quieter.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Slow the body</h4><div class="ar-step">اُهْدَأْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Wudu cools; long breaths slow the alarm. The body cannot run the panic pedal and the calm pedal at once.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>One honest move</h4><div class="ar-step">اِسْعَى</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Twenty minutes of study. One question asked. Tie your camel — action is worship's hands.</p></div></div><div class="rule-card"><p>I call to Allah. I check the thought. I slow the body. I make one move. Fear keeps its voice low, and my feet keep walking.</p></div><h3>The Worry Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Butterflies</div><div class="sc-do">Name it: "I'm nervous about ______." Dhikr + one small check of preparation. Butterflies are normal.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">The loop</div><div class="sc-do">Do the anchor fully: du'a, thought-check, slow breaths, one move. Break the loop with paper: write the what-ifs and answer each one.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Pounding</div><div class="sc-do">Heart racing, can't sleep: wake a parent. Pray two rak'ahs or make wudu together. Say out loud: حسبي الله ونعم الوكيل. Do not carry the storm alone.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">Stuck fear</div><div class="sc-do">Fear blocks eating, sleeping, school, or sleepovers for weeks: that is an illness signal, not weak iman — parents + doctor/counselor. Allah puts cures in hands.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: Bilal and the Dark</h2><div class="story-box"><p>Bilal's street lost power before Maghrib. His family lit candles, but the old house creaked and every shadow moved. Bilal's heart hammered: "What if someone is out there? What if I can't breathe?"</p></div><div class="checkpoint"><h4>Which is the anchor move for Bilal?</h4><button class="option" data-correct="true" data-feedback="Yes — dhikr for the heart, breath for the body, light in his hand, family around him. Fear handled on all four sides.">Say the adhkar he learned (the protection du&#x27;as), breathe, hold the flashlight — his &#x27;one move&#x27; — and sit near his family.</button><button class="option" data-correct="false" data-feedback="Panic dressed as bravery — the fear wins either way.">Run outside to prove he is not scared.</button><button class="option" data-correct="false" data-feedback="Alone is where loops get loudest; the shelter is company plus dhikr.">Lie awake all night arguing with the shadows alone.</button><div class="feedback"></div></div><div class="story-box"><p>Baba found him at the candlelight already doing it — the du'as, the breathing, torch in hand. "I was scared," Bilal admitted. "And then I did the anchor." Baba smiled: "Then the anchor is stronger than the dark." The power came back in twenty minutes. Bilal's fear came back too, sometimes. He always knew where the shelter stood.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Worry-to-Du'a Switch</h2><div class="challenge-card"><h3>Practice this week — tiny and honest:</h3><ol><li><strong>My loop:</strong> write your favorite what-if once, then answer it: certain? probable? just loud?</li><li><strong>My du'a:</strong> write or tape the Yunus du'a where you can see it — it is the emergency exit for fear.</li><li><strong>My one move:</strong> name the small action your fear wants you to skip — and do it for ten minutes.</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Tell your safe person one thing you did the anchor with this week. No long report — one sentence is a victory.</p></div><div class="balance-card"><p>Courage in this lesson is not 'no fear' — it is 'fear plus Allah plus one step.' That combination has never failed.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Don't be a baby."</li><li>"Nothing will happen" (you cannot promise the unseen).</li><li>"Good Muslims have no fear."</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Tell me your biggest what-if — let's look at it together."</li><li>"Where does your body feel the worry? Let's cool it."</li><li>"Say the du'a of Yunus — the dark is not the end of the story."</li></ul></div></div><h3>Interactive Teach-Back: Put the Anchor in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent. You know the fear-anchor.</div><div class="checkpoint" style="margin-top:24px;"><h4>Huda's stomach aches before the school speech. Which plan is the anchor?</h4><button class="option" data-correct="true" data-feedback="That is C-A-L-M in real life: shelter, check, slow, move.">Recite dhikr and the Yunus du&#x27;a, breathe slowly, do one last practice run, then go.</button><button class="option" data-correct="false" data-feedback="Avoidance feeds the loop bigger for next time.">Skip the speech and tell everyone she is sick.</button><button class="option" data-correct="false" data-feedback="That is hiding the alarm, not answering it.">Drink six energy drinks so she cannot feel the nerves.</button><button class="option" data-correct="false" data-feedback="Over-preparation is often fear in fancy dress.">Study for it until 3 a.m. the night before.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Children's fears are real even when we judge the cause small. Validate the feeling, then move the body — the anchor works on playground worries and exam worries alike. Watch for the 9–10 zone (weeks-long blocks on sleep, appetite, school) and bring in professionals without shame: treatment is tawakkul with action.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Call to Allah", "Answer the thought", "Slow your body", "Make one move"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First the heart calls on Allah.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

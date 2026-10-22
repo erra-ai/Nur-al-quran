@@ -9,8 +9,8 @@ import {
   shuffleOptions,
   state,
   surahs,
-} from "../state.js";
-import { showModal } from "../navigation.js";
+} from "../state.js?v=20260907-topnav2";
+import { showModal } from "../navigation.js?v=20260907-topnav2";
 
 /* ---------- QUIZ (scored) ---------- */
 function startQuiz() {

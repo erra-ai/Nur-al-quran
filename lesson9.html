@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabr During Difficulty · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="part">Part 9 · When Life Gets Heavy</div><h1>Sabr During Difficulty</h1><div class="rule">Sabr is not sitting still — it is standing firm while you keep working.</div><p class="subtitle">A story-centered Islamic SEL lesson that teaches children what real sabr is: honest endurance with prayer, effort, and hope — the muscle Prophet Ayyub trained us to build.</p><div class="meta"><div class="meta-card"><strong>Age</strong><span>10–13</span></div><div class="meta-card"><strong>Time</strong><span>25–30 min</span></div><div class="meta-card"><strong>SEL Skill</strong><span>Perseverance</span></div><div class="meta-card"><strong>Main Tool</strong><span>The Sabr Kit: Hold — Pray — Work — Wait</span></div></div></header>
+
+<article class="section emerald" id="story"><h2>1. Main Story: The Year Everything Was Hard</h2><div class="story-box"><p>It started with Baba losing his job in October. Then in December Mama got sick and stayed sick. By February, Adam's family had moved to a smaller flat, and the word 'later' had replaced a hundred words: later for the laptop, later for the camp, later for everything.</p></div><div class="story-box"><p>Adam was twelve. He had heard the phrase a thousand times — <em>Allah gives sabr to those who are patient</em> — but nobody had explained how a boy is supposed to <em>do</em> patience while his chest feels like a full washing machine. One night at the small kitchen table he snapped at his little sister over nothing, slammed his door, and cried with his face in the blanket.</p></div><div class="thought harmful">'I am done. I have been good and still everything fell. Either Allah forgot us — or I just stop feeling anything at all and grind through forever.'</div><div class="checkpoint"><h4>Which of those thoughts is the lie Shaytan is selling?</h4><button class="option" data-correct="true" data-feedback="Yes. Real sabr feels the full weight AND keeps moving toward Allah — neither a numb stone nor despair. The verse never says &#x27;stop feeling&#x27;; it says: seek help (2:153).">Both are lies: numbness is not sabr, and &#x27;He forgot us&#x27; is the oldest accusation against Allah.</button><button class="option" data-correct="false" data-feedback="Endless grinding without prayer or expression is how hearts crack silently.">Only the first one — grinding is actually fine.</button><button class="option" data-correct="false" data-feedback="One is despair dressed as theology, the other is numbness dressed as strength.">Neither — both are just strategies.</button><div class="feedback"></div></div><div class="story-box"><p>The next morning his sister Maryam — sixteen and carrying her own heavy — sat on his bed. 'Want to know what I learned about sabr? It is not sitting still. Look at Ayyub: years of sickness, lost wealth, lost children — and he never stopped ASKING. He complained TO Allah, not about Allah. Sabr with a voice.' Then she said the words that rearranged Adam's year: 'Baba says: we do our part, we pray, and we trust the Waiting. That is all any of us can carry.'</p></div><div class="story-box"><p>They built the kit without naming it: Adam kept one honest sentence a day to Mama about his anger. Maryam taught him the two-rak'ah reset when a wave hits. Baba made three job calls every morning like clockwork — sabr with shoes on. And Mama said the verse every night before sleep: <em>fa-inna ma'al 'usri yusra</em> — with hardship comes ease; it came twice in the Quran so nobody could miss it.</p></div><div class="thought wise">'I can hold it. I can pray it. I can work it. I can wait on Allah. I am not a statue and I am not alone.'</div><div class="checkpoint"><h4>What turned Adam's year?</h4><button class="option" data-correct="true" data-feedback="That is 2:153 lived: seek help THROUGH patience AND prayer — and the daily work is the footsteps of tawakkul.">The whole kit together — honest feeling, prayer, daily effort, and waiting on Allah&#x27;s timing.</button><button class="option" data-correct="false" data-feedback="The bird hadith answers that lie: the bird goes out AND comes back — movement plus trust.">Just waiting — sabr means doing nothing until Allah fixes it.</button><button class="option" data-correct="false" data-feedback="Anger dumps the weight on other backs — it never carries the load.">Getting angry at everyone until the pressure released.</button><div class="feedback"></div></div><div class="story-box"><p>In May, Baba found work — not the old one, a new one. In June, Mama walked Adam to his exams. The flat was still small. The laptop was still 'later.' But the family had discovered something: they had grown stronger than the year. That is the quiet profit of sabr — you do not just survive hard seasons; you come out with muscle that did not exist before.</p></div></article>
+
+<article class="section gold" id="quran"><h2>2. Quran Anchor</h2><p>Allah's two master-classes on sabr:</p><div class="quran-box"><p class="arabic">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ</p><p class="trans">&ldquo;O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient.&rdquo;</p><p class="ref">Surah Al-Baqarah 2:153 · ClearQuran (Talal Itani)</p></div><div class="quran-box"><p class="arabic">وَأَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلضُّرُّ وَأَنتَ أَرْحَمُ ٱلرَّٰحِمِينَ</p><p class="trans">&ldquo;And [mention] Job, when he called to his Lord, 'Indeed, adversity has touched me, and You are the Most Merciful of the merciful.'&rdquo;</p><p class="ref">Surah Al-Anbiya 21:83 · ClearQuran (Talal Itani)</p></div><p>Study Ayyub's sentence: he did NOT say 'your punishment is too much.' He said — the pain touched me, and YOU are the Most Merciful. Complaint to Allah, wrapped in praise of Allah. That is the tongue of real sabr.</p><div class="balance-card"><p>Important balance: 2:153 pairs sabr WITH salah — and Ayyub CRIED OUT. Patience is not silent suffering or gritted teeth forever. Sabr is holding the line while you talk to Allah about the weight — with a voice, with prayer, and with feet that keep walking.</p></div></article>
+
+<article class="section gold" id="prophetic"><h2>3. Prophetic Lens</h2><p>The Prophet ﷺ defined sabr where people actually need it:</p><div class="hadith-box"><p class="hadith-arabic">إِنَّمَا الصَّبْرُ عِنْدَ الصَّدْمَةِ الْأُولَى</p><p class="hadith-en">"Patience is [truly shown] at the first shock."</p><p class="hadith-ref">Sahih al-Bukhari 1283 · Sahih Muslim 926 — the moment the news hits is where sabr is built or lost</p></div><div class="hadith-box"><p class="hadith-arabic">مَن يَتَصَبَّرْ يُصَبِّرْهُ اللَّهُ، وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنَ الصَّبْرِ</p><p class="hadith-en">"Whoever strives to be patient, Allah will make him patient — and no one was given a gift better and more comprehensive than patience."</p><p class="hadith-ref">Sahih al-Bukhari 1469 · Sahih Muslim 1053 (verified at hadeethenc.com #4967)</p></div><p>The second hadith is the engine: sabr is a SKILL, and whoever PRACTICES it receives it as a GIFT from Allah. Patience is trainable — you are not born with a fixed tank.</p><div class="grid-2"><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What people think sabr is</h4><p style="margin:0;font-size:.9rem;">Silent face, no complaints, waiting like a stone.</p></div><div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What sabr actually is</h4><p style="margin:0;font-size:.9rem;">Feeling it honestly, praying it out, doing the next task, holding Allah's timing.</p></div></div><p style="text-align:center;font-weight:600;color:#3a3333;">Adam's family ran all four parts in real life — and the year meant to break them became their strongest training season.</p></article>
+
+<article class="section" id="difference"><h2>4. Understand the Difference</h2><div class="grid-3"><div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#0f766e;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Something is hard and it will last a while — my heart needs a way to carry long weight, not just dodge quick pain."</p></div><div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Numb out and never complain — or explode at everyone — or stop trying because Allah clearly forgot us."</p></div><div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">HOLD (one honest sentence daily) → PRAY (the two-rak'ah reset; Ayyub's words 21:83) → WORK (your daily next task — sabr with shoes) → WAIT (Allah's timing — the twice-given promise 94:5–6).</p></div></div><div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "A good Muslim never shows sadness in difficulty" — no; the Prophet ﷺ said 'the eyes tear and the heart grieves' (Bukhari 1303). Numbness is not sabr, silence is not strength. Teach the kit, not a stone mask. And never romanticize pain: the hardship is wrong AND the child is stronger than it.</p></div><div class="card" style="background:var(--cream);text-align:center;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">A fairness note: some heavy seasons are not 'tests' for the child at all (poverty, a sick parent). Do NOT say 'Allah tests everyone equally — be happy about it.' Say: this is hard, Allah sees it, and we hold AND fix what we can.</p></div></article>
+
+<article class="section emerald" id="skill"><h2>5. The Sabr Kit: hold, pray, work, wait</h2><div class="skill-grid"><div class="skill-card s1"><div class="step-num">1</div><h4>Hold the shock</h4><div class="ar-step">اِثْبُتْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">The first hit is where sabr lives (Bukhari 1283): one honest sentence, no explosion, no collapse. 'This really hurts. I will not decide tonight.'</p></div><div class="skill-card s2"><div class="step-num">2</div><h4>Pray it out</h4><div class="ar-step">صَلِّ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">2:153 — when the wave peaks: wudu, two rak'ahs, Ayyub's words: <em>massaniya al-durru wa anta arhamu al-rahimeen</em>. Complaint TO the Most Merciful.</p></div><div class="skill-card s3"><div class="step-num">3</div><h4>Do your task</h4><div class="ar-step">اِعْمَلْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Sabr has shoes: the three calls, the daily five problems, the one chore. One honest task a day keeps despair unemployed.</p></div><div class="skill-card s4"><div class="step-num">4</div><h4>Wait on Allah</h4><div class="ar-step">اِنتَظِرْ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">94:5–6: with hardship, ease — twice. Waiting is ACTIVE: you are the bird flying out at dawn, trusting the return.</p></div></div><div class="rule-card"><p>I hold the shock. I pray the pain. I work my part. I wait on Allah. Sabr is a muscle — and He gives it to those who train.</p></div><h3>The Weight Scale</h3><p>Click each level to see the plan.</p><div class="scale-grid"><button class="scale-card" aria-expanded="false"><div class="sc-level">1–3</div><div class="sc-name">Rough week</div><div class="sc-do">Faster prayers, one honest sentence, keep the routine. Small weights train the muscle for the big ones.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">4–6</div><div class="sc-name">Carrying</div><div class="sc-do">Full kit daily. Tell your family the truth about the weight. Snapping at siblings means the kit needs a check-up, not a silence.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">7–8</div><div class="sc-name">Storm</div><div class="sc-do">When sleep and food crack: bring an adult in NOW, keep the salah anchor, do ONE task daily only. No one runs level 8s alone.</div></button><button class="scale-card" aria-expanded="false"><div class="sc-level">9–10</div><div class="sc-name">Crushing</div><div class="sc-do">A loss or fear too big for the family to hold: professionals (doctor, counselor, imam) are Allah's hands — reaching for them is sabr, not surrender.</div></button></div></article>
+
+<article class="section" id="transfer"><h2>6. Transfer Practice: The Ramadan of the Long Days</h2><div class="story-box"><p>Hana, 12, wanted to fast all Ramadan. Week one: dizzy by 4 p.m., snapping at her brother at iftar, and one night she cried that she wanted to quit. Her whole plan had been 'be patient' — and she discovered that patience with no kit is just pressure.</p></div><div class="checkpoint"><h4>Which rebuild fits the Sabr Kit?</h4><button class="option" data-correct="true" data-feedback="The kit works in worship too — especially there: steady beats heroic, and Allah never burdens a soul beyond scope (2:286).">Scale the goal to what she can HOLD (fast some days, sleep enough, drink well at nights), PRAY the tiredness out, do one WORK task daily, and WAIT on strength returning week by week.</button><button class="option" data-correct="false" data-feedback="Harming the body is not worship. 2:286 just read the room.">Force every single day no matter what — quitting is haram.</button><button class="option" data-correct="false" data-feedback="Abandonment is the opposite of patience.">Quit Ramadan entirely and restart next year.</button><div class="feedback"></div></div><div class="story-box"><p>Hana finished the month strong and soft — the way the Prophet ﷺ said deeds should be: the most consistent, even if few (Bukhari 6464). She learned the difference between sabr (carry WITH Allah) and stamina (white-knuckling alone). Ramadan became her training ground for every hard season after it.</p></div></article>
+
+<article class="section gold" id="challenge"><h2>7. My Sabr Ledger</h2><div class="challenge-card"><h3>Three lines this week:</h3><ol><li><strong>My first-shock sentence:</strong> the one true thing to say when the wave hits ('I will not decide tonight').</li><li><strong>My daily task:</strong> the ONE small honest thing your family's season needs from you.</li><li><strong>My 94:5 card:</strong> tape 'inna ma'al 'usri yusra' where the hard hours find you.</li></ol><p style="margin-top:12px;font-weight:600;text-align:center;color:var(--emerald-dark);">Run the kit once for a real difficulty and tell your safe person which part helped most.</p></div><div class="balance-card"><p>Sabr is trainable (Bukhari 1469) — start with queues, traffic, small losses. The muscle built in tiny seasons is the one that holds the big ones, bi'idhnillah.</p></div></article>
+
+<article class="section" id="guide"><h2>8. Parent / Teacher Guide</h2><div class="grid-2"><div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Just be patient" — said like a door closing.</li><li>"Stop complaining — others have it worse." (comparing pain to shame it)</li><li>"You asked for this test." — nobody asked; hardship is not an automatic receipt for sin.</li></ul></div><div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"This season is genuinely heavy. Which kit step do you need today?"</li><li>"Say Ayyub's words with me — Allah loves the honest complain-to-Him tongue."</li><li>"One task. One prayer. One breath. Repeat."</li></ul></div></div><h3>Interactive Teach-Back: Put the Sabr Kit in Order</h3><p>Click the steps in order.</p><div class="order-grid" id="orderGrid"></div><p class="order-feedback" id="orderFeedback"></p><button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button><div class="order-complete" id="orderComplete">Excellent — you know the four kit parts.</div><div class="checkpoint" style="margin-top:24px;"><h4>Yusuf's dog of five years died that afternoon. What is sabr at the first shock?</h4><button class="option" data-correct="true" data-feedback="Hold + Pray + Work + Wait — with a voice and a prayer mat.">Say the truth out loud (&#x27;this breaks my heart&#x27;), pray two rak&#x27;ahs, let the tears come, and do the next task anyway.</button><button class="option" data-correct="false" data-feedback="Numbness wearing confidence — not sabr.">Laugh it off because &#x27;it was just a dog&#x27;.</button><button class="option" data-correct="false" data-feedback="Grief without the kit — and Islam protects the body too.">Refuse food and sleep to prove the loss.</button><div class="feedback"></div></div><div class="card" style="background:var(--cream);text-align:center;margin-top:16px;"><p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Children in real hardship (illness, poverty, divorce) need two messages together: 'this is genuinely hard' AND 'the adults carry the adult load — you hold your small part with us.' Let them see adults using the kit; that is the lesson. The 9–10 zone stays the same: professionals are Allah's hands.</p></div></article>
+</div>
+
+<script>
+(function(){
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct=\"true\"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='\u2705 '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+const steps=["Hold", "Pray", "Work", "Wait"];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>steps.length){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='\u2705 Step '+orderIdx+' of '+steps.length+' placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent="That step comes later. First: hold the shock without exploding.";
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+orderReset.addEventListener('click',initOrder);
+initOrder();
+})();
+</script>
+</body>
+</html>

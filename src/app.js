@@ -3,21 +3,21 @@ import {
   renderMeaningBank,
   renderOrderVerses,
   renderReadMeaning,
-} from "./activities/meaning-banks.js";
-import { renderQuiz, renderResult } from "./activities/quiz.js";
-import { renderRecite } from "./activities/recite.js?v=20260830-qurancom";
-import { renderVerseOrder } from "./activities/verse-order.js";
+} from "./activities/meaning-banks.js?v=20260907-topnav2";
+import { renderQuiz, renderResult } from "./activities/quiz.js?v=20260907-topnav2";
+import { renderRecite } from "./activities/recite.js?v=20260907-topnav2";
+import { renderVerseOrder } from "./activities/verse-order.js?v=20260907-topnav2";
 import {
   renderMatchVocab,
   renderPractice,
   renderVocab,
-} from "./activities/vocabulary.js";
-import { renderSidebar } from "./navigation.js";
-import { renderHome, renderIntro, renderLifeSkills } from "./pages.js?v=20260830-dagger-alif";
-import { setRenderer, state } from "./state.js";
+} from "./activities/vocabulary.js?v=20260907-topnav2";
+import { initChrome, syncChrome } from "./navigation.js?v=20260907-topnav2";
+import { renderHome, renderIntro, renderLifeSkills } from "./pages.js?v=20260907-topnav2";
+import { setRenderer, state } from "./state.js?v=20260907-topnav2";
 
 function render() {
-  renderSidebar();
+  syncChrome();
   if (state.view === "home") return renderHome();
   if (state.view === "intro") return renderIntro();
   if (state.view === "vocab") return renderVocab();
@@ -35,4 +35,5 @@ function render() {
 }
 
 setRenderer(render);
+initChrome();
 render();

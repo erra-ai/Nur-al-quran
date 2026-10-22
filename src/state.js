@@ -1,5 +1,5 @@
-import { surahs } from "./data/surahs/index.js";
-import { hadiths } from "./data/hadiths/index.js";
+import { surahs } from "./data/surahs/index.js?v=20260907-topnav2";
+import { hadiths } from "./data/hadiths/index.js?v=20260907-topnav2";
 
 /* ===========================================================
    STATE
@@ -22,7 +22,9 @@ export const state = {
   matchAr: [],
   matchEn: [],
   matchSelected: null,
-  verseChecked: false
+  verseChecked: false,
+  lifeSkillLesson: 1,   // which Life Skills lesson file to show in the iframe
+  activeCollection: "quran"  // which library the home page shows (quran|hadith|lifeskills)
 };
 
 /* ===========================================================

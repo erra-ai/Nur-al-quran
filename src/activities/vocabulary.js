@@ -5,8 +5,8 @@ import {
   setSurahProgress,
   shuffleOptions,
   state,
-} from "../state.js";
-import { startQuiz } from "./quiz.js";
+} from "../state.js?v=20260907-topnav2";
+import { startQuiz } from "./quiz.js?v=20260907-topnav2";
 
 function renderMatchVocab(){
   const m=getModule();

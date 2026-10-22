@@ -7,36 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./src/styles/app.css?v=20260830-intro-title">
+<link rel="stylesheet" href="./src/styles/app.css?v=20260907-topnav2">
 
 </head>
 <body>
 <div class="layout">
-  <!-- LEFT SIDEBAR: Surahs -->
-  <button id="sidebarToggle" class="sidebar-toggle left-toggle" title="Surahs menu">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </button>
-  <nav id="sidebar" class="sidebar left-sidebar">
-    <div class="sidebar-header">
-      <span class="sidebar-title">Surahs</span>
-      <button id="sidebarClose" class="sidebar-close" title="Close menu">&times;</button>
-    </div>
-    <div id="sidebarList" class="sidebar-list"></div>
-  </nav>
-  <div id="overlay" class="sidebar-overlay"></div>
-
-  <!-- RIGHT SIDEBAR: Hadith -->
-  <button id="hadithToggle" class="sidebar-toggle right-toggle" title="Hadith menu">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-  </button>
-  <nav id="hadithSidebar" class="sidebar right-sidebar">
-    <div class="sidebar-header hadith-header">
-      <span class="sidebar-title">Hadith</span>
-      <button id="hadithClose" class="sidebar-close" title="Close menu">&times;</button>
-    </div>
-    <div id="hadithList" class="sidebar-list"></div>
-  </nav>
-  <div id="hadithOverlay" class="sidebar-overlay"></div>
+  <!-- TOP NAVBAR: shared chrome for every view (src/navigation.js fills it) -->
+  <header id="topbar" class="topbar"></header>
 
   <!-- Custom Modal -->
   <div id="appModal" class="app-modal">
@@ -55,7 +32,7 @@
   </div>
 </div>
 
-<script type="module" src="./src/app.js?v=20260830-dagger-alif"></script>
+<script type="module" src="./src/app.js?v=20260907-topnav2"></script>
 
 </body>
 </html>

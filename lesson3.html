@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sadness and Grief · Strong Heart, Wise Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald:#0f766e; --emerald-light:#e8f5f1; --emerald-dark:#115e59;
+  --gold:#b8862d; --gold-light:#fdf3e4; --gold-line:#e8d08b;
+  --cream:#fdfaf5; --cream-dark:#f5ecd5;
+  --rose:#e11d48; --rose-light:#fff1f3; --rose-line:#f6b3c0;
+  --sky:#0ea5e9; --sky-light:#eff8ff; --sky-line:#b6e4fb;
+  --ink:#1f2937; --ink-soft:#4b5563; --ink-muted:#6b7280;
+  --radius-sm:10px; --radius:16px; --radius-lg:24px;
+  --shadow:0 4px 20px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;padding:0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.container{max-width:950px;margin:0 auto;padding:24px 20px 60px;}
+
+.header{text-align:center;padding:48px 0 36px;}
+.header .part{font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:#0369a1;font-weight:800;margin-bottom:8px;}
+.header h1{font-size:2.3rem;font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:12px;letter-spacing:-.02em;}
+.header .rule{display:inline-block;background:var(--sky-light);color:#075985;font-weight:700;font-size:1.05rem;padding:8px 20px;border-radius:999px;margin-bottom:14px;border:2px solid var(--sky-line);}
+.header .subtitle{color:var(--ink-soft);font-size:.95rem;max-width:700px;margin:0 auto 24px;}
+.header .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+.header .meta-card{background:rgba(255,255,255,.9);border:1px solid rgba(14,165,233,.18);border-radius:var(--radius-sm);padding:13px 10px;text-align:center;box-shadow:var(--shadow);}
+.header .meta-card strong{display:block;color:#075985;text-transform:uppercase;letter-spacing:.04em;font-size:.7rem;margin-bottom:3px;}
+.header .meta-card span{font-size:.85rem;font-weight:600;color:var(--ink);}
+
+.section{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:34px 32px;margin-bottom:26px;border-left:5px solid var(--sky);}
+.section.gold{border-left-color:var(--gold);}
+.section.emerald{border-left-color:var(--emerald);}
+.section h2{font-size:1.55rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;position:relative;padding-bottom:10px;}
+.section h2::after{content:'';position:absolute;bottom:0;left:0;width:44px;height:3px;background:var(--sky);border-radius:2px;}
+.section.gold h2::after{background:var(--gold);}
+.section.emerald h2::after{background:var(--emerald);}
+.section h3{font-size:1.15rem;font-weight:700;color:#3a3333;margin:20px 0 10px;}
+.section h4{font-size:1rem;font-weight:700;color:var(--emerald);margin:14px 0 6px;}
+.section p{margin-bottom:12px;color:var(--ink-soft);font-size:.96rem;}
+
+.story-box{background:var(--cream);border-radius:var(--radius);padding:26px 28px;margin:16px 0;font-style:normal;line-height:1.95;border:1px solid #e8e3db;}
+.story-box p{margin-bottom:10px;font-size:.96rem;}
+
+.thought{display:inline-block;padding:14px 20px;border-radius:20px;margin:10px 0 16px;font-weight:700;font-style:italic;font-size:.93rem;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.thought.harmful{border:2px dashed #e11d48;background:#fff5f5;color:#9f1239;}
+.thought.wise{border:2px dashed #0f766e;background:#f0fdf9;color:#0b4f4a;}
+
+.checkpoint{background:var(--cream);border-radius:var(--radius);padding:22px 24px;margin:22px 0;border:1px solid #e8e3db;}
+.checkpoint h4{color:#3a3333;font-size:1rem;margin:0 0 12px;}
+.option{display:block;padding:12px 16px;margin:6px 0;border-radius:10px;cursor:pointer;border:2px solid #e8e3db;font-size:.9rem;background:#fff;font-weight:500;transition:all .2s ease;font-family:inherit;text-align:left;width:100%;}
+.option:hover{border-color:var(--sky);background:var(--sky-light);}
+.option.correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;color:#065f46;}
+.option.wrong{border-color:var(--rose)!important;background:var(--rose-light)!important;font-weight:700;color:#991b1b;}
+.option.show-correct{border-color:#4caf84!important;background:#ecfdf5!important;font-weight:700;}
+.feedback{font-size:.85rem;margin-top:8px;font-weight:600;display:none;padding:10px 14px;border-radius:8px;}
+.feedback.show{display:block;}
+.feedback.good{background:#ecfdf5;border-left:3px solid #4caf84;color:#065f46;}
+.feedback.bad{background:var(--rose-light);border-left:3px solid var(--rose);color:#991b1b;}
+
+.quran-box{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;text-align:center;box-shadow:var(--shadow);}
+.quran-box .arabic{font-family:'Amiri',serif;font-size:1.8rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:8px;}
+.quran-box .trans{font-style:italic;color:#5c5454;font-size:.93rem;font-weight:500;}
+.quran-box .ref{font-size:.78rem;color:var(--ink-muted);margin-top:6px;font-weight:600;}
+
+.hadith-box{background:#fffef8;border:2px solid #e8d9b8;border-radius:var(--radius-lg);padding:22px 20px;margin:16px 0;text-align:center;box-shadow:var(--shadow);}
+.hadith-box .hadith-arabic{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:#5c3d1a;line-height:2;direction:rtl;margin-bottom:6px;}
+.hadith-box .hadith-en{font-style:italic;color:#6b5a3a;font-size:.9rem;font-weight:500;}
+.hadith-box .hadith-ref{font-size:.75rem;color:var(--ink-muted);margin-top:4px;}
+
+.card{background:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);border:1px solid #e8e3db;transition:box-shadow .2s;}
+.card:hover{box-shadow:var(--shadow);}
+.card.emerald{border-left:4px solid var(--emerald);}
+.card.gold{border-left:4px solid var(--gold);}
+.card.sky{border-left:4px solid var(--sky);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0;}
+.signal-col{background:var(--sky-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--sky-line);}
+.thought-col{background:var(--rose-light);border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid var(--rose-line);}
+.choice-col{background:#ecfdf5;border-radius:var(--radius);padding:18px 16px;text-align:center;border:1px solid #a7f3d0;}
+
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin:18px 0;}
+.skill-card{background:#fff;border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:2px solid #e8e3db;transition:all .2s;}
+.skill-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card .step-num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px;}
+.skill-card.s1 .step-num{background:#7dd3fc;}
+.skill-card.s2 .step-num{background:#e8b94d;}
+.skill-card.s3 .step-num{background:var(--emerald);}
+.skill-card.s4 .step-num{background:#075985;}
+.skill-card h4{font-size:.9rem;margin:4px 0;color:#3a3333;}
+.skill-card .ar-step{font-family:'Amiri',serif;font-size:1.05rem;color:#5c3d1a;direction:rtl;margin:2px 0 6px;}
+
+.balance-card{background:var(--gold-light);border:2px solid var(--gold-line);border-radius:var(--radius);padding:18px 22px;margin:16px 0;text-align:center;font-weight:600;color:#6b4d0a;}
+.balance-card p{margin:0;color:#6b4d0a;}
+
+.warning{background:var(--rose-light);border-left:4px solid var(--rose);padding:14px 18px;border-radius:var(--radius-sm);margin:16px 0;font-size:.88rem;color:#991b1b;}
+
+.challenge-card{background:var(--sky-light);border:2px solid var(--sky-line);border-radius:var(--radius-lg);padding:28px 24px;margin:18px 0;}
+.challenge-card h3{color:#075985;margin-top:0;}
+.challenge-card ol{padding-left:18px;margin:8px 0;color:var(--ink-soft);}
+.challenge-card ol li{margin-bottom:6px;font-weight:500;}
+
+.rule-card{background:linear-gradient(135deg,var(--sky-light),#dbeefe);border:2px solid var(--sky-line);border-radius:var(--radius);padding:20px 24px;text-align:center;margin:16px 0;}
+.rule-card p{color:#075985;font-weight:800;font-size:1rem;margin:0;letter-spacing:-.01em;}
+
+/* Heart weight scale */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0;}
+.scale-card{background:#fff;border:2px solid #e8e3db;border-radius:var(--radius);padding:16px 14px;cursor:pointer;transition:all .2s;text-align:center;font-family:inherit;}
+.scale-card:hover{border-color:var(--sky);}
+.scale-card.open{border-color:var(--sky);background:var(--sky-light);}
+.scale-card .sc-level{font-weight:800;font-size:1rem;color:#075985;margin-bottom:2px;}
+.scale-card .sc-name{font-weight:700;font-size:.85rem;color:#3a3333;}
+.scale-card .sc-do{display:none;font-size:.8rem;color:var(--ink-soft);margin-top:8px;text-align:left;line-height:1.55;}
+.scale-card.open .sc-do{display:block;}
+
+/* Ordering activity */
+.order-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:16px 0;}
+.order-card{padding:16px 10px;border-radius:var(--radius-sm);cursor:pointer;border:2px solid #e8e3db;background:#fff;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s;font-family:inherit;}
+.order-card:hover{border-color:var(--sky);background:var(--sky-light);}
+.order-card.placed{border-color:#4caf84!important;background:#ecfdf5!important;cursor:default;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:8px;}
+.order-card.placed .oc-num{display:inline-block;width:24px;height:24px;line-height:24px;border-radius:50%;background:#4caf84;color:#fff;font-size:.75rem;font-weight:800;}
+.order-feedback{text-align:center;font-weight:600;font-size:.9rem;min-height:24px;margin:8px 0;}
+.order-reset{background:#e8e3db;border:none;padding:8px 18px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.82rem;font-family:inherit;margin:0 auto;display:block;}
+.order-reset:hover{background:#d5cfc5;}
+.order-complete{display:none;text-align:center;font-weight:700;color:var(--emerald-dark);font-size:1rem;margin:12px 0;padding:12px;background:var(--emerald-light);border-radius:var(--radius-sm);}
+
+@media(max-width:768px){
+  .container{padding:16px 12px 40px;}
+  .header h1{font-size:1.7rem;}
+  .header .meta{grid-template-columns:1fr 1fr;}
+  .section{padding:22px 18px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr 1fr;}
+  .scale-grid{grid-template-columns:1fr 1fr;}
+  .order-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.35rem;}
+  .header .meta{grid-template-columns:1fr;}
+  .skill-grid{grid-template-columns:1fr;}
+  .scale-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .section{padding:16px 14px;}
+}
+
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+
+@media print{
+  body{background:#fff;color:#000;}
+  .section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;}
+}
+
+/* APP-RESTYLE */
+:root{
+  --cream:#fbf7ec; --cream-dark:#f3ead4;
+  --emerald:#1f5132; --emerald-light:#eef4ee; --emerald-dark:#143824;
+  --gold:#b08a3e; --gold-light:#f8f1e0; --gold-line:#d9b96b;
+  --rose:#a83a3a; --rose-light:#f7eeee; --rose-line:#e0c8c0;
+  --sky:#2e6b48; --sky-light:#eef4ef; --sky-line:#c8dccc;
+  --ink:#2a2a26; --ink-soft:#4b5563; --ink-muted:#6b6b62;
+  --shadow:0 8px 28px rgba(31,81,50,.10);
+}
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--cream);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(176,138,62,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(31,81,50,.10), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(176,138,62,.025) 0 2px, transparent 2px 18px);
+  background-attachment:fixed;
+}
+.header .part{color:var(--gold-deep, #8a6a2a);letter-spacing:.2em;}
+.header h1{font-family:"Cormorant Garamond","Amiri",serif;font-weight:700;color:#143824;letter-spacing:0;}
+.header .rule{background:#f8f1e0;color:#8a6a2a;border-color:var(--gold-line);}
+.header .meta{max-width:760px;}
+.header .meta-card{background:rgba(255,255,255,.92);border:1px solid #ede0c2;border-radius:12px;}
+.header .meta-card strong{color:var(--gold);}
+.header .subtitle{color:var(--ink-soft);}
+.section{background:#fff;border:1px solid #ede0c2;border-radius:22px;}
+.section h2{font-family:"Cormorant Garamond","Amiri",serif;color:#143824;font-weight:700;}
+.section h2::after{background:var(--gold);}
+.section.gold h2::after,.section.rose h2::after,.section.emerald h2::after{background:var(--gold);}
+.section h3{color:#2a2a26;}
+.section h4{color:var(--emerald);}
+.quran-box{background:linear-gradient(180deg,#fffdf8,#f8f1e0);border-color:rgba(176,138,62,.42);border-radius:22px;}
+.quran-box .arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;text-shadow:0 1px 0 #fff;}
+.quran-box .trans{color:#5c5454;}
+.quran-box .ref{color:#8a6a2a;}
+.hadith-box{background:#fffdf6;border-color:#e6d5ae;border-radius:22px;}
+.hadith-box .hadith-arabic{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.hadith-box .hadith-en{color:#5c5454;}
+.hadith-box .hadith-ref{color:#8a6a2a;}
+.story-box{background:#fbf7ec;border-color:#ede0c2;}
+.checkpoint{background:#fbf7ec;border-color:#ede0c2;}
+.option{border-color:#ede0c2;}
+.option:hover{border-color:var(--gold);background:#f8f1e0;}
+.option.correct,.option.show-correct{border-color:#2e7d4f!important;background:#eef6ee!important;color:#143824;}
+.option.wrong{border-color:#a83a3a!important;background:#f7eeee!important;color:#7a2626;}
+.feedback.good{background:#eef6ee;border-left-color:#2e7d4f;color:#1f5132;}
+.feedback.bad{background:#f7eeee;border-left-color:#a83a3a;color:#7a2626;}
+.thought.harmful{border-color:#a83a3a;background:#f7eeee;color:#7a2626;}
+.thought.wise{border-color:#1f5132;background:#eef6ee;color:#143824;}
+.signal-col{background:#eef4ee;border-color:#c8dccc;}
+.signal-col h4{color:#1f5132!important;}
+.thought-col h4{color:#7a2626!important;}
+.card.emerald{border-left-color:var(--emerald);}
+.card.sky{border-left-color:var(--emerald-soft,#2e6b48)!important;}
+.card h4,.card .h4{color:#143824;}
+.balance-card{background:#f8f1e0;border-color:var(--gold-line);}
+.balance-card p{color:#8a6a2a;}
+.rule-card{background:linear-gradient(135deg,#f8f1e0,#f0e2bc);border-color:var(--gold-line);}
+.rule-card p{color:#5c3d1a;}
+.warning{background:#f7eeee;border-left-color:#a83a3a;}
+.warning p{color:#7a2626!important;}
+.challenge-card{background:#eef4ee;border-color:#c8dccc;}
+.challenge-card h3{color:#143824;}
+.skill-card{border-color:#ede0c2;}
+.skill-card:hover{border-color:var(--gold);}
+.skill-card.s1 .step-num{background:#8a6a2a;}
+.skill-card.s2 .step-num{background:#b08a3e;}
+.skill-card.s3 .step-num{background:#1f5132;}
+.skill-card.s4 .step-num{background:#143824;}
+.skill-card .ar-step{font-family:"Scheherazade New","Amiri",serif;color:#143824;}
+.scale-card{border-color:#ede0c2;background:#fff;}
+.scale-card:hover{border-color:var(--gold);}
+.scale-card.open{border-color:var(--gold);background:#f8f1e0;}
+.scale-card .sc-level{color:#8a6a2a;}
+.order-card{border-color:#ede0c2;background:#fff;}
+.order-card:hover{border-color:var(--gold);background:#f8f1e0;}
+.order-card.placed{border-color:#2e7d4f!important;background:#eef6ee!important;}
+.order-card.placed .oc-num{background:#2e7d4f;}
+.order-complete{background:#eef4ee;color:#143824;}
+.order-reset{background:#f3ead4;}
+.order-reset:hover{background:#ede0c2;}
+button:focus-visible,.option:focus-visible,.order-card:focus-visible,.scale-card:focus-visible{outline:3px solid var(--gold);}
+.header .meta-card strong{color:#8a6a2a;}
+.grid-2 .card h4,.grid-2 .card strong{color:#143824;}
+@media print{body{background:#fff;}}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <div class="part">Part 3 · When the Heart Feels Heavy</div>
+  <h1>Sadness and Grief</h1>
+  <div class="rule">Tears are not weakness — they are how a heart that loved pays its debt.</div>
+  <p class="subtitle">A story-centered Islamic SEL lesson that teaches children it is safe to feel sad, how to carry a heavy heart honestly, and how Allah turns grief into reward and hope.</p>
+  <div class="meta">
+    <div class="meta-card"><strong>Age</strong><span>10–13</span></div>
+    <div class="meta-card"><strong>Time</strong><span>25–30 min</span></div>
+    <div class="meta-card"><strong>SEL Skill</strong><span>Emotional honesty · help-seeking</span></div>
+    <div class="meta-card"><strong>Main Tool</strong><span>Heart First Aid: Name — Share — Turn to Allah — Hope in action</span></div>
+  </div>
+</header>
+
+<!-- 1. MAIN STORY -->
+<article class="section" id="story">
+<h2>1. Main Story: Sara and Jaddu's Prayer Mat</h2>
+<div class="story-box">
+<p>Jaddu — Sara's grandfather — died last week. At the funeral there were so many people that Sara felt like she was watching everything from far away, like through glass. An uncle said, "Be strong, Sara. You are the big girl now."</p>
+<p>So Sara was strong. She did not cry. Not in front of anyone.</p>
+<p>Then the quiet days came. She walked past the balcony and saw Jaddu's empty chair. Inside, his prayer mat was still folded where he always left it. The house still smelled faintly of dates and oud. And suddenly the glass broke — the ache arrived all at once, heavy in her chest, and Sara had to sit down on the floor of her room.</p>
+<p>Her aunt found her there and whispered, "Ya binti, don't cry like this — sadness like this is not good for Jaddu in his grave." Sara wiped her face fast. That night she thought:</p>
+</div>
+<div class="thought harmful">"If my crying hurts Jaddu, I should stop. If Mama gets sad when she sees me sad, I should pretend I am fine. Nobody will understand anyway. I will carry this alone."</div>
+<div class="checkpoint">
+<h4>What is Sara feeling?</h4>
+<button class="option" data-correct="true" data-feedback="Good noticing. Grief often arrives late — numbness first, then the wave. Her body signs (heavy chest, sitting down alone) are real sadness.">A. Deep sadness and grief, hidden under "being strong"</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">B. Anger at her grandfather</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">C. Nothing — the funeral is over</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>But Mama came in that evening, sat on the floor beside her — right there on the carpet — and said something Sara never expected:</p>
+<p>"Your crying does not hurt Jaddu. Nothing about your love hurts him. Do you know what helps him now? Our dua for him, and charity done in his name. And do you know what the Prophet ﷺ did when his own little son Ibrahim died? His eyes filled with tears. He said: <em>'The eyes shed tears, the heart grieves — but we say only what pleases our Lord.'</em>"</p>
+<p>They cried together for a while. Then Sara said it out loud, honestly, for the first time since the funeral:</p>
+</div>
+<div class="thought wise">"I miss him so much it hurts. His chair is still there. I am sad — and that is okay, because I loved him."</div>
+<div class="checkpoint">
+<h4>What changed when Sara said her sadness out loud to Mama?</h4>
+<button class="option" data-correct="false" data-feedback="The sadness was still there — saying it honest did not delete it.">A. Her grandfather came back</button>
+<button class="option" data-correct="true" data-feedback="Yes. Naming the grief honestly, with a safe person, turned a lonely heavy heart into a shared one. The weight did not disappear — she no longer carried it alone.">B. The sadness became bearable because she was not carrying it alone anymore</button>
+<button class="option" data-correct="false" data-feedback="That is not what the story describes.">C. She stopped loving her grandfather</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>Weeks later, Sara started what she called <strong>Project Jaddu</strong>. Every Friday she put a small amount of her pocket money in an envelope for food for hungry people — "sadaqah jariyah for Jaddu." She taught his favorite short surah to her little brother, the way Jaddu had taught her. And she sent dua for him every night: "Allahumma ighfir lahu warhamhu — O Allah, forgive him and have mercy on him."</p>
+<p>The Prophet ﷺ taught that when a person dies, their deeds end — except three: charity that keeps flowing, knowledge people keep benefiting from, and the dua of a loving child. Sara could not bring Jaddu back. But she found a way to keep loving him that made him, inshaAllah, richer in his grave.</p>
+<p>Sara was still sad — she would miss him her whole life. The sadness did not vanish; it became light enough to carry. Because she told the truth about it, she did not carry it alone, she brought it to Allah, and she turned it into ongoing good.</p>
+<p><strong>Grief shrinks when it is shared and carried honestly. It grows heavy only when it is hidden and carried alone.</strong></p>
+</div>
+</article>
+
+<!-- 2. QURAN ANCHOR -->
+<article class="section gold" id="quran">
+<h2>2. Quran Anchor: A Prophet Cried for Decades</h2>
+<p>Listen to what Allah tells us about Prophet Yaqub (Jacob) — a prophet, one of the strongest believers who ever lived — who lost his son Yusuf:</p>
+<div class="quran-box">
+<p class="arabic">وَتَوَلَّىٰ عَنْهُمْ وَقَالَ يَـٰٓأَسَفَىٰ عَلَىٰ يُوسُفَ وَٱبْيَضَّتْ عَيْنَاهُ مِنَ ٱلْحُزْنِ فَهُوَ كَظِيمٌ</p>
+<p class="trans">"And he turned away from them and said, 'Oh, my sorrow over Joseph,' and his eyes became white from grief, for he was [of that] a suppressor."</p>
+<p class="ref">Surah Yusuf 12:84 · ClearQuran (Talal Itani)</p>
+</div>
+<p>Yaqub's grief was so long and so deep that his eyes went white from crying. He <strong>named it out loud</strong>: "Oh, my sorrow over Yusuf!" And his sons said, "By Allah, you will keep saying this until you die of it." Listen to his answer:</p>
+<div class="quran-box">
+<p class="arabic">قَالَ إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِىٓ إِلَى ٱللَّهِ وَأَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ</p>
+<p class="trans">"He said, 'I only complain of my suffering and my grief to Allah, and I know from Allah that which you do not know.'"</p>
+<p class="ref">Surah Yusuf 12:86 · ClearQuran (Talal Itani)</p>
+</div>
+<p>Two lessons in one prophet's life: <strong>feeling this much sadness did not cancel his prophethood</strong> — so it does not cancel your faith, your strength, or your worth. And he complained <em>to</em> Allah, not <em>away from</em> Allah — and he kept hope: "I know from Allah what you do not know."</p>
+<p>And then the promise for every heavy heart — said twice, so it cannot be broken:</p>
+<div class="quran-box">
+<p class="arabic">فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا * إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا</p>
+<p class="trans">"For indeed, with hardship [will be] ease. Indeed, with hardship [will be] ease."</p>
+<p class="ref">Surah Ash-Sharh 94:5–6 · ClearQuran (Talal Itani)</p>
+</div>
+<div class="balance-card">
+<p>Islam does not say "never be sad." It says: be honest about the sadness, bring it to Allah, keep hope alive — and never let it grow into despair, the one thought that says "Allah has forgotten you." Yaqub cried for decades and never once said that.</p>
+</div>
+</article>
+
+<!-- 3. PROPHETIC LENS -->
+<article class="section gold" id="prophetic">
+<h2>3. Prophetic Lens: The Prophet ﷺ Cried Too</h2>
+<div class="hadith-box">
+<p class="hadith-arabic">إِنَّمَا يَرْحَمُ اللَّهُ مِنْ عِبَادِهِ الرُّحَمَاءَ</p>
+<p class="hadith-en">The Prophet ﷺ held his dying grandson, and his eyes filled with tears. A companion asked in surprise: "Even you, O Messenger of Allah?" He said: "This is mercy. Allah places mercy in the hearts of His servants, and Allah shows mercy only to those who are merciful."</p>
+<p class="hadith-ref">Sahih al-Bukhari 1284</p>
+</div>
+<div class="hadith-box">
+<p class="hadith-arabic">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ</p>
+<p class="hadith-en">"O Allah, I seek refuge in You from anxiety and grief, from weakness and laziness, from miserliness and cowardice, from being overwhelmed by debt and overpowered by men." Anas رضي الله عنه served the Prophet ﷺ for years and kept hearing him say this. The Prophet ﷺ <strong>made dua against sadness — regularly.</strong></p>
+<p class="hadith-ref">Sahih al-Bukhari 6369 · Sahih Muslim 2706</p>
+</div>
+<div class="hadith-box">
+<p class="hadith-arabic">مَا يُصِيبُ الْمُسْلِمَ مِنْ نَصَبٍ وَلا وَصَبٍ وَلا هَمٍّ وَلا حُزْنٍ وَلا أَذًى وَلا غَمٍّ حَتَّى الشَّوْكَةِ يُشَاكُهَا، إِلا كَفَّرَ اللَّهُ بِهَا مِنْ خَطَايَاهُ</p>
+<p class="hadith-en">"No fatigue, illness, worry, sadness, harm, or distress befalls a Muslim — even a thorn that pricks him — except that Allah expiates some of his sins because of it."</p>
+<p class="hadith-ref">Sahih al-Bukhari 5641 · Sahih Muslim 2573 (agreed upon)</p>
+</div>
+<div class="grid-2">
+  <div class="card sky" style="text-align:center;"><h4 style="color:#075985;margin-top:0;">What this means for you</h4><p style="margin:0;font-size:.9rem;">Your heavy heart is not wasted pain. Every honest ache — even the sting of missing someone — is paying off your sins, and the Prophet ﷺ himself asked Allah's help against grief. Your sadness can literally become worship.</p></div>
+  <div class="card emerald" style="text-align:center;"><h4 style="color:var(--emerald);margin-top:0;">What stays forbidden</h4><p style="margin:0;font-size:.9rem;">Only despair: the thought that Allah has forgotten you or that this pain will never end. Ash-Sharh 94:5–6 promises twice that ease comes. Sadness visits; despair is the one guest we lock out.</p></div>
+</div>
+<p style="text-align:center;font-weight:600;color:#3a3333;">Remember Lesson 1? The Prophet ﷺ wept at funerals and said "we say only what pleases our Lord" (Bukhari 1303). Tears and faith live in the same heart.</p>
+</article>
+
+<!-- 4. UNDERSTAND THE DIFFERENCE -->
+<article class="section" id="difference">
+<h2>4. Understand the Difference</h2>
+<div class="grid-3">
+  <div class="signal-col"><h4 style="margin-top:0;font-size:.95rem;color:#075985;">Signal</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"I lost something I loved. My heart hurts because it mattered. I need time, company, and Allah."</p></div>
+  <div class="thought-col"><h4 style="margin-top:0;font-size:.95rem;color:#9f1239;">Unhelpful Thought or Urge</h4><p style="margin:0;font-size:.88rem;font-weight:500;">"Crying means weak iman. I must pretend I'm fine. I'll carry this alone. Allah is punishing me. Nothing will ever change."</p></div>
+  <div class="choice-col"><h4 style="margin-top:0;font-size:.95rem;color:#065f46;">Wise Choice</h4><p style="margin:0;font-size:.88rem;font-weight:500;">Name it honestly. Tell one safe person. Bring it to Allah — complain to Him, like Yaqub. Turn the love into ongoing good deeds.</p></div>
+</div>
+<div class="warning"><p style="margin:0;color:#991b1b;"><strong>Do not teach:</strong> "Don't cry — it hurts the person in their grave." That is a cultural saying, not Islam. Tears never harmed anyone. The Prophet ﷺ cried at graves and in grief, and what reaches the deceased is dua, charity and good deeds — performed with a heart that was allowed to feel. <strong>Also never teach:</strong> "Good Muslims are always happy." Prophet Yaqub cried for decades.</p></div>
+<div class="card" style="background:var(--cream);text-align:center;">
+<p style="font-size:.9rem;color:var(--ink-soft);margin:0;">The one difference to learn: <strong>sadness walks toward Allah; despair walks away from Him.</strong> "My heart is broken and I need Him" is worship. "He has forgotten me and nothing will help" is the lie Shaytan dresses in sadness. The first heavy heart stays connected — and it never has to stay alone.</p>
+</div>
+</article>
+
+<!-- 5. MAIN SEL TOOL -->
+<article class="section emerald" id="skill">
+<h2>5. Heart First Aid: The Four Steps</h2>
+<div class="skill-grid">
+  <div class="skill-card s1"><div class="step-num">1</div><h4>Name It Honestly</h4><div class="ar-step">سَمِّهِ بِصِدْق</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Say it out loud: "I feel sad. I miss him. My heart hurts."<br><br>Yaqub said: "Oh, my sorrow over Yusuf." A feeling with a name is a feeling you can carry. A hidden one drags you.</p></div>
+  <div class="skill-card s2"><div class="step-num">2</div><h4>Tell a Safe Person</h4><div class="ar-step">لَا تَحْمِلْ وَحْدَكَ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">One honest sentence to one safe adult today: "Mama, I keep missing Jaddu."<br><br>Heavy hearts were made to be shared. Allah paired you with people exactly for this.</p></div>
+  <div class="skill-card s3"><div class="step-num">3</div><h4>Turn to Allah</h4><div class="ar-step">أَشْكُ إِلَى اللَّهِ لَا عَنْهُ</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Complain <strong>to</strong> Allah, not away from Him.<br><br>Say the Prophet's ﷺ dua: <strong>اللهم إني أعوذ بك من الهم والحزن</strong><br><br>And put your forehead on the ground — sujood is where sadness leaves the body.</p></div>
+  <div class="skill-card s4"><div class="step-num">4</div><h4>Hope in Action</h4><div class="ar-step">مَعَ الْعُسْرِ يُسْرًا</div><p style="font-size:.82rem;color:var(--ink-soft);text-align:left;line-height:1.6;margin:0;">Trust the twice-repeated promise: ease IS coming.<br><br>Turn love into ongoing good: dua for them, charity in their name, teach what they taught you (Muslim 1631).</p></div>
+</div>
+<div class="rule-card"><p>I name my sadness honestly. I do not carry it alone. I bring it to Allah. I hold His twice-given promise — and I turn grief into good that keeps flowing.</p></div>
+<h3>The Heart Weight Scale</h3>
+<p>Click each level to see the plan.</p>
+<div class="scale-grid">
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">1–3</div>
+    <div class="sc-name">Blue days · a cloud</div>
+    <div class="sc-do">Notice and name it. "I feel low today." Say the Prophet's ﷺ dua, get extra sleep, go outside, be gentle with yourself. Blue days pass on their own faster when they are not hidden.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">4–6</div>
+    <div class="sc-name">Heavy · rain</div>
+    <div class="sc-do">Tell your safe person today — out loud, not hinted. Pray two rak'ahs of du'a and cry if you need to: the Prophet ﷺ cried too. Keep your body running: food, sleep, a walk.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">7–8</div>
+    <div class="sc-name">Dark · a storm</div>
+    <div class="sc-do">This is too big to carry alone — tell an adult NOW, and keep telling until someone truly hears you. Stay near people. Do not stay alone with it at night. This is not being dramatic — storms need shelter.</div>
+  </button>
+  <button class="scale-card" aria-expanded="false">
+    <div class="sc-level">9–10</div>
+    <div class="sc-name">Stuck · weeks of dark</div>
+    <div class="sc-do">If sadness has blocked your sleep, food, or school for weeks — you are not a bad Muslim, you are sick, and Allah put the cures in hands: a parent + a doctor or counselor is exactly how Allah answers the Prophet's ﷺ dua. Getting help IS tawakkul. Healing comes in waves — ride them out with your people.</div>
+  </button>
+</div>
+</article>
+
+<!-- 6. TRANSFER PRACTICE -->
+<article class="section" id="transfer">
+<h2>6. Transfer Practice: Omar, the New Kid</h2>
+<div class="story-box">
+<p>Omar's family moved to a new city when Baba changed jobs. Everything is fine, technically. Bigger flat, new school. But at lunch break Omar sits with people whose jokes he does not get, and at night he looks at photos of his old friend Samir and his grandma's courtyard until his chest aches.</p>
+<p>At school, when they ask "How's it going?", he says: "Fine." Always "fine." And when he scrolls old photos and feels the heaviness rise, he thinks:</p>
+</div>
+<div class="thought harmful">"Real men don't talk about missing people. Samir has new friends by now anyway. I'll just deal with it alone."</div>
+<div class="checkpoint">
+<h4>Which sentence is Omar honestly naming his feeling?</h4>
+<button class="option" data-correct="false" data-feedback="'Fine' is hiding, not naming.">A. "I'm fine." (again)</button>
+<button class="option" data-correct="true" data-feedback="Yes — honest, specific, and it names both parts: the loneliness AND the missing. That is a feeling with a name, which means it can now be carried with help.">B. "I feel lonely here, and I miss Samir and my grandma so much it hurts."</button>
+<button class="option" data-correct="false" data-feedback="Blaming everyone is the sadness wearing a mask — not honesty.">C. "This school is stupid and nobody here matters." </button>
+<div class="feedback"></div>
+</div>
+<div class="checkpoint">
+<h4>Which plan best follows the four steps?</h4>
+<button class="option" data-correct="false" data-feedback="Deleting old friendships to avoid the pain cuts the roots, not the grief — and grief grows in the dark.">A. Delete the old photos, never call Samir again, and just get used to it</button>
+<button class="option" data-correct="true" data-feedback="Exactly the four steps: name it honestly to a safe person, turn to Allah with the Prophet's ﷺ dua, then keep the love alive through action — and slowly build new roots.">B. Tell Mum honestly, say the dua of the Prophet ﷺ, schedule a weekly Friday call with Samir, and join the masjid class to make new friends</button>
+<button class="option" data-correct="false" data-feedback="Waiting until the sadness is unbearable before saying anything is how level 4 becomes level 9.">C. Say nothing to anyone and hope the feeling goes away by itself</button>
+<div class="feedback"></div>
+</div>
+<div class="story-box">
+<p>Omar did B. The hardest sentence was the first one to his mum: "I don't think I've been fine at all, actually." And then — the thing he was sure would never happen — his mum's eyes filled up too: "Baba and I miss our family terribly too. We've just been trying to be strong for you." Turns out his home had three lonely people each hiding from the other two.</p>
+<p>They made a ritual: Friday after maghrib, Samir's video call — old friendship watered like a garden. And Omar joined the masjid's Thursday football. On the first day he scored nothing and got almost benched. On the fifth week, someone he now considers a friend sat next to him at lunch, uninvited.</p>
+<p>Missing Samir never fully left. But it stopped being a wound and became a connection: one call a week, love kept alive. His new city did not erase the old one. Roots grow where they are watered — and both gardens counted.</p>
+</div>
+</article>
+
+<!-- 7. HOME CHALLENGE -->
+<article class="section gold" id="challenge">
+<h2>7. My Sadness Support Map</h2>
+<div class="challenge-card">
+<h3>Three lines this week — short is enough:</h3>
+<ol>
+  <li><strong>My warning signs:</strong> How does sadness show up in MY body first? (heavy chest / tired / no food / wanting to be alone)</li>
+  <li><strong>My safe person:</strong> The one adult I will tell one true thing to this week: "______."</li>
+  <li><strong>My Prophet's ﷺ dua:</strong> Write it or tape it where you will see it: <strong>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ</strong> — "O Allah, I seek refuge in You from anxiety and grief."</li>
+</ol>
+<p style="margin-top:12px;font-weight:600;text-align:center;color:#075985;">Mission: say the dua once today, and do one small ongoing good for someone who died — a dua, or charity in their name — or one kindness for someone at school who seems heavy. You never know who needs Project Jaddu too.</p>
+</div>
+<div class="balance-card"><p>This map is a skill, not a cure-all. If the weight keeps getting heavier or stays stuck for weeks, telling an adult is not the end of the plan — it is the beginning: with family and, if needed, a doctor. Allah sent remedies through people too.</p></div>
+</article>
+
+<!-- 8. PARENT / TEACHER GUIDE -->
+<article class="section emerald" id="guide">
+<h2>8. Parent / Teacher Guide</h2>
+<div class="grid-2">
+  <div class="card" style="border-top:4px solid var(--rose);"><h4 style="color:#991b1b;margin-top:0;">Avoid saying</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"Stop crying — it hurts the dead."</li><li>"Be the strong one now."</li><li>"Good Muslims are patient — no tears."</li><li>"He's in a better place" (said too early — true, but it can dismiss the pain before it has been heard)</li></ul></div>
+  <div class="card" style="border-top:4px solid var(--emerald);"><h4 style="color:var(--emerald);margin-top:0;">Say instead</h4><ul style="padding-left:18px;color:var(--ink-soft);font-size:.9rem;line-height:1.8;"><li>"I can see your heart is heavy. I'm here."</li><li>"What do you miss most about them?"</li><li>"The Prophet ﷺ cried too. Tears are mercy, not weakness."</li><li>"Let's turn this love into something that keeps rewarding them — dua and charity in their name."</li></ul></div>
+</div>
+
+<h3>Interactive Teach-Back: Put the Heart First Aid Steps in Order</h3>
+<p>Click the steps in the order a child should learn them.</p>
+<div class="order-grid" id="orderGrid"></div>
+<p class="order-feedback" id="orderFeedback"></p>
+<button class="order-reset" id="orderReset" style="display:none;">🔄 Reset Order</button>
+<div class="order-complete" id="orderComplete">Excellent. You know the four-step heart first aid.</div>
+
+<div class="checkpoint" style="margin-top:24px;">
+<h4>Since Babuji died eight weeks ago, Zaid sleeps badly, has stopped eating much, and no longer plays football. He says "I don't want to bother anyone." What is the wisest next step?</h4>
+<button class="option" data-correct="false" data-feedback="Eight weeks is long — waiting for it to pass alone is not patience, it is leaving a sick child untreated.">A. Give it more time — grief always passes on its own eventually</button>
+<button class="option" data-correct="true" data-feedback="Yes. Weeks of blocked sleep, appetite and joy with total withdrawal is the level 9–10 signal: bring in caring adults AND a doctor or counselor. Islam commands ties + treatment; the Prophet's ﷺ dua is said WITH action.">B. A trusted adult tells his parents openly, and they involve a doctor or counselor alongside family, dua and the four steps</button>
+<button class="option" data-correct="false" data-feedback="That would shame him for an illness, like blaming someone for a fever.">C. Tell Zaid his iman is weak and he should just cry less and pray more</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card" style="background:var(--cream);text-align:center;margin-top:16px;">
+<p style="font-size:.9rem;color:var(--ink-soft);margin:0;">Children grieve in waves and through play: a child who laughs loudly ten minutes after crying is not being disrespectful to the deceased — that is a child's pace, and it is healthy. Let grief come to them in manageable pieces. Keep routines steady (meals, sleep, school, masjid), keep talking about the person who died warmly, let the child keep one "ongoing good" project — and watch the level-scale: persistent storms get professionals, without shame.</p>
+</div>
+</article>
+
+</div>
+
+<script>
+(function(){
+
+// --- MCQ checkpoints ---
+document.querySelectorAll('.checkpoint').forEach(cp=>{
+  cp.querySelectorAll('.option').forEach(opt=>{
+    opt.addEventListener('click',function(){
+      const allOpts=cp.querySelectorAll('.option');
+      const fb=cp.querySelector('.feedback');
+      const isCorrect=this.dataset.correct==='true';
+      allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+      if(isCorrect){
+        this.classList.add('correct');fb.className='feedback show good';
+        fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+      }else{
+        this.classList.add('wrong');
+        allOpts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('show-correct');});
+        fb.className='feedback show bad';
+        fb.textContent='The correct answer is highlighted in green. Click it to continue.';
+        const correctOpt=cp.querySelector('.option[data-correct="true"]');
+        allOpts.forEach(o=>{if(o.dataset.correct!=='true')o.disabled=true;});
+        correctOpt.addEventListener('click',function retry(){
+          allOpts.forEach(o=>{o.classList.remove('correct','wrong','show-correct');o.disabled=false;});
+          this.classList.add('correct');fb.className='feedback show good';
+          fb.textContent='✅ '+this.dataset.feedback;allOpts.forEach(o=>o.disabled=true);
+          correctOpt.removeEventListener('click',retry);
+        });
+      }
+    });
+  });
+});
+
+// --- Heart weight scale cards ---
+document.querySelectorAll('.scale-card').forEach(card=>{
+  card.addEventListener('click',function(){
+    const isOpen=this.classList.toggle('open');
+    this.setAttribute('aria-expanded',isOpen?'true':'false');
+  });
+});
+
+// --- Ordering Activity ---
+const steps=['Name It Honestly','Tell a Safe Person','Turn to Allah','Hope in Action'];
+let shuffled=[],orderIdx=1;
+const orderGrid=document.getElementById('orderGrid');
+const orderFeedback=document.getElementById('orderFeedback');
+const orderReset=document.getElementById('orderReset');
+const orderComplete=document.getElementById('orderComplete');
+
+function initOrder(){
+  shuffled=[...steps].sort(()=>Math.random()-.5);
+  orderIdx=1;
+  orderComplete.style.display='none';
+  orderReset.style.display='none';
+  orderFeedback.textContent='';
+  orderGrid.innerHTML=shuffled.map(s=>'<button class="order-card">'+s+'</button>').join('');
+  orderGrid.querySelectorAll('.order-card').forEach(card=>{
+    card.addEventListener('click',function(){
+      if(this.classList.contains('placed'))return;
+      const stepName=this.textContent;
+      const correctPos=steps.indexOf(stepName);
+      if(correctPos===orderIdx-1){
+        this.classList.add('placed');
+        this.innerHTML='<span class="oc-num">'+orderIdx+'</span> '+stepName;
+        orderIdx++;
+        if(orderIdx>4){
+          orderComplete.style.display='block';
+          orderFeedback.textContent='';
+          orderReset.style.display='inline-block';
+        }else{
+          orderFeedback.textContent='✅ Step '+orderIdx+' of 4 placed correctly.';
+          orderFeedback.style.color='#065f46';
+        }
+      }else{
+        orderFeedback.textContent='That step comes later. First the feeling needs an honest name.';
+        orderFeedback.style.color='#991b1b';
+      }
+    });
+  });
+}
+
+orderReset.addEventListener('click',initOrder);
+initOrder();
+
+})();
+</script>
+</body>
+</html>

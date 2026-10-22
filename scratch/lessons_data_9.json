@@ -1,0 +1,1138 @@
+{
+ "9": {
+  "n": 9,
+  "title": "Sabr During Difficulty",
+  "part": "Part 9 · When Life Gets Heavy",
+  "rule": "Sabr is not sitting still — it is standing firm while you keep working.",
+  "subtitle": "A story-centered Islamic SEL lesson that teaches children what real sabr is: honest endurance with prayer, effort, and hope — the muscle Prophet Ayyub trained us to build.",
+  "sel": "Perseverance",
+  "tool": "The Sabr Kit: Hold — Pray — Work — Wait",
+  "theme": "emerald",
+  "story_h": "1. Main Story: The Year Everything Was Hard",
+  "story": [
+   {
+    "t": "box",
+    "p": [
+     "It started with Baba losing his job in October. Then in December Mama got sick and stayed sick. By February, Adam's family had moved to a smaller flat, and the word 'later' had replaced a hundred words: later for the laptop, later for the camp, later for everything."
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "Adam was twelve. He had heard the phrase a thousand times — <em>Allah gives sabr to those who are patient</em> — but nobody had explained how a boy is supposed to <em>do</em> patience while his chest feels like a full washing machine. One night at the small kitchen table he snapped at his little sister over nothing, slammed his door, and cried with his face in the blanket."
+    ]
+   },
+   {
+    "t": "harmful",
+    "p": [
+     "'I am done. I have been good and still everything fell. Either Allah forgot us — or I just stop feeling anything at all and grind through forever.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "Which of those thoughts is the lie Shaytan is selling?",
+     "o": [
+      [
+       "Both are lies: numbness is not sabr, and 'He forgot us' is the oldest accusation against Allah.",
+       true,
+       "Yes. Real sabr feels the full weight AND keeps moving toward Allah — neither a numb stone nor despair. The verse never says 'stop feeling'; it says: seek help (2:153)."
+      ],
+      [
+       "Only the first one — grinding is actually fine.",
+       false,
+       "Endless grinding without prayer or expression is how hearts crack silently."
+      ],
+      [
+       "Neither — both are just strategies.",
+       false,
+       "One is despair dressed as theology, the other is numbness dressed as strength."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "The next morning his sister Maryam — sixteen and carrying her own heavy — sat on his bed. 'Want to know what I learned about sabr? It is not sitting still. Look at Ayyub: years of sickness, lost wealth, lost children — and he never stopped ASKING. He complained TO Allah, not about Allah. Sabr with a voice.' Then she said the words that rearranged Adam's year: 'Baba says: we do our part, we pray, and we trust the Waiting. That is all any of us can carry.'"
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "They built the kit without naming it: Adam kept one honest sentence a day to Mama about his anger. Maryam taught him the two-rak'ah reset when a wave hits. Baba made three job calls every morning like clockwork — sabr with shoes on. And Mama said the verse every night before sleep: <em>fa-inna ma'al 'usri yusra</em> — with hardship comes ease; it came twice in the Quran so nobody could miss it."
+    ]
+   },
+   {
+    "t": "wise",
+    "p": [
+     "'I can hold it. I can pray it. I can work it. I can wait on Allah. I am not a statue and I am not alone.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What turned Adam's year?",
+     "o": [
+      [
+       "The whole kit together — honest feeling, prayer, daily effort, and waiting on Allah's timing.",
+       true,
+       "That is 2:153 lived: seek help THROUGH patience AND prayer — and the daily work is the footsteps of tawakkul."
+      ],
+      [
+       "Just waiting — sabr means doing nothing until Allah fixes it.",
+       false,
+       "The bird hadith answers that lie: the bird goes out AND comes back — movement plus trust."
+      ],
+      [
+       "Getting angry at everyone until the pressure released.",
+       false,
+       "Anger dumps the weight on other backs — it never carries the load."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "In May, Baba found work — not the old one, a new one. In June, Mama walked Adam to his exams. The flat was still small. The laptop was still 'later.' But the family had discovered something: they had grown stronger than the year. That is the quiet profit of sabr — you do not just survive hard seasons; you come out with muscle that did not exist before."
+    ]
+   }
+  ],
+  "quran_pre": [
+   "Allah's two master-classes on sabr:"
+  ],
+  "quran_boxes": [
+   {
+    "ar": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ",
+    "en": "O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient.",
+    "ref": "Surah Al-Baqarah 2:153 · ClearQuran (Talal Itani)"
+   },
+   {
+    "ar": "وَأَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلضُّرُّ وَأَنتَ أَرْحَمُ ٱلرَّٰحِمِينَ",
+    "en": "And [mention] Job, when he called to his Lord, 'Indeed, adversity has touched me, and You are the Most Merciful of the merciful.'",
+    "ref": "Surah Al-Anbiya 21:83 · ClearQuran (Talal Itani)"
+   }
+  ],
+  "quran_post": [
+   "Study Ayyub's sentence: he did NOT say 'your punishment is too much.' He said — the pain touched me, and YOU are the Most Merciful. Complaint to Allah, wrapped in praise of Allah. That is the tongue of real sabr."
+  ],
+  "balance": "Important balance: 2:153 pairs sabr WITH salah — and Ayyub CRIED OUT. Patience is not silent suffering or gritted teeth forever. Sabr is holding the line while you talk to Allah about the weight — with a voice, with prayer, and with feet that keep walking.",
+  "proph_intro": [
+   "The Prophet ﷺ defined sabr where people actually need it:"
+  ],
+  "hadiths": [
+   {
+    "ar": "إِنَّمَا الصَّبْرُ عِنْدَ الصَّدْمَةِ الْأُولَى",
+    "en": "\"Patience is [truly shown] at the first shock.\"",
+    "ref": "Sahih al-Bukhari 1283 · Sahih Muslim 926 — the moment the news hits is where sabr is built or lost"
+   },
+   {
+    "ar": "مَن يَتَصَبَّرْ يُصَبِّرْهُ اللَّهُ، وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنَ الصَّبْرِ",
+    "en": "\"Whoever strives to be patient, Allah will make him patient — and no one was given a gift better and more comprehensive than patience.\"",
+    "ref": "Sahih al-Bukhari 1469 · Sahih Muslim 1053 (verified at hadeethenc.com #4967)"
+   }
+  ],
+  "proph_post": [
+   "The second hadith is the engine: sabr is a SKILL, and whoever PRACTICES it receives it as a GIFT from Allah. Patience is trainable — you are not born with a fixed tank."
+  ],
+  "grid2": [
+   {
+    "h": "What people think sabr is",
+    "p": "Silent face, no complaints, waiting like a stone."
+   },
+   {
+    "h": "What sabr actually is",
+    "p": "Feeling it honestly, praying it out, doing the next task, holding Allah's timing."
+   }
+  ],
+  "proph_tail": "Adam's family ran all four parts in real life — and the year meant to break them became their strongest training season.",
+  "signal": "\"Something is hard and it will last a while — my heart needs a way to carry long weight, not just dodge quick pain.\"",
+  "urge": "\"Numb out and never complain — or explode at everyone — or stop trying because Allah clearly forgot us.\"",
+  "choice": "HOLD (one honest sentence daily) → PRAY (the two-rak'ah reset; Ayyub's words 21:83) → WORK (your daily next task — sabr with shoes) → WAIT (Allah's timing — the twice-given promise 94:5–6).",
+  "warn": "\"A good Muslim never shows sadness in difficulty\" — no; the Prophet ﷺ said 'the eyes tear and the heart grieves' (Bukhari 1303). Numbness is not sabr, silence is not strength. Teach the kit, not a stone mask. And never romanticize pain: the hardship is wrong AND the child is stronger than it.",
+  "note": "A fairness note: some heavy seasons are not 'tests' for the child at all (poverty, a sick parent). Do NOT say 'Allah tests everyone equally — be happy about it.' Say: this is hard, Allah sees it, and we hold AND fix what we can.",
+  "tool_h": "The Sabr Kit: hold, pray, work, wait",
+  "skills": [
+   {
+    "step": "Hold",
+    "h": "Hold the shock",
+    "ar": "اِثْبُتْ",
+    "p": "The first hit is where sabr lives (Bukhari 1283): one honest sentence, no explosion, no collapse. 'This really hurts. I will not decide tonight.'"
+   },
+   {
+    "step": "Pray",
+    "h": "Pray it out",
+    "ar": "صَلِّ",
+    "p": "2:153 — when the wave peaks: wudu, two rak'ahs, Ayyub's words: <em>massaniya al-durru wa anta arhamu al-rahimeen</em>. Complaint TO the Most Merciful."
+   },
+   {
+    "step": "Work",
+    "h": "Do your task",
+    "ar": "اِعْمَلْ",
+    "p": "Sabr has shoes: the three calls, the daily five problems, the one chore. One honest task a day keeps despair unemployed."
+   },
+   {
+    "step": "Wait",
+    "h": "Wait on Allah",
+    "ar": "اِنتَظِرْ",
+    "p": "94:5–6: with hardship, ease — twice. Waiting is ACTIVE: you are the bird flying out at dawn, trusting the return."
+   }
+  ],
+  "rule_card": "I hold the shock. I pray the pain. I work my part. I wait on Allah. Sabr is a muscle — and He gives it to those who train.",
+  "scale_h": "The Weight Scale",
+  "scale": [
+   [
+    "1–3",
+    "Rough week",
+    "Faster prayers, one honest sentence, keep the routine. Small weights train the muscle for the big ones."
+   ],
+   [
+    "4–6",
+    "Carrying",
+    "Full kit daily. Tell your family the truth about the weight. Snapping at siblings means the kit needs a check-up, not a silence."
+   ],
+   [
+    "7–8",
+    "Storm",
+    "When sleep and food crack: bring an adult in NOW, keep the salah anchor, do ONE task daily only. No one runs level 8s alone."
+   ],
+   [
+    "9–10",
+    "Crushing",
+    "A loss or fear too big for the family to hold: professionals (doctor, counselor, imam) are Allah's hands — reaching for them is sabr, not surrender."
+   ]
+  ],
+  "transfer_h": "6. Transfer Practice: The Ramadan of the Long Days",
+  "transfer": [
+   {
+    "t": "box",
+    "p": [
+     "Hana, 12, wanted to fast all Ramadan. Week one: dizzy by 4 p.m., snapping at her brother at iftar, and one night she cried that she wanted to quit. Her whole plan had been 'be patient' — and she discovered that patience with no kit is just pressure."
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "Which rebuild fits the Sabr Kit?",
+     "o": [
+      [
+       "Scale the goal to what she can HOLD (fast some days, sleep enough, drink well at nights), PRAY the tiredness out, do one WORK task daily, and WAIT on strength returning week by week.",
+       true,
+       "The kit works in worship too — especially there: steady beats heroic, and Allah never burdens a soul beyond scope (2:286)."
+      ],
+      [
+       "Force every single day no matter what — quitting is haram.",
+       false,
+       "Harming the body is not worship. 2:286 just read the room."
+      ],
+      [
+       "Quit Ramadan entirely and restart next year.",
+       false,
+       "Abandonment is the opposite of patience."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "Hana finished the month strong and soft — the way the Prophet ﷺ said deeds should be: the most consistent, even if few (Bukhari 6464). She learned the difference between sabr (carry WITH Allah) and stamina (white-knuckling alone). Ramadan became her training ground for every hard season after it."
+    ]
+   }
+  ],
+  "ch_h": "My Sabr Ledger",
+  "ch_intro": "Three lines this week:",
+  "ch_items": [
+   "<strong>My first-shock sentence:</strong> the one true thing to say when the wave hits ('I will not decide tonight').",
+   "<strong>My daily task:</strong> the ONE small honest thing your family's season needs from you.",
+   "<strong>My 94:5 card:</strong> tape 'inna ma'al 'usri yusra' where the hard hours find you."
+  ],
+  "ch_mission": "Run the kit once for a real difficulty and tell your safe person which part helped most.",
+  "ch_note": "Sabr is trainable (Bukhari 1469) — start with queues, traffic, small losses. The muscle built in tiny seasons is the one that holds the big ones, bi'idhnillah.",
+  "avoid": [
+   "\"Just be patient\" — said like a door closing.",
+   "\"Stop complaining — others have it worse.\" (comparing pain to shame it)",
+   "\"You asked for this test.\" — nobody asked; hardship is not an automatic receipt for sin."
+  ],
+  "say": [
+   "\"This season is genuinely heavy. Which kit step do you need today?\"",
+   "\"Say Ayyub's words with me — Allah loves the honest complain-to-Him tongue.\"",
+   "\"One task. One prayer. One breath. Repeat.\""
+  ],
+  "order_h": "Put the Sabr Kit in Order",
+  "order_done": "Excellent — you know the four kit parts.",
+  "order_wrong": "That step comes later. First: hold the shock without exploding.",
+  "scenario": {
+   "q": "Yusuf's dog of five years died that afternoon. What is sabr at the first shock?",
+   "o": [
+    [
+     "Say the truth out loud ('this breaks my heart'), pray two rak'ahs, let the tears come, and do the next task anyway.",
+     true,
+     "Hold + Pray + Work + Wait — with a voice and a prayer mat."
+    ],
+    [
+     "Laugh it off because 'it was just a dog'.",
+     false,
+     "Numbness wearing confidence — not sabr."
+    ],
+    [
+     "Refuse food and sleep to prove the loss.",
+     false,
+     "Grief without the kit — and Islam protects the body too."
+    ]
+   ]
+  },
+  "guide_note": "Children in real hardship (illness, poverty, divorce) need two messages together: 'this is genuinely hard' AND 'the adults carry the adult load — you hold your small part with us.' Let them see adults using the kit; that is the lesson. The 9–10 zone stays the same: professionals are Allah's hands."
+ },
+ "10": {
+  "n": 10,
+  "title": "Tawakkul and Uncertainty",
+  "part": "Part 10 · When You Don't Know What Happens Next",
+  "rule": "Tie your camel, then trust Allah — the heart rests where the hands work.",
+  "subtitle": "A story-centered Islamic SEL lesson that teaches children how to act bravely when the future is fog: do your honest part, tie the camel, and hand the result to the Only One who owns tomorrow.",
+  "sel": "Trust & decision-making",
+  "tool": "The Two-Hand Rule: Do — Tie — Ask — Let go",
+  "theme": "gold",
+  "story_h": "1. Main Story: The Camp Decision",
+  "story": [
+   {
+    "t": "box",
+    "p": [
+     "Two choices sat on the kitchen table like a fork in the road: the football camp Baba could barely afford, or the science week the teacher called 'once in a lifetime.' Eleven days to decide. And the fog was thick — what if the camp coach hates me? What if science week is boring and we wasted the money?"
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "Zayd spiralled. He asked seven people what to do, redrew the pros-and-cons list three times, and slept badly for two nights — because the truth nobody said out loud was this: <em>none of the answers could be KNOWN.</em> That is what uncertainty IS. His mother watched him a day, then said: 'Ya habibi, let me show you the two hands.'"
+    ]
+   },
+   {
+    "t": "harmful",
+    "p": [
+     "'I have to get this PERFECT, because if I choose wrong, my whole year breaks. I must decide it all by myself, right now, with total certainty!'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What did Zayd's loop actually demand of him?",
+     "o": [
+      [
+       "Impossible things — certainty about the unseen, and the power of a whole year inside one camp choice.",
+       true,
+       "Exactly. No human has those. The demand itself is the illness — uncertainty is not a puzzle to defeat; it is a fog to walk through with a Guide."
+      ],
+      [
+       "Nothing — he should just pick anything.",
+       false,
+       "Flippancy is not peace either. His hands still had work to do."
+      ],
+      [
+       "Only an adult's answer.",
+       false,
+       "Handing your fog to others feels like relief and grows dependence."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "Mama took two sticky notes. HAND ONE — DO what you own: ask the science teacher what the week actually covers; get the camp coach's number and ask about him; write the real budget with Baba. HAND TWO — ASK Allah: consult the wise, pray salat al-istikhara (the prayer of asking Allah for good), and then Mama said the sentence she had learned twice in her life and lived both times: 'The result was never yours.'"
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "Zayd did his part for six days, slept properly for the first time on night two, and chose camp. Half of science week's 'magic' turned out to be videos the teacher could have shown on any Tuesday. The camp was one of the hardest, best weeks of his summer — and his best friend there is now his team captain. Not because he guessed right, but because he DID his part and LET GO of the part he never owned."
+    ]
+   },
+   {
+    "t": "wise",
+    "p": [
+     "'I work with my hands, I tie with my effort, I ask Allah — and I release the future to its Owner. The result was never mine, and I was never alone in it.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "Why did Zayd sleep better on night two?",
+     "o": [
+      [
+       "Because he finally stopped trying to own the unseen and started doing his own visible part.",
+       true,
+       "That transfer is the entire engine of tawakkul — the heart rests at the shore of what it CAN control, handing the rest over."
+      ],
+      [
+       "Because he stopped caring.",
+       false,
+       "Indifference is not trust; he cared deeply and acted."
+      ],
+      [
+       "Because he let others decide.",
+       false,
+       "Outsourcing is not tawakkul either — that is the cousin of the bird that never leaves the nest."
+      ]
+     ]
+    }
+   }
+  ],
+  "quran_pre": [
+   "The Quran's definition of trust is a sequence of verbs, not a feeling:"
+  ],
+  "quran_boxes": [
+   {
+    "ar": "فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ",
+    "en": "And when you have decided, then rely upon Allah. Indeed, Allah loves those who rely [upon Him].",
+    "ref": "Surah Ali 'Imran 3:159 · ClearQuran (Talal Itani)"
+   },
+   {
+    "ar": "وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ",
+    "en": "And whoever relies upon Allah — then He is sufficient for him.",
+    "ref": "Surah At-Talaq 65:3 · ClearQuran (Talal Itani)"
+   }
+  ],
+  "quran_post": [
+   "Read 3:159's ORDER: consult → decide → THEN rely. The verse never says 'guess and hope.' And 'hasbuh' in 65:3 means Allah is SUFFICIENT — yet the bird hadith proves the bird still flies at dawn: trust has shoes."
+  ],
+  "balance": "Important balance: tawakkul is NOT 'I don't care, Allah will sort it' — that is laziness wearing a pious coat. The Prophet ﷺ answered the man who wanted to leave his camel untied: 'Tie it, AND trust.' Full effort with a fully free heart — hands working, heart resting.",
+  "proph_intro": [
+   "Two prophetic moments that define the whole lesson:"
+  ],
+  "hadiths": [
+   {
+    "ar": "قَالَ رَجُلٌ: يَا رَسُولَ اللَّهِ, أُرْسِلُهَا وَأَتَوَكَّلُ, أَوْ أَعْقِلُهَا وَأَتَوَكَّلُ? قَالَ: اعْقِلْهَا وَتَوَكَّلْ",
+    "en": "A man asked: 'O Messenger of Allah — should I release my camel and trust, or tie it and trust?' He said: \"Tie it, and trust.\"",
+    "ref": "Jami' at-Tirmidhi 2517 · hasan (graded in Sahih al-Jami' 1068 by al-Albani)"
+   },
+   {
+    "ar": "لَوْ أَنَّكُمْ تَتَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرَزَقَكُمْ كَمَا يَرْزُقُ الطَّيْرَ, تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا",
+    "en": "\"If you relied upon Allah with true reliance, He would provide for you as He provides for the bird: it leaves hungry in the morning and returns full in the evening.\"",
+    "ref": "Jami' at-Tirmidhi 2344 · sahih (verified at hadeethenc.com #4721)"
+   }
+  ],
+  "proph_post": [
+   "Look at the bird: it does not fly out full — it flies out HUNGRY. Dependence on Allah and daily movement are ONE act in that image. Your uncertain week is the morning flight; the full return is what you cannot yet see."
+  ],
+  "grid2": [
+   {
+    "h": "The fog whispers",
+    "p": "\"You must control the outcome or you're finished.\""
+   },
+   {
+    "h": "Tawakkul answers",
+    "p": "\"I own the effort, Allah owns the result — and I was never carrying what was never mine.\""
+   }
+  ],
+  "proph_tail": "Zayd's six days of honest work were his camel-rope; istikhara and the released heart were his flying out hungry. Both together — that is the whole religion of decisions.",
+  "signal": "\"The future is unseen and my mind is trying to solve it like a math problem. It is not a problem to solve; it is a fog to walk through with a Guide.\"",
+  "urge": "\"Decide with total certainty NOW — or refuse to decide at all — or let ten people decide for me.\"",
+  "choice": "DO your owned part fully → TIE the camel (all the preparation) → ASK Allah (shura + istikhara) → LET GO of the result with hasbunallahu wa ni'mal wakil.",
+  "warn": "\"If you truly had tawakkul you'd never feel anxious about the future\" — false. The Prophet ﷺ prepared, consulted, and felt the weight of decisions too. Tawakkul is action PLUS release; anxiety is the brain asking for certainty Allah never gave anyone. Teaching children that uncertainty-feelings equal weak faith creates either panic or fake bravado.",
+  "note": "Name istikhara simply: 'O Allah, I ask You for good in this choice and to turn what is harmful away from me.' It is a prayer you pray AFTER gathering facts — not a dream lottery.",
+  "tool_h": "The Two-Hand Rule",
+  "skills": [
+   {
+    "step": "Do",
+    "h": "Do your part",
+    "ar": "اِسْعَ",
+    "p": "List the facts you own: ask the teacher, make the calls, write the numbers. The visible list kills the invisible monster."
+   },
+   {
+    "step": "Tie",
+    "h": "Tie the camel",
+    "ar": "اِعْقِلْهَا",
+    "p": "Preparation is part of trust, not its opposite. Every rope you tie is a sentence you say to Allah: 'I take this seriously.'"
+   },
+   {
+    "step": "Ask",
+    "h": "Ask Allah",
+    "ar": "سْتَخِرْ",
+    "p": "Consult the wise (shura). Pray istikhara: ask Allah to pull this choice toward your good and push the harmful away."
+   },
+   {
+    "step": "Let go",
+    "h": "Release the result",
+    "ar": "فَوَكِّلْ",
+    "p": "After the decision: hasbunallahu wa ni'mal wakil. You are the worker, not the Owner — and sleep belongs to Allah."
+   }
+  ],
+  "rule_card": "Hands busy, heart surrendered. I tie the camel and I trust. The result was never mine.",
+  "scale_h": "The Fog Scale",
+  "scale": [
+   [
+    "1–3",
+    "Mist",
+    "A normal small unknown (a quiz topic, weekend plans). Run the two hands — twenty minutes of facts, one du'a, decide."
+   ],
+   [
+    "4–6",
+    "Fog",
+    "A real fork (teams, schools, friend drama): shura with two adults, istikhara, a pros/cons sheet. Write the fears — they get shorter on paper."
+   ],
+   [
+    "7–8",
+    "Whiteout",
+    "Sleep gone, mind looping the same thirty scenes nightly: the body is over-owning the unseen. Tell an adult, shrink the decision to one small next step at a time."
+   ],
+   [
+    "9–10",
+    "Lost",
+    "No decision feels possible, panic about everything: anxiety needs professional help — and alongside it, dhikr, patience, and the promise that with hardship comes ease."
+   ]
+  ],
+  "transfer_h": "6. Transfer Practice: The School Trip Form",
+  "transfer": [
+   {
+    "t": "box",
+    "p": [
+     "The trip form due Friday needed a forty-dirham fee, and Omar knew Baba's paycheck was late — again. His instinct: don't ask, just tell the teacher no, and hide that he wanted to go badly. He called that being 'understanding'; really it was grieving in advance to dodge the conversation."
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "Which move is the Two-Hand Rule?",
+     "o": [
+      [
+       "Tell Baba honestly what the trip means and what it costs; ask if there is a way — and if the answer is truly no, accept it and walk the sadness out with friends and an activity.",
+       true,
+       "Ask, tie what is askable, and release what is released. Honesty first — hiding the need is the rope never tied."
+      ],
+      [
+       "Never tell anyone; sit home and decide Baba doesn't care.",
+       false,
+       "The mind makes villains out of empty rooms it never entered."
+      ],
+      [
+       "Demand the money and rage at the family budget.",
+       false,
+       "Confusing feelings with force — and the bill is real."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "Baba's answer: 'We ask Allah tonight, together. If it is meant, a way appears.' That night they made du'a. Wednesday: Mama's neighbor offered to lend the amount until payday — simply, warmly, no drama. Omar went on the trip. Sometimes the camel you tied with honesty gets pulled across the river by doors you could never have pushed open alone."
+    ]
+   }
+  ],
+  "ch_h": "My Next Foggy Decision",
+  "ch_intro": "Pick ONE real decision you are carrying:",
+  "ch_items": [
+   "<strong>My facts list:</strong> the three questions I will actually ask this week (a teacher, an adult, the coach).",
+   "<strong>My istikhara night:</strong> schedule it — two rak'ahs and the du'a this week, for THIS decision.",
+   "<strong>My release line:</strong> write 'I own the effort; the result belongs to Allah' — tape it where the fog loops at you."
+  ],
+  "ch_mission": "Run the two hands on your foggy decision before the next lesson, and report where the rope got tied.",
+  "ch_note": "Wrong choices are survivable — that is the secret nobody tells children: adults live with decisions that were wrong, and the sky stayed down anyway. Allah is closer to the one who acted honestly, even imperfectly, than to the one who froze perfectly.",
+  "avoid": [
+   "\"Just trust — stop thinking so much.\"",
+   "\"Whatever happens happens\" (shrugging is not tawakkul).",
+   "\"You should have known better\" — punishing the learner for fog."
+  ],
+  "say": [
+   "\"What part is yours? What part is Allah's? Put each in its own box.\"",
+   "\"Tell me what you're afraid of — let's look at it once, fully.\"",
+   "\"Want to make istikhara together?\""
+  ],
+  "order_h": "Put the Two Hands in Order",
+  "order_done": "Excellent — you know the rule.",
+  "order_wrong": "That step comes later. First do the honest work of gathering facts.",
+  "scenario": {
+   "q": "Amina must choose between two school tracks. Every day she imagines five disasters. What breaks the loop?",
+   "o": [
+    [
+     "Ask each teacher exactly what the track covers, talk to an older student, pray istikhara, choose — and write: 'result owned by Allah.'",
+     true,
+     "Do → Tie → Ask → Let go, in order."
+    ],
+    [
+     "Ask ten more friends every day until one sounds certain.",
+     false,
+     "Searching people for what only Allah and your own effort can answer."
+    ],
+    [
+     "Flip a coin and never discuss it.",
+     false,
+     "Randomness is not release — it is skipping the rope."
+    ],
+    [
+     "Delay until the school office forces a decision.",
+     false,
+     "Deadline panic is the worst decision-maker there is."
+    ]
+   ]
+  },
+  "guide_note": "Model the two hands out loud: families that narrate their own istikhara and preparation raise kids who neither panic nor shrug in fog. And when a child's decision turns 'wrong,' never say 'I told you so' — ask 'what does this teach the next one?' The goal is not a perfect childhood record but a trained decider."
+ },
+ "11": {
+  "n": 11,
+  "title": "Gratitude Without Denying Pain",
+  "part": "Part 11 · Blessed AND Broken at Once",
+  "rule": "Gratitude and grief can live in the same heart — neither deletes the other.",
+  "subtitle": "A story-centered Islamic SEL lesson that teaches children that saying alhamdulillah does not mean pretending everything is fine — real shukr holds the gift and the wound together, honestly.",
+  "sel": "Emotional honesty",
+  "tool": "Honest Shukr: Name the hurt — Name the gift — Thank — Act",
+  "theme": "rose",
+  "story_h": "1. Main Story: Aisha's Thankful, Torn Week",
+  "story": [
+   {
+    "t": "box",
+    "p": [
+     "Aisha's week had two faces. FACE ONE: her teacher announced she had won the writing contest — years of messy notebooks paid off. FACE TWO: the SAME week her parents finished their divorce. She had cried in the bathroom before reading her essay to the class — then stood and read it beautifully to applause."
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "At home, an aunt said the sentence that broke something open: 'Aisha, be grateful — Allah gave you the prize! Do not be ungrateful over the family situation; it could be so much worse!' That night Aisha believed there were only two options: be happy and feel fake, or be sad and feel like a criminal."
+    ]
+   },
+   {
+    "t": "harmful",
+    "p": [
+     "'If I thank Allah for the prize, I am saying the divorce is fine. If I grieve it, I am ungrateful for my blessings. I must pick one feeling and delete the other.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "Which sentence is actually true?",
+     "o": [
+      [
+       "Both are true: the gift is real AND the wound is real. Gratitude does not require pretending.",
+       true,
+       "Yes — the Prophet ﷺ taught: 'the eyes tear and the heart grieves, and we say only what pleases our Lord' — grieving and faith in the SAME breath. The heart is built for both."
+      ],
+      [
+       "Only the gift is real.",
+       false,
+       "That is the fake smile that teaches shame."
+      ],
+      [
+       "Only the wound is real.",
+       false,
+       "And the prize, the applause, the years of work — all erased from the record? That is denial wearing the other mask."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "Her mother — the wiser half of the house that week — found her on the balcony: 'Say it with both hands, habibti. What is hurting?' 'Everything about us changed.' 'Now the other hand. What is real and good?' 'The prize. My writing. Your cooking. Huda's hugs.' Mama sat down beside her: 'Then tonight: alhamdulillah — AND — my heart hurts. Allah is big enough for both. He never asked one to lie about the other.'"
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "That night Aisha prayed two rak'ahs of shukr AND made du'a with her forehead down: Allah, repair what broke and keep the writing alive in me. She hung the certificate on the wall — next to the photo of the old family. Both are true. Both belong there. She was thirteen and already better at the hardest equation in worship than most adults: how to be grateful without lying, and sad without quitting."
+    ]
+   },
+   {
+    "t": "wise",
+    "p": [
+     "'Alhamdulillah ala kulli haal — praise in EVERY condition — which includes the one where the tears fall while the tongue thanks.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What made the week survivable?",
+     "o": [
+      [
+       "Naming both — the hurt and the gift — in the same breath, before Allah.",
+       true,
+       "That is honest shukr: gratitude never as a mask. Quran 14:7 promises INCREASE to thanks — and Allah promises the patient that no pain was wasted."
+      ],
+      [
+       "Deleting the pain to appear grateful.",
+       false,
+       "Masks keep the pain and add shame to it."
+      ],
+      [
+       "Deleting the gift to stay sad.",
+       false,
+       "The writing, the applause, Mama's cooking — all of it un-thanked? That is ingratitude in the OTHER direction."
+      ]
+     ]
+    }
+   }
+  ],
+  "quran_pre": [
+   "Two verses, both required, never either alone:"
+  ],
+  "quran_boxes": [
+   {
+    "ar": "لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+    "en": "If you are grateful, I will surely increase you [in favor].",
+    "ref": "Surah Ibrahim 14:7 · ClearQuran (Talal Itani)"
+   },
+   {
+    "ar": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ",
+    "en": "O you who have believed, seek help through patience and prayer.",
+    "ref": "Surah Al-Baqarah 2:153 — the companion verse: pain has its own worship"
+   }
+  ],
+  "quran_post": [
+   "Look at the design: Allah commanded THANKS when good arrives and PATIENCE when pain arrives — one heart, two doors. The false rule people invent is 'you must feel thankful right now or you are an ingrate.' The real rule: be patient in the wound and grateful in the gift — both come to the same Allah."
+  ],
+  "balance": "Important balance: gratitude is NOT forced happiness, and thanking Allah does NOT mean the wound is approved. The divorce hurt. The prize was true. The Prophet ﷺ cried at graves and still said alhamdulillah — two hands in the same prayer.",
+  "proph_intro": [
+   "The Prophet's ﷺ own life proves praise and pain share the same body:"
+  ],
+  "hadiths": [
+   {
+    "ar": "كَانَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُومُ مِنَ اللَّيْلِ حَتَّى تَتَفَطَّرَ قَدَمَاهُ، فَقَالَتْ عَائِشَةُ: لِمَ تَصْنَعُ هَذَا وَقَدْ غَفَرَ اللَّهُ لَكَ مَا تَقَدَّمَ مِنْ ذَنْبِكَ وَمَا تَأَخَّرَ? قَالَ: أَفَلَا أَكُونُ عَبْدًا شَكُورًا",
+    "en": "The Prophet ﷺ stood in night prayer until his feet swelled. Aisha asked why — his past and future sins were already forgiven! He said: \"Should I not be a grateful servant?\"",
+    "ref": "Sahih al-Bukhari 4837 · Sahih Muslim 2820 — gratitude is an ACT, not a mood"
+   },
+   {
+    "ar": "لَا يَشْكُرُ اللَّهَ مَنْ لَا يَشْكُرُ النَّاسَ",
+    "en": "\"He does not thank Allah who does not thank people.\"",
+    "ref": "Sunan Abi Dawud 4811 · Jami' at-Tirmidhi 1954, graded sahih by al-Albani (verified at hadeethenc.com #66255)"
+   }
+  ],
+  "proph_post": [
+   "First hadith: gratitude had a BODY — night prayer until his feet ached. Shukr is not a poster on the wall; it is what you DO with what you were given. Second hadith: thank the humans too — Mama's cooking, Huda's hugs — the same worship, pointed at people."
+  ],
+  "grid2": [
+   {
+    "h": "Fake shukr",
+    "p": "\"Everything is great! Nothing hurts!\" (while the pain is swallowed in silence)"
+   },
+   {
+    "h": "Honest shukr",
+    "p": "\"My heart hurts — AND — this good thing is real. Both belong to Allah.\""
+   }
+  ],
+  "proph_tail": "Aisha's certificate next to the old family photo is not a contradiction — it is theology on a wall.",
+  "signal": "\"Something beautiful happened at the same time as something painful — and the pressure to pick a single feeling is itself the lie.\"",
+  "urge": "\"Pretend fine so the adults are comfortable — or refuse to thank anything at all so the grief wins.\"",
+  "choice": "NAME the hurt honestly → NAME the gift honestly → THANK with both hands (prayer, du'a, thanking the people out loud) → ACT (put the gift to work; seek repair for the wound).",
+  "warn": "\"Stop being sad — count your blessings!\" — weaponized gratitude shames real pain and teaches children to hide. Teach the two-hands rule instead: blessings ADD to your honesty, they never replace it. Never make a child feel guilty for grieving while some 'good' exists — and never guilty for smiling while someone is missed.",
+  "note": "Especially in divorce, death and illness seasons: children need explicit permission for joy. Laughing at the funeral meal or winning a prize while a parent is sick does not betray anyone — the Prophet ﷺ smiled in hard times.",
+  "tool_h": "Honest Shukr: four moves",
+  "skills": [
+   {
+    "step": "Name hurt",
+    "h": "Name the hurt",
+    "ar": "سَمِّ الْجُرْحَ",
+    "p": "'My family broke. I am sad. That is true.' No deleting the wound to please anyone — Allah is not offended by honesty."
+   },
+   {
+    "step": "Name gift",
+    "h": "Name the gift",
+    "ar": "سَمِّ النِّعْمَةَ",
+    "p": "'And — I won. And Mama is here. And the writing survived.' The gift is not erased by the pain. Say both out loud."
+   },
+   {
+    "step": "Thank",
+    "h": "Thank with both hands",
+    "ar": "اِحْمَدْ",
+    "p": "Alhamdulillah in both directions — a sajdah of shukr for the good, du'a and sabr for the wound. And the humans (Abu Dawud 4811): go thank them in person."
+   },
+   {
+    "step": "Act",
+    "h": "Use the gift",
+    "ar": "اِعْمَلْ",
+    "p": "The prize means: write more. The cooking means: help Mama. Gratitude is a verb — the body's way of saying thank you."
+   }
+  ],
+  "rule_card": "Two hands, one heart: I name the wound AND the blessing, thank in both directions, and put the gift to work.",
+  "scale_h": "The Two-Hand Balance Scale",
+  "scale": [
+   [
+    "1–3",
+    "Normal mixed",
+    "A good and a bad in one day. Say both at dinner — one sentence each. Model it until it is yours."
+   ],
+   [
+    "4–6",
+    "Pressure to lie",
+    "'Be happy about the good!' — name the pressure, refuse the mask. Say it out loud: 'I am grateful AND it still hurts.'"
+   ],
+   [
+    "7–8",
+    "Grief guilt",
+    "Guilty for joy — laughing after a loss, winning while someone is sick: bring it to du'a and to a person. Joy honors the missing; it does not insult them."
+   ],
+   [
+    "9–10",
+    "Torn gray",
+    "Weeks where nothing feels good OR bad — only gray: that is not ingratitude, it is a health signal. Adult + doctor. The two-hands prayer can be said WITH them."
+   ]
+  ],
+  "transfer_h": "6. Transfer Practice: Bilal's Eid Without Jiddu",
+  "transfer": [
+   {
+    "t": "box",
+    "p": [
+     "Jiddu died three months ago. Now came the first Eid: new clothes that felt stupid, sweets that tasted like nothing, relatives saying 'Eid Mubarak — smile!' Bilal wanted to disappear into the sofa. His secret plan: refuse to celebrate — because enjoying Eid would feel like erasing Jiddu."
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What is the honest shukr move?",
+     "o": [
+      [
+       "Keep one Jiddu-tradition (the morning walk, the same breakfast spot) as an act of love for him — AND allow the afternoon joy with cousins. The heart has room for both.",
+       true,
+       "Grief-honoring AND gift-living on the same day: the two hands, on Eid."
+      ],
+      [
+       "Cancel Eid entirely to prove loyalty.",
+       false,
+       "Self-punishment dressed as love; the heart needs both doors."
+      ],
+      [
+       "Fake huge joy so nobody asks questions.",
+       false,
+       "The mask Aisha almost wore."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "They did the Jiddu walk — Bilal told his little cousins Jiddu stories on that exact street. Then they played football until the sky turned orange. At dinner Bilal said the sentence his mother never forgot: 'It's a good Eid AND I miss him.' That is what a healthy heart says. No contradiction. That is shukr and sabr holding hands."
+    ]
+   }
+  ],
+  "ch_h": "My Two-Hands Journal",
+  "ch_intro": "Three days, two lines each:",
+  "ch_items": [
+   "<strong>My hurt of today:</strong> one true sentence — no audience required.",
+   "<strong>My gift of today:</strong> one real thing I almost walked past.",
+   "<strong>My thanks in action:</strong> the person I thanked out loud today (sunnah!), and the one thing I did WITH the gift."
+  ],
+  "ch_mission": "Say one real 'both' sentence to your safe person this week: '______ hurts AND ______ is good.'",
+  "ch_note": "If joy keeps feeling forbidden weeks after a loss, tell an adult — hearts sometimes need company (and professionals) to unlock both doors again. There is no sin in needing help to grieve well.",
+  "avoid": [
+   "\"Count your blessings — stop being sad!\"",
+   "\"You should be over it by now.\"",
+   "Using 'alhamdulillah' like a period that ends a sentence, instead of two hands that open both."
+  ],
+  "say": [
+   "\"You can miss him AND enjoy Eid. Both are true.\"",
+   "\"Say the 'both' sentence with me.\"",
+   "\"Alhamdulillah — and now tell me the hard part too. I want both hands.\""
+  ],
+  "order_h": "Put Honest Shukr in Order",
+  "order_done": "Excellent — you know the two hands.",
+  "order_wrong": "That step comes later. First name the hurt honestly.",
+  "scenario": {
+   "q": "Yara's team lost the final AND she was named player of the tournament. Her parents keep saying 'be grateful — you lost!' What should she say?",
+   "o": [
+    [
+     "\"I am grateful for the award AND upset about the loss — both are true tonight.\"",
+     true,
+     "The honest 'both' sentence — exactly the lesson."
+    ],
+    [
+     "\"You're right — I'll only be happy.\"",
+     false,
+     "The mask — deleting the loss is not shukr."
+    ],
+    [
+     "\"You're right — I'll only be sad.\"",
+     false,
+     "And deleting the award is not gratitude either."
+    ]
+   ]
+  },
+  "guide_note": "Do not demand gratitude as a MOOD. Model the two-hands talk at family dinner. Watch especially in grief, divorce and illness homes: children get trained to hide joy out of loyalty — release them explicitly ('Jiddu would want you at the picnic'). And 9–10: weeks of gray is a health signal, not an attitude problem."
+ },
+ "12": {
+  "n": 12,
+  "title": "Hope and Rising Again",
+  "part": "Part 12 · After Every End, a Beginning",
+  "rule": "Despair is the only real defeat — while you are breathing, Allah has more chapters.",
+  "subtitle": "The closing lesson of the program: the strongest hope in Islam — no sin too big, no situation too closed, no year too lost — and the prophetic habit of starting again.",
+  "sel": "Hope & renewal",
+  "tool": "The Rising Loop: Turn — Hope — One step — Again",
+  "theme": "emerald",
+  "story_h": "1. Main Story: The Hundredth Chapter",
+  "story": [
+   {
+    "t": "box",
+    "p": [
+     "Karim had lost everything that matters to a thirteen-year-old inside one year: thrown off the team after the fight, grades below passing, his best friend moved cities, and the girl he never spoke to now called him 'the angry one.' By December he sat on the roof and made a decision that was not a decision — he simply stopped trying. 'Nothing I do fixes anything. I am the mistake.'"
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "His uncle Yusuf — yes, the name matters — found him there one evening and sat down beside him. He did not lecture. He told a story: a man who killed ninety-nine people asked whether repentance was even possible for him; one ignorant man said NO — and the next scholar said YES: 'And what stands between you and repentance?' The man ran toward a land of good people, and died halfway. The angels of mercy and the angels of punishment both claimed him — so they measured the distance between the two towns, and Allah took him because he was ONE CUBIT closer to the destination of repentance (Sahih Muslim 2766 · Sahih al-Bukhari 3470). Then Uncle Yusuf finished:"
+    ]
+   },
+   {
+    "t": "harmful",
+    "p": [
+     "'You are your worst chapter. The book is finished. Nobody with a record like yours gets a next page.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What was Karim's real trap?",
+     "o": [
+      [
+       "Despair — the belief that his past holds the final vote on his future.",
+       true,
+       "And despair is the ONE guest 39:53 locks out: 'do not despair of the mercy of Allah — He forgives ALL sins.' Not 'some.' Not 'the small ones.' ALL."
+      ],
+      [
+       "Laziness.",
+       false,
+       "His problem was not effort-management — he had decided effort was pointless."
+      ],
+      [
+       "Bad luck.",
+       false,
+       "Luck-theology replaces Allah with coincidence — and gives despair a nicer costume."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "They did not fix the year in a day — that is the lie of comeback movies. Uncle Yusuf set the Rising Loop. TURN: Karim apologized to the coach for the fight (his part only — not the whole world). HOPE: he read 39:53 every night until the verse started feeling true instead of printed. ONE STEP: a single retest — math, first, nothing else. AGAIN: when he relapsed into anger twice that spring, he used Lessons 2 and 6 — pause, istighfar, restart. Same day. Every time."
+    ]
+   },
+   {
+    "t": "box",
+    "p": [
+     "By June: retest passed — barely, but HIS. Not back on the team, but training with the juniors, and the coach now said his name with respect instead of warning. He spoke to the girl once; it was completely normal and nobody died. His best friend from the old city? Online football every Saturday — distance is not death. The year was not repaired. Karim was RISING — and rising is all hope ever promised."
+    ]
+   },
+   {
+    "t": "wise",
+    "p": [
+     "'My record is not my sentence. As long as Allah gives me breath, He gives me another chapter — the only real defeat is the book you decide never to open again.'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What is the true Islamic teaching about a fallen year?",
+     "o": [
+      [
+       "It is one chapter — and the Rising Loop is a lifetime skill: turn, hope, one step, again and again.",
+       true,
+       "Exactly. 'Every son of Adam sins, and the best of those who sin are those who keep returning' (Tirmidhi 2499). Returning is not failing — refusing to return is."
+      ],
+      [
+       "A wasted year means Allah is done with you.",
+       false,
+       "39:53 says the opposite, using jamee'an — ALL."
+      ],
+      [
+       "Fixed lives happen fast if you really mean it.",
+       false,
+       "Fast-fix stories make slow risers feel like failures — real hope is patient."
+      ]
+     ]
+    }
+   }
+  ],
+  "quran_pre": [
+   "Hope in Islam is not a mood — it is revealed information. Two verses to memorize for your worst days:"
+  ],
+  "quran_boxes": [
+   {
+    "ar": "لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا",
+    "en": "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.",
+    "ref": "Surah Az-Zumar 39:53 · ClearQuran (Talal Itani)"
+   },
+   {
+    "ar": "وَلَا تَا۟يْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ ۖ إِنَّهُۥ لَا يَا۟يْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ",
+    "en": "And do not despair of relief from Allah. Indeed, no one despairs of relief from Allah except the disbelieving people.",
+    "ref": "Surah Yusuf 12:87 — said by Yaqub AFTER decades of grief · ClearQuran (Talal Itani)"
+   }
+  ],
+  "quran_post": [
+   "Yaqub — nearly blind from sorrow — sent his sons back to SEARCH for Yusuf. That is what hope looks like when every fact says stop: ONE MORE SEARCH. And 39:53 was revealed for people with records much worse than yours — and mine. Read it as if it is addressed to you by name. It is."
+  ],
+  "balance": "Important balance: hope is NOT pretending the fall didn't happen. Hope looks at the record honestly, then looks at Allah honestly, and knows which of the two gets the last word. The last word is His: 'My mercy precedes My wrath' (Sahih al-Bukhari 7404).",
+  "proph_intro": [
+   "Two prophetic proof-packs for the person at the end of their rope:"
+  ],
+  "hadiths": [
+   {
+    "ar": "إِنَّ اللَّهَ يَبْسُطُ يَدَهُ بِاللَّيْلِ لِيَتُوبَ مُسِيءُ النَّهَارِ، وَيَبْسُطُ يَدَهُ بِالنَّهَارِ لِيَتُوبَ مُسِيءُ اللَّيْلِ",
+    "en": "\"Allah extends His hand at night so that the one who sinned by day may repent, and He extends His hand by day so that the one who sinned at night may repent.\"",
+    "ref": "Sahih Muslim 2759 — the door's opening hours: ALL of them"
+   },
+   {
+    "ar": "كُلُّ بَنِي آدَمَ خَطَّاءٌ، وَخَيْرُ الْخَطَّائِينَ التَّوَّابُونَ",
+    "en": "\"Every son of Adam sins, and the best of those who sin are those who repent.\"",
+    "ref": "Jami' at-Tirmidhi 2499 (verified at hadeethenc.com #5344)"
+   }
+  ],
+  "proph_post": [
+   "And the ninety-nine-murderer story — the one Uncle Yusuf told — is the ceiling-smasher: in Islam, no case file is ever sealed. The man died halfway on the road and Allah judged him by the DIRECTION of his heart. One honest cubit was enough."
+  ],
+  "grid2": [
+   {
+    "h": "What despair says",
+    "p": "\"You are your worst record. No chapter after that.\""
+   },
+   {
+    "h": "What Allah says",
+    "p": "\"Do not despair — I forgive ALL. My hand is outstretched by day AND by night, waiting for you.\""
+   }
+  ],
+  "proph_tail": "Karim's June was no miracle movie — one retest, one junior practice, one conversation. The Rising Loop runs on small honest circles, not explosions.",
+  "signal": "\"Everything is closed — I am done, and the evidence feels complete.\"",
+  "urge": "\"Never open the book again. One bad chapter means the whole book is bad.\"",
+  "choice": "TURN (face your real part honestly + istighfar) → HOPE (read 39:53 & 12:87 as YOUR addresses) → ONE STEP (the smallest real action — not a grand plan) → AGAIN (when you fall: pause, istighfar, restart the SAME DAY — as many times as it takes).",
+  "warn": "\"You have sinned too much / failed too many times — Allah is finished with you.\" That sentence is the ONLY voice in this entire program with no verse behind it. 39:53 says ALL. And never tell a fallen teen 'just snap out of it' — hope is built from one true step plus company.",
+  "note": "The closing note of the whole program: hope is not a mood stapled on at lesson 12 — it is what MAKES lessons 1–11 possible. Without hope nobody pauses anger, names sadness, repents, or rises. Every tool in this series is a door into this one room.",
+  "tool_h": "The Rising Loop",
+  "skills": [
+   {
+    "step": "Turn",
+    "h": "Turn around",
+    "ar": "تُبْ",
+    "p": "Face the record honestly + istighfar + repair your part. Turning is the only truly brave act left in a deep hole."
+   },
+   {
+    "step": "Hope",
+    "h": "Read the addresses",
+    "ar": "اِرْجُ",
+    "p": "39:53 and 12:87 are addressed to YOUR file. Recite them nightly until the feeling catches up with the truth — hope is trained by the tongue first."
+   },
+   {
+    "step": "One step",
+    "h": "The smallest step",
+    "ar": "قَدِمْ",
+    "p": "One retest. One practice. One apology sent. Not a new life — one true step. Then the next. Rising is a series of small circles."
+   },
+   {
+    "step": "Again",
+    "h": "Again. And again.",
+    "ar": "أَعِدْ",
+    "p": "Relapse is INSIDE the loop, not outside it: pause (L2), istighfar (L6), restart the SAME DAY. The best of sinners are the repeaters of return."
+   }
+  ],
+  "rule_card": "My record is not my sentence. I turn, I hope, I step, I rise — and if I fall, I rise again. Every breath is a new chapter.",
+  "scale_h": "The How-Deep Scale",
+  "scale": [
+   [
+    "1–3",
+    "Stumble",
+    "A bad week, dropped habits, some fights. Run the loop today: turn, one small step, done. Being human and returning fast IS the skill."
+   ],
+   [
+    "4–6",
+    "Pattern",
+    "Repeated sin or failure and the voice 'always, always.' 39:53 nightly + tell ONE real person. Secrets stall the loop; speaking restarts it."
+   ],
+   [
+    "7–8",
+    "'I'm done'",
+    "'I don't even care anymore.' Care is not gone — it is buried under exhaustion. Tell an adult that exact sentence today. Someone must find your roof."
+   ],
+   [
+    "9–10",
+    "The roof",
+    "Any thought of not wanting to be here anymore: this is an EMERGENCY — tell an adult NOW; call for help if you cannot speak it. The desert-camel joy of Muslim 2747 belongs to YOU. Stay — one chapter at a time."
+   ]
+  ],
+  "transfer_h": "6. Transfer Practice: The Second Hijab",
+  "transfer": [
+   {
+    "t": "box",
+    "p": [
+     "Maryam restarted praying five times in Ramadan. Then Shawwal exams crushed the routine — two weeks of nothing. The old voice returned: 'See? You're fake. Why start again when you always drop it?'"
+    ]
+   },
+   {
+    "t": "cp",
+    "c": {
+     "q": "What does the Rising Loop say?",
+     "o": [
+      [
+       "Restart NOW — the loop has unlimited re-starts: turn (no shame spiral), hope (His hand is out day and night), one step (Fajr tomorrow only — that's it), again (and after the next slip — again).",
+       true,
+       "That is 39:53 + Muslim 2759 lived. Shaytan's strategy is to make restarting feel embarrassing; Allah's strategy is to make the door infinite."
+      ],
+      [
+       "Wait until next Ramadan — the timing is ruined now.",
+       false,
+       "That is despair scheduling its own appointments."
+      ],
+      [
+       "Force all five plus extra night prayers to 'make up' the loss.",
+       false,
+       "Grand comebacks collapse; small honest circles climb."
+      ]
+     ]
+    }
+   },
+   {
+    "t": "box",
+    "p": [
+     "Maryam prayed Fajr alone the next morning and cried the whole walk to school — and it counted. Six weeks later, two-of-five had become four of five. Nobody announced it. The most beloved deeds to Allah are the consistent ones, even if few (Sahih al-Bukhari 6464). Rising is usually invisible — and invisible risings are exactly where Allah's hand is outstretched, day and night, waiting for the next honest step."
+    ]
+   }
+  ],
+  "ch_h": "My Next Chapter",
+  "ch_intro": "Write it once — keep it forever:",
+  "ch_items": [
+   "<strong>My verse card:</strong> 39:53 — copy it by hand; keep it in your wallet or as your phone lock.",
+   "<strong>My smallest circle:</strong> the one honest step THIS WEEK, after the thing you dropped or broke.",
+   "<strong>My again-promise:</strong> 'When I fall — and I will — I restart the same day. Falling is human; staying down is the trap.'"
+  ],
+  "ch_mission": "Before leaving this program: tell one adult your next-chapter step. The rule of the whole series — every ending is a beginning.",
+  "ch_note": "You have just completed Strong Heart, Wise Mind: twelve lessons, twelve tools. Return to any door whenever a feeling, a season, or a year breaks you open. The whole series lives in one prophetic line: 'Every son of Adam errs — and the best of them keep returning.'",
+  "avoid": [
+   "\"You've failed too many times.\"",
+   "\"You promised — this time had to be different.\"",
+   "Treating a restart like a second-class event — the third attempt is as honored as the first."
+  ],
+  "say": [
+   "\"Fall down seven, stand up eight — with bismillah each time.\"",
+   "\"The door has no closing hours (Muslim 2759).\"",
+   "\"One step. Just one. I'll walk it with you.\""
+  ],
+  "order_h": "Put the Rising Loop in Order",
+  "order_done": "Excellent — you know the loop. Now run it whenever life asks.",
+  "order_wrong": "That step comes later. First turn honestly — no cover, no shame spiral.",
+  "scenario": {
+   "q": "Rami broke his no-phone-at-night rule for the fifth time. What is the loop?",
+   "o": [
+    [
+     "Turn (honest istighfar, no self-hate speech), hope (the verse on his lock screen), one step (the charger sleeps in the kitchen tonight), again (restart any morning he slips).",
+     true,
+     "The loop — run honestly and immediately. Attempt five is still 'again,' not 'always.'"
+    ],
+    [
+     "Declare himself hopeless and give up all routines.",
+     false,
+     "That is despair winning a phone habit."
+    ],
+    [
+     "Tell nobody and start 'fresh' next year.",
+     false,
+     "Delayed restarts turn small falls into long ones."
+    ],
+    [
+     "Punish himself with a sleepless night of study.",
+     false,
+     "Harshness is not the method of the One whose hand is outstretched."
+    ]
+   ]
+  },
+  "guide_note": "Closing counsel for adults: our response to a child's FALL decides whether they RISE or HIDE. Welcome restarts loudly — make the second attempt as honorable as the first. And any 9–10 signal: treat not-wanting-to-be-here talk as a medical emergency, never laziness of faith — stay present, get help, stay present some more. Hope taught by how we respond is the hope that outlives this program."
+ }
+}
